@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+.App-header-menu {
+  background-color: rgb(228, 176, 153, 0.6);
+}
+
+.ant-menu-horizontal > .ant-menu-item a:hover {
+  color: #839abf;
+}
+
+.ant-menu-horizontal > .ant-menu-item a {
+  color: #7f3e19;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,14 +26,14 @@
 }
 
 .App-body {
-  background-color: #282c34;
+  background-color: rgb(227, 182, 129, 0.4);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -40,11 +52,19 @@
 h1,
 h4,
 h2 {
-  color: white;
+  color: #84624a;
 }
 
-.footer-link {
-  color: black;
+.App-footer {
+  background-color: rgb(228, 176, 153, 0.6);
+}
+
+.footer-link, a {
+  color: #7f3e19;
+}
+
+.footer-link:hover, a:hover {
+  color: #839abf
 }
 
 @import "~antd/dist/antd.css";

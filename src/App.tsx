@@ -28,9 +28,10 @@ function App() {
                 onClick={(e) => handleMenuClick(e.key)}
                 selectedKeys={[selectedMenuKey]}
                 mode="horizontal"
+                className='App-header-menu'
               >
                 <Menu.Item key="home">
-                  <a href="/">Home</a>
+                  <a className='menu-item' href="/">Home</a>
                 </Menu.Item>
                 <Menu.Item key="about">
                   <a href="/about">About Me</a>
@@ -87,7 +88,7 @@ function App() {
                 <a className='footer-link' href="https://www.facebook.com">
                   <FacebookOutlined />
                 </a>
-                <a className='footer-link' href="https://www.instagram.com">
+                <a className='footer-link' href="https://www.instagram.com/r3counseling">
                   <InstagramOutlined />
                 </a>
               </div>
