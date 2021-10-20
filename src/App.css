@@ -37,4 +37,8 @@
   }
 }
 
+h1 {
+  color: white
+}
+
 @import "~antd/dist/antd.css";
