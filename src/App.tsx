@@ -5,6 +5,7 @@ import "./App.css";
 import { Menu } from "antd";
 import Home from "./pages/home";
 import About from "./pages/about";
+import Terms from "./pages/terms";
 import ReadyToRelease from "./pages/ready-to-release";
 import AppointmentRequest from "./pages/appointment-request";
 
@@ -42,9 +43,6 @@ function App() {
                 <Menu.Item key="terms">
                   <a href="/terms">Terms</a>
                 </Menu.Item>
-                <Menu.Item key="appointment">
-                  <a href="/appointment-request">Appointment Request</a>
-                </Menu.Item>
               </Menu>
             </div>
           </header>
@@ -54,6 +52,9 @@ function App() {
             <Switch>
               <Route path="/about">
                 <About />
+              </Route>
+              <Route path="/terms">
+                <Terms />
               </Route>
               <Route path="/ready-to-release">
                 <ReadyToRelease />
