@@ -26,9 +26,10 @@ export default function ReadyToRelease() {
           Request Appointment
         </a> */}
         <a
-        href='https://provider.growtherapy.com/book-appointment?id=970&ref=prov'
-        target='_blank'>
-            Request Appointment
+          href="https://provider.growtherapy.com/book-appointment?id=970&ref=prov"
+          target="_blank"
+        >
+          Request Appointment
         </a>
       </div>
       <script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>

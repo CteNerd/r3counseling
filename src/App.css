@@ -37,8 +37,14 @@
   }
 }
 
-h1, h4, h2 {
-  color: white
+h1,
+h4,
+h2 {
+  color: white;
+}
+
+.footer-link {
+  color: black;
 }
 
 @import "~antd/dist/antd.css";
