@@ -12,7 +12,7 @@ export default function Offerings() {
         and thoughts on present behaviors. Let’s align to RELEASE, RESTORE and
         REDEFINE the next phase of your journey!
       </p>
-      <h2>Consultation &amps; Training</h2>
+      <h2>Consultation &amp; Training</h2>
       <p>
         R3 is eager to serve the community by providing consulting and training
         to enhance mental health awareness and education. Contact us to discuss

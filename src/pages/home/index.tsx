@@ -5,14 +5,12 @@ export default function Home() {
     <div>
       <div className="banner">
         <div className="banner-container">
-          <blockquote className='banner-quote'>
+          <blockquote className="banner-quote">
             “Don’t ask what the world needs. Ask what makes you come alive, and
             go do it. Because what the world needs is people who have come
             alive.”
           </blockquote>
-          <p className='banner-citation'>
-            - Howard Thurman
-          </p>
+          <p className="banner-citation">- Howard Thurman</p>
         </div>
       </div>
       <h1>Let's Come Alive</h1>
@@ -26,8 +24,11 @@ export default function Home() {
       </p>
       <div className="banner">
         <div className="banner-container">
-          <h1 className='banner-header'>Find me on:</h1>
-          <img className='banner-img' src='https://secureservercdn.net/198.71.233.229/41m.3eb.myftpupload.com/wp-content/uploads/2020/09/0009_psychology-today-logo.png?time=1634477867' />
+          <h1 className="banner-header">Find me on:</h1>
+          <img
+            className="banner-img"
+            src="https://secureservercdn.net/198.71.233.229/41m.3eb.myftpupload.com/wp-content/uploads/2020/09/0009_psychology-today-logo.png?time=1634477867"
+          />
         </div>
       </div>
       <p>

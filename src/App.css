@@ -69,6 +69,10 @@
   color: black;
 }
 
+.body-img-right {
+  float: right;
+}
+
 .App-link {
   color: #61dafb;
 }
