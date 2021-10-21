@@ -6,6 +6,7 @@ import { Menu } from "antd";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Terms from "./pages/terms";
+import Offerings from "./pages/offerings";
 import ReadyToRelease from "./pages/ready-to-release";
 import AppointmentRequest from "./pages/appointment-request";
 import { FacebookOutlined, InstagramOutlined } from "@ant-design/icons";
@@ -59,6 +60,9 @@ function App() {
               </Route>
               <Route path="/terms">
                 <Terms />
+              </Route>
+              <Route path="/offerings">
+                <Offerings />
               </Route>
               <Route path="/ready-to-release">
                 <ReadyToRelease />
