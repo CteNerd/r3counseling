@@ -28,10 +28,12 @@ function App() {
                 onClick={(e) => handleMenuClick(e.key)}
                 selectedKeys={[selectedMenuKey]}
                 mode="horizontal"
-                className='App-header-menu'
+                className="App-header-menu"
               >
                 <Menu.Item key="home">
-                  <a className='menu-item' href="/">Home</a>
+                  <a className="menu-item" href="/">
+                    Home
+                  </a>
                 </Menu.Item>
                 <Menu.Item key="about">
                   <a href="/about">About Me</a>
@@ -69,26 +71,37 @@ function App() {
               </Route>
             </Switch>
           </body>
-          <footer className='App-footer'>
+          <footer className="App-footer">
             <div>
-              <div className='footer-link-container'>
-                <a className='footer-link' href="https://www.google.com/maps/place/4210+Columbia+Rd,+Augusta,+GA+30907/@33.5060819,-82.1193749,17z/data=!3m1!4b1!4m5!3m4!1s0x88f9d370a85e0bed:0xedc6d4adfbf9f6be!8m2!3d33.5060819!4d-82.1171862">
+              <div className="footer-link-container">
+                <a
+                  className="footer-link"
+                  href="https://www.google.com/maps/place/4210+Columbia+Rd,+Augusta,+GA+30907/@33.5060819,-82.1193749,17z/data=!3m1!4b1!4m5!3m4!1s0x88f9d370a85e0bed:0xedc6d4adfbf9f6be!8m2!3d33.5060819!4d-82.1171862"
+                >
                   4210 Columbia Rd | Martinez, GA 30907
                 </a>
               </div>
-              <div className='footer-link-container'>
-                <a className='footer-link' href="tel:1-786-755-1863">PHONE: (786) 755-1863</a>
+              <div className="footer-link-container">
+                <a className="footer-link" href="tel:1-786-755-1863">
+                  PHONE: (786) 755-1863
+                </a>
               </div>
-              <div className='footer-link-container'>
-                <a className='footer-link' href="mailto:reception+Tiffany970@growtherapy.com">
+              <div className="footer-link-container">
+                <a
+                  className="footer-link"
+                  href="mailto:reception+Tiffany970@growtherapy.com"
+                >
                   EMAIL US
                 </a>
               </div>
-              <div className='footer-link-container'>
-                <a className='footer-link' href="https://www.facebook.com">
+              <div className="footer-link-container">
+                <a className="footer-link" href="https://www.facebook.com">
                   <FacebookOutlined />
                 </a>
-                <a className='footer-link' href="https://www.instagram.com/r3counseling">
+                <a
+                  className="footer-link"
+                  href="https://www.instagram.com/r3counseling"
+                >
                   <InstagramOutlined />
                 </a>
               </div>

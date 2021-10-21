@@ -6,6 +6,39 @@
   background-color: rgb(228, 176, 153, 0.6);
 }
 
+.banner {
+  background-color: #7f3e19;
+  padding: 10px;
+  text-align: -webkit-center;
+}
+
+.banner-quote {
+  width: 100%;
+}
+
+.banner-citation {
+  width: 100%;
+}
+
+.banner-container {
+  color: rgb(227, 182, 129);
+  max-width: 50vw;
+  font-size: 14px;
+}
+
+.banner-header {
+  text-align: left;
+  color: rgb(227, 182, 129);
+  width: fit-content;
+  display: inline-flex;
+}
+
+.banner-img {
+  max-width: 150px;
+  display: inline-flex;
+  padding: 5px;
+}
+
 .ant-menu-horizontal > .ant-menu-item a:hover {
   color: #839abf;
 }
@@ -59,12 +92,14 @@ h2 {
   background-color: rgb(228, 176, 153, 0.6);
 }
 
-.footer-link, a {
+.footer-link,
+a {
   color: #7f3e19;
 }
 
-.footer-link:hover, a:hover {
-  color: #839abf
+.footer-link:hover,
+a:hover {
+  color: #839abf;
 }
 
 @import "~antd/dist/antd.css";

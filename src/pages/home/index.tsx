@@ -3,6 +3,18 @@ import React from "react";
 export default function Home() {
   return (
     <div>
+      <div className="banner">
+        <div className="banner-container">
+          <blockquote className='banner-quote'>
+            “Don’t ask what the world needs. Ask what makes you come alive, and
+            go do it. Because what the world needs is people who have come
+            alive.”
+          </blockquote>
+          <p className='banner-citation'>
+            - Howard Thurman
+          </p>
+        </div>
+      </div>
       <h1>Let's Come Alive</h1>
       <p>
         Are you emotionally constipated? Are you trapped in your mask? Is your
@@ -12,6 +24,12 @@ export default function Home() {
         reality? Are you surrounded by ‘your team’ but still suffering in
         silence, feeling unheard, failing to be seen or fully supported?
       </p>
+      <div className="banner">
+        <div className="banner-container">
+          <h1 className='banner-header'>Find me on:</h1>
+          <img className='banner-img' src='https://secureservercdn.net/198.71.233.229/41m.3eb.myftpupload.com/wp-content/uploads/2020/09/0009_psychology-today-logo.png?time=1634477867' />
+        </div>
+      </div>
       <p>
         Are you ready to thrive and come alive, while continuing on your
         journey? If so, I am here to align with you, become your ally, explore
