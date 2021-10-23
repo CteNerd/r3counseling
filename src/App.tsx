@@ -99,7 +99,7 @@ function App() {
                 </a>
               </div>
               <div className="footer-link-container">
-                <a className="footer-link" href="https://www.facebook.comhttps://www.linkedin.com/in/tiffany-luke-lpc-29683119">
+                <a className="footer-link" href="https://www.linkedin.com/in/tiffany-luke-lpc-29683119">
                   <LinkedinOutlined />
                 </a>
                 <a
