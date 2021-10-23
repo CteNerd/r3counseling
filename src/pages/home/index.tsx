@@ -3,7 +3,7 @@ import React from "react";
 export default function Home() {
   return (
     <div>
-      <div className="banner">
+      <div className="banner top-banner">
         <div className="banner-container">
           <blockquote className="banner-quote">
             “Don’t ask what the world needs. Ask what makes you come alive, and
@@ -39,6 +39,14 @@ export default function Home() {
         wellbeing: mind, body and soul. Allow me to help you become empowered to
         redefine your personal transformation.
       </p>
+      <div className="banner">
+        <div className="banner-container">
+          <img
+            className="banner-img"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/united-healthcare-logo.png"
+          />
+        </div>
+      </div>
     </div>
   );
 }

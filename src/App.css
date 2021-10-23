@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'League Spartan', arial, helvetica, sans-serif;
 }
 
 .App-header-menu {
@@ -15,6 +16,12 @@
 .banner-quote {
   width: 100%;
 }
+
+/* .top-banner {
+  top: 50px;
+  position: fixed;
+  width: 100vw;
+} */
 
 .banner-citation {
   width: 100%;
@@ -64,7 +71,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding: 20px 0px;
   font-size: calc(10px + 2vmin);
   color: black;
 }
@@ -90,6 +97,7 @@ h1,
 h4,
 h2 {
   color: #84624a;
+  font-family: 'League Spartan', arial, helvetica, sans-serif;
 }
 
 .App-footer {
@@ -104,6 +112,24 @@ a {
 .footer-link:hover,
 a:hover {
   color: #839abf;
+}
+
+h1 {
+  font-size: 34px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+p, ul, ol {
+  font-size: 16px;
 }
 
 @import "~antd/dist/antd.css";
