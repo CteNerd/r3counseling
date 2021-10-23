@@ -17,11 +17,10 @@
   width: 100%;
 }
 
-/* .top-banner {
-  top: 50px;
-  position: fixed;
-  width: 100vw;
-} */
+button {
+  border-radius: 5px;
+  background-color: rgb(228, 176, 153, 0.6);
+}
 
 .banner-citation {
   width: 100%;
