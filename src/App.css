@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  font-family: 'League Spartan', arial, helvetica, sans-serif;
+  font-family: "League Spartan", arial, helvetica, sans-serif;
 }
 
 .App-header-menu {
@@ -97,7 +97,7 @@ h1,
 h4,
 h2 {
   color: #84624a;
-  font-family: 'League Spartan', arial, helvetica, sans-serif;
+  font-family: "League Spartan", arial, helvetica, sans-serif;
 }
 
 .App-footer {
@@ -128,7 +128,9 @@ h4 {
   font-size: 22px;
 }
 
-p, ul, ol {
+p,
+ul,
+ol {
   font-size: 16px;
 }
 

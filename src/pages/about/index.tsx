@@ -16,14 +16,19 @@ export default function AboutMe() {
         ground myself and enrich my creative sweets passion.
       </p>
       <div>
-      <a href='https://www.thecookierelease.com'><img className='body-img-right' src='https://img1.wsimg.com/isteam/ip/0b3c87cc-17d5-411c-a183-f13fcfb11802/TCR%20Logo%20Horizontal.jpg/:/rs=h:208/qt=q:95' /></a>
-      <p>
-        My hobby turned small business,{" "}
-        {<a href="https://thecookierelease.com">The Cookie Release</a>}, allows
-        me the opportunity to sow seeds and enhance my community’s optimal
-        health. How? I dedicate a portion of all of my sales proceeds towards
-        resources for my clients here – grounding tools and workshops.
-      </p>
+        <a href="https://www.thecookierelease.com">
+          <img
+            className="body-img-right"
+            src="https://img1.wsimg.com/isteam/ip/0b3c87cc-17d5-411c-a183-f13fcfb11802/TCR%20Logo%20Horizontal.jpg/:/rs=h:208/qt=q:95"
+          />
+        </a>
+        <p>
+          My hobby turned small business,{" "}
+          {<a href="https://thecookierelease.com">The Cookie Release</a>},
+          allows me the opportunity to sow seeds and enhance my community’s
+          optimal health. How? I dedicate a portion of all of my sales proceeds
+          towards resources for my clients here – grounding tools and workshops.
+        </p>
       </div>
       <p>
         I am here to empower, support and align, while being trustworthy,
