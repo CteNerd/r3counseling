@@ -48,6 +48,7 @@ export default function Home() {
           />
         </div>
       </div>
+      <script type="text/javascript" async src="//l.getsitecontrol.com/8w8momg4.js"></script>
     </div>
   );
 }
