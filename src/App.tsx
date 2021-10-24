@@ -9,7 +9,7 @@ import Terms from "./pages/terms";
 import Offerings from "./pages/offerings";
 import ReadyToRelease from "./pages/ready-to-release";
 import AppointmentRequest from "./pages/appointment-request";
-import { FacebookOutlined, InstagramOutlined, LinkedinOutlined } from "@ant-design/icons";
+import { FacebookOutlined, GiftOutlined, InstagramOutlined, LinkedinOutlined } from "@ant-design/icons";
 
 function App() {
   const [selectedMenuKey, setSelectedMenuKey] = useState("");
@@ -54,7 +54,7 @@ function App() {
           </header>
           <body className="App-body">
             <button className="newsletter-btn" onClick={() => setNewsletterModalVis(true)}>
-              Newsletter
+              <GiftOutlined /> Newsletter
             </button>
             <Modal
               visible={newsletterModalVis}
