@@ -10,10 +10,10 @@ import Offerings from "./pages/offerings";
 import ReadyToRelease from "./pages/ready-to-release";
 import AppointmentRequest from "./pages/appointment-request";
 import { FacebookOutlined, GiftOutlined, InstagramOutlined, LinkedinOutlined } from "@ant-design/icons";
+import News from "./pages/news";
 
 function App() {
   const [selectedMenuKey, setSelectedMenuKey] = useState("");
-  const [newsletterModalVis, setNewsletterModalVis] = useState(false);
 
   function handleMenuClick(key: string) {
     console.log(key);
@@ -50,21 +50,12 @@ function App() {
                   <a href="/terms">Terms</a>
                 </Menu.Item>
                 <Menu.Item key="news">
-                  <a onClick={() => setNewsletterModalVis(true)}>News</a>
+                  <a href="/news">News</a>
                 </Menu.Item>
               </Menu>
             </div>
           </header>
           <body className="App-body">
-            <Modal
-              visible={newsletterModalVis}
-              onCancel={() => setNewsletterModalVis(false)}
-              onOk={() => setNewsletterModalVis(false)}
-              style={{height:"100%", width:"100%"}}
-              closable={false}
-            >
-              <iframe className="signup-form" src="https://cdn.forms-content.sg-form.com/7fc8c182-3472-11ec-bd3e-06eb709f0acd"/>
-            </Modal>
             {/* A <Switch> looks through its children <Route>s and
       renders the first one that matches the current URL. */}
             <Switch>
@@ -73,6 +64,9 @@ function App() {
               </Route>
               <Route path="/terms">
                 <Terms />
+              </Route>
+              <Route path="/news">
+                <News />
               </Route>
               <Route path="/offerings">
                 <Offerings />
