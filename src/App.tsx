@@ -49,13 +49,13 @@ function App() {
                 <Menu.Item key="terms">
                   <a href="/terms">Terms</a>
                 </Menu.Item>
+                <Menu.Item key="news">
+                  <a onClick={() => setNewsletterModalVis(true)}>News</a>
+                </Menu.Item>
               </Menu>
             </div>
           </header>
           <body className="App-body">
-            <button className="newsletter-btn" onClick={() => setNewsletterModalVis(true)}>
-              <GiftOutlined /> Newsletter
-            </button>
             <Modal
               visible={newsletterModalVis}
               onCancel={() => setNewsletterModalVis(false)}
