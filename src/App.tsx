@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
-import { Menu } from "antd";
+import { Menu, Modal } from "antd";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Terms from "./pages/terms";
@@ -13,6 +13,7 @@ import { FacebookOutlined, InstagramOutlined, LinkedinOutlined } from "@ant-desi
 
 function App() {
   const [selectedMenuKey, setSelectedMenuKey] = useState("");
+  const [newsletterModalVis, setNewsletterModalVis] = useState(false);
 
   function handleMenuClick(key: string) {
     console.log(key);
@@ -52,6 +53,18 @@ function App() {
             </div>
           </header>
           <body className="App-body">
+            <button className="newsletter-btn" onClick={() => setNewsletterModalVis(true)}>
+              Newsletter
+            </button>
+            <Modal
+              visible={newsletterModalVis}
+              onCancel={() => setNewsletterModalVis(false)}
+              onOk={() => setNewsletterModalVis(false)}
+              style={{height:"100%", width:"100%"}}
+              closable={false}
+            >
+              <iframe className="signup-form" src="https://cdn.forms-content.sg-form.com/7fc8c182-3472-11ec-bd3e-06eb709f0acd"/>
+            </Modal>
             {/* A <Switch> looks through its children <Route>s and
       renders the first one that matches the current URL. */}
             <Switch>
