@@ -9,7 +9,12 @@ import Terms from "./pages/terms";
 import Offerings from "./pages/offerings";
 import ReadyToRelease from "./pages/ready-to-release";
 import AppointmentRequest from "./pages/appointment-request";
-import { FacebookOutlined, GiftOutlined, InstagramOutlined, LinkedinOutlined } from "@ant-design/icons";
+import {
+  FacebookOutlined,
+  GiftOutlined,
+  InstagramOutlined,
+  LinkedinOutlined,
+} from "@ant-design/icons";
 import News from "./pages/news";
 
 function App() {
@@ -106,7 +111,10 @@ function App() {
                 </a>
               </div>
               <div className="footer-link-container">
-                <a className="footer-link" href="https://www.linkedin.com/in/tiffany-luke-lpc-29683119">
+                <a
+                  className="footer-link"
+                  href="https://www.linkedin.com/in/tiffany-luke-lpc-29683119"
+                >
                   <LinkedinOutlined />
                 </a>
                 <a

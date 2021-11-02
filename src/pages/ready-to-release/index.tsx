@@ -30,9 +30,7 @@ export default function ReadyToRelease() {
           href="https://provider.growtherapy.com/book-appointment?id=970&ref=prov"
           target="_blank"
         >
-        <button>
-          Request Appointment
-        </button>
+          <button>Request Appointment</button>
         </a>
       </div>
       <script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>
