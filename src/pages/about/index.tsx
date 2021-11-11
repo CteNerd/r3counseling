@@ -54,13 +54,13 @@ export default function AboutMe() {
             Therapist
           </li>
           <li>
+            EMDR Institute trained provider (EMDRIA certification in progress)
+          </li>
+          <li>
             Master of Science concentration Community Counseling: Columbus State
             University
           </li>
           <li>Bachelor of Science concentration Psychology-Wesleyan College</li>
-          <li>
-            EMDR Institute trained provider (EMDRIA certification in progress)
-          </li>
           <li>
             Over 15 years of clinical experience:
             <ul>

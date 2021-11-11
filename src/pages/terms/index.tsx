@@ -8,9 +8,7 @@ export default function Terms() {
       <p>
         At Release Restore Redefine Counseling, we provide private rates to all
         our clients based on their needs. We offer an initial Goodness of Fit
-        consultation which is 15 minutes and free to all clients. After the
-        Goodness of Fit consult, we recommend scheduling a 60 minute private
-        session, $140 each.
+        consultation which is 15 minutes and free to all clients.
       </p>
       <p>
         For more information about consultations, or training, please feel free
