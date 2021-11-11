@@ -12,6 +12,7 @@ import AppointmentRequest from "./pages/appointment-request";
 import {
   FacebookOutlined,
   GiftOutlined,
+  GoogleOutlined,
   InstagramOutlined,
   LinkedinOutlined,
 } from "@ant-design/icons";
@@ -123,6 +124,12 @@ function App() {
                 href="https://www.instagram.com/r3counseling"
               >
                 <InstagramOutlined />
+              </a>
+              <a
+                className="footer-link"
+                href="https://goo.gl/maps/vE8KskCmY6pJJwZp8"
+              >
+                <GoogleOutlined />
               </a>
             </div>
           </div>
