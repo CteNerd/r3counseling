@@ -29,6 +29,18 @@ export default function Home() {
             className="banner-img"
             src="https://secureservercdn.net/198.71.233.229/41m.3eb.myftpupload.com/wp-content/uploads/2020/09/0009_psychology-today-logo.png?time=1634477867"
           />
+          <img
+            className="banner-img"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/COC-logo.jpg"
+          />
+          <img
+            className="banner-img"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/EMDRIA.png"
+          />
+          <img
+            className="banner-img"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/TFBG-logo.jpg"
+          />
         </div>
       </div>
       <h1>Empowerment | Support | Alliance | Safety</h1>
@@ -45,6 +57,10 @@ export default function Home() {
           <img
             className="banner-img"
             src="https://wellcall-app-cdk.s3.amazonaws.com/united-healthcare-logo.png"
+          />
+          <img
+            className="banner-img"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/anthem-bcbs.jpg"
           />
         </div>
       </div>
