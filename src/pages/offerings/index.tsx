@@ -15,8 +15,8 @@ export default function Offerings() {
       </p>
       <h2>Consultation &amp; Training</h2>
       <p>
-        Release Restore Redefine Counseling is eager to serve the community by providing
-        consulting and training to enhance mental health awareness and
+        Release Restore Redefine Counseling is eager to serve the community by
+        providing consulting and training to enhance mental health awareness and
         education. Contact us to discuss ways we can help your organization.
       </p>
       <h2>Clinical Supervision: Coming Soon!!! Fall 2022</h2>
