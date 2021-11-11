@@ -90,6 +90,10 @@ button {
   color: black;
 }
 
+.App-body-container {
+  width: 75vw;
+}
+
 .body-img-right {
   float: right;
 }

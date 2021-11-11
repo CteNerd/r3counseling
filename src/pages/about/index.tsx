@@ -5,13 +5,12 @@ export default function AboutMe() {
     <div>
       <h1>About Me</h1>
       <h4>
-        Meet the Tiffany Luke, Licensed Professional Counselor, EMDRIA trained,
-        EMDR provider{" "}
+        Meet the Tiffany Luke, Licensed Professional Counselor, EMDR trained provider{" "}
       </h4>
       <p>Hey, hey! I’m Tiffany.</p>
       <p>
         I am a Licensed Professional Counselor with over 15 years of clinical
-        experience. I am trauma informed, EMDRIA trained, EMDR provider and I’m
+        experience. I am trauma informed, EMDR trained provider and I’m
         also known as The Cookie Counselor. Yep, I bake to release stress,
         ground myself and enrich my creative sweets passion.
       </p>
@@ -56,7 +55,7 @@ export default function AboutMe() {
           University
         </li>
         <li>Bachelor of Science concentration Psychology-Wesleyan College</li>
-        <li>EMDRIA Trained, EMDR provider (certification in progress)</li>
+        <li>EMDR Institute trained provider (EMDRIA certification in progress)</li>
         <li>
           Over 15 years of clinical experience:
           <ul>

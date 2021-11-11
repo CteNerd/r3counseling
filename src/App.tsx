@@ -61,6 +61,7 @@ function App() {
             </div>
           </header>
           <body className="App-body">
+            <div className="App-body-container">
             {/* A <Switch> looks through its children <Route>s and
       renders the first one that matches the current URL. */}
             <Switch>
@@ -86,6 +87,7 @@ function App() {
                 <Home />
               </Route>
             </Switch>
+              </div>
           </body>
           <footer className="App-footer">
             <div>
