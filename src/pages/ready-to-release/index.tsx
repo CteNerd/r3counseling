@@ -8,7 +8,7 @@ export default function ReadyToRelease() {
         Are you ready to schedule your initial free 15 minute consultations? Do
         you have a quick question? Please send us a message. This message does
         not establish you as a client of Release Restore Redefine. Our typical
-        response time is within 24 business hours.
+        response time is within 24-48 business hours.
       </p>
 
       {/* <style>.spwidget-button-wrapper{text-align: center}.spwidget-button{display: inline-block;padding: 12px 24px;color: #fff !important;background: #de6a26;border: 0;border-radius: 4px;font-size: 16px;font-weight: 600;text-decoration: none}.spwidget-button:hover{background: #d15913}.spwidget-button:active{color: rgba(255, 255, 255, .75) !important;box-shadow: 0 1px 3px rgba(0, 0, 0, .15) inset}</style> */}
