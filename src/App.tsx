@@ -62,32 +62,32 @@ function App() {
           </header>
           <body className="App-body">
             <div className="App-body-container">
-            {/* A <Switch> looks through its children <Route>s and
+              {/* A <Switch> looks through its children <Route>s and
       renders the first one that matches the current URL. */}
-            <Switch>
-              <Route path="/about">
-                <About />
-              </Route>
-              <Route path="/terms">
-                <Terms />
-              </Route>
-              <Route path="/news">
-                <News />
-              </Route>
-              <Route path="/offerings">
-                <Offerings />
-              </Route>
-              <Route path="/ready-to-release">
-                <ReadyToRelease />
-              </Route>
-              <Route path="/appointment-request">
-                <AppointmentRequest />
-              </Route>
-              <Route path="/">
-                <Home />
-              </Route>
-            </Switch>
-              </div>
+              <Switch>
+                <Route path="/about">
+                  <About />
+                </Route>
+                <Route path="/terms">
+                  <Terms />
+                </Route>
+                <Route path="/news">
+                  <News />
+                </Route>
+                <Route path="/offerings">
+                  <Offerings />
+                </Route>
+                <Route path="/ready-to-release">
+                  <ReadyToRelease />
+                </Route>
+                <Route path="/appointment-request">
+                  <AppointmentRequest />
+                </Route>
+                <Route path="/">
+                  <Home />
+                </Route>
+              </Switch>
+            </div>
           </body>
           <footer className="App-footer">
             <div>
