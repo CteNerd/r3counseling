@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import './r3.css';
+import "./r3.css";
 
 export default function ReadyToRelease() {
   return (
@@ -22,18 +22,20 @@ export default function ReadyToRelease() {
         </a>
       </div>
 
-      <a
-        href="https://tiffany-luke.clientsecure.me"
-        className="spwidget-button"
-        data-spwidget-scope-id="b429046b-2ff3-4502-9bc6-451911b33ad0"
-        data-spwidget-scope-uri="tiffany-luke"
-        data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b"
-        data-spwidget-scope-global
-        data-spwidget-autobind
-        target="_blank"
-      >
-        Simple Practice Widget
-      </a>
+      <div className="spwidget-button-wrapper">
+        <a
+          href="https://tiffany-luke.clientsecure.me"
+          className="spwidget-button"
+          data-spwidget-scope-id="b429046b-2ff3-4502-9bc6-451911b33ad0"
+          data-spwidget-scope-uri="tiffany-luke"
+          data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b"
+          data-spwidget-scope-global
+          data-spwidget-autobind
+          target="_blank"
+        >
+          Simple Practice Widget
+        </a>
+      </div>
       <script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>
     </div>
   );

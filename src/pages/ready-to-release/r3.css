@@ -1,5 +1,6 @@
 .spwidget-button-wrapper {
   text-align: center;
+  padding: 5px;
 }
 .spwidget-button {
   display: inline-block;
