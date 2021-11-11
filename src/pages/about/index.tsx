@@ -1,4 +1,5 @@
 import React from "react";
+import './about.css'
 
 export default function AboutMe() {
   return (
@@ -44,31 +45,33 @@ export default function AboutMe() {
         release, restore and redefine!
       </p>
       <h4>Professional Journey at a Glance</h4>
-      <ul>
-        <li>
-          Licensed Professional Counselor: Georgia Composite Board of
-          Professional Counselors, Social Workers, and Marriage &amp; Family
-          Therapist
-        </li>
-        <li>
-          Master of Science concentration Community Counseling: Columbus State
-          University
-        </li>
-        <li>Bachelor of Science concentration Psychology-Wesleyan College</li>
-        <li>EMDR Institute trained provider (EMDRIA certification in progress)</li>
-        <li>
-          Over 15 years of clinical experience:
-          <ul>
-            <li>
-              Management of an Acute Psychiatric Intake Team located in the ER
-            </li>
-            <li>Outpatient trauma counselor </li>
-            <li>Acute psychiatric unit counselor</li>
-            <li>Grief &amp; loss counselor</li>
-            <li>Residential unit counselor </li>
-          </ul>
-        </li>
-      </ul>
+      <div className="professional-accolades-list">
+        <ul>
+          <li>
+            Licensed Professional Counselor: Georgia Composite Board of
+            Professional Counselors, Social Workers, and Marriage &amp; Family
+            Therapist
+          </li>
+          <li>
+            Master of Science concentration Community Counseling: Columbus State
+            University
+          </li>
+          <li>Bachelor of Science concentration Psychology-Wesleyan College</li>
+          <li>EMDR Institute trained provider (EMDRIA certification in progress)</li>
+          <li>
+            Over 15 years of clinical experience:
+            <ul>
+              <li>
+                Management of an Acute Psychiatric Intake Team located in the ER
+              </li>
+              <li>Outpatient trauma counselor </li>
+              <li>Acute psychiatric unit counselor</li>
+              <li>Grief &amp; loss counselor</li>
+              <li>Residential unit counselor </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
