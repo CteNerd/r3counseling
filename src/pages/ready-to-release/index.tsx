@@ -7,7 +7,7 @@ export default function ReadyToRelease() {
       <p>
         Are you ready to schedule your initial free 15 minute consultations? Do
         you have a quick question? Please send us a message. This message does
-        not establish you as a client of R3. Our typical response time is within
+        not establish you as a client of Release Restore Redefine. Our typical response time is within
         24 business hours.
       </p>
 

@@ -14,7 +14,7 @@ export default function Offerings() {
       </p>
       <h2>Consultation &amp; Training</h2>
       <p>
-        R3 is eager to serve the community by providing consulting and training
+        Release Restore Redefine is eager to serve the community by providing consulting and training
         to enhance mental health awareness and education. Contact us to discuss
         ways we can help your organization.
       </p>
