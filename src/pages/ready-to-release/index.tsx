@@ -37,7 +37,7 @@ export default function ReadyToRelease() {
           Simple Practice Widget
         </a>
       </div>
-      <iframe src={widget}></iframe>
+      {/* <iframe src={widget}></iframe> */}
     </div>
   );
 }
