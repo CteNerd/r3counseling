@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./r3.css";
-var widget = require('./simple-practice-widget.html')
 
 export default function ReadyToRelease() {
   useEffect(() => {
