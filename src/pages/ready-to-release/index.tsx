@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./r3.css";
+var widget = require('./simple-practice-widget.html')
 
 export default function ReadyToRelease() {
   return (
@@ -36,7 +37,7 @@ export default function ReadyToRelease() {
           Simple Practice Widget
         </a>
       </div>
-      <script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>
+      <iframe src={widget}></iframe>
     </div>
   );
 }
