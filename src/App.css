@@ -169,7 +169,7 @@ a:hover {
 
 h1 {
   font-size: 34px;
-  font-weight: 400;
+  font-weight: bolder;
   margin: 10px 0px;
 }
 
@@ -212,5 +212,5 @@ ol {
 
 @font-face {
   font-family: 'BradleysPen';
-  src: local('BradleysPen'), url(./fonts/Bradleys\ Pen.ttf);
+  src: local('BradleysPen'), url(./fonts/BRADHITC.TTF);
 }
