@@ -1,4 +1,5 @@
 import React from "react";
+import './home.css'
 
 export default function Home() {
   return (
@@ -12,6 +13,9 @@ export default function Home() {
           </blockquote>
           <p className="banner-citation">- Howard Thurman</p>
         </div>
+      </div>
+      <div className="masthead-img-container">
+        <img className="masthead-img" src="https://wellcall-app-cdk.s3.amazonaws.com/tiff-swinging.jpeg"/>
       </div>
       <h1>Let's Come Alive</h1>
       <p>
