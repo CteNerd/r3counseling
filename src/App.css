@@ -4,7 +4,11 @@
 }
 
 .App-header-menu {
-  background-color: rgb(228, 176, 153, 0.6);
+  background-color: #839abf;
+}
+
+.App-header-menu a:hover {
+  color: #84624a;
 }
 
 .banner {
@@ -60,11 +64,12 @@ button {
 }
 
 .ant-menu-horizontal > .ant-menu-item a:hover {
-  color: #839abf;
+  color: #f2cd9d
+  ;
 }
 
 .ant-menu-horizontal > .ant-menu-item a {
-  color: #7f3e19;
+  color: #fff;
 }
 
 .App-logo {
@@ -79,7 +84,6 @@ button {
 }
 
 .App-body {
-  background-color: rgb(227, 182, 129, 0.4);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -120,19 +124,19 @@ h3 {
 }
 
 .App-footer {
-  background-color: #e4b09999;
+  background-color: #839abf;
 }
 
 .footer-link,
 a {
-  color: #7f3e19;
+  color: #fff;
   padding: 5px;
   font-size: 16px;
 }
 
 .footer-link:hover,
 a:hover {
-  color: #839abf;
+  color: #f2cd9d;
 }
 
 h1 {
