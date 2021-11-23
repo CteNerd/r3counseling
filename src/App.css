@@ -53,6 +53,7 @@ button {
 .banner-header {
   text-align: left;
   color: rgb(227, 182, 129);
+  font-size: 34px;
   width: fit-content;
   display: inline-flex;
 }
@@ -84,6 +85,9 @@ button {
 }
 
 .App-body {
+  background: linear-gradient(-45deg, rgb(233, 237, 241, 0.4), rgb(163, 177, 203, 0.4), rgb(242, 205, 157, 0.4));
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -92,6 +96,18 @@ button {
   font-size: calc(10px + 2vmin);
   color: black;
   text-align: left;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 .App-body-container {
@@ -119,8 +135,8 @@ h1,
 h4,
 h2,
 h3 {
-  color: #84624a;
-  font-family: "League Spartan", arial, helvetica, sans-serif;
+  color: #839abf;
+  font-family: LucidaHandwriting;
 }
 
 .App-footer {
@@ -172,3 +188,8 @@ ol {
 }
 
 @import "~antd/dist/antd.css";
+
+@font-face {
+  font-family: 'LucidaHandwriting';
+  src: local('LucidaHandwriting'), url(./fonts/Lucida\ Handwriting\ Italic.ttf);
+}
