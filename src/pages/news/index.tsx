@@ -16,17 +16,22 @@ export default function News() {
         added to our quarterly drawing for Tiffany's Toolbox Giveaway.
       </p>
       <div>
-        <button onClick={() => setNewsletterModalVis(!newsletterModalVis)}>
-          News
-        </button>
+        <a onClick={() => setNewsletterModalVis(!newsletterModalVis)}>
+          <button>
+            Subscribe
+          </button>
+        </a>
         <iframe
           className={newsletterModalVis ? "signup-form" : "hidden-signup"}
           src="https://cdn.forms-content.sg-form.com/7fc8c182-3472-11ec-bd3e-06eb709f0acd"
         />
       </div>
+      <div className="news-list-container">
+
       <ol className="news-list">
         <li>Official site launching Fall 2022</li>
       </ol>
+      </div>
     </div>
   );
 }
