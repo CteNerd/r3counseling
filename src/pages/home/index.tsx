@@ -31,11 +31,11 @@ export default function Home() {
           />
           <img
             className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/COC-logo.jpg"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/COC-logo-removebg.png"
           />
           <img
             className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/EMDRIA.png"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/EMDRIA-logo.png"
           />
           <img
             className="banner-img"
@@ -60,7 +60,7 @@ export default function Home() {
           />
           <img
             className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/anthem-bcbs.jpg"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/anthem-bcbs-logo-removebg.png"
           />
         </div>
       </div>
