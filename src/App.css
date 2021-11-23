@@ -85,9 +85,11 @@ button {
 }
 
 .App-body {
-  background: linear-gradient(-45deg, rgb(233, 237, 241, 0.7), rgb(163, 177, 203, 0.7), rgb(242, 205, 157, 0.7));
+  /* background: linear-gradient(-45deg, rgb(233, 237, 241, 0.7), rgb(163, 177, 203, 0.7), rgb(242, 205, 157, 0.7));
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite; */
+  background: url("https://wellcall-app-cdk.s3.amazonaws.com/Attachment-1.jpeg");
+  background-size: cover;
   min-height: 86vh;
   display: flex;
   flex-direction: column;
