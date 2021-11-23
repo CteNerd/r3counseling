@@ -137,12 +137,16 @@ button {
   }
 }
 
-h1,
 h4,
 h2,
 h3 {
   color: #839abf;
   font-family: LucidaHandwriting;
+}
+
+h1 {
+  color: #839abf;
+  font-family: BradleysPen;
 }
 
 .App-footer {
@@ -204,4 +208,9 @@ ol {
 @font-face {
   font-family: 'LucidaHandwriting';
   src: local('LucidaHandwriting'), url(./fonts/Lucida\ Handwriting\ Italic.ttf);
+}
+
+@font-face {
+  font-family: 'BradleysPen';
+  src: local('BradleysPen'), url(./fonts/Bradleys\ Pen.ttf);
 }
