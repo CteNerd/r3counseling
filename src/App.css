@@ -46,13 +46,12 @@ button {
 }
 
 .banner-container {
-  color: rgb(227, 182, 129);
   font-size: 14px;
 }
 
 .banner-header {
   text-align: left;
-  color: rgb(227, 182, 129);
+  margin-right: 10px;
   font-size: 34px;
   width: fit-content;
   display: inline-flex;
@@ -184,6 +183,10 @@ ol {
 @media only screen and (max-width: 600px) {
   .body-img-right {
     width: 100%;
+  }
+
+  .banner-header {
+    margin-right: none;
   }
 }
 

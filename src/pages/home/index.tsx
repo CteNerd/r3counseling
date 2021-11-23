@@ -24,7 +24,7 @@ export default function Home() {
       </p>
       <div className="banner">
         <div className="banner-container">
-          <p className="banner-header">Find me on:</p>
+          <h1 className="banner-header">Find me on :</h1>
           <img
             className="banner-img"
             src="https://secureservercdn.net/198.71.233.229/41m.3eb.myftpupload.com/wp-content/uploads/2020/09/0009_psychology-today-logo.png?time=1634477867"
