@@ -66,6 +66,10 @@ export default function Home() {
             className="banner-img"
             src="https://wellcall-app-cdk.s3.amazonaws.com/anthem-bcbs-logo-removebg.png"
           />
+          <img
+            className="banner-img"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/oscar-removebg.png"
+          />
         </div>
       </div>
     </div>
