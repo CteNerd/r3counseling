@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./about.css";
 
-export default function AboutMe() {
+interface Props {
+  isMobile: boolean;
+}
+
+export default function AboutMe(props: Props) {
+
   return (
     <div>
       <h1>About Me</h1>
@@ -45,35 +50,49 @@ export default function AboutMe() {
         environment. During your journey, you deserve to be supported as you
         release, restore and redefine!
       </p>
-      <h4>Professional Journey at a Glance</h4>
-      <div className="professional-accolades-list">
-        <ul>
-          <li>
-            Licensed Professional Counselor: Georgia Composite Board of
-            Professional Counselors, Social Workers, and Marriage &amp; Family
-            Therapist
-          </li>
-          <li>
-            EMDR Institute trained provider (EMDRIA certification in progress)
-          </li>
-          <li>
-            Master of Science concentration Community Counseling: Columbus State
-            University
-          </li>
-          <li>Bachelor of Science concentration Psychology-Wesleyan College</li>
-          <li>
-            Over 15 years of clinical experience:
+      <div style={{display: props.isMobile ? "block" : "flex"}}>
+        <div className="journey-container-img-container" style={{textAlign: props.isMobile ? "center" : "inherit"}}>
+          <img
+            className="journey-container-img"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/tiff-profile.jpeg"
+          />
+        </div>
+        <div className={ props.isMobile ? "col-100" : "col-66"}>
+          <h4>Professional Journey at a Glance</h4>
+          <div className="professional-accolades-list">
             <ul>
               <li>
-                Management of an Acute Psychiatric Intake Team located in the ER
+                Licensed Professional Counselor: Georgia Composite Board of
+                Professional Counselors, Social Workers, and Marriage &amp;
+                Family Therapist
               </li>
-              <li>Outpatient trauma counselor </li>
-              <li>Acute psychiatric unit counselor</li>
-              <li>Grief &amp; loss counselor</li>
-              <li>Residential unit counselor </li>
+              <li>
+                EMDR Institute trained provider (EMDRIA certification in
+                progress)
+              </li>
+              <li>
+                Master of Science concentration Community Counseling: Columbus
+                State University
+              </li>
+              <li>
+                Bachelor of Science concentration Psychology-Wesleyan College
+              </li>
+              <li>
+                Over 15 years of clinical experience:
+                <ul>
+                  <li>
+                    Management of an Acute Psychiatric Intake Team located in
+                    the ER
+                  </li>
+                  <li>Outpatient trauma counselor </li>
+                  <li>Acute psychiatric unit counselor</li>
+                  <li>Grief &amp; loss counselor</li>
+                  <li>Residential unit counselor </li>
+                </ul>
+              </li>
             </ul>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </div>
   );

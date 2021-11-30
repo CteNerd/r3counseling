@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
@@ -20,6 +20,12 @@ import News from "./pages/news";
 
 function App() {
   const [selectedMenuKey, setSelectedMenuKey] = useState("");
+  const breakpoint = window.matchMedia("(max-width: 1279px)");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(breakpoint.matches);
+  }, []);
 
   function handleMenuClick(key: string) {
     console.log(key);
@@ -66,7 +72,7 @@ function App() {
       renders the first one that matches the current URL. */}
             <Switch>
               <Route path="/about">
-                <About />
+                <About isMobile={isMobile}/>
               </Route>
               <Route path="/terms">
                 <Terms />

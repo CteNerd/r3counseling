@@ -66,8 +66,7 @@ button {
 }
 
 .ant-menu-horizontal > .ant-menu-item a:hover {
-  color: #000
-  ;
+  color: #000;
 }
 
 .ant-menu-horizontal > .ant-menu-item a {
@@ -103,13 +102,13 @@ button {
 
 @keyframes gradient {
   0% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
   100% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 }
 
@@ -193,6 +192,22 @@ ol {
   font-size: 16px;
 }
 
+.col-100 {
+  width: 100%;
+}
+
+.col-50 {
+  width: 50%;
+}
+
+.col-33 {
+  width: 33%;
+}
+
+.col-66 {
+  width: 66%;
+}
+
 @media only screen and (max-width: 600px) {
   .body-img-right {
     width: 100%;
@@ -206,11 +221,11 @@ ol {
 @import "~antd/dist/antd.css";
 
 @font-face {
-  font-family: 'LucidaHandwriting';
-  src: local('LucidaHandwriting'), url(./fonts/Lucida\ Handwriting\ Italic.ttf);
+  font-family: "LucidaHandwriting";
+  src: local("LucidaHandwriting"), url(./fonts/Lucida\ Handwriting\ Italic.ttf);
 }
 
 @font-face {
-  font-family: 'BradleysPen';
-  src: local('BradleysPen'), url(./fonts/BRADHITC.TTF);
+  font-family: "BradleysPen";
+  src: local("BradleysPen"), url(./fonts/BRADHITC.TTF);
 }

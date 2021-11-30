@@ -17,9 +17,7 @@ export default function News() {
       </p>
       <div>
         <a onClick={() => setNewsletterModalVis(!newsletterModalVis)}>
-          <button>
-            Subscribe
-          </button>
+          <button>Subscribe</button>
         </a>
         <iframe
           className={newsletterModalVis ? "signup-form" : "hidden-signup"}
@@ -27,10 +25,9 @@ export default function News() {
         />
       </div>
       <div className="news-list-container">
-
-      <ol className="news-list">
-        <li>Official site launching Fall 2022</li>
-      </ol>
+        <ol className="news-list">
+          <li>Official site launching Fall 2022</li>
+        </ol>
       </div>
     </div>
   );
