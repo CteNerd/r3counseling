@@ -4,3 +4,9 @@
 .masthead-img {
   max-width: 100%;
 }
+
+.banner-container {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+}
