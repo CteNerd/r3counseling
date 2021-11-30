@@ -30,6 +30,14 @@ button {
   color: #7f3e19;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: revert;
+}
+
 .newsletter-btn {
   position: fixed;
   bottom: 120px;

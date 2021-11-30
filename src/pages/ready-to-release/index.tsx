@@ -32,8 +32,8 @@ export default function ReadyToRelease() {
         >
           <button>Grow Therapy Appt</button>
         </a>
-        <a href="https://tiffany-luke.clientsecure.me" target="_blank">
-          <button>Simple Practice</button>
+        <a aria-disabled={true} href="https://tiffany-luke.clientsecure.me" target="_blank">
+          <button disabled={true}>Simple Practice</button>
         </a>
       </div>
       <div id="widget"></div>
