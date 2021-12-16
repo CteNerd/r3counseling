@@ -1,4 +1,5 @@
 import React from "react";
+import "./home.css";
 
 export default function Home() {
   return (
@@ -13,6 +14,12 @@ export default function Home() {
           <p className="banner-citation">- Howard Thurman</p>
         </div>
       </div>
+      <div className="masthead-img-container">
+        <img
+          className="masthead-img"
+          src="https://wellcall-app-cdk.s3.amazonaws.com/tiff-swinging.jpeg"
+        />
+      </div>
       <h1>Let's Come Alive</h1>
       <p>
         Are you emotionally constipated? Are you trapped in your mask? Is your
@@ -24,18 +31,18 @@ export default function Home() {
       </p>
       <div className="banner">
         <div className="banner-container">
-          <h1 className="banner-header">Find me on:</h1>
+          <h1 className="banner-header">Find me on :</h1>
           <img
             className="banner-img"
             src="https://secureservercdn.net/198.71.233.229/41m.3eb.myftpupload.com/wp-content/uploads/2020/09/0009_psychology-today-logo.png?time=1634477867"
           />
           <img
             className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/COC-logo.jpg"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/COC-logo-removebg.png"
           />
           <img
             className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/EMDRIA.png"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/EMDRIA-logo.png"
           />
           <img
             className="banner-img"
@@ -60,7 +67,11 @@ export default function Home() {
           />
           <img
             className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/anthem-bcbs.jpg"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/anthem-bcbs-logo-removebg.png"
+          />
+          <img
+            className="banner-img"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/oscar-removebg.png"
           />
         </div>
       </div>

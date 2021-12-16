@@ -1,3 +1,7 @@
+.news-list-container {
+  padding: 10px 0px;
+}
+
 .news-list {
   text-align: justify;
 }

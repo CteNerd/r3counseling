@@ -1,3 +1,38 @@
 .professional-accolades-list {
   text-align: left;
 }
+
+.journey-container {
+  display: flex;
+}
+
+.journey-container-img-container {
+  padding: 5px;
+}
+
+.journey-container-img {
+  max-height: 500px;
+}
+
+.journey-container-list {
+  width: 50%;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .journey-container-img-container {
+    text-align: center;
+  }
+
+  .journey-container {
+    display: block;
+  }
+
+  .journey-container-img {
+    width: 75%;
+  }
+  
+  .journey-container-list {
+    width: 75%;
+  }
+}
