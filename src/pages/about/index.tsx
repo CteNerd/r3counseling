@@ -10,8 +10,8 @@ export default function AboutMe(props: Props) {
     <div>
       <h1>About Me</h1>
       <h4>
-        Meet the Tiffany Luke, Licensed Professional Counselor, EMDRIA trained, EMDR
-        provider{" "}
+        Meet the Tiffany Luke, Licensed Professional Counselor, EMDRIA trained,
+        EMDR provider{" "}
       </h4>
       <p>Hey, hey! I’m Tiffany.</p>
       <p>
@@ -67,16 +67,16 @@ export default function AboutMe(props: Props) {
                 Licensed Professional Counselor: Georgia Composite Board of
                 Professional Counselors, Social Workers, and Marriage &amp;
                 Family Therapist
-              <li>
-                Master of Science concentration Community Counseling: Columbus
-                State University
-              </li>
-              <li>
-                Bachelor of Science concentration Psychology-Wesleyan College
-              </li>
-              <li>
-              EMDRIA Trained, EMDR provider (certification in progress)
-              </li>
+                <li>
+                  Master of Science concentration Community Counseling: Columbus
+                  State University
+                </li>
+                <li>
+                  Bachelor of Science concentration Psychology-Wesleyan College
+                </li>
+                <li>
+                  EMDRIA Trained, EMDR provider (certification in progress)
+                </li>
               </li>
               <li>
                 Over 15 years of clinical experience:

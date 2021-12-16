@@ -75,7 +75,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <h1 style={{textAlign:'center'}}>Take your voice back. BE YOU!</h1>
+      <h1 style={{ textAlign: "center" }}>Take your voice back. BE YOU!</h1>
     </div>
   );
 }
