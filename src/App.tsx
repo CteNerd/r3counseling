@@ -72,7 +72,7 @@ function App() {
       renders the first one that matches the current URL. */}
             <Switch>
               <Route path="/about">
-                <About isMobile={isMobile}/>
+                <About isMobile={isMobile} />
               </Route>
               <Route path="/terms">
                 <Terms />

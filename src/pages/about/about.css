@@ -18,7 +18,6 @@
   width: 50%;
 }
 
-
 @media only screen and (max-width: 600px) {
   .journey-container-img-container {
     text-align: center;
@@ -31,7 +30,7 @@
   .journey-container-img {
     width: 75%;
   }
-  
+
   .journey-container-list {
     width: 75%;
   }

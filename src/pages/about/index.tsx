@@ -6,7 +6,6 @@ interface Props {
 }
 
 export default function AboutMe(props: Props) {
-
   return (
     <div>
       <h1>About Me</h1>
@@ -50,14 +49,17 @@ export default function AboutMe(props: Props) {
         environment. During your journey, you deserve to be supported as you
         release, restore and redefine!
       </p>
-      <div style={{display: props.isMobile ? "block" : "flex"}}>
-        <div className="journey-container-img-container" style={{textAlign: props.isMobile ? "center" : "inherit"}}>
+      <div style={{ display: props.isMobile ? "block" : "flex" }}>
+        <div
+          className="journey-container-img-container"
+          style={{ textAlign: props.isMobile ? "center" : "inherit" }}
+        >
           <img
             className="journey-container-img"
             src="https://wellcall-app-cdk.s3.amazonaws.com/tiff-profile.jpeg"
           />
         </div>
-        <div className={ props.isMobile ? "col-100" : "col-66"}>
+        <div className={props.isMobile ? "col-100" : "col-66"}>
           <h4>Professional Journey at a Glance</h4>
           <div className="professional-accolades-list">
             <ul>

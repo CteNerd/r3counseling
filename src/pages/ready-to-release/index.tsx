@@ -32,26 +32,14 @@ export default function ReadyToRelease() {
         >
           <button>Grow Therapy Appt</button>
         </a>
-        <a aria-disabled={true} href="https://tiffany-luke.clientsecure.me" target="_blank">
+        <a
+          aria-disabled={true}
+          href="https://tiffany-luke.clientsecure.me"
+          target="_blank"
+        >
           <button disabled={true}>Simple Practice</button>
         </a>
       </div>
-
-      <div className="spwidget-button-wrapper">
-        <a
-          href="https://tiffany-luke.clientsecure.me"
-          className="spwidget-button"
-          data-spwidget-scope-id="b429046b-2ff3-4502-9bc6-451911b33ad0"
-          data-spwidget-scope-uri="tiffany-luke"
-          data-spwidget-application-id="7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b"
-          data-spwidget-scope-global
-          data-spwidget-autobind
-          target="_blank"
-        >
-          Simple Practice Widget
-        </a>
-      </div>
-      <script src="https://widget-cdn.simplepractice.com/assets/integration-1.0.js"></script>
     </div>
   );
 }
