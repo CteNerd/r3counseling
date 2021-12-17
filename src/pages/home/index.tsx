@@ -46,7 +46,7 @@ export default function Home() {
           />
           <img
             className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/TFBG-logo-black.jpg"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/TFBG-logo.jpg"
           />
         </div>
       </div>
