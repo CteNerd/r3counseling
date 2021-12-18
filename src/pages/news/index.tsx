@@ -37,7 +37,7 @@ export default function News(props: Props) {
       <div>
         <h1>Resources to Release</h1>
         <div style={{ display: props.isMobile ? "block" : "flex" }}>
-          <div
+          {/* <div
             className="help-app-img-container"
             style={{ textAlign: props.isMobile ? "center" : "inherit" }}
           >
@@ -47,7 +47,7 @@ export default function News(props: Props) {
                 "https://wellcall-app-cdk.s3.amazonaws.com/Man-making-phone-call.jpeg"
               }
             />
-          </div>
+          </div> */}
           <div>
             <ul>
               <li>
