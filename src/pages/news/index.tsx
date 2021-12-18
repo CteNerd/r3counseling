@@ -51,7 +51,7 @@ export default function News(props: Props) {
           <div>
             <ul>
               <li>
-                <a href="tel:18007154225">Georgia Crisiis Access Line</a>
+                <a href="tel:18007154225">Georgia Crisis Access Line</a>
                 <ul>
                   <li>
                     Available 24 hours a day/7 days per week. Available to help
