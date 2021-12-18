@@ -146,17 +146,6 @@ export default function News(props: Props) {
         <div>
           <h4>Help at Your Fingertips... Apps to Download</h4>
           <div style={{ display: props.isMobile ? "block" : "flex" }}>
-            <div
-              className="help-app-img-container"
-              style={{ textAlign: props.isMobile ? "center" : "inherit" }}
-            >
-              <img
-                className="help-app-img"
-                src={
-                  "https://wellcall-app-cdk.s3.amazonaws.com/help-app-img.jpeg"
-                }
-              />
-            </div>
             <div className="help-app-container">
               <h5>My GCal App</h5>
               <p>
