@@ -16,6 +16,14 @@ export default function ReadyToRelease() {
   return (
     <div id="r3">
       <h1>Ready to Release</h1>
+      <div className={"reception-img-container"}>
+        <img
+          className="reception-img"
+          src={
+            "https://wellcall-app-cdk.s3.amazonaws.com/Front-Desk-Check-in.jpeg"
+          }
+        />
+      </div>
       <p>
         Are you ready to schedule your initial free 15 minute consultations? Do
         you have a quick question? Please send us a message. This message does

@@ -23,3 +23,14 @@
   color: rgba(255, 255, 255, 0.75) !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
 }
+
+.reception-img-container {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.reception-img {
+  max-height: 50vh;
+  max-width: 100%;
+}

@@ -1,9 +1,20 @@
 import React from "react";
+import "./offerings.css";
 
-export default function Offerings() {
+interface Props {
+  isMobile: boolean;
+}
+
+export default function Offerings(props: Props) {
   return (
     <div>
       <h1>Offerings</h1>
+      <div className={"session-img-container"}>
+        <img
+          className="session-img"
+          src={"https://wellcall-app-cdk.s3.amazonaws.com/session.jpeg"}
+        />
+      </div>
       <h2>Individual Therapy</h2>
       <p>
         Let’s talk one-on-one in a safe, non-judgmental, relaxed, and supportive

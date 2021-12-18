@@ -1,8 +1,6 @@
 import { AndroidOutlined, AppleOutlined } from "@ant-design/icons";
 import { Modal } from "antd";
 import React, { useState } from "react";
-import helpImg from "./help-app-img.jpeg";
-import manCallImg from "./Man-making-phone-call.jpeg";
 import "./news.css";
 
 interface Props {
@@ -39,103 +37,110 @@ export default function News(props: Props) {
       <div>
         <h1>Resources to Release</h1>
         <div style={{ display: props.isMobile ? "block" : "flex" }}>
-            <div
-              className="help-app-img-container"
-              style={{ textAlign: props.isMobile ? "center" : "inherit" }}
-            >
-              <img className="help-app-img" src={manCallImg} />
-            </div>
-        <div>
-          <ul>
-            <li>
-              <a href="tel:18007154225">Georgia Crisiis Access Line</a>
-              <ul>
-                <li>
-                  Available 24 hours a day/7 days per week. Available to help
-                  anyone in crisis. Also, a provider for a COMP Waiver
-                  Application
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="tel:18443265400">
-                CARES Warm Line (Georgia Certified Addiction Recovery
-                Specialist)
-              </a>
-              <ul>
-                <li>
-                  Certified Addiction Specialist to provide support for those
-                  with substance abuse challenges. Call or text daily 8:30
-                  am-11:00 pm (time subject to change){" "}
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="tel:18663998938">
-                Georgia COVID-19 Emotional Support Line
-              </a>
-              <ul>
-                <li>
-                  Providing free and confidential emotional support and
-                  resources to anyone daily from 8:00 am-11:00 pm (time subject
-                  to change){" "}
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="tel:7067363094">
-                National Alliance on Mental Illness (NAMI)
-              </a>
-              <ul>
-                <li>
-                  Provider of support groups, education, and advocacy for
-                  individuals and family impacted by mental illness needs
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="tel:18007296686">
-                Substance Abuse and Mental Health Services Administration
-              </a>
-              <ul>
-                <li>Call 1-800-729-6686 or 1-800-789-2647</li>
-              </ul>
-            </li>
-            <li>
-              <a href="tel:7069450920">Focus on Reocvery</a>
-              <ul>
-                <li>
-                  Recovery Community Organization which focuses on ensuring
-                  individuals or families are empowered to lead healthy lives as
-                  they seek recovery
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="tel:18775658860">Trans Peer Support Lifeline</a>
-              <ul>
-                <li>
-                  Providing direct emotional and financial support to those in
-                  crisis. Available 24 hours a day/7 days per week
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="tel:18002738255,1">Veterans Crisis Line</a>
-              <ul>
-                <li>
-                  Confidential line for Veterans needing emotional support.
-                  Available 24 hours a day/7 days per week
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="tel:18002738255">National Suicide Prevention Lifeline</a>
-              <ul>
-                <li>Free emotional support and resource line</li>
-              </ul>
-            </li>
-          </ul>
+          <div
+            className="help-app-img-container"
+            style={{ textAlign: props.isMobile ? "center" : "inherit" }}
+          >
+            <img
+              className="help-app-img"
+              src={
+                "https://wellcall-app-cdk.s3.amazonaws.com/Man-making-phone-call.jpeg"
+              }
+            />
+          </div>
+          <div>
+            <ul>
+              <li>
+                <a href="tel:18007154225">Georgia Crisiis Access Line</a>
+                <ul>
+                  <li>
+                    Available 24 hours a day/7 days per week. Available to help
+                    anyone in crisis. Also, a provider for a COMP Waiver
+                    Application
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="tel:18443265400">
+                  CARES Warm Line (Georgia Certified Addiction Recovery
+                  Specialist)
+                </a>
+                <ul>
+                  <li>
+                    Certified Addiction Specialist to provide support for those
+                    with substance abuse challenges. Call or text daily 8:30
+                    am-11:00 pm (time subject to change){" "}
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="tel:18663998938">
+                  Georgia COVID-19 Emotional Support Line
+                </a>
+                <ul>
+                  <li>
+                    Providing free and confidential emotional support and
+                    resources to anyone daily from 8:00 am-11:00 pm (time
+                    subject to change){" "}
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="tel:7067363094">
+                  National Alliance on Mental Illness (NAMI)
+                </a>
+                <ul>
+                  <li>
+                    Provider of support groups, education, and advocacy for
+                    individuals and family impacted by mental illness needs
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="tel:18007296686">
+                  Substance Abuse and Mental Health Services Administration
+                </a>
+                <ul>
+                  <li>Call 1-800-729-6686 or 1-800-789-2647</li>
+                </ul>
+              </li>
+              <li>
+                <a href="tel:7069450920">Focus on Reocvery</a>
+                <ul>
+                  <li>
+                    Recovery Community Organization which focuses on ensuring
+                    individuals or families are empowered to lead healthy lives
+                    as they seek recovery
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="tel:18775658860">Trans Peer Support Lifeline</a>
+                <ul>
+                  <li>
+                    Providing direct emotional and financial support to those in
+                    crisis. Available 24 hours a day/7 days per week
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="tel:18002738255,1">Veterans Crisis Line</a>
+                <ul>
+                  <li>
+                    Confidential line for Veterans needing emotional support.
+                    Available 24 hours a day/7 days per week
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="tel:18002738255">
+                  National Suicide Prevention Lifeline
+                </a>
+                <ul>
+                  <li>Free emotional support and resource line</li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
         <div>
@@ -145,7 +150,12 @@ export default function News(props: Props) {
               className="help-app-img-container"
               style={{ textAlign: props.isMobile ? "center" : "inherit" }}
             >
-              <img className="help-app-img" src={helpImg} />
+              <img
+                className="help-app-img"
+                src={
+                  "https://wellcall-app-cdk.s3.amazonaws.com/help-app-img.jpeg"
+                }
+              />
             </div>
             <div className="help-app-container">
               <h5>My GCal App</h5>

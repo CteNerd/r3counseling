@@ -81,7 +81,7 @@ function App() {
                 <News isMobile={isMobile} />
               </Route>
               <Route path="/offerings">
-                <Offerings />
+                <Offerings isMobile={isMobile} />
               </Route>
               <Route path="/ready-to-release">
                 <ReadyToRelease />
