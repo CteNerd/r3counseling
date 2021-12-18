@@ -9,3 +9,24 @@
 .hidden-signup {
   display: none;
 }
+
+.journey-container {
+  display: flex;
+}
+
+.help-app-img-container {
+  padding: 5px;
+}
+
+.help-app-container {
+  border: 2px solid grey;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: 5px 5px 5px grey;
+  text-align: center;
+}
+
+.help-app-img {
+  max-height: 500px;
+}

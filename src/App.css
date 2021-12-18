@@ -77,6 +77,10 @@ button:disabled {
   color: #839abf;
 }
 
+.ant-menu-horizontal > .ant-menu-item a:hover {
+  color: #765039;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -142,7 +146,8 @@ button:disabled {
 
 h4,
 h2,
-h3 {
+h3,
+h5 {
   color: #839abf;
   font-family: LucidaHandwriting;
 }
@@ -167,7 +172,7 @@ a {
 
 .footer-link:hover,
 a:hover {
-  color: #000;
+  color: #765039;
 }
 
 h1 {
@@ -178,7 +183,7 @@ h1 {
 
 h2 {
   font-size: 30px;
-  font-weight: 400;
+  /* font-weight: 400; */
 }
 
 h3 {
@@ -188,6 +193,10 @@ h3 {
 
 h4 {
   font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
 }
 
 p,
