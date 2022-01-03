@@ -36,10 +36,9 @@ export default function Home() {
             className="banner-img"
             src="https://secureservercdn.net/198.71.233.229/41m.3eb.myftpupload.com/wp-content/uploads/2020/09/0009_psychology-today-logo.png?time=1634477867"
           />
-          <img
-            className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/COC-logo-removebg.png"
-          />
+          <a href="https://www.cliniciansofcolor.org:443/clinicians/tiffany-luke-lpc/" target="_blank" rel="external nofollow">
+            <img src="https://www.cliniciansofcolor.org/wp-content/uploads/2021/06/cocbdge-e1624452955918.png" />
+          </a>
           <img
             className="banner-img"
             src="https://wellcall-app-cdk.s3.amazonaws.com/EMDRIA-logo.png"
