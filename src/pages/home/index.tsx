@@ -49,7 +49,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <h1>Empowerment | Support | Alliance | Safety</h1>
+      <h1>Empowerment | Support | Alliance | Safety </h1>
       <p>
         Are you ready to thrive and come alive, while continuing on your
         journey? If so, I am here to align with you, become your ally, explore
