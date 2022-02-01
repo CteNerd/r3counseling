@@ -24,11 +24,10 @@ export default function Offerings(props: Props) {
           your emotions and thoughts on present behaviors. Let’s align to
           RELEASE, RESTORE and REDEFINE the next phase of your journey!
         </p>
-        <div>
+        <div className="highlight-vid-container">
           <h3>EMDR at a Glance</h3>
           <iframe
-            width="560"
-            height="315"
+            className="highlight-vid"
             src="https://www.youtube.com/embed/Pkfln-ZtWeY"
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
