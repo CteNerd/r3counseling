@@ -15,20 +15,34 @@ export default function Offerings(props: Props) {
           src={"https://wellcall-app-cdk.s3.amazonaws.com/session.jpeg"}
         />
       </div>
-      <h2>Individual Therapy</h2>
-      <p>
-        Let’s talk one-on-one in a safe, non-judgmental, relaxed, and supportive
-        environment. Allow me to gain an understanding of your past and present
-        experiences through your lens. Let’s explore the impact of your emotions
-        and thoughts on present behaviors. Let’s align to RELEASE, RESTORE and
-        REDEFINE the next phase of your journey!
-      </p>
-      <h2>Consultation &amp; Training</h2>
-      <p>
-        R3 is eager to serve the community by providing consulting and training
-        to enhance mental health awareness and education. Contact us to discuss
-        ways we can help your organization.
-      </p>
+      <div>
+        <h2>Individual Therapy</h2>
+        <p>
+          Let’s talk one-on-one in a safe, non-judgmental, relaxed, and
+          supportive environment. Allow me to gain an understanding of your past
+          and present experiences through your lens. Let’s explore the impact of
+          your emotions and thoughts on present behaviors. Let’s align to
+          RELEASE, RESTORE and REDEFINE the next phase of your journey!
+        </p>
+        <div className="highlight-vid-container">
+          <h3>EMDR at a Glance</h3>
+          <iframe
+            className="highlight-vid"
+            src="https://www.youtube.com/embed/Pkfln-ZtWeY"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
+      <div>
+        <h2>Consultation &amp; Training</h2>
+        <p>
+          R3 is eager to serve the community by providing consulting and
+          training to enhance mental health awareness and education. Contact us
+          to discuss ways we can help your organization.
+        </p>
+      </div>
       <h2>Clinical Supervision: Coming Soon!!! Fall 2022</h2>
     </div>
   );
