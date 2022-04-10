@@ -18,6 +18,28 @@
   color: #84624a;
 }
 
+.App-header .menu-btn {
+  vertical-align: middle;
+  float: right;
+  padding: 1vh;
+  min-height: 10vh;
+}
+
+.menu-btn:hover {
+  cursor: pointer;
+}
+
+.App-header .menu-line:hover {
+  cursor: pointer;
+}
+
+.App-header .menu-line {
+  width: 35px;
+  height: 5px;
+  background-color: #839abf;
+  margin: 6px 0;
+}
+
 .menu-img {
   max-height: 110px;
 }
@@ -237,6 +259,12 @@ ol {
 
   .banner-header {
     margin-right: none;
+  }
+
+  .menu-img {
+    float: left;
+    margin: 0px 0px 0px 10px;
+    max-height: 110px;
   }
 }
 

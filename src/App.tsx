@@ -16,6 +16,7 @@ import {
   InstagramOutlined,
   LinkedinOutlined,
 } from "@ant-design/icons";
+import SideNav from "./components/sideNav/sideNav"
 import News from "./pages/news";
 
 function App() {
@@ -28,45 +29,72 @@ function App() {
   }, []);
 
   function handleMenuClick(key: string) {
-    console.log(key);
     setSelectedMenuKey(key);
+  }
+
+  /* Set the width of the side navigation to 250px */
+  function openNav() {
+    console.log('opening');
+    if (document.getElementById("mySidenav")) {
+      document.getElementById("mySidenav")!.style.width = "100%";
+    }
+  }
+
+  function Navigation() {
+    if (isMobile) {
+      return (
+        <div>
+          <img className="menu-img" src="https://wellcall-app-cdk.s3.amazonaws.com/R3+Counseling+Logo+-+Final-01-Transparentv2.png"/>
+        <div className="menu-btn" onClick={() => openNav()}>
+          <div className="menu-line"></div>
+          <div className="menu-line"></div>
+          <div className="menu-line"></div>
+        </div>
+        </div>
+      );
+    } else {
+      return (
+        <Menu
+          onClick={(e) => handleMenuClick(e.key)}
+          selectedKeys={[selectedMenuKey]}
+          mode="horizontal"
+          className="App-header-menu"
+        >
+          <Menu.Item key="home">
+            <a className="menu-item" href="/">
+              Home
+            </a>
+          </Menu.Item>
+          <Menu.Item key="about">
+            <a href="/about">About Me</a>
+          </Menu.Item>
+          <Menu.Item key="offerings">
+            <a href="/offerings">Offerings</a>
+          </Menu.Item>
+        <Menu.Item key="img">
+          <img className="menu-img" src="https://wellcall-app-cdk.s3.amazonaws.com/R3+Counseling+Logo+-+Final-01-Transparentv2.png"/>
+        </Menu.Item>
+          <Menu.Item key="contact">
+            <a href="/ready-to-release">Ready to Release</a>
+          </Menu.Item>
+          <Menu.Item key="terms">
+            <a href="/terms">Terms</a>
+          </Menu.Item>
+          <Menu.Item key="news">
+            <a href="/news">News</a>
+          </Menu.Item>
+        </Menu>
+      );
+    }
   }
 
   return (
     <Router>
       <div className="App">
+        <SideNav />
         <header className="App-header">
           <div>
-            <Menu
-              onClick={(e) => handleMenuClick(e.key)}
-              selectedKeys={[selectedMenuKey]}
-              mode="horizontal"
-              className="App-header-menu"
-            >
-              <Menu.Item key="home">
-                <a className="menu-item" href="/">
-                  Home
-                </a>
-              </Menu.Item>
-              <Menu.Item key="about">
-                <a href="/about">About Me</a>
-              </Menu.Item>
-              <Menu.Item key="offerings">
-                <a href="/offerings">Offerings</a>
-              </Menu.Item>
-            <Menu.Item key="img">
-              <img className="menu-img" src="https://wellcall-app-cdk.s3.amazonaws.com/R3+Counseling+Logo+-+Final-01-Transparentv2.png"/>
-            </Menu.Item>
-              <Menu.Item key="contact">
-                <a href="/ready-to-release">Ready to Release</a>
-              </Menu.Item>
-              <Menu.Item key="terms">
-                <a href="/terms">Terms</a>
-              </Menu.Item>
-              <Menu.Item key="news">
-                <a href="/news">News</a>
-              </Menu.Item>
-            </Menu>
+            <Navigation />
           </div>
         </header>
         <body className="App-body">
