@@ -54,6 +54,9 @@ function App() {
               <Menu.Item key="offerings">
                 <a href="/offerings">Offerings</a>
               </Menu.Item>
+            <Menu.Item key="img">
+              <img className="menu-img" src="https://wellcall-app-cdk.s3.amazonaws.com/R3+Counseling+Logo+-+Final-01-Transparentv2.png"/>
+            </Menu.Item>
               <Menu.Item key="contact">
                 <a href="/ready-to-release">Ready to Release</a>
               </Menu.Item>

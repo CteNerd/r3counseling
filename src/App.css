@@ -3,6 +3,11 @@
   font-family: "League Spartan", arial, helvetica, sans-serif;
 }
 
+.ant-menu-horizontal {
+  justify-content: center;
+  align-items: center;
+}
+
 .App-header-menu {
   background: linear-gradient(-45deg, #d3fbf7, #fbdcd3, #fbf0d3);
   background-size: 400% 400%;
@@ -11,6 +16,10 @@
 
 .App-header-menu a:hover {
   color: #84624a;
+}
+
+.menu-img {
+  max-height: 110px;
 }
 
 .banner {
