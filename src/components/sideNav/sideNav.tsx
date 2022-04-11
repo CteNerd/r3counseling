@@ -55,7 +55,7 @@ export default function SideNav() {
       <a href="/offerings">
         Offerings
       </a>
-      <a href="/contact">
+      <a href="/ready-to-release">
         Ready to Release
       </a>
       <a href="/terms">
