@@ -43,7 +43,7 @@ export default function Offerings(props: Props) {
           to discuss ways we can help your organization.
         </p>
       </div>
-      <h2>Clinical Supervision: Coming Soon!!! Fall 2022</h2>
+      <h2>Clinical Supervision: Coming Soon!!! Winter 2022</h2>
     </div>
   );
 }
