@@ -1,0 +1,88 @@
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  /* background-color: #fae5dc; */
+  background: linear-gradient(-45deg, #d3fbf7, #fbdcd3, #fbf0d3);
+  background-size: 100% 100%;
+  animation: gradient 15s ease infinite;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #839abf;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav .anticon {
+  color: #fff;
+}
+
+.sidenav .biz-icon {
+  max-width: 24px;
+  max-height: 24px;
+  margin: 0px 2px 0px 0px;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  color: #839abf;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  text-align: right;
+}
+
+.sidenav .closebtn:hover {
+  cursor: pointer;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a,
+.dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #839abf;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  margin: 0;
+  text-align: center;
+}
+
+.sidenav .dropdown-container a {
+  padding-left: 30px;
+}
+
+/* On mouse-over */
+.dropdown-btn:hover {
+  color: #fff;
+}
+
+.sidenav a:hover {
+  color: #fff;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}

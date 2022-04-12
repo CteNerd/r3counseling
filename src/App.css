@@ -3,6 +3,11 @@
   font-family: "League Spartan", arial, helvetica, sans-serif;
 }
 
+.ant-menu-horizontal {
+  justify-content: center;
+  align-items: center;
+}
+
 .App-header-menu {
   background: linear-gradient(-45deg, #d3fbf7, #fbdcd3, #fbf0d3);
   background-size: 400% 400%;
@@ -11,6 +16,32 @@
 
 .App-header-menu a:hover {
   color: #84624a;
+}
+
+.App-header .menu-btn {
+  vertical-align: middle;
+  float: right;
+  padding: 1vh;
+  min-height: 10vh;
+}
+
+.menu-btn:hover {
+  cursor: pointer;
+}
+
+.App-header .menu-line:hover {
+  cursor: pointer;
+}
+
+.App-header .menu-line {
+  width: 35px;
+  height: 5px;
+  background-color: #839abf;
+  margin: 6px 0;
+}
+
+.menu-img {
+  max-height: 110px;
 }
 
 .banner {
@@ -228,6 +259,12 @@ ol {
 
   .banner-header {
     margin-right: none;
+  }
+
+  .menu-img {
+    float: left;
+    margin: 0px 0px 0px 10px;
+    max-height: 110px;
   }
 }
 
