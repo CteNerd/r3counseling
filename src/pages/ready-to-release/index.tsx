@@ -35,17 +35,10 @@ export default function ReadyToRelease() {
       <div className="spwidget-button-wrapper">
         <h4>Please Schedule Here</h4>
         <a
-          href="https://provider.growtherapy.com/book-appointment?id=970&ref=prov"
-          target="_blank"
-        >
-          <button>Grow Therapy Appt</button>
-        </a>
-        <a
-          aria-disabled={true}
           href="https://tiffany-luke.clientsecure.me"
           target="_blank"
         >
-          <button disabled={true}>Simple Practice</button>
+          <button>Simple Practice</button>
         </a>
       </div>
     </div>
