@@ -18,7 +18,7 @@ export default function Terms() {
       <p>
         <ul>
           <li>$140 for a 60 minute initial Intake Sessions</li>
-          <li>$115 for a 50 minute Psycotherapy/EMDR session</li>
+          <li>$115 for a 55 minute Psycotherapy/EMDR session</li>
           <li>$165 for a 90 minute Extended Session</li>
         </ul>
       </p>
@@ -28,6 +28,20 @@ export default function Terms() {
       <p>
         A Superbill can be requested and generated, if you would like to submit
         information to your insurance company.
+      </p>
+      <h4>Good Faith Estimate</h4>
+      <p>
+        Under Section 2799B-6 of the Public Health Service Act, health care
+        providers and health care facilities are required to inform individuals
+        who are not enrolled in a plan or coverage or a Federal health care
+        program, or not seeking to file a claim with their plan or coverage both
+        orally and in writing of their ability, upon request or at the time of
+        scheduling health care items and services, to receive a “Good Faith
+        Estimate” of expected charges. You have the right to receive a “Good
+        Faith Estimate” explaining how much your medical care will cost. Under
+        the law, health care providers need to give patients who don’t have
+        insurance or who are not using insurance an estimate of the bill for
+        medical items and services.
       </p>
       <h2>Insured Clients</h2>
       <p>
