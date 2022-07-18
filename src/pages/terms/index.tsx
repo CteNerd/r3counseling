@@ -37,11 +37,16 @@ export default function Terms() {
         program, or not seeking to file a claim with their plan or coverage both
         orally and in writing of their ability, upon request or at the time of
         scheduling health care items and services, to receive a “Good Faith
-        Estimate” of expected charges. You have the right to receive a “Good
-        Faith Estimate” explaining how much your medical care will cost. Under
-        the law, health care providers need to give patients who don’t have
-        insurance or who are not using insurance an estimate of the bill for
-        medical items and services.
+        Estimate” of expected charges.
+      </p>
+      <p>
+        You have the right to receive a “Good Faith Estimate” explaining how
+        much your medical care will cost.
+      </p>
+      <p>
+        Under the law, health care providers need to give patients who don’t
+        have insurance or who are not using insurance an estimate of the bill
+        for medical items and services.
       </p>
       <h2>Insured Clients</h2>
       <p>
