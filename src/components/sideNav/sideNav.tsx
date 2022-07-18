@@ -46,24 +46,12 @@ export default function SideNav() {
       <div className="closebtn" onClick={closeNav}>
         &times;
       </div>
-      <a href="/">
-        Home
-      </a>
-      <a href="/about">
-        About Me
-      </a>
-      <a href="/offerings">
-        Offerings
-      </a>
-      <a href="/ready-to-release">
-        Ready to Release
-      </a>
-      <a href="/terms">
-        Terms
-      </a>
-      <a href="/news">
-        News
-      </a>
+      <a href="/">Home</a>
+      <a href="/about">About Me</a>
+      <a href="/offerings">Offerings</a>
+      <a href="/ready-to-release">Ready to Release</a>
+      <a href="/terms">Terms</a>
+      <a href="/news">News</a>
     </div>
   );
 }

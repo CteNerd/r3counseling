@@ -39,15 +39,15 @@ export default function AboutMe(props: Props) {
         I am here to empower, support and align, while being trustworthy,
         relatable, consistent and professional. I have had the privilege of
         serving in multiple clinical capacities throughout my career. I am
-        passionate and committed to helping individuals heal from
-        sexual trauma, explore traumatic experiences, anxiety, self-esteem,
-        depression and grief.
+        passionate and committed to helping individuals heal from sexual trauma,
+        explore traumatic experiences, anxiety, self-esteem, depression and
+        grief.
       </p>
       <p>
         While being culturally humble, I incorporate Cognitive Behavior Therapy,
-        Somatic Therapy, Mindfulness Therapy, in a person-centered
-        environment. During your journey, you deserve to be supported as you
-        release, restore and redefine!
+        Somatic Therapy, Mindfulness Therapy, in a person-centered environment.
+        During your journey, you deserve to be supported as you release, restore
+        and redefine!
       </p>
       <div style={{ display: props.isMobile ? "block" : "flex" }}>
         <div
@@ -75,7 +75,7 @@ export default function AboutMe(props: Props) {
                   Bachelor of Science concentration Psychology-Wesleyan College
                 </li>
                 <li>
-                EMDR Certified; EMDR provider ASSYST, EMDR-PRECI, EMDR-IGTP
+                  EMDR Certified; EMDR provider ASSYST, EMDR-PRECI, EMDR-IGTP
                 </li>
               </li>
               <li>
