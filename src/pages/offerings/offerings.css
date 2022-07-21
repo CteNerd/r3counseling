@@ -5,9 +5,7 @@
 }
 
 .session-img {
-  width: 100%;
-  max-height: 50vh;
-  max-width: 100%;
+  max-height: 70vh;
 }
 
 .highlight-vid {
@@ -22,5 +20,12 @@
   .highlight-vid {
     height: 315px;
     width: 560px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .session-img {
+    max-width: 100%;
+    max-height: none;
   }
 }

@@ -12,7 +12,7 @@ export default function Offerings(props: Props) {
       <div className={"session-img-container"}>
         <img
           className="session-img"
-          src={"https://wellcall-app-cdk.s3.amazonaws.com/session.jpeg"}
+          src={"https://wellcall-app-cdk.s3.amazonaws.com/Copy+of+Website+Stock+Photos++(800+%C3%97+600+px).png"}
         />
       </div>
       <div>
