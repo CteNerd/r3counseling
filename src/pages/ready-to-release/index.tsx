@@ -35,7 +35,7 @@ export default function ReadyToRelease() {
       <div className="spwidget-button-wrapper">
         <h4>Please Schedule Here</h4>
         <a href="https://tiffany-luke.clientsecure.me" target="_blank">
-          <button>Simple Practice</button>
+          <button title="Schedule With Simple Practice">Schedule Here</button>
         </a>
       </div>
     </div>
