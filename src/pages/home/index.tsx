@@ -80,6 +80,10 @@ export default function Home() {
             className="banner-img"
             src="https://wellcall-app-cdk.s3.amazonaws.com/aetna_purple.jpg"
           />
+          <img
+            className="banner-img"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/Cigna-Logo.png"
+          />
         </div>
       </div>
       <h1 style={{ textAlign: "center" }}>Take your voice back. BE YOU!</h1>
