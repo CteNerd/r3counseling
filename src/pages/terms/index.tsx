@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./terms.css"
+import "./terms.css";
 
 export default function Terms() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -29,7 +29,16 @@ export default function Terms() {
             </a>
           </li>
           <ul>
-            <li><a href={"https://wellcall-app-cdk.s3.amazonaws.com/Poster+-+R3.pdf"} target={"_blank"}>Download PDF</a></li>
+            <li>
+              <a
+                href={
+                  "https://wellcall-app-cdk.s3.amazonaws.com/Poster+-+R3.pdf"
+                }
+                target={"_blank"}
+              >
+                Download PDF
+              </a>
+            </li>
           </ul>
         </ul>
       </p>
@@ -73,11 +82,20 @@ export default function Terms() {
         or you failed to reschedule/cancel 24 hours prior to scheduled
         appointment, you will be automatically charged a $50.00 fee.
       </p>
-      <div id="myModal" className="modal" style={{display: modalOpen ? "block" : "none"}}>
+      <div
+        id="myModal"
+        className="modal"
+        style={{ display: modalOpen ? "block" : "none" }}
+      >
         <div className="modal-content">
-          <span className="close" onClick={() => setModalOpen(false)}>&times;</span>
+          <span className="close" onClick={() => setModalOpen(false)}>
+            &times;
+          </span>
           <video height="100%" autoPlay={true} loop muted>
-            <source src={"https://wellcall-app-cdk.s3.amazonaws.com/Poster+-+R3.mp4"} type="video/mp4"/>
+            <source
+              src={"https://wellcall-app-cdk.s3.amazonaws.com/Poster+-+R3.mp4"}
+              type="video/mp4"
+            />
           </video>
         </div>
       </div>

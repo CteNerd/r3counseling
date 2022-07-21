@@ -44,8 +44,10 @@ export default function Offerings(props: Props) {
         </p>
       </div>
       <div className="coming-soon-container">
-
-      <h3>Clinical Supervision and Trauma Conscious Movement Groups: <br/> Coming soon!! Winter 2022</h3>
+        <h3>
+          Clinical Supervision and Trauma Conscious Movement Groups: <br />{" "}
+          Coming soon!! Winter 2022
+        </h3>
       </div>
     </div>
   );
