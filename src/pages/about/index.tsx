@@ -10,8 +10,8 @@ export default function AboutMe(props: Props) {
     <div>
       <h1>About Me</h1>
       <h4>
-        Meet the Tiffany Luke, Licensed Professional Counselor, EMDRIA Certified,
-        EMDR provider{" "}
+        Meet the Tiffany Luke, Licensed Professional Counselor, EMDRIA
+        Certified, EMDR provider{" "}
       </h4>
       <p>Hey, hey! I’m Tiffany.</p>
       <p>

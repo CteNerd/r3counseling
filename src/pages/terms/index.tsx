@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import "./terms.css"
 
 export default function Terms() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <div>
       <h1>Terms</h1>
@@ -14,12 +17,20 @@ export default function Terms() {
         For more information about consultations, or training, please feel free
         to reach out to The Cookie Counselor.
       </p>
-      <h4>Individual Psycotherapy</h4>
+      <h4>Individual Psychotherapy</h4>
       <p>
         <ul>
           <li>$140 for a 60 minute initial Intake Sessions</li>
           <li>$115 for a 55 minute Psycotherapy/EMDR session</li>
           <li>$165 for a 90 minute Extended Session</li>
+          <li>
+            <a onClick={() => setModalOpen(true)}>
+              Self Pay Package Rate: Individual/EMDR Intensive
+            </a>
+          </li>
+          <ul>
+            <li><a href={"https://wellcall-app-cdk.s3.amazonaws.com/Poster+-+R3.pdf"} target={"_blank"}>Download PDF</a></li>
+          </ul>
         </ul>
       </p>
       <h4>Accepts Payments</h4>
@@ -62,6 +73,14 @@ export default function Terms() {
         or you failed to reschedule/cancel 24 hours prior to scheduled
         appointment, you will be automatically charged a $50.00 fee.
       </p>
+      <div id="myModal" className="modal" style={{display: modalOpen ? "block" : "none"}}>
+        <div className="modal-content">
+          <span className="close" onClick={() => setModalOpen(false)}>&times;</span>
+          <video height="100%" autoPlay={true} loop muted>
+            <source src={"https://wellcall-app-cdk.s3.amazonaws.com/Poster+-+R3.mp4"} type="video/mp4"/>
+          </video>
+        </div>
+      </div>
     </div>
   );
 }
