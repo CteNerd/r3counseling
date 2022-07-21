@@ -91,7 +91,7 @@ export default function Terms() {
           <span className="close" onClick={() => setModalOpen(false)}>
             &times;
           </span>
-          <video height="100%" autoPlay={true} loop muted>
+          <video className="modal-video" autoPlay={true} loop muted>
             <source
               src={"https://wellcall-app-cdk.s3.amazonaws.com/Poster+-+R3.mp4"}
               type="video/mp4"

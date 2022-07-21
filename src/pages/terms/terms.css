@@ -22,6 +22,10 @@
   height: 90%;
 }
 
+.modal-video {
+    height: 100%;
+}
+
 /* The Close Button */
 .close {
   color: #aaa;
@@ -36,3 +40,9 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+    .modal-video {
+        max-width: 100%;
+    }
+  }
