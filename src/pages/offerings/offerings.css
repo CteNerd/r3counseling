@@ -16,6 +16,24 @@
   text-align: center;
 }
 
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  max-width: 100%;
+}
+
+.slide-img {
+  max-height: 50vh;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
 @media only screen and (min-width: 600px) {
   .highlight-vid {
     height: 315px;
