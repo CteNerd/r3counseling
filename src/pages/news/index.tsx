@@ -44,6 +44,12 @@ export default function News(props: Props) {
           <div>
             <ul>
               <li>
+                <a href="tel:988">National Suicide/Mental Health Crisis Line</a>
+                <ul>
+                  <li>Available 24/7/365. Dial or Text 988 for HELP</li>
+                </ul>
+              </li>
+              <li>
                 <a href="tel:18007154225">Georgia Crisis Access Line</a>
                 <ul>
                   <li>
