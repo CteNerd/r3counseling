@@ -1,19 +1,57 @@
 import React from "react";
 import "./offerings.css";
+import Posters from "./posters.json"
 
 interface Props {
   isMobile: boolean;
 }
 
 export default function Offerings(props: Props) {
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function showSlides(n: number) {
+    var i;
+    var slides = document.getElementsByClassName(
+      "mySlides"
+    ) as HTMLCollectionOf<HTMLElement>;
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+
+    if (slides[slideIndex - 1]) {
+      slides[slideIndex - 1].style.display = "block";
+    }
+
+    setTimeout(showSlides, 3500); // Change image every 3.5 seconds
+  }
+
+  function CarouselImages() {
+    let content: JSX.Element[] = [];
+
+    Posters.forEach((poster, index) => {
+      content.push(
+        <div className="mySlides fade session-img">
+          {/* <div className="numbertext">{index} / {Posters.length}</div> */}
+          <img src={poster.url} className="slide-img" />
+          {/* <div className="text">{poster.caption}</div> */}
+        </div>
+      );
+    });
+
+    return <div>{content}</div>;
+  }
+
   return (
     <div>
       <h1>Offerings</h1>
       <div className={"session-img-container"}>
-        <img
-          className="session-img"
-          src={"https://wellcall-app-cdk.s3.amazonaws.com/session.jpeg"}
-        />
+        <CarouselImages />
       </div>
       <div>
         <h2>Individual Therapy</h2>
@@ -43,7 +81,12 @@ export default function Offerings(props: Props) {
           to discuss ways we can help your organization.
         </p>
       </div>
-      <h2>Clinical Supervision: Coming Soon!!! Winter 2022</h2>
+      <div className="coming-soon-container">
+        <h3>
+          Clinical Supervision and Trauma Conscious Movement Groups: <br />{" "}
+          Coming soon!! Winter 2022
+        </h3>
+      </div>
     </div>
   );
 }

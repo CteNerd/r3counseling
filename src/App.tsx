@@ -16,7 +16,7 @@ import {
   InstagramOutlined,
   LinkedinOutlined,
 } from "@ant-design/icons";
-import SideNav from "./components/sideNav/sideNav"
+import SideNav from "./components/sideNav/sideNav";
 import News from "./pages/news";
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
 
   /* Set the width of the side navigation to 250px */
   function openNav() {
-    console.log('opening');
+    console.log("opening");
     if (document.getElementById("mySidenav")) {
       document.getElementById("mySidenav")!.style.width = "100%";
     }
@@ -44,12 +44,15 @@ function App() {
     if (isMobile) {
       return (
         <div>
-          <img className="menu-img" src="https://wellcall-app-cdk.s3.amazonaws.com/R3+Counseling+Logo+-+Final-01-Transparentv2.png"/>
-        <div className="menu-btn" onClick={() => openNav()}>
-          <div className="menu-line"></div>
-          <div className="menu-line"></div>
-          <div className="menu-line"></div>
-        </div>
+          <img
+            className="menu-img"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/R3+Counseling+Logo+-+Final-01-Transparentv2.png"
+          />
+          <div className="menu-btn" onClick={() => openNav()}>
+            <div className="menu-line"></div>
+            <div className="menu-line"></div>
+            <div className="menu-line"></div>
+          </div>
         </div>
       );
     } else {
@@ -71,9 +74,12 @@ function App() {
           <Menu.Item key="offerings">
             <a href="/offerings">Offerings</a>
           </Menu.Item>
-        <Menu.Item key="img">
-          <img className="menu-img" src="https://wellcall-app-cdk.s3.amazonaws.com/R3+Counseling+Logo+-+Final-01-Transparentv2.png"/>
-        </Menu.Item>
+          <Menu.Item key="img">
+            <img
+              className="menu-img"
+              src="https://wellcall-app-cdk.s3.amazonaws.com/R3+Counseling+Logo+-+Final-01-Transparentv2.png"
+            />
+          </Menu.Item>
           <Menu.Item key="contact">
             <a href="/ready-to-release">Ready to Release</a>
           </Menu.Item>
