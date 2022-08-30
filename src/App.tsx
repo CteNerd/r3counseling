@@ -143,8 +143,8 @@ function App() {
               </a>
             </div>
             <div className="footer-link-container">
-              <a className="footer-link" href="tel:1-786-755-1863">
-                PHONE: (786) 755-1863
+              <a className="footer-link" href="tel:1-706-750-8906">
+                PHONE: (706) 750-8906
               </a>
             </div>
             <div className="footer-link-container">
