@@ -37,7 +37,7 @@ export default function News(props: Props) {
             <img
               className="help-app-img"
               src={
-                "https://wellcall-app-cdk.s3.amazonaws.com/Man-making-phone-call.jpeg"
+                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Man-making-phone-call.jpeg"
               }
             />
           </div> */}

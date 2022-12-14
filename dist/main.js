@@ -19918,15 +19918,15 @@
               }),
               n.createElement("img", {
                 className: "banner-img",
-                src: "https://wellcall-app-cdk.s3.amazonaws.com/COC-logo.jpg",
+                src: "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/COC-logo.jpg",
               }),
               n.createElement("img", {
                 className: "banner-img",
-                src: "https://wellcall-app-cdk.s3.amazonaws.com/EMDRIA.png",
+                src: "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/EMDRIA.png",
               }),
               n.createElement("img", {
                 className: "banner-img",
-                src: "https://wellcall-app-cdk.s3.amazonaws.com/TFBG-logo.jpg",
+                src: "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/TFBG-logo.jpg",
               })
             )
           ),
@@ -19948,11 +19948,11 @@
               { className: "banner-container" },
               n.createElement("img", {
                 className: "banner-img",
-                src: "https://wellcall-app-cdk.s3.amazonaws.com/united-healthcare-logo.png",
+                src: "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/united-healthcare-logo.png",
               }),
               n.createElement("img", {
                 className: "banner-img",
-                src: "https://wellcall-app-cdk.s3.amazonaws.com/anthem-bcbs.jpg",
+                src: "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/anthem-bcbs.jpg",
               })
             )
           )

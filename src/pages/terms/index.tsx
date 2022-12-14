@@ -32,7 +32,7 @@ export default function Terms() {
             <li>
               <a
                 href={
-                  "https://wellcall-app-cdk.s3.amazonaws.com/Poster+-+R3.pdf"
+                  "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3.pdf"
                 }
                 target={"_blank"}
               >
@@ -93,7 +93,7 @@ export default function Terms() {
           </span>
           <video className="modal-video" autoPlay={true} loop muted>
             <source
-              src={"https://wellcall-app-cdk.s3.amazonaws.com/Poster+-+R3.mp4"}
+              src={"https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3.mp4"}
               type="video/mp4"
             />
           </video>

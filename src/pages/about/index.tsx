@@ -56,7 +56,7 @@ export default function AboutMe(props: Props) {
         >
           <img
             className="journey-container-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/tiff-profile.jpeg"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/tiff-profile.jpeg"
           />
         </div>
         <div className={props.isMobile ? "col-100" : "col-66"}>

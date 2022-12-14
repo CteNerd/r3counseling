@@ -17,7 +17,7 @@ export default function Home() {
       <div className="masthead-img-container">
         <img
           className="masthead-img"
-          src="https://wellcall-app-cdk.s3.amazonaws.com/tiff-swinging.jpeg"
+          src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/tiff-swinging.jpeg"
         />
       </div>
       <h1>Let's Come Alive</h1>
@@ -45,11 +45,11 @@ export default function Home() {
           </a>
           <img
             className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/EMDRIA-logo.png"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/EMDRIA-logo.png"
           />
           <img
             className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/TFBG-logo.jpg"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/TFBG-logo.jpg"
           />
         </div>
       </div>
@@ -66,23 +66,23 @@ export default function Home() {
         <div className="banner-container">
           <img
             className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/united-healthcare-logo.png"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/united-healthcare-logo.png"
           />
           <img
             className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/anthem-bcbs-logo-removebg.png"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/anthem-bcbs-logo-removebg.png"
           />
           <img
             className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/oscar-removebg.png"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/oscar-removebg.png"
           />
           <img
             className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/aetna_purple.jpg"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/aetna_purple.jpg"
           />
           <img
             className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/Cigna-Logo.png"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Cigna-Logo.png"
           />
         </div>
       </div>

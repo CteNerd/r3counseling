@@ -46,7 +46,7 @@ function App() {
         <div>
           <img
             className="menu-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/R3+Counseling+Logo+-+Final-01-Transparentv2.png"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/R3+Counseling+Logo+-+Final-01-Transparentv2.png"
           />
           <div className="menu-btn" onClick={() => openNav()}>
             <div className="menu-line"></div>
@@ -77,7 +77,7 @@ function App() {
           <Menu.Item key="img">
             <img
               className="menu-img"
-              src="https://wellcall-app-cdk.s3.amazonaws.com/R3+Counseling+Logo+-+Final-01-Transparentv2.png"
+              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/R3+Counseling+Logo+-+Final-01-Transparentv2.png"
             />
           </Menu.Item>
           <Menu.Item key="contact">
