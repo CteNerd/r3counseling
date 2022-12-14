@@ -20,7 +20,7 @@ export default function ReadyToRelease() {
         <img
           className="reception-img"
           src={
-            "https://wellcall-app-cdk.s3.amazonaws.com/Front-Desk-Check-in.jpeg"
+            "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Front-Desk-Check-in.jpeg"
           }
         />
       </div> */}
