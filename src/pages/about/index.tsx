@@ -10,14 +10,14 @@ export default function AboutMe(props: Props) {
     <div>
       <h1>About Me</h1>
       <h4>
-        Meet the Tiffany Luke, Licensed Professional Counselor, EMDRIA
-        Certified, EMDR provider, EMDR Clinician, TCYM{" "}
+        Meet the Tiffany Luke, LPC, CPCS, EMDRIA Certified EMDR provider, TCYM{" "}
       </h4>
       <p>Hey, hey! I’m Tiffany.</p>
       <p>
         I am a Licensed Professional Counselor with over 15 years of clinical
-        experience. I am trauma informed, EMDR Certified provider and Certified
-        Professional Clinical Supervisor. I am Certified in the{" "}
+        experience. I am a Certified Professional Clinical Supervisor. I am
+        trauma informed, EMDR Certified provider and Certified Professional
+        Clinical Supervisor. I am Certified in the{" "}
         <a href="https://traumaconsciousyoga.com/" target="_blank">
           Trauma Conscious Yoga Method
         </a>{" "}
@@ -69,10 +69,14 @@ export default function AboutMe(props: Props) {
           <div className="professional-accolades-list">
             <ul>
               <li>
-                Licensed Professional Counselor
-                <ul>Certified Professional Clinical Supervisor: Georgia Composite Board of
-                Professional Counselors, Social Workers, and Marriage &amp;
-                Family Therapist</ul>
+                Certified Professional Clinical Supervisor:
+                <ul>
+                  <li>LPCGA</li>
+                  <li>
+                    Georgia Composite Board of Professional Counselors, Social
+                    Workers, and Marriage &amp; Family Therapist
+                  </li>
+                </ul>
                 <li>
                   Master of Science concentration Community Counseling: Columbus
                   State University
