@@ -45,7 +45,10 @@ export default function Terms() {
         </div>
         <div className="psychotherapy-container-columns">
           <div className="emdr-badge-container tooltip">
-            <a href="https://credentials.emdria.org/0d260993-9d2c-4819-868d-d08c7e358a63#gs.lo5cs3">
+            <a
+              target="_blank"
+              href="https://credentials.emdria.org/0d260993-9d2c-4819-868d-d08c7e358a63#gs.lo5cs3"
+            >
               <span className="tooltiptext">Click To View My Credentials</span>
               <img src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/EMDR+Certified+Therapist+%E2%80%A2+Tiffany+Luke+%E2%80%A2+EMDR+International+Association+Badge.png" />
             </a>
