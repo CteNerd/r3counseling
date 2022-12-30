@@ -140,14 +140,10 @@ export default function News(props: Props) {
                 </ul>
               </li>
               <li>
-                <a href="tel:18006564673">
-                National Sexual Assault Hotline
-                </a>
+                <a href="tel:18006564673">National Sexual Assault Hotline</a>
               </li>
               <li>
-                <a href="tel:18007997233">
-                Domestic Violence National Hotline
-                </a>
+                <a href="tel:18007997233">Domestic Violence National Hotline</a>
               </li>
             </ul>
           </div>

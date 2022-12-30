@@ -93,7 +93,9 @@ export default function Terms() {
           </span>
           <video className="modal-video" autoPlay={true} loop muted>
             <source
-              src={"https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3.mp4"}
+              src={
+                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3.mp4"
+              }
               type="video/mp4"
             />
           </video>

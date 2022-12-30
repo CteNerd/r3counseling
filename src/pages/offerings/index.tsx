@@ -1,6 +1,6 @@
 import React from "react";
 import "./offerings.css";
-import Posters from "./posters.json"
+import Posters from "./posters.json";
 
 interface Props {
   isMobile: boolean;
