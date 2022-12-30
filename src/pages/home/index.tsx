@@ -45,7 +45,7 @@ export default function Home() {
           </a>
           <img
             className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/EMDRIA-logo.png"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/EMDR+Certified+Therapist+%E2%80%A2+Tiffany+Luke+%E2%80%A2+EMDR+International+Association+Badge.png"
           />
           <img
             className="banner-img"
