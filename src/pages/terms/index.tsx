@@ -43,7 +43,7 @@ export default function Terms() {
             </ul>
           </ul>
         </div>
-        <div className="psychotherapy-container-columns">
+        {/* <div className="psychotherapy-container-columns">
           <div className="emdr-badge-container tooltip">
             <a
               target="_blank"
@@ -53,7 +53,7 @@ export default function Terms() {
               <img src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/EMDR+Certified+Therapist+%E2%80%A2+Tiffany+Luke+%E2%80%A2+EMDR+International+Association+Badge.png" />
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
       <h4>Accepts Payments</h4>
       <p>All major credit cards are accepted for payment.</p>
