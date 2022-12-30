@@ -41,8 +41,34 @@
   cursor: pointer;
 }
 
+.psychotherapy-container {
+  display: flex;
+}
+
+.psychotherapy-container-columns {
+  width: 50%;
+  display: inline-block;
+}
+
+.emdr-badge-container {
+  float: right;
+}
+
+.emdr-badge-container img {
+  max-height: 150px;
+}
+
 @media only screen and (max-width: 600px) {
   .modal-video {
     max-width: 100%;
+  }
+
+  .psychotherapy-container-columns {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .psychotherapy-container {
+    display: block;
   }
 }
