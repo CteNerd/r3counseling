@@ -139,6 +139,16 @@ export default function News(props: Props) {
                   <li>Free emotional support and resource line</li>
                 </ul>
               </li>
+              <li>
+                <a href="tel:18006564673">
+                National Sexual Assault Hotline
+                </a>
+              </li>
+              <li>
+                <a href="tel:18007997233">
+                Domestic Violence National Hotline
+                </a>
+              </li>
             </ul>
           </div>
         </div>
