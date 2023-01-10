@@ -69,14 +69,11 @@ export default function AboutMe(props: Props) {
           <div className="professional-accolades-list">
             <ul>
               <li>
-                Certified Professional Clinical Supervisor:
-                <ul>
-                  <li>LPCGA</li>
-                  <li>
-                    Georgia Composite Board of Professional Counselors, Social
-                    Workers, and Marriage &amp; Family Therapist
-                  </li>
-                </ul>
+                Georgia Composite Board of Professional Counselors, Social
+                Workers, and Marriage &amp; Family Therapist
+              </li>
+              <li>
+                Certified Professional Clinical Supervisor: LPCGA
                 <li>
                   Master of Science concentration Community Counseling: Columbus
                   State University
@@ -86,7 +83,7 @@ export default function AboutMe(props: Props) {
                 </li>
                 <li>
                   EMDRIA Certified; EMDR provider ASSYST, EMDR-PRECI, EMDR-IGTP
-                  <ul>Certified, Trauma Conscious Yoga Method</ul>
+                  <ul><li>Certified, Trauma Conscious Yoga Method</li></ul>
                 </li>
               </li>
               <li>

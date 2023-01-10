@@ -24,7 +24,7 @@ export default function News(props: Props) {
       </div>
       <div className="news-list-container">
         <ol className="news-list">
-          <li>Official site launching Winter 2022</li>
+          {/* <li>Official site launching Winter 2022</li> */}
         </ol>
       </div>
       <div>
