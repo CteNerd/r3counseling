@@ -1,6 +1,6 @@
 import React from "react";
 import "./offerings.css";
-import Posters from "./posters.json"
+import Posters from "./posters.json";
 
 interface Props {
   isMobile: boolean;
@@ -82,10 +82,7 @@ export default function Offerings(props: Props) {
         </p>
       </div>
       <div className="coming-soon-container">
-        <h3>
-          Clinical Supervision and Trauma Conscious Movement Groups: <br />{" "}
-          Coming soon!! Winter 2022
-        </h3>
+        <h3>Wellness Group Coming Soon</h3>
       </div>
     </div>
   );

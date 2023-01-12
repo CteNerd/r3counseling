@@ -24,7 +24,7 @@ export default function News(props: Props) {
       </div>
       <div className="news-list-container">
         <ol className="news-list">
-          <li>Official site launching Winter 2022</li>
+          {/* <li>Official site launching Winter 2022</li> */}
         </ol>
       </div>
       <div>
@@ -138,6 +138,12 @@ export default function News(props: Props) {
                 <ul>
                   <li>Free emotional support and resource line</li>
                 </ul>
+              </li>
+              <li>
+                <a href="tel:18006564673">National Sexual Assault Hotline</a>
+              </li>
+              <li>
+                <a href="tel:18007997233">Domestic Violence National Hotline</a>
               </li>
             </ul>
           </div>

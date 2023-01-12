@@ -18,30 +18,43 @@ export default function Terms() {
         to reach out to The Cookie Counselor.
       </p>
       <h4>Individual Psychotherapy</h4>
-      <p>
-        <ul>
-          <li>$140 for a 60 minute initial Intake Sessions</li>
-          <li>$115 for a 55 minute Psycotherapy/EMDR session</li>
-          <li>$165 for a 90 minute Extended Session</li>
-          <li>
-            <a onClick={() => setModalOpen(true)}>
-              Self Pay Package Rate: Individual/EMDR Intensive
-            </a>
-          </li>
+      <div className="psychotherapy-container">
+        <div className="psychotherapy-container-columns">
           <ul>
+            <li>$140 for a 60 minute initial Intake Sessions</li>
+            <li>$115 for a 55 minute Psychotherapy/EMDR session</li>
+            <li>$165 for a 90 minute Extended Session</li>
             <li>
-              <a
-                href={
-                  "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3.pdf"
-                }
-                target={"_blank"}
-              >
-                Download PDF
+              <a onClick={() => setModalOpen(true)}>
+                Self Pay Package Rate: Individual/EMDR Intensive
               </a>
             </li>
+            <ul>
+              <li>
+                <a
+                  href={
+                    "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3-2.pdf"
+                  }
+                  target={"_blank"}
+                >
+                  Download PDF
+                </a>
+              </li>
+            </ul>
           </ul>
-        </ul>
-      </p>
+        </div>
+        {/* <div className="psychotherapy-container-columns">
+          <div className="emdr-badge-container tooltip">
+            <a
+              target="_blank"
+              href="https://credentials.emdria.org/0d260993-9d2c-4819-868d-d08c7e358a63#gs.lo5cs3"
+            >
+              <span className="tooltiptext">Click To View My Credentials</span>
+              <img src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/EMDR+Certified+Therapist+%E2%80%A2+Tiffany+Luke+%E2%80%A2+EMDR+International+Association+Badge.png" />
+            </a>
+          </div>
+        </div> */}
+      </div>
       <h4>Accepts Payments</h4>
       <p>All major credit cards are accepted for payment.</p>
       <h4>Superbill</h4>
@@ -93,7 +106,9 @@ export default function Terms() {
           </span>
           <video className="modal-video" autoPlay={true} loop muted>
             <source
-              src={"https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3.mp4"}
+              src={
+                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3-2.mp4"
+              }
               type="video/mp4"
             />
           </video>

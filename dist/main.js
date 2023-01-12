@@ -19973,7 +19973,7 @@
           n.createElement(
             "p",
             null,
-            "I am a Licensed Professional Counselor with over 15 years of clinical experience. I am trauma informed, EMDR trained provider and I’m also known as The Cookie Counselor. Yep, I bake to release stress, ground myself and enrich my creative sweets passion."
+            "I am a Licensed Professional Counselor with over 15 years of clinical experience. I am a trauma informed, EMDR trained provider and I’m also known as The Cookie Counselor. Yep, I bake to release stress, ground myself and enrich my creative sweets passion."
           ),
           n.createElement(
             "div",

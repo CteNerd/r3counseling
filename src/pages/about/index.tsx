@@ -10,15 +10,19 @@ export default function AboutMe(props: Props) {
     <div>
       <h1>About Me</h1>
       <h4>
-        Meet the Tiffany Luke, Licensed Professional Counselor, EMDRIA
-        Certified, EMDR provider{" "}
+        Meet the Tiffany Luke, LPC, CPCS, EMDRIA Certified EMDR provider, TCYM{" "}
       </h4>
       <p>Hey, hey! I’m Tiffany.</p>
       <p>
         I am a Licensed Professional Counselor with over 15 years of clinical
-        experience. I am trauma informed, EMDR certified provider and I’m also
-        known as The Cookie Counselor. Yep, I bake to release stress, ground
-        myself and enrich my creative sweets passion.
+        experience. I am a Certified Professional Clinical Supervisor. I am
+        trauma informed, EMDR Certified provider and Certified Professional
+        Clinical Supervisor. I am Certified in the{" "}
+        <a href="https://traumaconsciousyoga.com/" target="_blank">
+          Trauma Conscious Yoga Method
+        </a>{" "}
+        and I’m also known as The Cookie Counselor. Yep, I bake to release
+        stress, ground myself and enrich my creative sweets passion.
       </p>
       <div>
         <a href="https://www.thecookierelease.com">
@@ -44,9 +48,10 @@ export default function AboutMe(props: Props) {
         grief.
       </p>
       <p>
-        While being culturally humble, I incorporate Cognitive Behavior Therapy,
-        Somatic Therapy, Mindfulness Therapy, in a person-centered environment.
-        During your journey, you deserve to be supported as you release, restore
+        While being culturally humble, I incorporate integrative/holistic
+        modalities to include: Cognitive Behavior Therapy, Somatic Therapy,
+        Mindfulness Therapy, Mindful Movement, in a person-centered environment.
+        During your journey, you deserve to be supported as you release, restore,
         and redefine!
       </p>
       <div style={{ display: props.isMobile ? "block" : "flex" }}>
@@ -64,9 +69,11 @@ export default function AboutMe(props: Props) {
           <div className="professional-accolades-list">
             <ul>
               <li>
-                Licensed Professional Counselor: Georgia Composite Board of
-                Professional Counselors, Social Workers, and Marriage &amp;
-                Family Therapist
+                Licensed Professional Counselor: Georgia Composite Board of Professional Counselors, Social
+                Workers, and Marriage &amp; Family Therapist
+              </li>
+              <li>
+                Certified Professional Clinical Supervisor: LPCGA
                 <li>
                   Master of Science concentration Community Counseling: Columbus
                   State University
@@ -76,7 +83,9 @@ export default function AboutMe(props: Props) {
                 </li>
                 <li>
                   EMDRIA Certified; EMDR provider ASSYST, EMDR-PRECI, EMDR-IGTP
+                  
                 </li>
+                <li>Certified, Trauma Conscious Yoga Method</li>
               </li>
               <li>
                 Over 15 years of clinical experience:

@@ -45,7 +45,7 @@ export default function Home() {
           </a>
           <img
             className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/EMDRIA-logo.png"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/EMDR+Certified+Therapist+%E2%80%A2+Tiffany+Luke+%E2%80%A2+EMDR+International+Association+Badge.png"
           />
           <img
             className="banner-img"
@@ -59,7 +59,7 @@ export default function Home() {
         journey? If so, I am here to align with you, become your ally, explore
         your journey through your lens in a safe, non-judgmental, relaxed and
         supportive environment. Let’s release pent up trauma, restore overall
-        wellbeing: mind, body and soul. Allow me to help you become empowered to
+        wellbeing: mind, body, and soul. Allow me to help you become empowered to
         redefine your personal transformation.
       </p>
       <div className="banner">
