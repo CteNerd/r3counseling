@@ -150,7 +150,7 @@ function App() {
             <div className="footer-link-container">
               <a
                 className="footer-link"
-                href="mailto:reception+Tiffany970@growtherapy.com"
+                href="mailto:R3counseling@counselingsecure.com"
               >
                 EMAIL US
               </a>
