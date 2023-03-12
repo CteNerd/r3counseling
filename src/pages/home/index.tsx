@@ -59,8 +59,8 @@ export default function Home() {
         journey? If so, I am here to align with you, become your ally, explore
         your journey through your lens in a safe, non-judgmental, relaxed and
         supportive environment. Let’s release pent up trauma, restore overall
-        wellbeing: mind, body, and soul. Allow me to help you become empowered to
-        redefine your personal transformation.
+        wellbeing: mind, body, and soul. Allow me to help you become empowered
+        to redefine your personal transformation.
       </p>
       <div className="banner">
         <div className="banner-container">

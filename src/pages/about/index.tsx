@@ -51,8 +51,8 @@ export default function AboutMe(props: Props) {
         While being culturally humble, I incorporate integrative/holistic
         modalities to include: Cognitive Behavior Therapy, Somatic Therapy,
         Mindfulness Therapy, Mindful Movement, in a person-centered environment.
-        During your journey, you deserve to be supported as you release, restore,
-        and redefine!
+        During your journey, you deserve to be supported as you release,
+        restore, and redefine!
       </p>
       <div style={{ display: props.isMobile ? "block" : "flex" }}>
         <div
@@ -69,8 +69,9 @@ export default function AboutMe(props: Props) {
           <div className="professional-accolades-list">
             <ul>
               <li>
-                Licensed Professional Counselor: Georgia Composite Board of Professional Counselors, Social
-                Workers, and Marriage &amp; Family Therapist
+                Licensed Professional Counselor: Georgia Composite Board of
+                Professional Counselors, Social Workers, and Marriage &amp;
+                Family Therapist
               </li>
               <li>
                 Certified Professional Clinical Supervisor: LPCGA
@@ -83,7 +84,6 @@ export default function AboutMe(props: Props) {
                 </li>
                 <li>
                   EMDRIA Certified; EMDR provider ASSYST, EMDR-PRECI, EMDR-IGTP
-                  
                 </li>
                 <li>Certified, Trauma Conscious Yoga Method</li>
               </li>

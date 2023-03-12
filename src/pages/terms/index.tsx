@@ -33,7 +33,7 @@ export default function Terms() {
               <li>
                 <a
                   href={
-                    "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3.pdf"
+                    "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3+-+Q12023.pdf"
                   }
                   target={"_blank"}
                 >
@@ -107,7 +107,7 @@ export default function Terms() {
           <video className="modal-video" autoPlay={true} loop muted>
             <source
               src={
-                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3.mp4"
+                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3+-+Q12023.mp4"
               }
               type="video/mp4"
             />
