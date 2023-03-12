@@ -22,8 +22,8 @@ export default function Terms() {
         <div className="psychotherapy-container-columns">
           <ul>
             <li>$140 for a 60 minute initial Intake Sessions</li>
-            <li>$115 for a 55 minute Psychotherapy/EMDR session</li>
-            <li>$165 for a 90 minute Extended Session</li>
+            <li>$125 for a 55 minute Psychotherapy/EMDR session</li>
+            <li>$175 for a 90 minute Extended Session</li>
             <li>
               <a onClick={() => setModalOpen(true)}>
                 Self Pay Package Rate: Individual/EMDR Intensive
@@ -33,7 +33,7 @@ export default function Terms() {
               <li>
                 <a
                   href={
-                    "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3-2.pdf"
+                    "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3.pdf"
                   }
                   target={"_blank"}
                 >
@@ -107,7 +107,7 @@ export default function Terms() {
           <video className="modal-video" autoPlay={true} loop muted>
             <source
               src={
-                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3-2.mp4"
+                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3.mp4"
               }
               type="video/mp4"
             />
