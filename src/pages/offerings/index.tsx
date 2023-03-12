@@ -54,14 +54,31 @@ export default function Offerings(props: Props) {
         <CarouselImages />
       </div>
       <div>
-        <h2>Individual Therapy</h2>
-        <p>
-          Let’s talk one-on-one in a safe, non-judgmental, relaxed, and
-          supportive environment. Allow me to gain an understanding of your past
-          and present experiences through your lens. Let’s explore the impact of
-          your emotions and thoughts on present behaviors. Let’s align to
-          RELEASE, RESTORE and REDEFINE the next phase of your journey!
-        </p>
+        <div>
+          <h2>EMDR Incentives</h2>
+          <p>
+            EMDR Intensives are another road to healing, rather than changing
+            how you think to change how you feel, EMDR rewires your memory
+            networks and desensitizes those old memories that make you feel
+            stuck in your past. The negative feelings and belief patterns about
+            self that are embedded in your memory network can be changed with
+            EMDR processing. EMDR Intensives provides you with an opportunity to
+            work on your past, present, and/or future over a condensed period,
+            which expedites your healing journey.
+          </p>
+          <p>
+            An Intensive usually entails an 8-hour day session for 2 to 4
+            consecutive days. With this time frame, we spend more concentrated
+            time healing your specific concern. Yes, it is INTENSE work and it
+            can be the healing and emotional reset needed in this moment of your
+            life. EMDR Intensives are not for everyone, so, a free consultation
+            is provided to determine your readiness for the intensive work being
+            offered. You can travel from anywhere, feel free to spend a few days
+            in Augusta while conducting your Intensive, then, return to your
+            normal schedule. I invite you to contact me to schedule your free
+            consultation, why wait!!
+          </p>
+        </div>
         <div className="highlight-vid-container">
           <h3>EMDR at a Glance</h3>
           <iframe
@@ -72,17 +89,43 @@ export default function Offerings(props: Props) {
             allowFullScreen
           ></iframe>
         </div>
-      </div>
-      <div>
-        <h2>Consultation &amp; Training</h2>
-        <p>
-          R3 is eager to serve the community by providing consulting and
-          training to enhance mental health awareness and education. Contact us
-          to discuss ways we can help your organization.
-        </p>
-      </div>
-      <div className="coming-soon-container">
-        <h3>Wellness Group Coming Soon</h3>
+        <div>
+          <h2>EMDR Group Therapy</h2>
+          <p>
+            I invite you to schedule a consult regarding EMDR group therapy
+            being provided to your organization. Yes, healing can be done within
+            the circle. Schedule a consult today!!!
+          </p>
+        </div>
+        <div>
+          <h2>Clinical Supervision</h2>
+          <p>
+            Release Restore Redefine Counseling offers clinical supervision to
+            students and clinicians who are in the process of seeking their
+            professional counseling license. If you are interested in beginning
+            individual or group supervision, feel free to call 706-750-8906 or
+            send an email to{" "}
+            {
+              <a href="mailto:r3counseling@counselingsecure.com">
+                r3counseling@counselingsecure.com
+              </a>
+            }
+          </p>
+        </div>
+        <div>
+          <h2>Individual Therapy</h2>
+          <p>
+            Let’s talk one-on-one in a safe, non-judgmental, relaxed, and
+            supportive environment. Allow me to gain an understanding of your
+            past and present experiences through your lens. Let’s explore the
+            impact of your emotions and thoughts on present behaviors. Let’s
+            align to RELEASE, RESTORE and REDEFINE the next phase of your
+            journey!
+          </p>
+        </div>
+        <div className="coming-soon-container">
+          <h3>Wellness Retreat Coming Soon</h3>
+        </div>
       </div>
     </div>
   );
