@@ -12,6 +12,15 @@
   width: 100%;
 }
 
+.free-consult-container {
+  text-align: center;
+  padding: 15px 0px;
+}
+
+.free-consult-button {
+  padding: 5px;
+}
+
 .consult-modal-none {
   display: none;
 }

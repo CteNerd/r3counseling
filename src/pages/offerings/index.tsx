@@ -56,7 +56,7 @@ export default function Offerings(props: Props) {
       </div>
       <div>
         <div>
-          <h2>EMDR Incentives</h2>
+          <h2>EMDR Intensives</h2>
           <p>
             EMDR Intensives are another road to healing, rather than changing
             how you think to change how you feel, EMDR rewires your memory
@@ -80,9 +80,9 @@ export default function Offerings(props: Props) {
             consultation, why wait!!
           </p>
         </div>
-        <div>
+        <div className="free-consult-container">
           <a onClick={() => setConsultModalVis(!consultModalVis)}>
-            <button>Free Consult</button>
+            <button className="free-consult-button">Free Consultation</button>
           </a>
           <div
             id="id01"
