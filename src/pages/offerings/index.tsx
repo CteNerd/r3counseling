@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./offerings.css";
 import Posters from "./posters.json";
 
@@ -7,6 +7,7 @@ interface Props {
 }
 
 export default function Offerings(props: Props) {
+  const [consultModalVis, setConsultModalVis] = useState(false);
   var slideIndex = 1;
   showSlides(slideIndex);
 
@@ -78,6 +79,29 @@ export default function Offerings(props: Props) {
             normal schedule. I invite you to contact me to schedule your free
             consultation, why wait!!
           </p>
+        </div>
+        <div>
+          <a onClick={() => setConsultModalVis(!consultModalVis)}>
+            <button>Free Consult</button>
+          </a>
+          <div
+            id="id01"
+            className={consultModalVis ? "consult-modal" : "consult-modal-none"}
+          >
+            <div className="consult-modal-content">
+              <div className="consult-container">
+                <span
+                  onClick={() => setConsultModalVis(false)}
+                  className="w3-button w3-display-topright"
+                >
+                  &times;
+                </span>
+                <iframe
+                  src="https://cdn.forms-content.sg-form.com/58a2c899-c0c0-11ed-b4f5-060e8f5a62bc"
+                />
+              </div>
+            </div>
+          </div>
         </div>
         <div className="highlight-vid-container">
           <h3>EMDR at a Glance</h3>
