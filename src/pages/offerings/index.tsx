@@ -68,7 +68,7 @@ export default function Offerings(props: Props) {
             which expedites your healing journey.
           </p>
           <p>
-            An Intensive usually entails an 8-hour day session for 2 to 4
+            An Intensive usually entails an 8-hour day session for 1 to 5
             consecutive days. With this time frame, we spend more concentrated
             time healing your specific concern. Yes, it is INTENSE work and it
             can be the healing and emotional reset needed in this moment of your
@@ -96,9 +96,7 @@ export default function Offerings(props: Props) {
                 >
                   &times;
                 </span>
-                <iframe
-                  src="https://cdn.forms-content.sg-form.com/58a2c899-c0c0-11ed-b4f5-060e8f5a62bc"
-                />
+                <iframe src="https://cdn.forms-content.sg-form.com/58a2c899-c0c0-11ed-b4f5-060e8f5a62bc" />
               </div>
             </div>
           </div>
@@ -116,9 +114,16 @@ export default function Offerings(props: Props) {
         <div>
           <h2>EMDR Group Therapy</h2>
           <p>
-            I invite you to schedule a consult regarding EMDR group therapy
-            being provided to your organization. Yes, healing can be done within
-            the circle. Schedule a consult today!!!
+            <a href="https://youtu.be/n2fQ8xC4U10" target="_blank">
+              EMDR Intensive Groups
+            </a>{" "}
+            are NOT your typical groups. There is no sharing required, internal
+            processing occurs, and rapid intervention to support those who have
+            experienced acute trauma. EMDR does not make you forget what has
+            happened, it will help you decrease the intensity surrounding your
+            flashbacks, limiting beliefs, and overwhelming feelings. EMDR group
+            therapy can be provided within your organization as well. Feel free
+            to schedule a consult today!!
           </p>
         </div>
         <div>
@@ -148,7 +153,7 @@ export default function Offerings(props: Props) {
           </p>
         </div>
         <div className="coming-soon-container">
-          <h3>Wellness Retreat Coming Soon</h3>
+          <h3>EMDR Intensive Restoration Retreat Fall/Winter 2023</h3>
         </div>
       </div>
     </div>

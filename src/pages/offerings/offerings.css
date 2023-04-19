@@ -39,10 +39,17 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.consult-modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}
+.consult-modal-content {
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  padding: 0;
+  outline: 0;
+  width: 600px;
+}
 
 .consult-container {
-  padding:0.01em 16px
+  padding: 0.01em 16px;
 }
 
 iframe {
