@@ -153,7 +153,7 @@ export default function Offerings(props: Props) {
           </p>
         </div>
         <div className="coming-soon-container">
-          <h3>Wellness Retreat Coming Soon</h3>
+          <h3>EMDR Intensive Restoration Retreat Fall/Winter 2023</h3>
         </div>
       </div>
     </div>
