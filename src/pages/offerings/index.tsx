@@ -68,7 +68,7 @@ export default function Offerings(props: Props) {
             which expedites your healing journey.
           </p>
           <p>
-            An Intensive usually entails an 8-hour day session for 2 to 4
+            An Intensive usually entails an 8-hour day session for 1 to 5
             consecutive days. With this time frame, we spend more concentrated
             time healing your specific concern. Yes, it is INTENSE work and it
             can be the healing and emotional reset needed in this moment of your
