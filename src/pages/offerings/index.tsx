@@ -96,9 +96,7 @@ export default function Offerings(props: Props) {
                 >
                   &times;
                 </span>
-                <iframe
-                  src="https://cdn.forms-content.sg-form.com/58a2c899-c0c0-11ed-b4f5-060e8f5a62bc"
-                />
+                <iframe src="https://cdn.forms-content.sg-form.com/58a2c899-c0c0-11ed-b4f5-060e8f5a62bc" />
               </div>
             </div>
           </div>
@@ -116,9 +114,13 @@ export default function Offerings(props: Props) {
         <div>
           <h2>EMDR Group Therapy</h2>
           <p>
-            I invite you to schedule a consult regarding EMDR group therapy
-            being provided to your organization. Yes, healing can be done within
-            the circle. Schedule a consult today!!!
+            EMDR Intensive Groups are NOT your typical groups. There is no
+            sharing required, internal processing occurs, and rapid intervention
+            to support those who have experienced acute trauma. EMDR does not
+            make you forget what has happened, it will help you decrease the
+            intensity surrounding your flashbacks, limiting beliefs, and
+            overwhelming feelings. EMDR group therapy can be provided within
+            your organization as well. Feel free to schedule a consult today!!
           </p>
         </div>
         <div>
