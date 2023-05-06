@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./terms.css";
 
 export default function Terms() {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [emdrModalOpen, setEmdrModalOpen] = useState(false);
+  const [groupModalOpen, setGroupModalOpen] = useState(false);
 
   return (
     <div>
@@ -25,8 +26,31 @@ export default function Terms() {
             <li>$125 for a 55 minute Psychotherapy/EMDR session</li>
             <li>$175 for a 90 minute Extended Session</li>
             <li>
-              <a onClick={() => setModalOpen(true)}>
+              <a
+                onClick={() => setEmdrModalOpen(true)
+                }
+              >
                 Self Pay Package Rate: Individual/EMDR Intensive
+              </a>
+            </li>
+            <ul>
+              <li>
+                <a
+                  href={
+                    "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3+-+Q12023.pdf"
+                  }
+                  target={"_blank"}
+                >
+                  Download PDF
+                </a>
+              </li>
+            </ul>
+            <li>
+              <a
+                onClick={() => setGroupModalOpen(true)
+                }
+              >
+                EMDR Group Intensive Offerings/Package Rate
               </a>
             </li>
             <ul>
@@ -96,21 +120,30 @@ export default function Terms() {
         appointment, you will be automatically charged a $50.00 fee.
       </p>
       <div
-        id="myModal"
+        id="emdrIntesiveModal"
         className="modal"
-        style={{ display: modalOpen ? "block" : "none" }}
+        style={{ display: emdrModalOpen ? "block" : "none" }}
       >
         <div className="modal-content">
-          <span className="close" onClick={() => setModalOpen(false)}>
+          <span className="close" onClick={() => setEmdrModalOpen(false)}>
             &times;
           </span>
           <video className="modal-video" autoPlay={true} loop muted>
-            <source
-              src={
-                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3+-+Q12023.mp4"
-              }
-              type="video/mp4"
-            />
+            <source src={"https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3+-+Q12023.mp4"} type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <div
+        id="groupIntensiveModal"
+        className="modal"
+        style={{ display: groupModalOpen ? "block" : "none" }}
+      >
+        <div className="modal-content">
+          <span className="close" onClick={() => setGroupModalOpen(false)}>
+            &times;
+          </span>
+          <video className="modal-video" autoPlay={true} loop muted>
+            <source src={"https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Group+Intensive+Offering+.mp4"} type="video/mp4" />
           </video>
         </div>
       </div>

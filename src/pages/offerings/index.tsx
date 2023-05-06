@@ -112,7 +112,7 @@ export default function Offerings(props: Props) {
           ></iframe>
         </div>
         <div>
-          <h2>EMDR Group Therapy</h2>
+          <h2>EMDR Group Intensives</h2>
           <p>
             <a href="https://youtu.be/n2fQ8xC4U10" target="_blank">
               EMDR Intensive Groups
@@ -125,6 +125,37 @@ export default function Offerings(props: Props) {
             therapy can be provided within your organization as well. Feel free
             to schedule a consult today!!
           </p>
+          <div className="free-consult-container">
+            <a
+              href={
+                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Group+Intensive+Offering+.pdf"
+              }
+              target={"_blank"}
+            >
+              <button className="free-consult-button">PDF Download</button>
+            </a>
+            <a onClick={() => setConsultModalVis(!consultModalVis)}>
+              <button className="free-consult-button">Free Consultation</button>
+            </a>
+            <div
+              id="id01"
+              className={
+                consultModalVis ? "consult-modal" : "consult-modal-none"
+              }
+            >
+              <div className="consult-modal-content">
+                <div className="consult-container">
+                  <span
+                    onClick={() => setConsultModalVis(false)}
+                    className="w3-button w3-display-topright"
+                  >
+                    &times;
+                  </span>
+                  <iframe src="https://cdn.forms-content.sg-form.com/58a2c899-c0c0-11ed-b4f5-060e8f5a62bc" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div>
           <h2>Clinical Supervision</h2>

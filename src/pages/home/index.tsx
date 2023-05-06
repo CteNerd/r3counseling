@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./home.css";
 
 export default function Home() {
+  const [modalOpen, setModalOpen] = useState(true);
+
+  function closeModal() {
+    setModalOpen(false)
+  }
+
   return (
     <div>
       <div className="banner top-banner">
@@ -87,6 +93,21 @@ export default function Home() {
         </div>
       </div>
       <h1 style={{ textAlign: "center" }}>Take your voice back. BE YOU!</h1>
+      <div
+        id="groupIntensiveModal"
+        className="modal"
+        style={{ display: (modalOpen) ? "block" : "none" }}
+        onBlur={()=> setModalOpen(false)}
+      >
+        <div className="modal-content">
+          <span className="close" onClick={closeModal}>
+            &times;
+          </span>
+          <video className="modal-video" autoPlay={true} loop muted>
+            <source src={"https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Group+Intensive+Offering+.mp4"} type="video/mp4" />
+          </video>
+        </div>
+      </div>
     </div>
   );
 }
