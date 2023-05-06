@@ -1,6 +1,3 @@
-.masthead-img-container {
-}
-
 .masthead-img {
   max-width: 100%;
 }
@@ -9,4 +6,9 @@
   font-size: 16px;
   font-weight: 400;
   font-style: italic;
+}
+
+.home-modal-content {
+  max-height: fit-content;
+  margin-top: 40vh;
 }
