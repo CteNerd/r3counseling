@@ -11,4 +11,10 @@
 .home-modal-content {
   max-height: fit-content;
   margin-top: 40vh;
+  height: fit-content;
+}
+
+.home-img {
+  width: 50vw;
+  height: 80vh;
 }
