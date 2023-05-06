@@ -103,7 +103,7 @@ export default function Home() {
           <span className="close" onClick={closeModal}>
             &times;
           </span>
-          <img
+          <iframe
             className="home-img"
             src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Home.pdf"
           />
