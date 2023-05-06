@@ -26,10 +26,7 @@ export default function Terms() {
             <li>$125 for a 55 minute Psychotherapy/EMDR session</li>
             <li>$175 for a 90 minute Extended Session</li>
             <li>
-              <a
-                onClick={() => setEmdrModalOpen(true)
-                }
-              >
+              <a onClick={() => setEmdrModalOpen(true)}>
                 Self Pay Package Rate: Individual/EMDR Intensive
               </a>
             </li>
@@ -46,10 +43,7 @@ export default function Terms() {
               </li>
             </ul>
             <li>
-              <a
-                onClick={() => setGroupModalOpen(true)
-                }
-              >
+              <a onClick={() => setGroupModalOpen(true)}>
                 EMDR Group Intensive Offerings/Package Rate
               </a>
             </li>
@@ -129,7 +123,12 @@ export default function Terms() {
             &times;
           </span>
           <video className="modal-video" autoPlay={true} loop muted>
-            <source src={"https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3+-+Q12023.mp4"} type="video/mp4" />
+            <source
+              src={
+                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3+-+Q12023.mp4"
+              }
+              type="video/mp4"
+            />
           </video>
         </div>
       </div>
@@ -143,7 +142,12 @@ export default function Terms() {
             &times;
           </span>
           <video className="modal-video" autoPlay={true} loop muted>
-            <source src={"https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Group+Intensive+Offering+.mp4"} type="video/mp4" />
+            <source
+              src={
+                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Group+Intensive+Offering+.mp4"
+              }
+              type="video/mp4"
+            />
           </video>
         </div>
       </div>

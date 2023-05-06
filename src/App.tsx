@@ -18,6 +18,7 @@ import {
 } from "@ant-design/icons";
 import SideNav from "./components/sideNav/sideNav";
 import News from "./pages/news";
+import Retreat from "./pages/retreat";
 
 function App() {
   const [selectedMenuKey, setSelectedMenuKey] = useState("");
@@ -86,6 +87,9 @@ function App() {
           <Menu.Item key="terms">
             <a href="/terms">Terms</a>
           </Menu.Item>
+          <Menu.Item key="retreat">
+            <a href="/retreat">Retreat</a>
+          </Menu.Item>
           <Menu.Item key="news">
             <a href="/news">News</a>
           </Menu.Item>
@@ -122,6 +126,9 @@ function App() {
               </Route>
               <Route path="/ready-to-release">
                 <ReadyToRelease />
+              </Route>
+              <Route path="/retreat">
+                <Retreat />
               </Route>
               <Route path="/appointment-request">
                 <AppointmentRequest />

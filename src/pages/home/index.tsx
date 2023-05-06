@@ -5,7 +5,7 @@ export default function Home() {
   const [modalOpen, setModalOpen] = useState(true);
 
   function closeModal() {
-    setModalOpen(false)
+    setModalOpen(false);
   }
 
   return (
@@ -96,16 +96,17 @@ export default function Home() {
       <div
         id="groupIntensiveModal"
         className="modal"
-        style={{ display: (modalOpen) ? "block" : "none" }}
-        onBlur={()=> setModalOpen(false)}
+        style={{ display: modalOpen ? "block" : "none" }}
+        onBlur={() => setModalOpen(false)}
       >
-        <div className="modal-content">
+        <div className="modal-content home-modal-content">
           <span className="close" onClick={closeModal}>
             &times;
           </span>
-          <video className="modal-video" autoPlay={true} loop muted>
-            <source src={"https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Group+Intensive+Offering+.mp4"} type="video/mp4" />
-          </video>
+          <img
+            className="home-img"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Home.pdf"
+          />
         </div>
       </div>
     </div>

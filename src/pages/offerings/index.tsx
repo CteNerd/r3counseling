@@ -8,6 +8,8 @@ interface Props {
 
 export default function Offerings(props: Props) {
   const [consultModalVis, setConsultModalVis] = useState(false);
+  const [groupModalOpen, setGroupModalOpen] = useState(false);
+
   var slideIndex = 1;
   showSlides(slideIndex);
 
@@ -114,7 +116,11 @@ export default function Offerings(props: Props) {
         <div>
           <h2>EMDR Group Intensives</h2>
           <p>
-            <a href="https://youtu.be/n2fQ8xC4U10" target="_blank">
+            <a
+              className="emdr-link"
+              href="https://youtu.be/n2fQ8xC4U10"
+              target="_blank"
+            >
               EMDR Intensive Groups
             </a>{" "}
             are NOT your typical groups. There is no sharing required, internal
@@ -126,13 +132,10 @@ export default function Offerings(props: Props) {
             to schedule a consult today!!
           </p>
           <div className="free-consult-container">
-            <a
-              href={
-                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Group+Intensive+Offering+.pdf"
-              }
-              target={"_blank"}
-            >
-              <button className="free-consult-button">PDF Download</button>
+            <a onClick={() => setGroupModalOpen(true)}>
+              <button className="free-consult-button">
+                Group Intensive Info
+              </button>
             </a>
             <a onClick={() => setConsultModalVis(!consultModalVis)}>
               <button className="free-consult-button">Free Consultation</button>
@@ -185,6 +188,25 @@ export default function Offerings(props: Props) {
         </div>
         <div className="coming-soon-container">
           <h3>EMDR Intensive Restoration Retreat Fall/Winter 2023</h3>
+        </div>
+      </div>
+      <div
+        id="groupIntensiveModal"
+        className="modal"
+        style={{ display: groupModalOpen ? "block" : "none" }}
+      >
+        <div className="modal-content">
+          <span className="close" onClick={() => setGroupModalOpen(false)}>
+            &times;
+          </span>
+          <video className="modal-video" autoPlay={true} loop muted>
+            <source
+              src={
+                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Group+Intensive+Offering+.mp4"
+              }
+              type="video/mp4"
+            />
+          </video>
         </div>
       </div>
     </div>

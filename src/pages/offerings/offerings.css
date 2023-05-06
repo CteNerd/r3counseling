@@ -4,6 +4,11 @@
   text-align: center;
 }
 
+.emdr-link {
+  font-weight: 400;
+  font-size: x-large;
+}
+
 .session-img {
   max-height: 50vh;
 }
