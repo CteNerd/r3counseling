@@ -1,0 +1,45 @@
+.spwidget-button-wrapper {
+  text-align: center;
+  padding: 5px;
+}
+
+.spwidget-button {
+  display: inline-block;
+  padding: 12px 24px;
+  color: #fff !important;
+  background: #de6a26;
+  border: 0;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.spwidget-button:hover {
+  background: #d15913;
+}
+
+.spwidget-button:active {
+  color: rgba(255, 255, 255, 0.75) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+}
+
+.reception-img-container {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.reception-img {
+  max-height: 50vh;
+  max-width: 100%;
+}
+
+.retreat-img {
+  max-width: 80%;
+}
+
+.retreat-img-container {
+  margin: 15px;
+  text-align: center;
+}
