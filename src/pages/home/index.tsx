@@ -99,14 +99,18 @@ export default function Home() {
         style={{ display: modalOpen ? "block" : "none" }}
         onBlur={() => setModalOpen(false)}
       >
-        <div className="modal-content home-modal-content">
+        <div className="home-modal-content">
           <span className="close" onClick={closeModal}>
             &times;
           </span>
+          <a
+          href="https://cdn.forms-content.sg-form.com/58a2c899-c0c0-11ed-b4f5-060e8f5a62bc"
+          target="_blank">
           <img
             className="home-img"
             src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Home.pdf"
           />
+          </a>
         </div>
       </div>
     </div>
