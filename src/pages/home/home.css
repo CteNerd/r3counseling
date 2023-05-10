@@ -20,3 +20,29 @@
   background-color: transparent !important;
   background: transparent !important;
 }
+
+@media only screen and (max-width: 600px) {
+  .close-container {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+
+  .close {
+    float: none !important;
+  }
+
+  .home-modal-content {
+    max-height: fit-content;
+    margin: 25vh 0vw;
+    height: fit-content;
+    text-align: center;
+  }
+
+  .home-img {
+    width: 90vw;
+    margin: 0vh 0vw;
+    background-color: transparent !important;
+    background: transparent !important;
+  }
+}
