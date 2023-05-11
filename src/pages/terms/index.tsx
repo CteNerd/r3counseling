@@ -1,9 +1,51 @@
 import React, { useState } from "react";
 import "./terms.css";
+import GroupIntensiveImages from "./group-intensive-images.json";
+
 
 export default function Terms() {
   const [emdrModalOpen, setEmdrModalOpen] = useState(false);
   const [groupModalOpen, setGroupModalOpen] = useState(false);
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function showSlides(n: number) {
+    var i;
+    var slides = document.getElementsByClassName(
+      "mySlides"
+    ) as HTMLCollectionOf<HTMLElement>;
+
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+
+    if (slides[slideIndex - 1]) {
+      slides[slideIndex - 1].style.display = "block";
+    }
+
+    setTimeout(showSlides, 3500); // Change image every 3.5 seconds
+  }
+
+  function CarouselImages() {
+    let content: JSX.Element[] = [];
+
+    GroupIntensiveImages.forEach((image, index) => {
+      content.push(
+        <div className="mySlides fade">
+          {/* <div className="numbertext">{index} / {Cookies.length}</div> */}
+          <img src={image.url} className="gii-slide-img" />
+          {/* <div className="text">{image.caption}</div> */}
+        </div>
+      );
+    });
+
+    return <div>{content}</div>;
+  }
 
   return (
     <div>
@@ -137,7 +179,7 @@ export default function Terms() {
         className="modal"
         style={{ display: groupModalOpen ? "block" : "none" }}
       >
-        <div className="modal-content">
+        {/* <div className="modal-content">
           <span className="close" onClick={() => setGroupModalOpen(false)}>
             &times;
           </span>
@@ -149,6 +191,12 @@ export default function Terms() {
               type="video/mp4"
             />
           </video>
+        </div> */}
+        <div className="modal-container">
+          <span className="close" onClick={() => setGroupModalOpen(false)}>
+            &times;
+          </span>
+          <CarouselImages />
         </div>
       </div>
     </div>
