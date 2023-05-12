@@ -96,7 +96,7 @@ export default function Terms() {
               <li>
                 <a
                   href={
-                    "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3+-+Q12023.pdf"
+                    "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Group+Intensive+Offering+.pdf"
                   }
                   target={"_blank"}
                 >
