@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import "./terms.css";
 import GroupIntensiveImages from "./group-intensive-images.json";
 
-
 export default function Terms() {
   const [emdrModalOpen, setEmdrModalOpen] = useState(false);
   const [groupModalOpen, setGroupModalOpen] = useState(false);
 
   var slideIndex = 1;
-  showSlides(slideIndex);
 
   function showSlides(n: number) {
     var i;
@@ -85,7 +83,12 @@ export default function Terms() {
               </li>
             </ul>
             <li>
-              <a onClick={() => setGroupModalOpen(true)}>
+              <a
+                onClick={() => {
+                  setGroupModalOpen(true);
+                  showSlides(slideIndex);
+                }}
+              >
                 EMDR Group Intensive Offerings/Package Rate
               </a>
             </li>
