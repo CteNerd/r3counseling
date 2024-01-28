@@ -26,7 +26,9 @@ export default function Retreat() {
           need to care for yourself, begin to restore yourself, while surrounded by safe and supportive
           community. You are worthy of the PAUSE.</p>
 
-        <h2>4 Women. Intimate. Individualized. PAUSE.</h2>
+        <div className="coming-soon-container">
+          <h2>4 Women. Intimate. Individualized. PAUSE.</h2>
+        </div>
 
         <h3>Pause Retreat is for the women</h3>
         <ul>
@@ -62,7 +64,7 @@ export default function Retreat() {
           restore, and reclaim their wholeness, time, and self care.
         </p>
 
-        <div className="coming-soon-container">
+        <div >
           <h1>Sample Retreat Schedule &quot;Schedule is Subject to Change&quot;</h1>
         </div>
         <h5>Friday (Commune, Express, Aware)</h5>
