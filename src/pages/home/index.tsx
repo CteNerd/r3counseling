@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./home.css";
-import EDMR from "../../Assets/Images/EMDR.jpg"
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(true);
@@ -112,7 +111,7 @@ export default function Home() {
           >
             <img
               className="home-img"
-              src={EDMR}
+              src={"https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/EMDR.jpg"}
             />
           </a>
         </div>
