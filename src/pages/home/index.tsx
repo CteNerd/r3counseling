@@ -111,7 +111,7 @@ export default function Home() {
           >
             <img
               className="home-img"
-              src={"https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/EMDR.jpg"}
+              src={"https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Home-Rocks.png"}
             />
           </a>
         </div>
