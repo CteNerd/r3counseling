@@ -15,14 +15,12 @@ export default function AboutMe(props: Props) {
       <p>Hey, hey! I’m Tiffany.</p>
       <p>
         I am a Licensed Professional Counselor with over 15 years of clinical
-        experience. I am a Certified Professional Clinical Supervisor. I am
-        trauma informed, EMDR Certified provider and Certified Professional
-        Clinical Supervisor. I am Certified in the{" "}
+        experience. I am a Certified Professional Clinical Supervisor. I am Certified Holistic Therapist and EMDR Certified provider. I am Certified in the{" "}
         <a href="https://traumaconsciousyoga.com/" target="_blank">
           Trauma Conscious Yoga Method
         </a>{" "}
         and I’m also known as The Cookie Counselor. Yep, I bake to release
-        stress, ground myself and enrich my creative sweets passion.
+        stress, ground myself, and enrich my creative sweets passion.
       </p>
       <div>
         <a href="https://www.thecookierelease.com">
@@ -83,6 +81,12 @@ export default function AboutMe(props: Props) {
                 </li>
                 <li>
                   EMDRIA Certified; EMDR provider ASSYST, EMDR-PRECI, EMDR-IGTP
+                </li>
+                <li>
+                  Certified Holistic Healer
+                </li>
+                <li>
+                  CYT 300, Certified Yoga Therapist
                 </li>
                 <li>Certified, Trauma Conscious Yoga Method</li>
               </li>
