@@ -155,10 +155,24 @@ export default function Retreat() {
                 <br />
                 *Exception: 3-Virtual Post Retreat One-on-One Coaching Package
                 available for purchase within 7 days post retreat
+                <br />
+                *Retreat Accommodations and Coaching Packages are non-refundable. The cost for Retreat Accommodations can be transferred to future Retreat offerings. 
               </strong>
             </p>
           </div>
         </div>
+            <p>
+              <h4>Not Included</h4>
+              <ul>
+                <li>Airfare</li>
+                <li>Roundtrip airfare transport</li>
+                <li>Transportation to and from location</li>
+                <li>Travel Insurance</li>
+                <li>Optional offsite activities of personal choice</li>
+                <li>Optional offsite food purchases of choice</li>
+                <li>Transportation outside of group activities</li>
+              </ul>
+            </p>
 
         <h5>Frequently asked questions:</h5>
         <div>
