@@ -15,7 +15,9 @@ export default function AboutMe(props: Props) {
       <p>Hey, hey! I’m Tiffany.</p>
       <p>
         I am a Licensed Professional Counselor with over 15 years of clinical
-        experience. I am a Certified Professional Clinical Supervisor. I am Certified Holistic Therapist and EMDR Certified provider. I am Certified in the{" "}
+        experience. I am a Certified Professional Clinical Supervisor. I am
+        Certified Holistic Therapist and EMDR Certified provider. I am Certified
+        in the{" "}
         <a href="https://traumaconsciousyoga.com/" target="_blank">
           Trauma Conscious Yoga Method
         </a>{" "}
@@ -82,12 +84,8 @@ export default function AboutMe(props: Props) {
                 <li>
                   EMDRIA Certified; EMDR provider ASSYST, EMDR-PRECI, EMDR-IGTP
                 </li>
-                <li>
-                  Certified Holistic Healer
-                </li>
-                <li>
-                  CYT 300, Certified Yoga Therapist
-                </li>
+                <li>Certified Holistic Healer</li>
+                <li>CYT 300, Certified Yoga Therapist</li>
                 <li>Certified, Trauma Conscious Yoga Method</li>
               </li>
               <li>

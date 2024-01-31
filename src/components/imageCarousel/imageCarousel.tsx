@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { ImageMeta } from '../../types/models';
+import React, { useState } from "react";
+import { ImageMeta } from "../../types/models";
 
 // Define a type for the props
 type ImageCarouselProps = {
   images: ImageMeta[];
-  className:string;
+  className: string;
 };
 
 const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, className }) => {
@@ -25,11 +25,12 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, className }) => {
   return (
     <div>
       <button onClick={goToPrevious}>Previous</button>
-          <a
-            href={images[currentIndex].landingPageUrl}
-            target="_blank"
-          >
-      <img className={className} src={images[currentIndex].imageUrl} alt="carousel" />
+      <a href={images[currentIndex].landingPageUrl} target="_blank">
+        <img
+          className={className}
+          src={images[currentIndex].imageUrl}
+          alt="carousel"
+        />
       </a>
       <button onClick={goToNext}>Next</button>
     </div>
