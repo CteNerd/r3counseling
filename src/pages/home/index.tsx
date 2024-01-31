@@ -1,8 +1,17 @@
 import React, { useState } from "react";
 import "./home.css";
+import ImageCarousel from "../../components/imageCarousel/imageCarousel";
+import {ImageMeta} from "../../types/models"
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(true);
+  const images:ImageMeta[] = [{
+    imageUrl:"https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Home-Rocks.png",
+    landingPageUrl:"https://cdn.forms-content.sg-form.com/58a2c899-c0c0-11ed-b4f5-060e8f5a62bc"
+  },{
+    imageUrl:"https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Home.png",
+    landingPageUrl:"/retreat"
+  }]
 
   function closeModal() {
     setModalOpen(false);
@@ -105,15 +114,7 @@ export default function Home() {
               &times;
             </span>
           </div>
-          <a
-            href="https://cdn.forms-content.sg-form.com/58a2c899-c0c0-11ed-b4f5-060e8f5a62bc"
-            target="_blank"
-          >
-            <img
-              className="home-img"
-              src={"https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Home-Rocks.png"}
-            />
-          </a>
+            <ImageCarousel className={"home-img"} images={images} />
         </div>
       </div>
     </div>
