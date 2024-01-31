@@ -1,4 +1,4 @@
 export interface ImageMeta {
-    imageUrl:string;
-    landingPageUrl:string;
+  imageUrl: string;
+  landingPageUrl: string;
 }
