@@ -52,7 +52,7 @@ export default function SideNav() {
       <a href="/ready-to-release">Ready to Release</a>
       <a href="/terms">Terms</a>
       <a href="/retreat">Retreat</a>
-      <a href="/news">News</a>
+      <a href="/resources">Resources</a>
     </div>
   );
 }
