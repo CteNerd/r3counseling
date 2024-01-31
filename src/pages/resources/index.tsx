@@ -1,13 +1,13 @@
 import { AndroidOutlined, AppleOutlined } from "@ant-design/icons";
 import { Modal } from "antd";
 import React, { useState } from "react";
-import "./news.css";
+import "./resources.css";
 
 interface Props {
   isMobile: boolean;
 }
 
-export default function News(props: Props) {
+export default function Resources(props: Props) {
   const [newsletterModalVis, setNewsletterModalVis] = useState(false);
 
   return (
