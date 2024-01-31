@@ -82,6 +82,12 @@ export default function AboutMe(props: Props) {
                 <li>
                   EMDRIA Certified; EMDR provider ASSYST, EMDR-PRECI, EMDR-IGTP
                 </li>
+                <li>
+                  Certified Holistic Healer
+                </li>
+                <li>
+                  CYT 300, Certified Yoga Therapist
+                </li>
                 <li>Certified, Trauma Conscious Yoga Method</li>
               </li>
               <li>
