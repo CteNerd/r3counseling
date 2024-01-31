@@ -118,7 +118,7 @@ function App() {
               <Route path="/terms">
                 <Terms />
               </Route>
-              <Route path="/news">
+              <Route path="/resources">
                 <Resources isMobile={isMobile} />
               </Route>
               <Route path="/offerings">
