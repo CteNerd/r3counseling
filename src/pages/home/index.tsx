@@ -108,12 +108,7 @@ export default function Home() {
         </div>
       </div><h1>PAUSE Boutique Holistic Healing Retreat</h1>
       <p>
-        Are you ready to thrive and come alive, while continuing on your
-        journey? If so, I am here to align with you, become your ally, explore
-        your journey through your lens in a safe, non-judgmental, relaxed and
-        supportive environment. Let’s release pent up trauma, restore overall
-        wellbeing: mind, body, and soul. Allow me to help you become empowered
-        to redefine your personal transformation.
+      Holistic Healing retreat for high achieving women to rest, restore, and reclaim their wholeness, time, and self care. You may find yourself feeling burnt-out, with little time to pour into yourself. The daily grind can be overwhelming, leaving little time for self care, authenticity, and rejuvenation. It is time to reset, recenter, and cultivate the balance you have envisioned.
       </p>
       <div className="banner">
         <div className="banner-container">

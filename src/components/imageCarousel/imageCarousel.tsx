@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ImageMeta } from "../../types/models";
 
 // Define a type for the props
@@ -10,21 +10,16 @@ type ImageCarouselProps = {
 const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, className }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-  const goToPrevious = () => {
-    const isFirstImage = currentIndex === 0;
-    const newIndex = isFirstImage ? images.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((current) => (current + 1) % images.length);
+    }, 2000); // Change image every 2 seconds
 
-  const goToNext = () => {
-    const isLastImage = currentIndex === images.length - 1;
-    const newIndex = isLastImage ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
+    return () => clearInterval(intervalId); // Cleanup interval on component unmount
+  }, [images.length]);
 
   return (
     <div>
-      <button onClick={goToPrevious}>Previous</button>
       <a href={images[currentIndex].landingPageUrl} target="_blank">
         <img
           className={className}
@@ -32,7 +27,6 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, className }) => {
           alt="carousel"
         />
       </a>
-      <button onClick={goToNext}>Next</button>
     </div>
   );
 };
