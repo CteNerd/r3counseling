@@ -43,3 +43,13 @@
   margin: 15px;
   text-align: center;
 }
+
+.transition-text {
+  opacity: 0;
+  /* white-space: pre-wrap; */
+  transition: opacity 0.9s ease 0.203478s;
+}
+
+.transition-text.visible {
+  opacity: 1;
+}
