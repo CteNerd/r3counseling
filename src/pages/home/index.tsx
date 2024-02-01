@@ -118,7 +118,7 @@ export default function Home() {
           />
           <img
             className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat-11.png"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat-12.png"
           />
           <img
             className="banner-img"
@@ -126,7 +126,7 @@ export default function Home() {
           />
           <img
             className="banner-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat-18.png"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat-9.png"
           />
           <img
             className="banner-img"
