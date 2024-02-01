@@ -186,9 +186,6 @@ export default function Offerings(props: Props) {
             journey!
           </p>
         </div>
-        <div className="coming-soon-container">
-          <h3>EMDR Intensive Restoration Retreat Fall/Winter 2023</h3>
-        </div>
       </div>
       <div
         id="groupIntensiveModal"
