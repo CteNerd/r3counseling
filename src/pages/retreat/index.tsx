@@ -170,7 +170,7 @@ export default function Retreat() {
               $1350 Upstairs Floor, Queen, Shared Bathroom
             </p>
             <p className="transition-text">
-              <strong>*500 Deposit due upon booking</strong>
+              <strong>* $500 Non-Refundable Deposit due upon booking</strong>
             </p>
           </div>
         </div>
