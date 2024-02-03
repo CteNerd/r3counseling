@@ -39,7 +39,7 @@ export default function Offerings(props: Props) {
 
     Posters.forEach((poster, index) => {
       content.push(
-        <div className="mySlides fade session-img">
+        <div key={index} className="mySlides fade session-img">
           {/* <div className="numbertext">{index} / {Posters.length}</div> */}
           <img src={poster.url} className="slide-img" />
           {/* <div className="text">{poster.caption}</div> */}

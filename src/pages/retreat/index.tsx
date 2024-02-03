@@ -199,18 +199,18 @@ export default function Retreat() {
             </p>
           </div>
         </div>
-        <p className="transition-text">
-          <h4 className="transition-text">Not Included</h4>
-          <ul className="transition-text">
-            <li className="transition-text">Airfare</li>
-            <li className="transition-text">Roundtrip airfare transport</li>
-            <li className="transition-text">Transportation to and from location</li>
-            <li className="transition-text">Travel Insurance</li>
-            <li className="transition-text">Optional offsite activities of personal choice</li>
-            <li className="transition-text">Optional offsite food purchases of choice</li>
-            <li className="transition-text">Transportation outside of group activities</li>
-          </ul>
-        </p>
+
+        <h4 className="transition-text">Not Included</h4>
+        <ul className="transition-text">
+          <li className="transition-text">Airfare</li>
+          <li className="transition-text">Roundtrip airfare transport</li>
+          <li className="transition-text">Transportation to and from location</li>
+          <li className="transition-text">Travel Insurance</li>
+          <li className="transition-text">Optional offsite activities of personal choice</li>
+          <li className="transition-text">Optional offsite food purchases of choice</li>
+          <li className="transition-text">Transportation outside of group activities</li>
+        </ul>
+
 
         <h5 className="transition-text">Frequently asked questions:</h5>
         <div>
