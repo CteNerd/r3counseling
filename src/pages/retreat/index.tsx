@@ -125,7 +125,7 @@ export default function Retreat() {
             Sample Retreat Schedule &quot;Schedule is Subject to Change&quot;
           </h1>
         </div>
-        <h5>Friday (Commune, Express, Aware)</h5>
+        <h5 className="transition-text">Friday (Commune, Express, Aware)</h5>
         <div>
           <ul className="transition-text">
             <li className="transition-text">Arrive ~ 3 pm</li>
@@ -135,7 +135,7 @@ export default function Retreat() {
           </ul>
         </div>
 
-        <h5>Saturday (Aware, Release, Clarify)</h5>
+        <h5 className="transition-text">Saturday (Aware, Release, Clarify)</h5>
         <div>
           <ul className="transition-text">
             <li className="transition-text">Breath, Movement, Reflect</li>
@@ -148,7 +148,7 @@ export default function Retreat() {
           </ul>
         </div>
 
-        <h5>Sunday (Integrate and Empower)</h5>
+        <h5 className="transition-text">Sunday (Integrate and Empower)</h5>
         <div>
           <ul className="transition-text">
             <li className="transition-text">Closing Sister Circle</li>
