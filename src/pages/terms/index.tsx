@@ -34,7 +34,7 @@ export default function Terms() {
 
     GroupIntensiveImages.forEach((image, index) => {
       content.push(
-        <div className="mySlides fade">
+        <div key={index} className="mySlides fade">
           {/* <div className="numbertext">{index} / {Cookies.length}</div> */}
           <img src={image.url} className="gii-slide-img" />
           {/* <div className="text">{image.caption}</div> */}
