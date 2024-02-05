@@ -101,7 +101,7 @@ export default function Retreat() {
 
         <h1 className="transition-text">Your Host</h1>
         <p className="transition-text">
-          Hey Y’all, I‘m Tiffany. I am an ambitions woman juggling the roles of
+          Hey Y’all, I‘m Tiffany. I am an ambitous woman juggling the roles of
           a devoted wife, a nurturing mother to three amazing kiddos, and a
           multipreneur. For years, I threw myself into caring for others, often
           neglecting my own well-being in the process. Despite my dedication, I
