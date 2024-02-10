@@ -108,7 +108,7 @@ export default function Home() {
         </div>
       </div><h1>PAUSE Boutique Holistic Healing Retreat</h1>
       <p>
-      Holistic Healing retreat for high achieving women to rest, restore, and reclaim their wholeness, time, and self care. You may find yourself feeling burnt-out, with little time to pour into yourself. The daily grind can be overwhelming, leaving little time for self care, authenticity, and rejuvenation. It is time to reset, recenter, and cultivate the balance you have envisioned.
+      PAUSE: Holistic Healing retreat for high achieving women to rest, restore, and reclaim their wholeness, time, and self care. You may find yourself feeling burnt-out, with little time to pour into yourself. The daily grind can be overwhelming, leaving little time for self care, authenticity, and rejuvenation. It is time to reset, recenter, and cultivate the balance you have envisioned.
       </p>
       <div className="banner">
         <div className="banner-container">
