@@ -76,38 +76,60 @@ export default function Retreat() {
           </h2>
         </div>
 
-        <h3 className="transition-text">Pause Retreat is for the women</h3>
-        <ul className="transition-text">
-          <li className="transition-text">
-            Who are high achievers with limited time for self
-          </li>
-          <li className="transition-text">
-            Who are facing burnout and are ready to take off the mask
-          </li>
-          <li className="transition-text">
-            Who feel pressure to appear to have it all together while navigating
-            home, work, and other life demands
-          </li>
-        </ul>
+        <div className="retreat-intro-section-container">
+          <div>
+            <h3 className="transition-text">Pause Retreat is for the women</h3>
+            <ul className="transition-text">
+              <li className="transition-text">
+                Who are high achievers with limited time for self
+              </li>
+              <li className="transition-text">
+                Who are facing burnout and are ready to take off the mask
+              </li>
+              <li className="transition-text">
+                Who feel pressure to appear to have it all together while
+                navigating home, work, and other life demands
+              </li>
+            </ul>
 
-        <h3 className="transition-text">PAUSE Includes:</h3>
-        <ul className="transition-text">
-          <li className="transition-text">
-            Your stay in an Intimate Boutique Style Beach Property
-          </li>
-          <li className="transition-text">
-            All onsite meals included (dietary restrictions can be accommodated)
-          </li>
-          <li className="transition-text">
-            All Holistic Healing practices and activities-Trauma Conscious Yoga,
-            Sound Meditation, Breath Work, Sister Circles, Fire Release Ceremony
-          </li>
-          <li className="transition-text">
-            Bonuses: Pause Welcome Tool Kit, Digital Self Care Journal, Access
-            to One-on-One Coaching Add-Ons, Heated Private Pool, Beach
-            Accessible Property
-          </li>
-        </ul>
+            <h3 className="transition-text">PAUSE Includes:</h3>
+            <ul className="transition-text">
+              <li className="transition-text">
+                Your stay in an Intimate Boutique Style Beach Property
+              </li>
+              <li className="transition-text">
+                All onsite meals included (dietary restrictions can be
+                accommodated)
+              </li>
+              <li className="transition-text">
+                All Holistic Healing practices and activities-Trauma Conscious
+                Yoga, Sound Meditation, Breath Work, Sister Circles, Fire
+                Release Ceremony
+              </li>
+              <li className="transition-text">
+                Bonuses: Pause Welcome Tool Kit, Digital Self Care Journal,
+                Access to One-on-One Coaching Add-Ons, Heated Private Pool,
+                Beach Accessible Property
+              </li>
+            </ul>
+          </div>
+          <div className="retreat-intro-img-and-button-container">
+            <div className="retreat-intro-img-container">
+              <img
+                className="retreat-intro-img"
+                src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0300.jpg"
+              />
+            </div>
+            <div className="retreat-intro-btn-container">
+              <a
+                href="https://docs.google.com/forms/d/131VPZ5XOYhlt7gOK9dtYN-UYWBNRSUNqrdUcD3lt4tY/edit?ts=6599ccdc"
+                target="_blank"
+              >
+                <button title="Join Retreat">Join Retreat</button>
+              </a>
+            </div>
+          </div>
+        </div>
 
         <h1 className="transition-text">Your Host</h1>
         <p className="transition-text">
@@ -135,6 +157,8 @@ export default function Retreat() {
             Sample Retreat Schedule &quot;Schedule is Subject to Change&quot;
           </h1>
         </div>
+        <div className="retreat-intro-section-container">
+        <div>
         <h5 className="transition-text">Friday (Commune, Express, Aware)</h5>
         <div>
           <ul className="transition-text">
@@ -166,6 +190,24 @@ export default function Retreat() {
             <li className="transition-text">Brunch</li>
             <li className="transition-text">Departure ~ 1pm</li>
           </ul>
+        </div>
+        </div>
+          <div className="retreat-intro-img-and-button-container">
+            <div className="retreat-intro-img-container">
+              <img
+                className="retreat-intro-img"
+                src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat-7.png"
+              />
+            </div>
+            <div className="retreat-intro-btn-container">
+              <a
+                href="https://docs.google.com/forms/d/131VPZ5XOYhlt7gOK9dtYN-UYWBNRSUNqrdUcD3lt4tY/edit?ts=6599ccdc"
+                target="_blank"
+              >
+                <button title="Join Retreat">Join Retreat</button>
+              </a>
+            </div>
+          </div>
         </div>
 
         <div className="coming-soon-container">
@@ -214,64 +256,84 @@ export default function Retreat() {
           </div>
         </div>
 
-        <h4 className="transition-text">Not Included</h4>
-        <ul className="transition-text">
-          <li className="transition-text">Airfare</li>
-          <li className="transition-text">Roundtrip airfare transport</li>
-          <li className="transition-text">
-            Transportation to and from location
-          </li>
-          <li className="transition-text">Travel Insurance</li>
-          <li className="transition-text">
-            Optional offsite activities of personal choice
-          </li>
-          <li className="transition-text">
-            Optional offsite food purchases of choice
-          </li>
-          <li className="transition-text">
-            Transportation outside of group activities
-          </li>
-        </ul>
-
-        <h5 className="transition-text">Frequently asked questions:</h5>
-        <div>
-          <p className="transition-text">
-            Should I book my flight once my application is completed for
-            retreat:
-            <br />
-            <strong>
-              No, please wait until you receive confirmation from retreat host
-              of ACCEPTANCE into PAUSE
-            </strong>
-            <br />
-            <br />
-            Where is closest airport to retreat property:
-            <br />
-            <strong>Destin-Fort Walton Beach Airport (VPS)</strong>
-            <br />
-            <br />
-            What is the location of retreat property:{" "}
-            <strong>Santa Rosa Beach, Florida</strong>
-            <br />
-            <br />
-            What is the estimated cost of the uber ride:{" "}
-            <strong>$57-$83</strong>
-            <br />
-            <br />
-            What is the approximate length of time from Airport to Santa Rosa:{" "}
-            <strong>47 min or 31.5 miles</strong>
-            <br />
-            <br />
-            Should I obtain Trip Insurance:
-            <br />
-            <strong>
-              Trip Insurance can be independently at your discretion. Here are a
-              few sites to consider: Allianz Travel Insurance; Travel Guard;
-              Travelers Insurance (These are only suggestions, PAUSE has no
-              connection to any of the option insurers to consider)
-            </strong>
-          </p>
+        <div className="retreat-intro-section-container">
+          <div>
+          <h4 className="transition-text">Not Included</h4>
+          <ul className="transition-text">
+            <li className="transition-text">Airfare</li>
+            <li className="transition-text">Roundtrip airfare transport</li>
+            <li className="transition-text">
+              Transportation to and from location
+            </li>
+            <li className="transition-text">Travel Insurance</li>
+            <li className="transition-text">
+              Optional offsite activities of personal choice
+            </li>
+            <li className="transition-text">
+              Optional offsite food purchases of choice
+            </li>
+            <li className="transition-text">
+              Transportation outside of group activities
+            </li>
+          </ul>
         </div>
+          <div className="retreat-intro-img-and-button-container">
+            <div className="retreat-intro-img-container">
+              <img
+                className="retreat-intro-img"
+                src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat-18.png"
+              />
+            </div>
+            <div className="retreat-intro-btn-container">
+              <a
+                href="https://docs.google.com/forms/d/131VPZ5XOYhlt7gOK9dtYN-UYWBNRSUNqrdUcD3lt4tY/edit?ts=6599ccdc"
+                target="_blank"
+              >
+                <button title="Join Retreat">Join Retreat</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+          <h5 className="transition-text">Frequently asked questions:</h5>
+          <div>
+            <p className="transition-text">
+              Should I book my flight once my application is completed for
+              retreat:
+              <br />
+              <strong>
+                No, please wait until you receive confirmation from retreat host
+                of ACCEPTANCE into PAUSE
+              </strong>
+              <br />
+              <br />
+              Where is closest airport to retreat property:
+              <br />
+              <strong>Destin-Fort Walton Beach Airport (VPS)</strong>
+              <br />
+              <br />
+              What is the location of retreat property:{" "}
+              <strong>Santa Rosa Beach, Florida</strong>
+              <br />
+              <br />
+              What is the estimated cost of the uber ride:{" "}
+              <strong>$57-$83</strong>
+              <br />
+              <br />
+              What is the approximate length of time from Airport to Santa Rosa:{" "}
+              <strong>47 min or 31.5 miles</strong>
+              <br />
+              <br />
+              Should I obtain Trip Insurance:
+              <br />
+              <strong>
+                Trip Insurance can be independently at your discretion. Here are
+                a few sites to consider: Allianz Travel Insurance; Travel Guard;
+                Travelers Insurance (These are only suggestions, PAUSE has no
+                connection to any of the option insurers to consider)
+              </strong>
+            </p>
+          </div>
       </div>
 
       <div className="retreat-img-container">
