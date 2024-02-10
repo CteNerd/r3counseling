@@ -1,6 +1,3 @@
-import { AndroidOutlined, AppleOutlined } from "@ant-design/icons";
-import { Modal } from "antd";
-import React, { useState } from "react";
 import "./resources.css";
 
 interface Props {
@@ -8,7 +5,6 @@ interface Props {
 }
 
 export default function Resources(props: Props) {
-  const [newsletterModalVis, setNewsletterModalVis] = useState(false);
 
   return (
     <div>
