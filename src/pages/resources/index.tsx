@@ -12,16 +12,6 @@ export default function Resources(props: Props) {
 
   return (
     <div>
-      <h1>Keep up with the latest on our developments here.</h1>
-      <div>
-        <a onClick={() => setNewsletterModalVis(!newsletterModalVis)}>
-          <button>Subscribe</button>
-        </a>
-        <iframe
-          className={newsletterModalVis ? "signup-form" : "hidden-signup"}
-          src="https://cdn.forms-content.sg-form.com/7fc8c182-3472-11ec-bd3e-06eb709f0acd"
-        />
-      </div>
       <div className="news-list-container">
         <ol className="news-list">
           {/* <li>Official site launching Winter 2022</li> */}
