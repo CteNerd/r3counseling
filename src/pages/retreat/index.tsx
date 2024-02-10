@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./retreat.css";
 
 export default function Retreat() {
-  const containerRef = useRef<HTMLDivElement | null>(null)
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -13,27 +13,31 @@ export default function Retreat() {
           } else {
             entry.target.classList.remove("visible");
           }
-        })
+        });
       },
       {
         root: null,
         rootMargin: "0px",
         threshold: 0.1,
       }
-    )
+    );
 
     if (containerRef.current) {
-      const elements = containerRef.current.querySelectorAll("h1, h2, h3, h4, h5, p, ul, li");
-      elements.forEach(element => observer.observe(element));
+      const elements = containerRef.current.querySelectorAll(
+        "h1, h2, h3, h4, h5, p, ul, li"
+      );
+      elements.forEach((element) => observer.observe(element));
     }
 
     //clean up on mount
     return () => {
       if (containerRef.current) {
-        const elements = containerRef.current.querySelectorAll("h1, h2, h3, h4, h5, p, ul, li");
-        elements.forEach(element => observer.unobserve(element));
+        const elements = containerRef.current.querySelectorAll(
+          "h1, h2, h3, h4, h5, p, ul, li"
+        );
+        elements.forEach((element) => observer.unobserve(element));
       }
-    }
+    };
   }, []);
 
   useEffect(() => {
@@ -48,13 +52,11 @@ export default function Retreat() {
     }
   }, []);
   return (
-
-
-
-    <div id="r3"  >
-
+    <div id="r3">
       <div ref={containerRef}>
-        <h1 className="transition-text">PAUSE-Boutique Holistic Healing Retreat</h1>
+        <h1 className="transition-text">
+          PAUSE-Boutique Holistic Healing Retreat
+        </h1>
         <p className="transition-text">
           PAUSE: Holistic Healing retreat for high achieving women to rest,
           restore, and reclaim their wholeness, time, and self care. We
@@ -69,13 +71,19 @@ export default function Retreat() {
         </p>
 
         <div className="coming-soon-container">
-          <h2 className="transition-text">4 Women. Intimate. Individualized. PAUSE.</h2>
+          <h2 className="transition-text">
+            4 Women. Intimate. Individualized. PAUSE.
+          </h2>
         </div>
 
         <h3 className="transition-text">Pause Retreat is for the women</h3>
         <ul className="transition-text">
-          <li className="transition-text">Who are high achievers with limited time for self</li>
-          <li className="transition-text">Who are facing burnout and are ready to take off the mask</li>
+          <li className="transition-text">
+            Who are high achievers with limited time for self
+          </li>
+          <li className="transition-text">
+            Who are facing burnout and are ready to take off the mask
+          </li>
           <li className="transition-text">
             Who feel pressure to appear to have it all together while navigating
             home, work, and other life demands
@@ -84,7 +92,9 @@ export default function Retreat() {
 
         <h3 className="transition-text">PAUSE Includes:</h3>
         <ul className="transition-text">
-          <li className="transition-text">Your stay in an Intimate Boutique Style Beach Property</li>
+          <li className="transition-text">
+            Your stay in an Intimate Boutique Style Beach Property
+          </li>
           <li className="transition-text">
             All onsite meals included (dietary restrictions can be accommodated)
           </li>
@@ -93,16 +103,16 @@ export default function Retreat() {
             Sound Meditation, Breath Work, Sister Circles, Fire Release Ceremony
           </li>
           <li className="transition-text">
-            Bonuses: Pause Welcome Tool Kit, Digital Self Care Journal, Access to
-            One-on-One Coaching Add-Ons, Heated Private Pool, Beach Accessible
-            Property
+            Bonuses: Pause Welcome Tool Kit, Digital Self Care Journal, Access
+            to One-on-One Coaching Add-Ons, Heated Private Pool, Beach
+            Accessible Property
           </li>
         </ul>
 
         <h1 className="transition-text">Your Host</h1>
         <p className="transition-text">
-          Hey Y’all, I‘m Tiffany. I am an ambitous woman juggling the roles of
-          a devoted wife, a nurturing mother to three amazing kiddos, and a
+          Hey Y’all, I‘m Tiffany. I am an ambitous woman juggling the roles of a
+          devoted wife, a nurturing mother to three amazing kiddos, and a
           multipreneur. For years, I threw myself into caring for others, often
           neglecting my own well-being in the process. Despite my dedication, I
           began feeling drained, disconnected, and even resentful at times. I
@@ -176,7 +186,9 @@ export default function Retreat() {
         </div>
 
         <div className="coming-soon-container">
-          <h1 className="transition-text">Available Add on One-on-One Coaching Packages:</h1>
+          <h1 className="transition-text">
+            Available Add on One-on-One Coaching Packages:
+          </h1>
           <div>
             <p className="transition-text">
               3-50 minute virtual sessions post retreat - $500
@@ -194,7 +206,9 @@ export default function Retreat() {
                 *Exception: 3-Virtual Post Retreat One-on-One Coaching Package
                 available for purchase within 7 days post retreat
                 <br />
-                *Retreat Accommodations and Coaching Packages are non-refundable. The cost for Retreat Accommodations can be transferred to future Retreat offerings.
+                *Retreat Accommodations and Coaching Packages are
+                non-refundable. The cost for Retreat Accommodations can be
+                transferred to future Retreat offerings.
               </strong>
             </p>
           </div>
@@ -204,13 +218,20 @@ export default function Retreat() {
         <ul className="transition-text">
           <li className="transition-text">Airfare</li>
           <li className="transition-text">Roundtrip airfare transport</li>
-          <li className="transition-text">Transportation to and from location</li>
+          <li className="transition-text">
+            Transportation to and from location
+          </li>
           <li className="transition-text">Travel Insurance</li>
-          <li className="transition-text">Optional offsite activities of personal choice</li>
-          <li className="transition-text">Optional offsite food purchases of choice</li>
-          <li className="transition-text">Transportation outside of group activities</li>
+          <li className="transition-text">
+            Optional offsite activities of personal choice
+          </li>
+          <li className="transition-text">
+            Optional offsite food purchases of choice
+          </li>
+          <li className="transition-text">
+            Transportation outside of group activities
+          </li>
         </ul>
-
 
         <h5 className="transition-text">Frequently asked questions:</h5>
         <div>
