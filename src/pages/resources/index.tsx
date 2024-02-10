@@ -5,7 +5,6 @@ interface Props {
 }
 
 export default function Resources(props: Props) {
-
   return (
     <div>
       <h1>Resources to Release</h1>

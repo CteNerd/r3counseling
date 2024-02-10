@@ -53,3 +53,22 @@
 .transition-text.visible {
   opacity: 1;
 }
+
+.retreat-intro-section-container {
+  display: flex;
+  width: 100%;
+  align-items: center; /* This will vertically align the items in the middle */
+  justify-content: space-between; 
+}
+
+.retreat-intro-img-and-button-container {
+  text-align: center;
+}
+
+.retreat-intro-btn-container .retreat-intro-img-container {
+  max-width: 40vw;
+}
+
+.retreat-intro-img {
+  max-width: 25vw;
+}
