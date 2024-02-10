@@ -93,7 +93,7 @@ export default function Retreat() {
             Sound Meditation, Breath Work, Sister Circles, Fire Release Ceremony
           </li>
           <li className="transition-text">
-            Bonuses: Pause Welcome Tool Kit, Access to Group Photos, Access to
+            Bonuses: Pause Welcome Tool Kit, Digital Self Care Journal, Access to
             One-on-One Coaching Add-Ons, Heated Private Pool, Beach Accessible
             Property
           </li>
