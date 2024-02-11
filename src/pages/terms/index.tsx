@@ -55,8 +55,7 @@ export default function Terms() {
         consultation which is 15 minutes and free to all clients.
       </p>
       <p>
-        For more information about consultations, or training, please feel free
-        to reach out to The Cookie Counselor.
+      For more information about Retreats, Intensives, Clinical Supervision, Training, Group Therapy, or Individual Therapy feel free to send a message here. Our typical response time is within 24-48 business hours.
       </p>
       <h4>Individual Psychotherapy</h4>
       <div className="psychotherapy-container">
