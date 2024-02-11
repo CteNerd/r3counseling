@@ -14,7 +14,7 @@ export default function Home() {
     },
     {
       imageUrl:
-        "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Home.png",
+        "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/PAUSE-Retreat-Flier-v2.png",
       landingPageUrl: "/retreat",
     },
   ];
