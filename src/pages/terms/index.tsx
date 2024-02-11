@@ -65,11 +65,11 @@ export default function Terms() {
             <li>$140 for a 60 minute initial Intake Sessions</li>
             <li>$125 for a 55 minute Psychotherapy/EMDR session</li>
             <li>$175 for a 90 minute Extended Session</li>
-            <li>
+            {/* <li>
               <a onClick={() => setEmdrModalOpen(true)}>
                 Self Pay Package Rate: Individual/EMDR Intensive
               </a>
-            </li>
+            </li> */}
             <ul>
               <li>
                 <a
