@@ -61,17 +61,17 @@ export default function Terms() {
       <div className="psychotherapy-container">
         <div className="psychotherapy-container-columns">
           <ul>
-            <li>$174 for a 60 minute initial Intake Sessions</li>
-            {/* <li>
+            <li>$175 for a 60 minute initial Intake Sessions</li>
+            <li>
               <a onClick={() => setEmdrModalOpen(true)}>
                 Self Pay Package Rate: Individual/EMDR Intensive
               </a>
-            </li> */}
+            </li>
             <ul>
               <li>
                 <a
                   href={
-                    "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3+-+Q12023.pdf"
+                    "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/2024+EMDR+Intensive+Packages.png"
                   }
                   target={"_blank"}
                 >
@@ -167,7 +167,7 @@ export default function Terms() {
           <video className="modal-video" autoPlay={true} loop muted>
             <source
               src={
-                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3+-+Q12023.mp4"
+                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/2024+EMDR+Intensive+Packages.mp4"
               }
               type="video/mp4"
             />
@@ -179,7 +179,7 @@ export default function Terms() {
         className="modal"
         style={{ display: groupModalOpen ? "block" : "none" }}
       >
-        {/* <div className="modal-content">
+        <div className="modal-content">
           <span className="close" onClick={() => setGroupModalOpen(false)}>
             &times;
           </span>
@@ -191,7 +191,7 @@ export default function Terms() {
               type="video/mp4"
             />
           </video>
-        </div> */}
+        </div>
         <div className="modal-container">
           <span className="close" onClick={() => setGroupModalOpen(false)}>
             &times;
