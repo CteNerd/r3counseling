@@ -39,7 +39,7 @@ export default function Offerings(props: Props) {
 
     Posters.forEach((poster, index) => {
       content.push(
-        <div className="mySlides fade session-img">
+        <div key={index} className="mySlides fade session-img">
           {/* <div className="numbertext">{index} / {Posters.length}</div> */}
           <img src={poster.url} className="slide-img" />
           {/* <div className="text">{poster.caption}</div> */}
@@ -70,7 +70,7 @@ export default function Offerings(props: Props) {
             which expedites your healing journey.
           </p>
           <p>
-            An Intensive usually entails an 8-hour day session for 1 to 5
+            An Intensive usually entails a 4 to 8 hour day session for 1 to 5
             consecutive days. With this time frame, we spend more concentrated
             time healing your specific concern. Yes, it is INTENSE work and it
             can be the healing and emotional reset needed in this moment of your
@@ -186,9 +186,9 @@ export default function Offerings(props: Props) {
             journey!
           </p>
         </div>
-        <div className="coming-soon-container">
-          <h3>EMDR Intensive Restoration Retreat Fall/Winter 2023</h3>
-        </div>
+      </div>
+      <div className="coming-soon-container">
+        <h3>Stay Tuned R & R-Rest and Restore Coming November 2024</h3>
       </div>
       <div
         id="groupIntensiveModal"

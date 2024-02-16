@@ -1,8 +1,23 @@
 import React, { useState } from "react";
 import "./home.css";
+import ImageCarousel from "../../components/imageCarousel/imageCarousel";
+import { ImageMeta } from "../../types/models";
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(true);
+  const images: ImageMeta[] = [
+    {
+      imageUrl:
+        "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Home-Rocks.png",
+      landingPageUrl:
+        "https://cdn.forms-content.sg-form.com/58a2c899-c0c0-11ed-b4f5-060e8f5a62bc",
+    },
+    {
+      imageUrl:
+        "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/PAUSE-Retreat-Flier-v2.png",
+      landingPageUrl: "/retreat",
+    },
+  ];
 
   function closeModal() {
     setModalOpen(false);
@@ -59,6 +74,40 @@ export default function Home() {
           />
         </div>
       </div>
+
+      <h1>PAUSE Boutique Holistic Healing Retreat</h1>
+      <p>
+        PAUSE: Holistic Healing retreat for high achieving women to rest,
+        restore, and reclaim their wholeness, time, and self care. You may find
+        yourself feeling burnt-out, with little time to pour into yourself. The
+        daily grind can be overwhelming, leaving little time for self care,
+        authenticity, and rejuvenation. It is time to reset, recenter, and
+        cultivate the balance you have envisioned.
+      </p>
+      <div className="banner">
+        <div className="banner-container">
+          <img
+            className="banner-img"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat-1.png"
+          />
+          <img
+            className="banner-img"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat-12.png"
+          />
+          <img
+            className="banner-img"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat-7.png"
+          />
+          <img
+            className="banner-img"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat-9.png"
+          />
+          <img
+            className="banner-img"
+            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat-19.png"
+          />
+        </div>
+      </div>
       <h1>Empowerment | Support | Alliance | Safety </h1>
       <p>
         Are you ready to thrive and come alive, while continuing on your
@@ -105,15 +154,7 @@ export default function Home() {
               &times;
             </span>
           </div>
-          <a
-            href="https://cdn.forms-content.sg-form.com/58a2c899-c0c0-11ed-b4f5-060e8f5a62bc"
-            target="_blank"
-          >
-            <img
-              className="home-img"
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Home.pdf"
-            />
-          </a>
+          <ImageCarousel className={"home-img"} images={images} />
         </div>
       </div>
     </div>

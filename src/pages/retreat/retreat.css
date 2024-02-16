@@ -43,3 +43,96 @@
   margin: 15px;
   text-align: center;
 }
+
+.transition-text {
+  opacity: 0;
+  /* white-space: pre-wrap; */
+  transition: opacity 0.9s ease 0.203478s;
+}
+
+.transition-text.visible {
+  opacity: 1;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-side {
+  flex: 1; /* Each side takes up equal amount of space */
+  padding: 20px;
+  text-align: center;
+}
+
+.text-side {
+  flex: 1; /* Each side takes up equal amount of space */
+  padding: 20px;
+}
+
+.image-side img {
+  width: 100%; /* Make image fill its container */
+  height: auto; /* Keep image aspect ratio */
+}
+
+.image-side a {
+  height: auto; /* Keep image aspect ratio */
+}
+
+.retreat-intro-section-container {
+  display: flex;
+  width: 100%;
+  align-items: center; /* This will vertically align the items in the middle */
+  justify-content: space-between;
+}
+
+.retreat-intro-img-and-button-container {
+  text-align: center;
+}
+
+.retreat-intro-btn-container .retreat-intro-img-container {
+  max-width: 40vw;
+}
+
+.retreat-intro-img {
+  max-width: 25vw;
+}
+
+.hero-container {
+  position: relative;
+  height: 400px; /* Adjust based on your needs */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text {
+  color: white;
+  font-size: 30px; /* Adjust based on your needs */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+  padding: 20px;
+  font-family: BradleysPen;
+}
+
+.banner-container {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) { /* Adjust this breakpoint to your needs */
+  .container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+  
+  /* Optional: Adjust padding or other styles for mobile here */
+  .image-side, .text-side {
+    padding: 10px;
+  }
+}

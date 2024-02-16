@@ -34,7 +34,7 @@ export default function Terms() {
 
     GroupIntensiveImages.forEach((image, index) => {
       content.push(
-        <div className="mySlides fade">
+        <div key={index} className="mySlides fade">
           {/* <div className="numbertext">{index} / {Cookies.length}</div> */}
           <img src={image.url} className="gii-slide-img" />
           {/* <div className="text">{image.caption}</div> */}
@@ -55,16 +55,16 @@ export default function Terms() {
         consultation which is 15 minutes and free to all clients.
       </p>
       <p>
-        For more information about consultations, or training, please feel free
-        to reach out to The Cookie Counselor.
+        For more information about Retreats, Intensives, Clinical Supervision,
+        Training, Group Therapy, or Individual Therapy feel free to send a
+        message <a href="mailto:R3counseling@counselingsecure.com">here</a>. Our
+        typical response time is within 24-48 business hours.
       </p>
       <h4>Individual Psychotherapy</h4>
       <div className="psychotherapy-container">
         <div className="psychotherapy-container-columns">
           <ul>
-            <li>$140 for a 60 minute initial Intake Sessions</li>
-            <li>$125 for a 55 minute Psychotherapy/EMDR session</li>
-            <li>$175 for a 90 minute Extended Session</li>
+            <li>$175 for a 60 minute Individual Session</li>
             <li>
               <a onClick={() => setEmdrModalOpen(true)}>
                 Self Pay Package Rate: Individual/EMDR Intensive
@@ -74,7 +74,7 @@ export default function Terms() {
               <li>
                 <a
                   href={
-                    "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3+-+Q12023.pdf"
+                    "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/2024+EMDR+Intensive+Packages.png"
                   }
                   target={"_blank"}
                 >
@@ -170,7 +170,7 @@ export default function Terms() {
           <video className="modal-video" autoPlay={true} loop muted>
             <source
               src={
-                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Poster+-+R3+-+Q12023.mp4"
+                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/2024+EMDR+Intensive+Packages.mp4"
               }
               type="video/mp4"
             />
@@ -182,7 +182,7 @@ export default function Terms() {
         className="modal"
         style={{ display: groupModalOpen ? "block" : "none" }}
       >
-        {/* <div className="modal-content">
+        <div className="modal-content">
           <span className="close" onClick={() => setGroupModalOpen(false)}>
             &times;
           </span>
@@ -194,7 +194,7 @@ export default function Terms() {
               type="video/mp4"
             />
           </video>
-        </div> */}
+        </div>
         <div className="modal-container">
           <span className="close" onClick={() => setGroupModalOpen(false)}>
             &times;

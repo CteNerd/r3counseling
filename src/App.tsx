@@ -17,7 +17,7 @@ import {
   LinkedinOutlined,
 } from "@ant-design/icons";
 import SideNav from "./components/sideNav/sideNav";
-import News from "./pages/news";
+import Resources from "./pages/resources";
 import Retreat from "./pages/retreat";
 
 function App() {
@@ -90,8 +90,8 @@ function App() {
           <Menu.Item key="retreat">
             <a href="/retreat">Retreat</a>
           </Menu.Item>
-          <Menu.Item key="news">
-            <a href="/news">News</a>
+          <Menu.Item key="resources">
+            <a href="/resources">Resources</a>
           </Menu.Item>
         </Menu>
       );
@@ -107,7 +107,7 @@ function App() {
             <Navigation />
           </div>
         </header>
-        <body className="App-body">
+        <div className="App-body">
           <div className="App-body-container">
             {/* A <Switch> looks through its children <Route>s and
       renders the first one that matches the current URL. */}
@@ -118,8 +118,8 @@ function App() {
               <Route path="/terms">
                 <Terms />
               </Route>
-              <Route path="/news">
-                <News isMobile={isMobile} />
+              <Route path="/resources">
+                <Resources isMobile={isMobile} />
               </Route>
               <Route path="/offerings">
                 <Offerings isMobile={isMobile} />
@@ -138,7 +138,7 @@ function App() {
               </Route>
             </Switch>
           </div>
-        </body>
+        </div>
         <footer className="App-footer">
           <div>
             <div className="footer-link-container">
