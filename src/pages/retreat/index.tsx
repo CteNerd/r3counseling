@@ -53,6 +53,11 @@ export default function Retreat() {
   }, []);
   return (
     <div id="r3">
+      <div className="hero-container" style={{ backgroundImage: `url(https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0299.JPG)` }}>
+      <div className="hero-text">
+        Welcome to Your Relaxation
+      </div>
+    </div>
       <div ref={containerRef}>
         <h1 className="transition-text">
           PAUSE-Boutique Holistic Healing Retreat
@@ -227,6 +232,48 @@ export default function Retreat() {
           </div>
         </div>
 
+
+      <div className="banner">
+        <div className="banner-container">
+      
+        <img
+          src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0300.jpg"
+            className="banner-img"
+        />
+      
+      
+        <img
+          src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0301.JPG"
+            className="banner-img"
+        />
+      
+      
+        <img
+          src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0496.JPG"
+            className="banner-img"
+        />
+      
+      
+        <img
+          src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0497.JPG"
+            className="banner-img"
+        />
+      
+      
+        <img
+          src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0498.JPG"
+            className="banner-img"
+        />
+      
+      
+        <img
+          src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0502.JPG"
+            className="banner-img"
+        />
+      
+        </div>
+      </div>
+
         <div className="coming-soon-container">
           <h1 className="transition-text">
             Available Add on One-on-One Coaching Packages:
@@ -334,49 +381,6 @@ export default function Retreat() {
               </strong>
             </p>
           </div>
-      </div>
-
-      <div className="retreat-img-container">
-        <img
-          src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0299.JPG"
-          className="retreat-img"
-        />
-      </div>
-      <div className="retreat-img-container">
-        <img
-          src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0300.jpg"
-          className="retreat-img"
-        />
-      </div>
-      <div className="retreat-img-container">
-        <img
-          src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0301.JPG"
-          className="retreat-img"
-        />
-      </div>
-      <div className="retreat-img-container">
-        <img
-          src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0496.JPG"
-          className="retreat-img"
-        />
-      </div>
-      <div className="retreat-img-container">
-        <img
-          src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0497.JPG"
-          className="retreat-img"
-        />
-      </div>
-      <div className="retreat-img-container">
-        <img
-          src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0498.JPG"
-          className="retreat-img"
-        />
-      </div>
-      <div className="retreat-img-container">
-        <img
-          src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0502.JPG"
-          className="retreat-img"
-        />
       </div>
     </div>
   );
