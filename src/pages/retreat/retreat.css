@@ -54,11 +54,37 @@
   opacity: 1;
 }
 
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-side {
+  flex: 1; /* Each side takes up equal amount of space */
+  padding: 20px;
+  text-align: center;
+}
+
+.text-side {
+  flex: 1; /* Each side takes up equal amount of space */
+  padding: 20px;
+}
+
+.image-side img {
+  width: 100%; /* Make image fill its container */
+  height: auto; /* Keep image aspect ratio */
+}
+
+.image-side a {
+  height: auto; /* Keep image aspect ratio */
+}
+
 .retreat-intro-section-container {
   display: flex;
   width: 100%;
   align-items: center; /* This will vertically align the items in the middle */
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
 .retreat-intro-img-and-button-container {
