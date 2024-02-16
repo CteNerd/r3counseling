@@ -72,3 +72,28 @@
 .retreat-intro-img {
   max-width: 25vw;
 }
+
+.hero-container {
+  position: relative;
+  height: 400px; /* Adjust based on your needs */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text {
+  color: white;
+  font-size: 30px; /* Adjust based on your needs */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+  padding: 20px;
+  font-family: BradleysPen;
+}
+
+.banner-container {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+}
