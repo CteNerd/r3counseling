@@ -188,7 +188,7 @@ export default function Offerings(props: Props) {
         </div>
       </div>
       <div className="coming-soon-container">
-        <h3>Stay Tuned R & R-Rest and Restore Coming November 2024</h3>
+        <h3>Stay Tuned R & R-Rest and Restore Retreat Coming November 2024</h3>
       </div>
       <div
         id="groupIntensiveModal"
