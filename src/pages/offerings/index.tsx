@@ -60,26 +60,23 @@ export default function Offerings(props: Props) {
         <div>
           <h2>EMDR Intensives</h2>
           <p>
-            EMDR Intensives are another road to healing, rather than changing
-            how you think to change how you feel, EMDR rewires your memory
-            networks and desensitizes those old memories that make you feel
-            stuck in your past. The negative feelings and belief patterns about
-            self that are embedded in your memory network can be changed with
-            EMDR processing. EMDR Intensives provides you with an opportunity to
-            work on your past, present, and/or future over a condensed period,
-            which expedites your healing journey.
+            EMDR Intensives offer an alternative path to healing by rewiring
+            memory networks rather than simply altering thought patterns to
+            change emotions. Through EMDR processing, memories that contribute
+            to feeling stuck in the past are desensitized, allowing for
+            transformation of negative feelings, beliefs, and body sensations.
+            These Intensives provide a condensed opportunity to address past,
+            present, and future concerns, expediting the healing process.
           </p>
           <p>
-            An Intensive usually entails a 4 to 8 hour day session for 1 to 5
-            consecutive days. With this time frame, we spend more concentrated
-            time healing your specific concern. Yes, it is INTENSE work and it
-            can be the healing and emotional reset needed in this moment of your
-            life. EMDR Intensives are not for everyone, so, a free consultation
-            is provided to determine your readiness for the intensive work being
-            offered. You can travel from anywhere, feel free to spend a few days
-            in Augusta while conducting your Intensive, then, return to your
-            normal schedule. I invite you to contact me to schedule your free
-            consultation, why wait!!
+            Typically spanning 4 to 8 hours per day over 1 to 5 days, Intensives
+            offer concentrated time to address specific issues. While the work
+            is intense, it can serve as a profound emotional reset. To ensure
+            suitability for Intensive work, a complimentary consultation is
+            provided. Clients are welcome to travel to Augusta for the
+            Intensive, creating space for focused healing before returning to
+            their regular routines. Don't hesitate to reach out and schedule
+            your free consultation today—why wait to begin your healing journey?
           </p>
         </div>
         <div className="free-consult-container">
