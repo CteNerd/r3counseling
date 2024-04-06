@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./offerings.css";
 import Posters from "./posters.json";
 import FAQs from "./intensive-faqs";
@@ -10,6 +10,31 @@ interface Props {
 export default function Offerings(props: Props) {
   const [consultModalVis, setConsultModalVis] = useState(false);
   const [groupModalOpen, setGroupModalOpen] = useState(false);
+
+  useEffect(() => {
+  const handleScroll = () => {
+    const elements = document.querySelectorAll('.transition-text');
+    elements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const fullyVisible = rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+      const partiallyVisible = rect.top < window.innerHeight && rect.bottom >= 0; // Adjusted to check for any part of the element being visible
+
+      if (fullyVisible || partiallyVisible) {
+        el.classList.add('visible');
+      } else {
+        el.classList.remove('visible');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Call it once to check visibility on initial render
+
+  // Clean up the event listener when the component unmounts
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
+
+  // Your existing component code
 
   var slideIndex = 1;
   showSlides(slideIndex);
@@ -59,8 +84,8 @@ export default function Offerings(props: Props) {
       </div>
       <div>
         <div>
-          <h2>EMDR Intensives</h2>
-          <p>
+          <h2 className="transition-text">EMDR Intensives</h2>
+          <p className="transition-text">
             EMDR Intensives offer an alternative path to healing by rewiring
             memory networks rather than simply altering thought patterns to
             change emotions. Through EMDR processing, memories that contribute
@@ -69,7 +94,7 @@ export default function Offerings(props: Props) {
             These Intensives provide a condensed opportunity to address past,
             present, and future concerns, expediting the healing process.
           </p>
-          <p>
+          <p className="transition-text">
             Typically spanning 4 to 8 hours per day over 1 to 5 days, Intensives
             offer concentrated time to address specific issues. While the work
             is intense, it can serve as a profound emotional reset. To ensure
@@ -104,17 +129,17 @@ export default function Offerings(props: Props) {
         <div>
           <div>
             <div>
-              <h3>Intensive Experience at a Glance</h3>
+              <h3 className="transition-text">Intensive Experience at a Glance</h3>
             </div>
           </div>
           <div>
             <ul className="intensive-offerings-list">
-              <li>
+              <li className="transition-text">
                 <strong>Consultation 30 minutes</strong> - Our Goodness of Fit
                 consultation aims to assess whether the Intensive is the optimal
                 approach for your current journey.
               </li>
-              <li>
+              <li className="transition-text">
                 <strong>EMDR Client Workbook</strong> - This workbook features
                 assessments and activities designed to ready you for the
                 Intensive, enabling you to track progress on your treatment
@@ -122,14 +147,14 @@ export default function Offerings(props: Props) {
                 maintain a comprehensive record of your journey before, during,
                 and after our sessions.
               </li>
-              <li>
+              <li className="transition-text">
                 <strong>Intensive Intake 60 minutes</strong> - In this 60-minute
                 session, we establish the objectives of the Intensive and lay
                 the groundwork for the journey ahead. Together, we'll pinpoint
                 the sources of discomfort—be it painful experiences, beliefs,
                 emotions, bodily sensations, or images—that you aim to address.
               </li>
-              <li>
+              <li className="transition-text">
                 <strong>Customized EMDR Intensive Schedule</strong> - Intensives
                 typically span from 1 to 5 days, with sessions lasting 4 to 8
                 hours each. Our focus during these sessions will be on
@@ -138,19 +163,19 @@ export default function Offerings(props: Props) {
                 EMDR, Resourcing Activities, and Holistic Practices will be
                 integrated.
               </li>
-              <li>
+              <li className="transition-text">
                 <strong>Post Intensive Follow Up/Next Steps 45 minutes</strong>{" "}
                 - This 45-minute session is dedicated to exploring your
                 experience, reflecting on any changes you've observed within
                 yourself or new insights you may have gained. We'll also discuss
                 the next steps for your journey.
                 <ul>
-                  <li>
+                  <li className="transition-text">
                     <strong>Not an insurance covered service</strong>
                   </li>
                 </ul>
               </li>
-              <li>
+              <li className="transition-text">
                 <strong>Pricing begins at $1000</strong> and is adjusted based
                 on your Customized EMDR Intensive Schedule/Needs
               </li>
@@ -160,14 +185,14 @@ export default function Offerings(props: Props) {
         <div>
           <div>
             <div>
-              <h3>Intensive Frequently Asked Questions (FAQs)</h3>
-              <p>Click To Expand Answer</p>
+              <h3 className="transition-text">Intensive Frequently Asked Questions (FAQs)</h3>
+              <p className="transition-text">Click To Expand Answer</p>
             </div>
           </div>
           <FAQs />
         </div>
         <div className="highlight-vid-container">
-          <h3>EMDR at a Glance</h3>
+          <h3 className="transition-text">EMDR at a Glance</h3>
           <iframe
             className="highlight-vid"
             src="https://www.youtube.com/embed/Pkfln-ZtWeY"
@@ -177,8 +202,8 @@ export default function Offerings(props: Props) {
           ></iframe>
         </div>
         <div>
-          <h2>EMDR Group Intensives</h2>
-          <p>
+          <h2 className="transition-text">EMDR Group Intensives</h2>
+          <p className="transition-text">
             <a
               className="emdr-link"
               href="https://youtu.be/n2fQ8xC4U10"
@@ -224,8 +249,8 @@ export default function Offerings(props: Props) {
           </div>
         </div>
         <div>
-          <h2>Clinical Supervision</h2>
-          <p>
+          <h2 className="transition-text">Clinical Supervision</h2>
+          <p className="transition-text">
             Release Restore Redefine Counseling offers clinical supervision to
             students and clinicians who are in the process of seeking their
             professional counseling license. If you are interested in beginning
@@ -239,8 +264,8 @@ export default function Offerings(props: Props) {
           </p>
         </div>
         <div>
-          <h2>Individual Therapy</h2>
-          <p>
+          <h2 className="transition-text">Individual Therapy</h2>
+          <p className="transition-text">
             Let’s talk one-on-one in a safe, non-judgmental, relaxed, and
             supportive environment. Allow me to gain an understanding of your
             past and present experiences through your lens. Let’s explore the
@@ -251,7 +276,7 @@ export default function Offerings(props: Props) {
         </div>
       </div>
       <div className="coming-soon-container">
-        <h3>Stay Tuned R & R-Rest and Restore Retreat Coming November 2024</h3>
+        <h3 className="transition-text">Stay Tuned R & R-Rest and Restore Retreat Coming November 2024</h3>
       </div>
       <div
         id="groupIntensiveModal"
