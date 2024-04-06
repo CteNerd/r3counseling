@@ -124,15 +124,16 @@
   font-style: italic;
 }
 
-
 /* Responsive adjustments */
-@media (max-width: 768px) { /* Adjust this breakpoint to your needs */
+@media (max-width: 768px) {
+  /* Adjust this breakpoint to your needs */
   .container {
     flex-direction: column; /* Stack items vertically on smaller screens */
   }
-  
+
   /* Optional: Adjust padding or other styles for mobile here */
-  .image-side, .text-side {
+  .image-side,
+  .text-side {
     padding: 10px;
   }
 }
