@@ -4,7 +4,7 @@
 }
 
 .session-img-container .mySlides {
-  display: flex; /* Use flexbox for alignment */
+  display: none; /* Use flexbox for alignment */
   justify-content: center; /* Center the images horizontally */
   align-items: center; /* Center the images vertically */
   width: 100%; /* Ensure the slide takes full width of the container */
@@ -33,6 +33,10 @@
 
 .free-consult-button {
   padding: 5px;
+}
+
+.faq-question {
+font-weight: bold;
 }
 
 .consult-modal-none {

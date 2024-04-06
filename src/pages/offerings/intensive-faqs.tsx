@@ -66,8 +66,8 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
       onClick={() => setIsOpen(!isOpen)}
       style={{ cursor: "pointer", marginBottom: "10px" }}
     >
-      <p>{question}</p>
-      {isOpen && <p>{answer}</p>}
+      <p className="faq-question">{question}</p>
+      {isOpen && <p className="faq-answer">{answer}</p>}
     </div>
   );
 };
