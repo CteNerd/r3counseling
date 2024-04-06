@@ -4,10 +4,12 @@
 }
 
 .session-img-container .mySlides {
-  display: none; /* Use flexbox for alignment */
+  display: flex; /* Use flexbox for alignment */
   justify-content: center; /* Center the images horizontally */
   align-items: center; /* Center the images vertically */
   width: 100%; /* Ensure the slide takes full width of the container */
+  height: auto; /* Adjust the height automatically to maintain aspect ratio */
+  max-height: 75vh; /* Limit the height to not exceed 75% of the viewport height */
 }
 
 .session-img-container .slide-img {
