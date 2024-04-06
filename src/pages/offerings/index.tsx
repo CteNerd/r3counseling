@@ -102,56 +102,58 @@ export default function Offerings(props: Props) {
         </div>
         <div>
           <div>
-            <h3>Intensive Experience at a Glance</h3>
+            <div>
+              <h3>Intensive Experience at a Glance</h3>
+            </div>
           </div>
-        </div>
-        <div>
-          <ul className="intensive-offerings-list">
-            <li>
-              <strong>Consultation 30 minutes</strong> - Our Goodness of Fit
-              consultation aims to assess whether the Intensive is the optimal
-              approach for your current journey.
-            </li>
-            <li>
-              <strong>EMDR Client Workbook</strong> - This workbook features
-              assessments and activities designed to ready you for the
-              Intensive, enabling you to track progress on your treatment goals
-              throughout our sessions. This tool empowers you to maintain a
-              comprehensive record of your journey before, during, and after our
-              sessions.
-            </li>
-            <li>
-              <strong>Intensive Intake 60 minutes</strong> - In this 60-minute
-              session, we establish the objectives of the Intensive and lay the
-              groundwork for the journey ahead. Together, we'll pinpoint the
-              sources of discomfort—be it painful experiences, beliefs,
-              emotions, bodily sensations, or images—that you aim to address.
-            </li>
-            <li>
-              <strong>Customized EMDR Intensive Schedule</strong> - Intensives
-              typically span from 1 to 5 days, with sessions lasting 4 to 8
-              hours each. Our focus during these sessions will be on addressing
-              the stressful experiences identified during the initial 60-minute
-              Intensive Intake session. Techniques such as EMDR, Resourcing
-              Activities, and Holistic Practices will be integrated.
-            </li>
-            <li>
-              <strong>Post Intensive Follow Up/Next Steps 45 minutes</strong> -
-              This 45-minute session is dedicated to exploring your experience,
-              reflecting on any changes you've observed within yourself or new
-              insights you may have gained. We'll also discuss the next steps
-              for your journey.
-              <ul>
-                <li>
-                  <strong>Not an insurance covered service</strong>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <strong>Pricing begins at $1000</strong> and is adjusted based on
-              your Customized EMDR Intensive Schedule/Needs
-            </li>
-          </ul>
+          <div>
+            <ul className="intensive-offerings-list">
+              <li>
+                <strong>Consultation 30 minutes</strong> - Our Goodness of Fit
+                consultation aims to assess whether the Intensive is the optimal
+                approach for your current journey.
+              </li>
+              <li>
+                <strong>EMDR Client Workbook</strong> - This workbook features
+                assessments and activities designed to ready you for the
+                Intensive, enabling you to track progress on your treatment goals
+                throughout our sessions. This tool empowers you to maintain a
+                comprehensive record of your journey before, during, and after our
+                sessions.
+              </li>
+              <li>
+                <strong>Intensive Intake 60 minutes</strong> - In this 60-minute
+                session, we establish the objectives of the Intensive and lay the
+                groundwork for the journey ahead. Together, we'll pinpoint the
+                sources of discomfort—be it painful experiences, beliefs,
+                emotions, bodily sensations, or images—that you aim to address.
+              </li>
+              <li>
+                <strong>Customized EMDR Intensive Schedule</strong> - Intensives
+                typically span from 1 to 5 days, with sessions lasting 4 to 8
+                hours each. Our focus during these sessions will be on addressing
+                the stressful experiences identified during the initial 60-minute
+                Intensive Intake session. Techniques such as EMDR, Resourcing
+                Activities, and Holistic Practices will be integrated.
+              </li>
+              <li>
+                <strong>Post Intensive Follow Up/Next Steps 45 minutes</strong> -
+                This 45-minute session is dedicated to exploring your experience,
+                reflecting on any changes you've observed within yourself or new
+                insights you may have gained. We'll also discuss the next steps
+                for your journey.
+                <ul>
+                  <li>
+                    <strong>Not an insurance covered service</strong>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Pricing begins at $1000</strong> and is adjusted based on
+                your Customized EMDR Intensive Schedule/Needs
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="highlight-vid-container">
           <h3>EMDR at a Glance</h3>
