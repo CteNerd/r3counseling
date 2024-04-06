@@ -12,27 +12,31 @@ export default function Offerings(props: Props) {
   const [groupModalOpen, setGroupModalOpen] = useState(false);
 
   useEffect(() => {
-  const handleScroll = () => {
-    const elements = document.querySelectorAll('.transition-text');
-    elements.forEach(el => {
-      const rect = el.getBoundingClientRect();
-      const fullyVisible = rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
-      const partiallyVisible = rect.top < window.innerHeight && rect.bottom >= 0; // Adjusted to check for any part of the element being visible
+    const handleScroll = () => {
+      const elements = document.querySelectorAll(".transition-text");
+      elements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        const fullyVisible =
+          rect.top >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight);
+        const partiallyVisible =
+          rect.top < window.innerHeight && rect.bottom >= 0; // Adjusted to check for any part of the element being visible
 
-      if (fullyVisible || partiallyVisible) {
-        el.classList.add('visible');
-      } else {
-        el.classList.remove('visible');
-      }
-    });
-  };
+        if (fullyVisible || partiallyVisible) {
+          el.classList.add("visible");
+        } else {
+          el.classList.remove("visible");
+        }
+      });
+    };
 
-  window.addEventListener('scroll', handleScroll);
-  handleScroll(); // Call it once to check visibility on initial render
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Call it once to check visibility on initial render
 
-  // Clean up the event listener when the component unmounts
-  return () => window.removeEventListener('scroll', handleScroll);
-}, []);
+    // Clean up the event listener when the component unmounts
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Your existing component code
 
@@ -129,7 +133,9 @@ export default function Offerings(props: Props) {
         <div>
           <div>
             <div>
-              <h3 className="transition-text">Intensive Experience at a Glance</h3>
+              <h3 className="transition-text">
+                Intensive Experience at a Glance
+              </h3>
             </div>
           </div>
           <div>
@@ -185,7 +191,9 @@ export default function Offerings(props: Props) {
         <div>
           <div>
             <div>
-              <h3 className="transition-text">Intensive Frequently Asked Questions (FAQs)</h3>
+              <h3 className="transition-text">
+                Intensive Frequently Asked Questions (FAQs)
+              </h3>
               <p className="transition-text">Click To Expand Answer</p>
             </div>
           </div>
@@ -276,7 +284,9 @@ export default function Offerings(props: Props) {
         </div>
       </div>
       <div className="coming-soon-container">
-        <h3 className="transition-text">Stay Tuned R & R-Rest and Restore Retreat Coming November 2024</h3>
+        <h3 className="transition-text">
+          Stay Tuned R & R-Rest and Restore Retreat Coming November 2024
+        </h3>
       </div>
       <div
         id="groupIntensiveModal"
