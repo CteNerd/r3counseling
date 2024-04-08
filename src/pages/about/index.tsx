@@ -80,7 +80,7 @@ export default function AboutMe(props: Props) {
                 <li>
                   Bachelor of Science concentration Psychology-Wesleyan College
                 </li>
-                <li>EMDRIA Certified and EMDR provider</li>
+                <li>EMDRIA Certified EMDR provider</li>
                 <li>Certified Holistic Healer</li>
                 <li>CYT 300, Certified Yoga Therapist</li>
                 <li>Certified, Trauma Conscious Yoga Method</li>
