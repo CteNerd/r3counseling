@@ -8,7 +8,7 @@ interface Props {
 export default function AboutMe(props: Props) {
   return (
     <div>
-      <h1>About Me</h1>
+      <h1>About</h1>
       <h4>
         Meet the Tiffany Luke, LPC, CPCS, EMDRIA Certified EMDR provider, TCYM{" "}
       </h4>
@@ -58,9 +58,13 @@ export default function AboutMe(props: Props) {
           style={{ textAlign: props.isMobile ? "center" : "inherit" }}
         >
           <img
-            className="journey-container-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/tiff-profile.jpeg"
-          />
+    className="journey-container-img"
+    src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/tiff-profile.jpeg"
+    alt="tiff-profile.jpeg"
+    width="454"
+    height="727"
+    style={{ width: '454px', height: '727px', objectFit: 'contain', objectPosition: '50% 50%' }}
+/>
         </div>
         <div className={props.isMobile ? "col-100" : "col-66"}>
           <h4>Professional Journey at a Glance</h4>

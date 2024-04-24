@@ -70,7 +70,7 @@ function App() {
             </a>
           </Menu.Item>
           <Menu.Item key="about">
-            <a href="/about">About Me</a>
+            <a href="/about">About</a>
           </Menu.Item>
           <Menu.Item key="offerings">
             <a href="/offerings">Offerings</a>
