@@ -22,21 +22,28 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 80%;
   /* height: 100%; */
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(228, 176, 153);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: left;
   opacity: 0;
   transition: opacity 0.3s ease;
   padding: 20px;
 }
+.info-box-style p {
+  font-size: 15px; /* Change this value to the size you want */
+}
 
 .journey-container-img-container:hover .info-box-style {
   opacity: 1;
+}
+
+.rounded-div {
+  border-radius: 10px; /* Change this value to adjust the roundness */
 }
 
 @media only screen and (max-width: 600px) {
