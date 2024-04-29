@@ -1,0 +1,19 @@
+.info-box-style {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    /* height: 100%; */
+    background-color: rgb(228, 176, 153);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+  }
+  .info-box-style p {
+    font-size: 15px; /* Change this value to the size you want */
+  }

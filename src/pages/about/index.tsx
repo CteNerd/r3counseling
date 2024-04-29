@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
 import "./about.css";
+import MiniCard from "../../components/miniCard/miniCard";
 
 interface Props {
   isMobile: boolean;
@@ -15,6 +15,7 @@ export default function AboutMe(props: Props) {
           className="journey-container-img-container"
           style={{ textAlign: props.isMobile ? "center" : "inherit", position: 'relative'}}
         >
+          <div className="image-container">
           <img
     className="journey-container-img"
     src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/tiff-profile.jpeg"
@@ -23,16 +24,14 @@ export default function AboutMe(props: Props) {
     height="727"
     style={{ width: '454px', height: '727px', objectFit: 'contain', objectPosition: '50% 50%' }}
 />
-<div
-        
-        className="info-box-style"
-    >
+
+<div className="info-box-style">
       <p>
   Hey, hey! I’m Tiffany.<br /><br />
   I am a Licensed Professional Counselor with over 15 years of clinical
   experience. I am a Certified Professional Clinical Supervisor, Certified
   Holistic Therapist, and EMDR Certified provider. I am Certified in the{" "}
-  <a href="https://traumaconsciousyoga.com/" target="_blank">
+  <a href="https://traumaconsciousyoga.com/" target="_blank" rel="noreferrer">
     Trauma Conscious Yoga Method
   </a>{" "}
   and I’m also known as The Cookie Counselor. Yep, I bake to release
@@ -53,12 +52,17 @@ export default function AboutMe(props: Props) {
         your journey, you deserve to be supported as you release, restore, and
         redefine!
 </p>
+
     </div>
-    <div className="rounded-div">
-    <h4>
-        Meet the Tiffany Luke, LPC, CPCS, EMDRIA Certified EMDR provider, TCYM{" "}
-      </h4>
+    <MiniCard 
+    name="Tiffany Luke" 
+    licenses="LPC, CPCS, EMDR Certified Therapist, Certified Holistic Therapist,EMDR, TCYM, CYT-300" 
+    title="Founder & Therapist" 
+    clientStatus="(Only Accepting EMDR Intensive Clients & Georgia Supervisees)"
+    />
     </div>
+    
+    
         </div>
         <div className={props.isMobile ? "col-100" : "col-66"}>
           <h4>Professional Journey at a Glance</h4>
@@ -71,6 +75,11 @@ export default function AboutMe(props: Props) {
               </li>
               <li>
                 Certified Professional Clinical Supervisor: LPCGA
+                <li>EMDRIA Certified and EMDR provider</li>
+                <li>Certified Holistic Healer</li>
+                <li>CYT 300, Certified Yoga Therapist</li>
+                <li>Certified, Trauma Conscious Yoga Method</li>
+                <li>IFS Level One Trained Therapist</li>
                 <li>
                   Master of Science concentration Community Counseling: Columbus
                   State University
@@ -78,24 +87,9 @@ export default function AboutMe(props: Props) {
                 <li>
                   Bachelor of Science concentration Psychology-Wesleyan College
                 </li>
-                <li>EMDRIA Certified and EMDR provider</li>
-                <li>Certified Holistic Healer</li>
-                <li>CYT 300, Certified Yoga Therapist</li>
-                <li>Certified, Trauma Conscious Yoga Method</li>
+                
               </li>
-              <li>
-                Over 15 years of clinical experience:
-                <ul>
-                  <li>
-                    Management of an Acute Psychiatric Intake Team located in
-                    the ER
-                  </li>
-                  <li>Outpatient trauma counselor </li>
-                  <li>Acute psychiatric unit counselor</li>
-                  <li>Grief &amp; loss counselor</li>
-                  <li>Residential unit counselor </li>
-                </ul>
-              </li>
+             
             </ul>
           </div>
         </div>

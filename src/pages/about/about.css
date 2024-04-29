@@ -12,6 +12,9 @@
 
 .journey-container-img {
   max-height: 500px;
+  display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .journey-container-list {
@@ -22,7 +25,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 100%;
   /* height: 100%; */
   background-color: rgb(228, 176, 153);
   color: white;
@@ -37,6 +40,23 @@
 .info-box-style p {
   font-size: 15px; /* Change this value to the size you want */
 }
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.image-container:hover .info-box-style {
+  opacity: 1;
+}
+
+/* .journey-container-img:hover + .info-box-style {
+  display: block;
+} */
 
 .journey-container-img-container:hover .info-box-style {
   opacity: 1;
@@ -62,4 +82,7 @@
   .journey-container-list {
     width: 75%;
   }
+  .image-container {
+    width: 75%;
+}
 }
