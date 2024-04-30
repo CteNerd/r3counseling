@@ -41,14 +41,14 @@
   font-size: 15px; /* Change this value to the size you want */
 }
 
-.image-container {
+/* .image-container {
   position: relative;
   display: inline-block;
   justify-content: center;
   align-items: center;
   padding: 0;
   margin: 0;
-}
+} */
 
 .image-container:hover .info-box-style {
   opacity: 1;
@@ -82,7 +82,7 @@
   .journey-container-list {
     width: 75%;
   }
-  .image-container {
+  /* .image-container {
     width: 75%;
-}
+} */
 }

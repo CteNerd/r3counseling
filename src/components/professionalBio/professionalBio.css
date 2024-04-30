@@ -17,3 +17,8 @@
   .info-box-style p {
     font-size: 15px; /* Change this value to the size you want */
   }
+
+  .custom-meta {
+    padding: 10px !important; /* Change 10px to your desired padding */
+}
+
