@@ -53,7 +53,14 @@ const ProfessionalBio: React.FC<ProfessionalBioProps> = ({ title, description, i
             </Col>
             <Col span={12}>
             {/*<h4>Professional Journey at a Glance</h4>*/}
-            <Card style={{ maxWidth: 400, height: '100%', backgroundColor:'rgb(255, 255, 255, 0.4)' }}>
+            <Card style={{ 
+                maxWidth: 400, 
+                height: '100%', 
+                backgroundColor:'rgb(255, 255, 255, 0.4)',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center' 
+                }}>
                 {content2}
             </Card>
           
