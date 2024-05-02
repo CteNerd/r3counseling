@@ -1,7 +1,7 @@
 import '../professionalBio/professionalBio.css';
 
 const TiffanyBioContent = (
-    <div className='info-box-style' style={{ display: 'none', position: 'absolute', zIndex: 1, width: '100%' }}>
+    <div className='info-box-style' >
         <p>
             Hey, hey! I’m Tiffany.<br /><br />
             I am a Licensed Professional Counselor with over 15 years of clinical
