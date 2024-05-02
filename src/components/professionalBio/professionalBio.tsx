@@ -10,9 +10,10 @@ interface ProfessionalBioProps {
     description: JSX.Element;
     imageSrc: string;
     content: JSX.Element;
+    content2: JSX.Element;
 }
 
-const ProfessionalBio: React.FC<ProfessionalBioProps> = ({ title, description, imageSrc, content }) => {
+const ProfessionalBio: React.FC<ProfessionalBioProps> = ({ title, description, imageSrc, content, content2 }) => {
     return (
         <Row justify='center'>
             <Col>
@@ -23,6 +24,7 @@ const ProfessionalBio: React.FC<ProfessionalBioProps> = ({ title, description, i
                     element.style.display = 'block';
                     element.style.opacity = '1';
                 }
+                console.log('Mouse entered', title, content,description);
             }}
             onMouseLeave={() => {
                 const element = document.querySelector('.info-box-style') as HTMLElement;
@@ -30,6 +32,7 @@ const ProfessionalBio: React.FC<ProfessionalBioProps> = ({ title, description, i
                     element.style.display = 'none';
                     element.style.opacity = '0';
                 }
+                console.log('Mouse left', title, content, description);
             }}
             headStyle={{ fontWeight: 'bold', textAlign: 'center'}}
             bodyStyle={{ textAlign: 'center'}}
@@ -38,40 +41,18 @@ const ProfessionalBio: React.FC<ProfessionalBioProps> = ({ title, description, i
             cover={<img alt={title} src={imageSrc} height={'500px'} />}
             >
                 <Meta 
-                title={title} 
+                title={<span style={{ fontWeight: 'bold' }}>{title}</span>} 
                 description={description}
                 />
                 {content}
             </Card>
             </Col>
             <Col span={12}>
-            <h4>Professional Journey at a Glance</h4>
-          {/* <div className="professional-accolades-list"> */}
-            <ul>
-              <li>
-                Licensed Professional Counselor: Georgia Composite Board of
-                Professional Counselors, Social Workers, and Marriage &amp;
-                Family Therapist
-              </li>
-              <li>
-                Certified Professional Clinical Supervisor: LPCGA
-                <li>EMDRIA Certified and EMDR provider</li>
-                <li>Certified Holistic Healer</li>
-                <li>CYT 300, Certified Yoga Therapist</li>
-                <li>Certified, Trauma Conscious Yoga Method</li>
-                <li>IFS Level One Trained Therapist</li>
-                <li>
-                  Master of Science concentration Community Counseling: Columbus
-                  State University
-                </li>
-                <li>
-                  Bachelor of Science concentration Psychology-Wesleyan College
-                </li>
-                
-              </li>
-             
-            </ul>
-            {/* </div> */}
+            {/*<h4>Professional Journey at a Glance</h4>*/}
+            <Card style={{ maxWidth: 400, height: '100%', backgroundColor:'rgb(255, 255, 255, 0.4)' }}>
+                {content2}
+            </Card>
+          
             </Col>
         </Row>
     );

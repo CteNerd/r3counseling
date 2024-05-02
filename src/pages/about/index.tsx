@@ -1,14 +1,21 @@
 import "./about.css";
 import ProfessionalBio from "../../components/professionalBio/professionalBio";
 import TiffanyBioContent from "../../components/professionalBio/tiffanyBioContent";
+import TiffanyProfessionalJourney from "../../components/professionalBio/tiffanyProfessionalJourney";
+import { Col, Row } from "antd";
+import imageSrc from '../../assets/images/Nicole Thoms Fuentes - Profile Photo.png'
+import NicoleBioContent from "../../components/professionalBio/nicoleBioContent";
+import NicoleProfessionalJourney from "../../components/professionalBio/nicoleProfesssionalJourney";
 
 
 export default function AboutMe() {
   return (
     <div>
       <h1>About</h1>
-      
+      <Row gutter={[24, 16]}>
+        <Col className='gutter-row' >
       <ProfessionalBio
+      
       title="Tiffany Luke"
       description={(
         <>
@@ -16,12 +23,31 @@ export default function AboutMe() {
             Certified Holistic Therapist,EMDR, TCYM,  <br />
             CYT-300  <br /><br />
             Founder & Therapist  <br /><br />
-            (Only Accepting EMDR Intensive Clients & Georgia Supervisees)
+            <strong>(ONLY ACCEPTING EMDR INTENSIVE CLIENTS & GEORGIA SUPERVISEES)</strong>
         </>
     )}
     imageSrc='https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/tiff-profile.jpeg'
     content={TiffanyBioContent}
+    content2={TiffanyProfessionalJourney}
       />
+      </Col>
+      <Col className='gutter-row' >
+        <ProfessionalBio 
+       
+        title="Nicole Thoms Fuentes"
+        description={(
+          <>
+            LPC, CPCS <br />
+            Graduate Therapist Intern under the Supervision of Tiffany Luke,  <br /><br />
+            <strong>(ACCEPTING NEW CLIENTS)</strong>
+          </>
+        )}
+        imageSrc={imageSrc}
+        content={NicoleBioContent}
+        content2={NicoleProfessionalJourney}
+        />
+      </Col>
+      </Row>
       </div>
   );
 }
