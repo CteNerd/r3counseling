@@ -12,7 +12,7 @@ export default function AboutMe() {
   return (
     <div>
       <h1>About</h1>
-      <Row gutter={[24, 16]}>
+      <Row gutter={[24, 16]} justify='center'>
         <Col className='gutter-row' >
       <ProfessionalBio
       

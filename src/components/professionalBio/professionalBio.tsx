@@ -26,7 +26,7 @@ const ProfessionalBio: React.FC<ProfessionalBioProps> = ({ title, description, i
                     element.style.display = 'block';
                     element.style.opacity = '1';
                 }
-                console.log('Mouse entered', title, content,description);
+                //console.log('Mouse entered', title, content,description);
             }}
             onMouseLeave={() => {
                 const element = document.querySelector(`#${uniqueId}`) as HTMLElement;
@@ -34,7 +34,7 @@ const ProfessionalBio: React.FC<ProfessionalBioProps> = ({ title, description, i
                     element.style.display = 'none';
                     element.style.opacity = '0';
                 }
-                console.log('Mouse left', title, content, description);
+                //console.log('Mouse left', title, content, description);
             }}
             headStyle={{ fontWeight: 'bold', textAlign: 'center'}}
             bodyStyle={{ textAlign: 'center'}}
