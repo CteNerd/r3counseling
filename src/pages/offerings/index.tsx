@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./offerings.css";
 import Posters from "./posters.json";
 import FAQs from "./intensive-faqs";
+import { Card, Image, Row } from 'antd';
+import Image1 from '../../assets/images/lightbeam-on-eye.png'
 
 interface Props {
   isMobile: boolean;
@@ -87,9 +89,26 @@ export default function Offerings(props: Props) {
         <CarouselImages />
       </div>
       <div>
-        <div>
-          <h2 className="transition-text">EMDR Intensives</h2>
-          <p className="transition-text">
+        <div style={{ position: 'relative' }}>
+        <Row>
+        
+          <Image 
+            height={723}
+            width={614}
+            src={Image1}
+            preview={false}
+          />
+          <Card style={{ 
+            width: 600,
+            position: 'absolute',
+            top: '60%',
+            left: '70%',
+            transform: 'translate(-50%, -50%)',
+            borderColor: 'rgb(224, 188, 191, 0.5)',
+            borderWidth: 2,
+            }}>
+            <h2 className="transition-text">EMDR Intensives</h2>
+            <p className="transition-text">
             EMDR Intensives offer an alternative path to healing by rewiring
             memory networks rather than simply altering thought patterns to
             change emotions. Through EMDR processing, memories that contribute
@@ -108,7 +127,11 @@ export default function Offerings(props: Props) {
             their regular routines. Don't hesitate to reach out and schedule
             your free consultation today—why wait to begin your healing journey?
           </p>
+        </Card>
+        </Row>
         </div>
+          
+        
         <div className="free-consult-container">
           <a onClick={() => setConsultModalVis(!consultModalVis)}>
             <button className="free-consult-button">Free Consultation</button>
