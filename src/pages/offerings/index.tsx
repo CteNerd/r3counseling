@@ -4,6 +4,12 @@ import Posters from "./posters.json";
 import FAQs from "./intensive-faqs";
 import { Card, Image, Row } from 'antd';
 import Image1 from '../../assets/images/lightbeam-on-eye.png'
+import CardWithLeftImage from "../../components/Offerings/cardWithLeftImage";
+import LightBeamOnEye from'../../assets/images/lightbeam-on-eye.png'
+import AboutEDMR from "../../components/Offerings/EDMRIntesives/aboutEDMR";
+import CardWithRightImage from "../../components/Offerings/cardWithRightImage";
+import Consulting from '../../assets/images/girl-talk.png'
+import ClinicalConsultCorner from "../../components/Offerings/clinicalConsultCorner";
 
 interface Props {
   isMobile: boolean;
@@ -89,47 +95,12 @@ export default function Offerings(props: Props) {
         <CarouselImages />
       </div>
       <div>
-        <div style={{ position: 'relative' }}>
-        <Row>
+        <CardWithLeftImage 
+          imageSrc={LightBeamOnEye}
+          title="EMDR Intensives"
+          content={AboutEDMR}
+        />
         
-          <Image 
-            height={723}
-            width={614}
-            src={Image1}
-            preview={false}
-          />
-          <Card style={{ 
-            width: 600,
-            position: 'absolute',
-            top: '60%',
-            left: '70%',
-            transform: 'translate(-50%, -50%)',
-            borderColor: 'rgb(224, 188, 191, 0.5)',
-            borderWidth: 2,
-            }}>
-            <h2 className="transition-text">EMDR Intensives</h2>
-            <p className="transition-text">
-            EMDR Intensives offer an alternative path to healing by rewiring
-            memory networks rather than simply altering thought patterns to
-            change emotions. Through EMDR processing, memories that contribute
-            to feeling stuck in the past are desensitized, allowing for
-            transformation of negative feelings, beliefs, and body sensations.
-            These Intensives provide a condensed opportunity to address past,
-            present, and future concerns, expediting the healing process.
-          </p>
-          <p className="transition-text">
-            Typically spanning 4 to 8 hours per day over 1 to 5 days, Intensives
-            offer concentrated time to address specific issues. While the work
-            is intense, it can serve as a profound emotional reset. To ensure
-            suitability for Intensive work, a complimentary consultation is
-            provided. Clients are welcome to travel to Augusta for the
-            Intensive, creating space for focused healing before returning to
-            their regular routines. Don't hesitate to reach out and schedule
-            your free consultation today—why wait to begin your healing journey?
-          </p>
-        </Card>
-        </Row>
-        </div>
           
         
         <div className="free-consult-container">
@@ -279,8 +250,16 @@ export default function Offerings(props: Props) {
             </div>
           </div>
         </div>
+        
+        <CardWithRightImage 
+        heroTitle="Clinician Consult Corner"
+        imageSrc={Consulting}
+        title="Group Clinical Supervision"
+        content={ClinicalConsultCorner}
+
+        />
         <div>
-          <h2 className="transition-text">Clinical Supervision</h2>
+          
           <p className="transition-text">
             Release Restore Redefine Counseling offers clinical supervision to
             students and clinicians who are in the process of seeking their
