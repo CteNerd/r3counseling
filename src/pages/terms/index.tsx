@@ -146,6 +146,8 @@ export default function Terms() {
           have insurance or who are not using insurance an estimate of the bill
           for medical items and services.
         </p>
+      </section>
+      <section className="insured-clients">
         <h2>Insured Clients</h2>
         <p>
           At Release Restore Redefine Counseling, insurance is accepted.
