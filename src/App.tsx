@@ -70,7 +70,7 @@ function App() {
             </a>
           </Menu.Item>
           <Menu.Item key="about">
-            <a href="/about">About Me</a>
+            <a href="/about">About</a>
           </Menu.Item>
           <Menu.Item key="offerings">
             <a href="/offerings">Offerings</a>
@@ -113,7 +113,7 @@ function App() {
       renders the first one that matches the current URL. */}
             <Switch>
               <Route path="/about">
-                <About isMobile={isMobile} />
+                <About />
               </Route>
               <Route path="/terms">
                 <Terms />
