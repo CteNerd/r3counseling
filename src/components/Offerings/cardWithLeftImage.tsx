@@ -3,15 +3,18 @@ import { Image, Card, Row } from 'antd';
 import '../../pages/offerings/offerings.css'
 
 interface CardWithLeftImageProps {
+    heroTitle?: string;
     imageSrc: string;
     title: string;
     content: JSX.Element;
 }
 
-const CardWithLeftImage: React.FC<CardWithLeftImageProps> = ({ imageSrc, title, content }) => {
+const CardWithLeftImage: React.FC<CardWithLeftImageProps> = ({ imageSrc, title, content, heroTitle }) => {
     return (
         <div style={{ position: 'relative' }}>
+            <h2 className="transition-text">{heroTitle}</h2>
             <Row>
+            
                 <Image 
                     height={723}
                     width={614}

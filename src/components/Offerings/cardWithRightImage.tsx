@@ -11,7 +11,8 @@ interface CardWithRightImageProps {
 const CardWithRightImage: React.FC<CardWithRightImageProps> = ({ imageSrc, title, content, heroTitle }) => {
     return (
         <div style={{ position: 'relative' }}>
-            <h2 className="transition-text">{heroTitle}</h2>
+            {/* <Row> */}
+            
         <Card style={{ 
             width: 600,
             position: 'absolute',
@@ -26,13 +27,15 @@ const CardWithRightImage: React.FC<CardWithRightImageProps> = ({ imageSrc, title
             <h2 className="transition-text">{title}</h2>
             {content}
         </Card>
+        <h2 style={{ textAlign: 'right' }} className="transition-text">{heroTitle}</h2>
         <Image 
             height={623}
-            width={544}
+            width='75%'
             src={imageSrc}
             preview={false}
             style={{ marginLeft: '80%' }}
         />
+        {/* </Row> */}
     </div>
     );
 }

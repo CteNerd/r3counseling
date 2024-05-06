@@ -2,14 +2,16 @@ import React, { useState, useEffect } from "react";
 import "./offerings.css";
 import Posters from "./posters.json";
 import FAQs from "./intensive-faqs";
-import { Card, Image, Row } from 'antd';
-import Image1 from '../../assets/images/lightbeam-on-eye.png'
 import CardWithLeftImage from "../../components/Offerings/cardWithLeftImage";
 import LightBeamOnEye from'../../assets/images/lightbeam-on-eye.png'
 import AboutEDMR from "../../components/Offerings/EDMRIntesives/aboutEDMR";
 import CardWithRightImage from "../../components/Offerings/cardWithRightImage";
 import Consulting from '../../assets/images/girl-talk.png'
 import ClinicalConsultCorner from "../../components/Offerings/clinicalConsultCorner";
+import Bowls from '../../assets/images/Tiffany-playing-bowls.png'
+import WellnessBooster from "../../components/Offerings/wellnessBooster";
+import Tiffany from '../../assets/images/Tiffany-sitting.png'
+import IndividualTherapy from "../../components/Offerings/individualTherapy";
 
 interface Props {
   isMobile: boolean;
@@ -126,11 +128,9 @@ export default function Offerings(props: Props) {
         </div>
         <div>
           <div>
-            <div>
               <h3 className="transition-text">
                 Intensive Experience at a Glance
               </h3>
-            </div>
           </div>
           <div>
             <ul className="intensive-offerings-list">
@@ -251,6 +251,7 @@ export default function Offerings(props: Props) {
           </div>
         </div>
         
+        <div>
         <CardWithRightImage 
         heroTitle="Clinician Consult Corner"
         imageSrc={Consulting}
@@ -258,8 +259,6 @@ export default function Offerings(props: Props) {
         content={ClinicalConsultCorner}
 
         />
-        <div>
-          
           <p className="transition-text">
             Release Restore Redefine Counseling offers clinical supervision to
             students and clinicians who are in the process of seeking their
@@ -274,15 +273,19 @@ export default function Offerings(props: Props) {
           </p>
         </div>
         <div>
-          <h2 className="transition-text">Individual Therapy</h2>
-          <p className="transition-text">
-            Let’s talk one-on-one in a safe, non-judgmental, relaxed, and
-            supportive environment. Allow me to gain an understanding of your
-            past and present experiences through your lens. Let’s explore the
-            impact of your emotions and thoughts on present behaviors. Let’s
-            align to RELEASE, RESTORE and REDEFINE the next phase of your
-            journey!
-          </p>
+          <CardWithLeftImage 
+            heroTitle="Wellness Booster"
+            imageSrc={Bowls}
+            title="EmpowerHer: Women's Trauma Healing Group"
+            content={WellnessBooster}
+          />
+        </div>
+        <div>
+          <CardWithRightImage 
+            imageSrc={Tiffany}
+            title="Individual Therapy"
+            content={IndividualTherapy}
+          />
         </div>
       </div>
       <div className="coming-soon-container">
