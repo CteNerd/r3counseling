@@ -15,7 +15,7 @@ const CardWithRightImage: React.FC<CardWithRightImageProps> = ({ imageSrc, title
         <Card style={{ 
             width: 600,
             position: 'absolute',
-            top: '60%',
+            top: '55%',
             left: '30%',
             transform: 'translate(-50%, -50%)',
             borderColor: 'rgb(224, 188, 191, 0.5)',
@@ -28,7 +28,7 @@ const CardWithRightImage: React.FC<CardWithRightImageProps> = ({ imageSrc, title
         </Card>
         <Image 
             height={623}
-            width={614}
+            width={544}
             src={imageSrc}
             preview={false}
             style={{ marginLeft: '80%' }}
