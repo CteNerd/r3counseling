@@ -135,9 +135,7 @@ export default function Retreat() {
         <div className="container">
           <div className="image-side">
             <div>
-              <img
-                src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat_Host_v2.jpg"
-              />
+              <img src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat_Host_v2.jpg" />
             </div>
           </div>
           <div className="text-side">
