@@ -48,6 +48,7 @@ export default function Terms() {
   return (
     <div>
       <h1>Terms</h1>
+      <section className="private-rates">
       <h2>Private Rates</h2>
       <p>
         At Release Restore Redefine Counseling, we provide private rates to all
@@ -60,6 +61,8 @@ export default function Terms() {
         message <a href="mailto:R3counseling@counselingsecure.com">here</a>. Our
         typical response time is within 24-48 business hours.
       </p>
+      </section>
+      <section className="individual-psychotherapthy">
       <h4>Individual Psychotherapy</h4>
       <div className="psychotherapy-container">
         <div className="psychotherapy-container-columns">
@@ -106,18 +109,9 @@ export default function Terms() {
             </ul>
           </ul>
         </div>
-        {/* <div className="psychotherapy-container-columns">
-          <div className="emdr-badge-container tooltip">
-            <a
-              target="_blank"
-              href="https://credentials.emdria.org/0d260993-9d2c-4819-868d-d08c7e358a63#gs.lo5cs3"
-            >
-              <span className="tooltiptext">Click To View My Credentials</span>
-              <img src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/EMDR+Certified+Therapist+%E2%80%A2+Tiffany+Luke+%E2%80%A2+EMDR+International+Association+Badge.png" />
-            </a>
-          </div>
-        </div> */}
       </div>
+      </section>
+      <section className="payments">
       <h4>Accepts Payments</h4>
       <p>All major credit cards are accepted for payment.</p>
       <h4>Superbill</h4>
@@ -152,12 +146,15 @@ export default function Terms() {
         prior to your initial session, insurance benefits are verified.
         Co-payments can be made with all major credit cards.
       </p>
+      </section>
+      <section className="scheduling">
       <h2>Cancellation / No Shows / Rescheduling</h2>
       <p>
         In the event that you do not attend your scheduled therapy appointment
         or you failed to reschedule/cancel 24 hours prior to scheduled
         appointment, you will be automatically charged a $50.00 fee.
       </p>
+      </section>
       <div
         id="emdrIntesiveModal"
         className="modal"
