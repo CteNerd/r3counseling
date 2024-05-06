@@ -113,11 +113,15 @@ export default function Terms() {
       </section>
       <section className="sliding-scale">
         <h4>Sliding Scale</h4>
-        <p>
-          Intern-Graduate Student in an internship program, under the direct
-          clinical supervision of a fully licensed therapist $40 for a 50 minute
-          Individual Session.
-        </p>
+        <ul>
+          <li>$40 for a 50 minute Individual Session.</li>
+          <ul>
+            <li>
+              Intern-Graduate Student in an internship program, under the direct
+              clinical supervision of a fully licensed therapist
+            </li>
+          </ul>
+        </ul>
       </section>
       <section className="payments">
         <h4>Accepts Payments</h4>
