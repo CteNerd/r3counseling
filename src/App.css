@@ -152,7 +152,7 @@ button:disabled {
 }
 
 .App-body-container {
-  width: 75vw;
+  /* width: 75vw; */
   background-color: rgb(255, 255, 255, 0.4);
   padding: 10px 40px;
   border-radius: 4px;
@@ -311,6 +311,12 @@ ol {
     float: left;
     margin: 0px 0px 0px 10px;
     max-height: 110px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .image-card h2 {
+      font-size: 25px; /* Adjust as needed */
   }
 }
 

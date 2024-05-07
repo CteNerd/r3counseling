@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image, Card, Row } from 'antd';
 import '../../pages/offerings/offerings.css'
+import './cardWithLeftImage.css'
 
 interface CardWithLeftImageProps {
     heroTitle?: string;
@@ -11,29 +12,21 @@ interface CardWithLeftImageProps {
 
 const CardWithLeftImage: React.FC<CardWithLeftImageProps> = ({ imageSrc, title, content, heroTitle }) => {
     return (
-        <div style={{ position: 'relative' }}>
+        <div className='card-container'>
             <h2 className="transition-text">{heroTitle}</h2>
-            <Row>
-            
+            <div style={{ display: 'flex', position: 'relative' }}>
                 <Image 
-                    height={723}
-                    width={614}
+                    style={{ objectFit: 'cover'}}
+                    height='auto'
+                    width='60%'
                     src={imageSrc}
                     preview={false}
                 />
-                <Card style={{ 
-                    width: 600,
-                    position: 'absolute',
-                    top: '60%',
-                    left: '70%',
-                    transform: 'translate(-50%, -50%)',
-                    borderColor: 'rgb(224, 188, 191, 0.5)',
-                    borderWidth: 2,
-                }}>
+                <Card bodyStyle={{ padding: 2 }} className='image-card'>
                     <h2 className="transition-text">{title}</h2>
                     {content}
                 </Card>
-            </Row>
+            </div>
         </div>
     );
 }

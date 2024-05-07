@@ -6,36 +6,36 @@ interface CardWithRightImageProps {
     title: string;
     content: JSX.Element;
     heroTitle?: string;
+    pngSrc?: string;
 }
 
-const CardWithRightImage: React.FC<CardWithRightImageProps> = ({ imageSrc, title, content, heroTitle }) => {
+const CardWithRightImage: React.FC<CardWithRightImageProps> = ({ imageSrc, title, content, heroTitle, pngSrc }) => {
     return (
-        <div style={{ position: 'relative' }}>
-            {/* <Row> */}
+        <div className='card-container-right'>
+            <h2 className="transition-text">{heroTitle}</h2>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             
         <Card style={{ 
-            width: 600,
-            position: 'absolute',
-            top: '55%',
-            left: '30%',
-            transform: 'translate(-50%, -50%)',
+            width: '55%',
+            height: '75%',
+            left: '10%',
             borderColor: 'rgb(224, 188, 191, 0.5)',
             borderWidth: 2,
-            marginRight: '20px',
+            marginTop: '5%',
             zIndex: 1,
+            // overflow: 'auto',
         }}>
             <h2 className="transition-text">{title}</h2>
             {content}
         </Card>
-        <h2 style={{ textAlign: 'right' }} className="transition-text">{heroTitle}</h2>
         <Image 
-            height={623}
-            width='75%'
+            style={{  marginLeft: 'auto'}}
+            height='80%'
+            width='50%'
             src={imageSrc}
             preview={false}
-            style={{ marginLeft: '80%' }}
         />
-        {/* </Row> */}
+        </div>
     </div>
     );
 }

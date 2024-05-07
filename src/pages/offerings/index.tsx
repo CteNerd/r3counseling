@@ -12,6 +12,7 @@ import Bowls from '../../assets/images/Tiffany-playing-bowls.png'
 import WellnessBooster from "../../components/Offerings/wellnessBooster";
 import Tiffany from '../../assets/images/Tiffany-sitting.png'
 import IndividualTherapy from "../../components/Offerings/individualTherapy";
+import { Col, Row } from "antd";
 
 interface Props {
   isMobile: boolean;
@@ -250,43 +251,43 @@ export default function Offerings(props: Props) {
             </div>
           </div>
         </div>
-        
-        <div>
+        <Row gutter={[16, 24]}>
+    <Col span={24}>
         <CardWithRightImage 
-        heroTitle="Clinician Consult Corner"
-        imageSrc={Consulting}
-        title="Group Clinical Supervision"
-        content={ClinicalConsultCorner}
-
+            heroTitle="Clinician Consult Corner"
+            imageSrc={Consulting}
+            title="Group Clinical Supervision"
+            content={ClinicalConsultCorner}
         />
-          <p className="transition-text">
+        <p className="transition-text">
             Release Restore Redefine Counseling offers clinical supervision to
             students and clinicians who are in the process of seeking their
             professional counseling license. If you are interested in beginning
             individual or group supervision, feel free to call 706-750-8906 or
             send an email to{" "}
             {
-              <a href="mailto:r3counseling@counselingsecure.com">
-                r3counseling@counselingsecure.com
-              </a>
+                <a href="mailto:r3counseling@counselingsecure.com">
+                    r3counseling@counselingsecure.com
+                </a>
             }
-          </p>
-        </div>
-        <div>
-          <CardWithLeftImage 
+        </p>
+    </Col>
+    <Col span={24}>
+        <CardWithLeftImage 
             heroTitle="Wellness Booster"
             imageSrc={Bowls}
             title="EmpowerHer: Women's Trauma Healing Group"
             content={WellnessBooster}
-          />
-        </div>
-        <div>
-          <CardWithRightImage 
+        />
+    </Col>
+    <Col span={24}>
+        <CardWithRightImage 
             imageSrc={Tiffany}
             title="Individual Therapy"
             content={IndividualTherapy}
-          />
-        </div>
+        />
+    </Col>
+</Row>
       </div>
       <div className="coming-soon-container">
         <h3 className="transition-text">
