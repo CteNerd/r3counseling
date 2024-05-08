@@ -268,18 +268,6 @@ export default function Offerings(props: Props) {
             title="Group Clinical Supervision"
             content={ClinicalConsultCorner}
         />
-        <p className="transition-text">
-            Release Restore Redefine Counseling offers clinical supervision to
-            students and clinicians who are in the process of seeking their
-            professional counseling license. If you are interested in beginning
-            individual or group supervision, feel free to call 706-750-8906 or
-            send an email to{" "}
-            {
-                <a href="mailto:r3counseling@counselingsecure.com">
-                    r3counseling@counselingsecure.com
-                </a>
-            }
-        </p>
     {/* </Col> */}
     {/* <Col span={24}> */}
         <CardWithLeftImage 
@@ -300,7 +288,7 @@ export default function Offerings(props: Props) {
       </div>
       <div className="coming-soon-container">
         <h3 className="transition-text">
-          Stay Tuned R & R-Rest and Restore Retreat Coming November 2024
+        Stay Tuned....PAUSE Day Retreat Series Coming Soon
         </h3>
       </div>
       <div

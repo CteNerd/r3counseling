@@ -165,7 +165,7 @@ function App() {
             <div className="footer-link-container">
               <a
                 className="footer-link"
-                href="https://www.linkedin.com/in/tiffany-luke-lpc-29683119"
+                href="https://www.linkedin.com/in/tiffany-luke-lpc-cpcs-certified-emdr-holistic-therapist-29683119?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
               >
                 <LinkedinOutlined />
               </a>
