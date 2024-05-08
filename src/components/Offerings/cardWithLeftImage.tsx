@@ -22,7 +22,7 @@ const CardWithLeftImage: React.FC<CardWithLeftImageProps> = ({ imageSrc, title, 
                     src={imageSrc}
                     preview={false}
                 />
-                <Card bodyStyle={{ padding: 2 }} className='image-card'>
+                <Card  className='image-card'>
                     <h2 className="transition-text">{title}</h2>
                     {content}
                 </Card>

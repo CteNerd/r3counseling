@@ -18,9 +18,9 @@ const CardWithRightImage: React.FC<CardWithRightImageProps> = ({ imageSrc, title
             <div className='flex-container'>
             
         <Card className='image-card-right'>
-            <Row>
+            {/* <Row> */}
             <h2 className="transition-text">{title}</h2>
-            <img 
+            {/* <img 
         src={Arrow} 
         style={{ 
             marginLeft: '10px', 
@@ -28,8 +28,8 @@ const CardWithRightImage: React.FC<CardWithRightImageProps> = ({ imageSrc, title
             height: '100px', 
         }} 
         alt="Arrow" 
-    />
-    </Row>
+    /> */}
+    {/* </Row> */}
             {content}
         </Card>
         <Image 

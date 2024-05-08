@@ -1,20 +1,8 @@
-import { Row } from "antd";
-import Arrow from '../../assets/images/Arrow.svg'
+
 
 const WellnessBooster = (
     <div>
-        <Row>
-        <h2>Empower Her:<br/> Women's Trauma Healing Group</h2>
-        <img 
-        src={Arrow} 
-        style={{ 
-            marginLeft: '10px', 
-            width: '5vw', 
-            height: '10vh', 
-        }} 
-        alt="Arrow" 
-    />
-        </Row>
+        <h2>Empower Her: Women's Trauma Healing Group</h2>
         <p>
         Join us for EmpowerHer: Women's Trauma Healing Group, an 8-week 
 journey designed to foster healing and understanding in a supportive 
