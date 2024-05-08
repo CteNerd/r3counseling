@@ -1,6 +1,20 @@
+import { Row } from "antd";
+import Arrow from '../../assets/images/Arrow.svg'
 
 const WellnessBooster = (
     <div>
+        <Row>
+        <h2>Empower Her:<br/> Women's Trauma Healing Group</h2>
+        <img 
+        src={Arrow} 
+        style={{ 
+            marginLeft: '10px', 
+            width: '5vw', 
+            height: '10vh', 
+        }} 
+        alt="Arrow" 
+    />
+        </Row>
         <p>
         Join us for EmpowerHer: Women's Trauma Healing Group, an 8-week 
 journey designed to foster healing and understanding in a supportive 
@@ -10,7 +24,7 @@ trauma-conscious movement, breathwork, and sound meditation,
 alongside traditional support circles, creating a holistic approach to 
 healing both body and mind. Discover empowerment and healing 
 through restoring and renewing with us!!<br /><br />
-<strong>Duration: 90 minutes; 8-weeks; Closed Group; Fees: Private Pay $50 
+<strong style={{ color: '#839abf' }}>Duration: 90 minutes; 8-weeks; Closed Group; Fees: Private Pay $50 
 per session</strong>
         </p>
     </div>

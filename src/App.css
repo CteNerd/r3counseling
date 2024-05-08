@@ -152,7 +152,7 @@ button:disabled {
 }
 
 .App-body-container {
-  /* width: 75vw; */
+  /* width: 100%; */
   background-color: rgb(255, 255, 255, 0.4);
   padding: 10px 40px;
   border-radius: 4px;

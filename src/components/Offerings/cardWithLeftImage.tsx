@@ -6,15 +6,15 @@ import './cardWithLeftImage.css'
 interface CardWithLeftImageProps {
     heroTitle?: string;
     imageSrc: string;
-    title: string;
+    title?: string;
     content: JSX.Element;
 }
 
 const CardWithLeftImage: React.FC<CardWithLeftImageProps> = ({ imageSrc, title, content, heroTitle }) => {
     return (
-        <div className='card-container'>
+        <div className='card-container' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <h2 className="transition-text">{heroTitle}</h2>
-            <div style={{ display: 'flex', position: 'relative' }}>
+            <div className='flex-container'>
                 <Image 
                     style={{ objectFit: 'cover'}}
                     height='auto'

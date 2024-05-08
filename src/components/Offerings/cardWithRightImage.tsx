@@ -1,5 +1,7 @@
 import React from 'react';
 import { Image, Card, Row } from 'antd';
+import Arrow from '../../assets/images/Arrow.svg'
+import './cardWithRightImage.css'
 
 interface CardWithRightImageProps {
     imageSrc: string;
@@ -11,25 +13,27 @@ interface CardWithRightImageProps {
 
 const CardWithRightImage: React.FC<CardWithRightImageProps> = ({ imageSrc, title, content, heroTitle, pngSrc }) => {
     return (
-        <div className='card-container-right'>
-            <h2 className="transition-text">{heroTitle}</h2>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div className='card-container-right'style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+            <h2  className="transition-text">{heroTitle}</h2>
+            <div className='flex-container'>
             
-        <Card style={{ 
-            width: '55%',
-            height: '75%',
-            left: '10%',
-            borderColor: 'rgb(224, 188, 191, 0.5)',
-            borderWidth: 2,
-            marginTop: '5%',
-            zIndex: 1,
-            // overflow: 'auto',
-        }}>
+        <Card className='image-card-right'>
+            <Row>
             <h2 className="transition-text">{title}</h2>
+            <img 
+        src={Arrow} 
+        style={{ 
+            marginLeft: '10px', 
+            width: '50px', 
+            height: '100px', 
+        }} 
+        alt="Arrow" 
+    />
+    </Row>
             {content}
         </Card>
         <Image 
-            style={{  marginLeft: 'auto'}}
+            style={{ objectFit: 'cover'}}
             height='80%'
             width='50%'
             src={imageSrc}
