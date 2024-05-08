@@ -9,7 +9,7 @@ const TiffanyProfessionalJourney = (
     Certified Professional Clinical Supervisor: <br />
     <strong>LPCGA</strong><br /><br />
 
-    EMDRIA Certified and EMDR provider<br /><br />
+    EMDRIA Certified EMDR Therapist<br /><br />
 
     Certified Holistic Healer<br /><br />
 
