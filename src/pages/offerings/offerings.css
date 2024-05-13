@@ -101,3 +101,9 @@ iframe {
     max-height: none;
   }
 }
+
+@media (max-width: 480px) {
+.heading {
+  text-align: center;
+}
+}

@@ -12,8 +12,6 @@ import Bowls from '../../assets/images/Tiffany-playing-bowls.png'
 import WellnessBooster from "../../components/Offerings/wellnessBooster";
 import Tiffany from '../../assets/images/Tiffany-sitting.png'
 import IndividualTherapy from "../../components/Offerings/individualTherapy";
-import { Col, Row } from "antd";
-import WavyBackground from '../../assets/images/Sweet Pink Wavy Shape Basic Gradient Desktop Wallpaper.png'
 
 interface Props {
   isMobile: boolean;
@@ -135,7 +133,7 @@ export default function Offerings(props: Props) {
             justifyContent: 'center', 
             width: '100%',
             }}>
-          <div>
+            <div className="heading">
               <h3 className="transition-text">
                 Intensive Experience at a Glance
               </h3>
@@ -192,7 +190,7 @@ export default function Offerings(props: Props) {
         </div>
         <div  style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
           <div>
-            <div>
+            <div className="heading">
               <h3 className="transition-text">
                 Intensive Frequently Asked Questions (FAQs)
               </h3>
@@ -202,7 +200,7 @@ export default function Offerings(props: Props) {
           <FAQs />
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-        <div className="highlight-vid-container">
+        <div className="highlight-vid-container heading">
           <h3 className="transition-text">EMDR at a Glance</h3>
           <iframe
             className="highlight-vid"
@@ -214,7 +212,7 @@ export default function Offerings(props: Props) {
         </div>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-          <h2 className="transition-text">EMDR Group Intensives</h2>
+          <h2 className="transition-text heading">EMDR Group Intensives</h2>
           <p className="transition-text">
             <a
               className="emdr-link"
@@ -260,16 +258,12 @@ export default function Offerings(props: Props) {
             </div>
           </div>
         </div>
-        {/* <Row gutter={[16, 24]}> */}
-    {/* <Col span={24}> */}
         <CardWithRightImage 
             heroTitle="Clinician Consult Corner"
             imageSrc={Consulting}
             title="Group Clinical Supervision"
             content={ClinicalConsultCorner}
         />
-    {/* </Col> */}
-    {/* <Col span={24}> */}
         <CardWithLeftImage 
             heroTitle="Wellness Booster"
             imageSrc={Bowls}

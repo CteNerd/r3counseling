@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, Card, Row } from 'antd';
-import Arrow from '../../assets/images/Arrow.svg'
+import '../../pages/offerings/offerings.css'
 import './cardWithRightImage.css'
 
 interface CardWithRightImageProps {
@@ -14,7 +14,7 @@ interface CardWithRightImageProps {
 const CardWithRightImage: React.FC<CardWithRightImageProps> = ({ imageSrc, title, content, heroTitle, pngSrc }) => {
     return (
         <div className='card-container-right'style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            <h2  className="transition-text">{heroTitle}</h2>
+            <h2  className="transition-text heading">{heroTitle}</h2>
             <div className='flex-container'>
             
         <Card className='image-card-right'>

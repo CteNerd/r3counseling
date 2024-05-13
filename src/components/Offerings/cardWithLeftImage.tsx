@@ -13,7 +13,7 @@ interface CardWithLeftImageProps {
 const CardWithLeftImage: React.FC<CardWithLeftImageProps> = ({ imageSrc, title, content, heroTitle }) => {
     return (
         <div className='card-container' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            <h2 className="transition-text">{heroTitle}</h2>
+            <h2 className="transition-text heading">{heroTitle}</h2>
             <div className='flex-container'>
                 <Image 
                     style={{ objectFit: 'cover'}}
