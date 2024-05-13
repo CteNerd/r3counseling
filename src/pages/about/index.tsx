@@ -10,10 +10,10 @@ import NicoleProfessionalJourney from "../../components/professionalBio/nicolePr
 
 export default function AboutMe() {
   return (
-    <div>
+    <div style={{ width: '100%' }}>
       <h1>About</h1>
       <Row gutter={[24, 16]} justify='center'>
-        <Col className='gutter-row' >
+        <Col className='gutter-row' xs={24} md={8} >
       <ProfessionalBio
       
       title="Tiffany Luke"
@@ -31,7 +31,7 @@ export default function AboutMe() {
     content2={TiffanyProfessionalJourney}
       />
       </Col>
-      <Col className='gutter-row' >
+      <Col className='gutter-row' xs={24} md={8}>
         <ProfessionalBio 
        
         title="Nicole Thoms Fuentes"

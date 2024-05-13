@@ -13,6 +13,7 @@
     opacity: 0;
     transition: opacity 0.3s ease;
     padding: 5px;
+    overflow: auto;
     
     
   }
@@ -24,5 +25,14 @@
   }
   .custom-meta {
     padding: 10px !important; /* Change 10px to your desired padding */
+}
+
+@media (max-width: 480px) {
+  .info-box-style {
+    position:inherit;
+      width: 270px;
+      right: 30%;
+      text-align: center;
+  }
 }
 
