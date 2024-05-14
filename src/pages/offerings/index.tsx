@@ -2,6 +2,16 @@ import React, { useState, useEffect } from "react";
 import "./offerings.css";
 import Posters from "./posters.json";
 import FAQs from "./intensive-faqs";
+import CardWithLeftImage from "../../components/Offerings/cardWithLeftImage";
+import LightBeamOnEye from'../../assets/images/lightbeam-on-eye.png'
+import AboutEDMR from "../../components/Offerings/EDMRIntesives/aboutEDMR";
+import CardWithRightImage from "../../components/Offerings/cardWithRightImage";
+import Consulting from '../../assets/images/girl-talk.png'
+import ClinicalConsultCorner from "../../components/Offerings/clinicalConsultCorner";
+import Bowls from '../../assets/images/Tiffany-playing-bowls.png'
+import WellnessBooster from "../../components/Offerings/wellnessBooster";
+import Tiffany from '../../assets/images/Tiffany-sitting.png'
+import IndividualTherapy from "../../components/Offerings/individualTherapy";
 
 interface Props {
   isMobile: boolean;
@@ -87,28 +97,14 @@ export default function Offerings(props: Props) {
         <CarouselImages />
       </div>
       <div>
-        <div>
-          <h2 className="transition-text">EMDR Intensives</h2>
-          <p className="transition-text">
-            EMDR Intensives offer an alternative path to healing by rewiring
-            memory networks rather than simply altering thought patterns to
-            change emotions. Through EMDR processing, memories that contribute
-            to feeling stuck in the past are desensitized, allowing for
-            transformation of negative feelings, beliefs, and body sensations.
-            These Intensives provide a condensed opportunity to address past,
-            present, and future concerns, expediting the healing process.
-          </p>
-          <p className="transition-text">
-            Typically spanning 4 to 8 hours per day over 1 to 5 days, Intensives
-            offer concentrated time to address specific issues. While the work
-            is intense, it can serve as a profound emotional reset. To ensure
-            suitability for Intensive work, a complimentary consultation is
-            provided. Clients are welcome to travel to Augusta for the
-            Intensive, creating space for focused healing before returning to
-            their regular routines. Don't hesitate to reach out and schedule
-            your free consultation today—why wait to begin your healing journey?
-          </p>
-        </div>
+        <CardWithLeftImage 
+          imageSrc={LightBeamOnEye}
+          title="EMDR Intensives"
+          content={AboutEDMR}
+        />
+        
+          
+        
         <div className="free-consult-container">
           <a onClick={() => setConsultModalVis(!consultModalVis)}>
             <button className="free-consult-button">Free Consultation</button>
@@ -130,13 +126,17 @@ export default function Offerings(props: Props) {
             </div>
           </div>
         </div>
-        <div>
-          <div>
-            <div>
+        <div  style={{ 
+          display: 'flex',
+           flexDirection: 'column',
+            alignItems: 'center', 
+            justifyContent: 'center', 
+            width: '100%',
+            }}>
+            <div className="heading">
               <h3 className="transition-text">
                 Intensive Experience at a Glance
               </h3>
-            </div>
           </div>
           <div>
             <ul className="intensive-offerings-list">
@@ -188,9 +188,9 @@ export default function Offerings(props: Props) {
             </ul>
           </div>
         </div>
-        <div>
+        <div  style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
           <div>
-            <div>
+            <div className="heading">
               <h3 className="transition-text">
                 Intensive Frequently Asked Questions (FAQs)
               </h3>
@@ -199,7 +199,8 @@ export default function Offerings(props: Props) {
           </div>
           <FAQs />
         </div>
-        <div className="highlight-vid-container">
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="highlight-vid-container heading">
           <h3 className="transition-text">EMDR at a Glance</h3>
           <iframe
             className="highlight-vid"
@@ -209,8 +210,9 @@ export default function Offerings(props: Props) {
             allowFullScreen
           ></iframe>
         </div>
-        <div>
-          <h2 className="transition-text">EMDR Group Intensives</h2>
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+          <h2 className="transition-text heading">EMDR Group Intensives</h2>
           <p className="transition-text">
             <a
               className="emdr-link"
@@ -256,36 +258,31 @@ export default function Offerings(props: Props) {
             </div>
           </div>
         </div>
-        <div>
-          <h2 className="transition-text">Clinical Supervision</h2>
-          <p className="transition-text">
-            Release Restore Redefine Counseling offers clinical supervision to
-            students and clinicians who are in the process of seeking their
-            professional counseling license. If you are interested in beginning
-            individual or group supervision, feel free to call 706-750-8906 or
-            send an email to{" "}
-            {
-              <a href="mailto:r3counseling@counselingsecure.com">
-                r3counseling@counselingsecure.com
-              </a>
-            }
-          </p>
-        </div>
-        <div>
-          <h2 className="transition-text">Individual Therapy</h2>
-          <p className="transition-text">
-            Let’s talk one-on-one in a safe, non-judgmental, relaxed, and
-            supportive environment. Allow me to gain an understanding of your
-            past and present experiences through your lens. Let’s explore the
-            impact of your emotions and thoughts on present behaviors. Let’s
-            align to RELEASE, RESTORE and REDEFINE the next phase of your
-            journey!
-          </p>
-        </div>
+        <CardWithRightImage 
+            heroTitle="Clinician Consult Corner"
+            imageSrc={Consulting}
+            title="Group Clinical Supervision"
+            content={ClinicalConsultCorner}
+        />
+        <CardWithLeftImage 
+            heroTitle="Wellness Booster"
+            imageSrc={Bowls}
+            // title="EmpowerHer: Women's Trauma Healing Group"
+            content={WellnessBooster}
+        />
+    {/* </Col> */}
+    {/* <Col span={24}> */}
+        <CardWithRightImage 
+            imageSrc={Tiffany}
+            title="Individual Therapy"
+            content={IndividualTherapy}
+        />
+    {/* </Col> */}
+{/* </Row> */}
       </div>
       <div className="coming-soon-container">
         <h3 className="transition-text">
-          Stay Tuned R & R-Rest and Restore Retreat Coming November 2024
+        Stay Tuned....PAUSE Day Retreat Series Coming Soon
         </h3>
       </div>
       <div

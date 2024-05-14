@@ -47,7 +47,7 @@ export default function SideNav() {
         &times;
       </div>
       <a href="/">Home</a>
-      <a href="/about">About Me</a>
+      <a href="/about">About</a>
       <a href="/offerings">Offerings</a>
       <a href="/ready-to-release">Ready to Release</a>
       <a href="/terms">Terms</a>
