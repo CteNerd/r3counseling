@@ -51,7 +51,7 @@ const ProfessionalBio: React.FC<ProfessionalBioProps> = ({ title, description, i
                 </div>
             </Card>
             </Col>
-            <Col span={12} xs={24}>
+            <Col>
             {/*<h4>Professional Journey at a Glance</h4>*/}
             <Card style={{ 
                 maxWidth: 400, 
