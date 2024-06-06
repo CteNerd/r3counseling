@@ -19,6 +19,7 @@ import {
 import SideNav from "./components/sideNav/sideNav";
 import Resources from "./pages/resources";
 import Retreat from "./pages/retreat";
+import Events from "./pages/events";
 
 function App() {
   const [selectedMenuKey, setSelectedMenuKey] = useState("");
@@ -75,6 +76,9 @@ function App() {
           <Menu.Item key="offerings">
             <a href="/offerings">Offerings</a>
           </Menu.Item>
+          <Menu.Item key="events">
+            <a href="/events">Events</a>  
+          </Menu.Item>
           <Menu.Item key="img">
             <img
               className="menu-img"
@@ -123,6 +127,9 @@ function App() {
               </Route>
               <Route path="/offerings">
                 <Offerings isMobile={isMobile} />
+              </Route>
+              <Route path="/events">
+                <Events />
               </Route>
               <Route path="/ready-to-release">
                 <ReadyToRelease />

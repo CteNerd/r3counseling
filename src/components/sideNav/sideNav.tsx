@@ -49,6 +49,7 @@ export default function SideNav() {
       <a href="/">Home</a>
       <a href="/about">About</a>
       <a href="/offerings">Offerings</a>
+      <a href="/events">Events</a>
       <a href="/ready-to-release">Ready to Release</a>
       <a href="/terms">Terms</a>
       <a href="/retreat">Retreat</a>
