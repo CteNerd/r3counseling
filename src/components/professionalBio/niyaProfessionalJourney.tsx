@@ -9,7 +9,7 @@ const NiyaProfessionalJourney = (
      Masters of Social Work: <br />
     <strong>Valdosta State University</strong><br /><br />
 
-    Bachelors of Social Work <br />
+    Bachelors of Social Work: <br />
     <strong>Georgia State University</strong><br /><br />
   </p>
     </div>
