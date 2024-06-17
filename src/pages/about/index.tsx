@@ -37,8 +37,7 @@ export default function AboutMe() {
         title="Nicole Thoms Fuentes"
         description={(
           <>
-            LPC, CPCS <br />
-            Graduate Therapist Intern under the Supervision of Tiffany Luke,  <br /><br />
+            Graduate Therapist Intern under the Clinical Supervision of Tiffany Luke, LPC, CPS  <br /><br />
             <strong>(ACCEPTING NEW CLIENTS)</strong>
           </>
         )}
