@@ -6,9 +6,9 @@
     height: 100%;
     background-color: rgb(228, 176, 153);
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     text-align: left;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -35,4 +35,6 @@
       text-align: center;
   }
 }
+
+
 

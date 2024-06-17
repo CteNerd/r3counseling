@@ -67,7 +67,7 @@ export default function Terms() {
         <div className="psychotherapy-container">
           <div className="psychotherapy-container-columns">
             <ul>
-              <li>$175 for a 60 minute Individual Session</li>
+              <li>$175/$125 for a 60 minute Individual Session</li>
               <li>
                 <a onClick={() => setEmdrModalOpen(true)}>
                   Self Pay Package Rate: Individual/EMDR Intensive
@@ -114,7 +114,7 @@ export default function Terms() {
       <section className="sliding-scale">
         <h4>Sliding Scale</h4>
         <ul>
-          <li>$40 for a 50 minute Individual Session.</li>
+          <li>$40 for a 50 minute Individual Session</li>
           <ul>
             <li>
               Intern-Graduate Student in an internship program, under the direct
