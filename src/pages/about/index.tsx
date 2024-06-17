@@ -1,11 +1,15 @@
 import "./about.css";
+import '../../components/professionalBio/col-adjust.css'
 import ProfessionalBio from "../../components/professionalBio/professionalBio";
 import TiffanyBioContent from "../../components/professionalBio/tiffanyBioContent";
 import TiffanyProfessionalJourney from "../../components/professionalBio/tiffanyProfessionalJourney";
 import { Col, Row } from "antd";
-import imageSrc from '../../assets/images/Nicole Thoms Fuentes - Profile Photo.png'
+import Nicole from '../../assets/images/Nicole Thoms Fuentes - Profile Photo.png'
 import NicoleBioContent from "../../components/professionalBio/nicoleBioContent";
 import NicoleProfessionalJourney from "../../components/professionalBio/nicoleProfesssionalJourney";
+import NiyaBioContent from "../../components/professionalBio/niyaBioContent";
+import NiyaProfessionalJourney from "../../components/professionalBio/niyaProfessionalJourney";
+import Niya from '../../assets/images/Niya-headShot.png'
 
 
 export default function AboutMe() {
@@ -41,10 +45,26 @@ export default function AboutMe() {
             <strong>(ACCEPTING NEW CLIENTS)</strong>
           </>
         )}
-        imageSrc={imageSrc}
+        imageSrc={Nicole}
         content={NicoleBioContent}
         content2={NicoleProfessionalJourney}
         />
+      </Col>
+      <Col className='gutter-row col-adjust' xs={24} md={8}>
+      <ProfessionalBio
+      
+      title="Niya Burnette"
+      description={(
+        <>
+          LCSW <br /><br />
+          Therapist <br /><br />
+          <strong>(ACCEPTING NEW CLIENTS-VIRTUAL ONLY)</strong>
+        </>
+      )}
+      imageSrc={Niya}
+      content={NiyaBioContent}
+      content2={NiyaProfessionalJourney}
+      />
       </Col>
       </Row>
       </div>
