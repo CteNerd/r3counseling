@@ -1,12 +1,12 @@
 import { Image } from 'antd';
-import natureNurtureFlyer from '../../assets/images/Nature-and-Nurture.png'
+import parkFreeWellnessBooster from '../../assets/images/Park Free Wellness Booster.pdf.png'
 
 export default function Events() {
     return (
         <div>
         <h1>Events</h1>
         <Image 
-          src={natureNurtureFlyer}
+          src={parkFreeWellnessBooster}
         />
         </div>
     );
