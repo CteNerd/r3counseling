@@ -1,5 +1,5 @@
 import { Image } from 'antd';
-import parkFreeWellnessBooster from '../../assets/images/Park Free Wellness Booster.pdf.png'
+import parkFreeWellnessBooster from '../../assets/images/Park Free Wellness Booster.png'
 
 export default function Events() {
     return (
