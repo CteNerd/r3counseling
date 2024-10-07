@@ -1,5 +1,5 @@
 import { Col, Image, Row } from 'antd';
-import parkFreeWellnessBooster from '../../assets/images/Park Free Wellness Booster-09.png'
+import parkFreeWellnessBooster from '../../assets/images/Park Free Wellness Booster.png'
 import bookClub from '../../assets/images/Book Club Thema Bryant.png'
 
 export default function Events() {

@@ -12,6 +12,8 @@ import Bowls from '../../assets/images/Tiffany-playing-bowls.png'
 import WellnessBooster from "../../components/Offerings/wellnessBooster";
 import Tiffany from '../../assets/images/Tiffany-sitting.png'
 import IndividualTherapy from "../../components/Offerings/individualTherapy";
+import PrivateWellnessExperience from "../../assets/images/private-wellness-experience.png";
+import privateWellnessExperience from "../../components/Offerings/privateWellnessExperience";
 
 interface Props {
   isMobile: boolean;
@@ -265,17 +267,24 @@ export default function Offerings(props: Props) {
             content={ClinicalConsultCorner}
         />
         <CardWithLeftImage 
+            heroTitle="Private Wellness Experience"
+            imageSrc={PrivateWellnessExperience}
+            content={privateWellnessExperience}
+            className="private-wellness"
+        />
+        <CardWithRightImage 
             heroTitle="Wellness Booster"
             imageSrc={Bowls}
-            // title="EmpowerHer: Women's Trauma Healing Group"
+            title="EmpowerHer: Women's Trauma Healing Group"
             content={WellnessBooster}
         />
     {/* </Col> */}
     {/* <Col span={24}> */}
-        <CardWithRightImage 
+        <CardWithLeftImage 
             imageSrc={Tiffany}
             title="Individual Therapy"
             content={IndividualTherapy}
+            
         />
     {/* </Col> */}
 {/* </Row> */}
