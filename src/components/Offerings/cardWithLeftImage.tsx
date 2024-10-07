@@ -8,6 +8,7 @@ interface CardWithLeftImageProps {
     imageSrc: string;
     title?: string;
     content: JSX.Element;
+    className?: string;
 }
 
 const CardWithLeftImage: React.FC<CardWithLeftImageProps> = ({ imageSrc, title, content, heroTitle }) => {
@@ -18,7 +19,7 @@ const CardWithLeftImage: React.FC<CardWithLeftImageProps> = ({ imageSrc, title, 
                 <Image 
                     style={{ objectFit: 'cover'}}
                     height='auto'
-                    width='60%'
+                    width='50%'
                     src={imageSrc}
                     preview={false}
                 />
