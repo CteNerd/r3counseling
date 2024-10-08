@@ -272,7 +272,7 @@ export default function Offerings(props: Props) {
         <Row justify='space-around' align='middle'gutter={[16,{ xs: 8, sm: 16, md: 24, lg: 32 }]}>
           <Col>
         <CardWithLeftImage 
-            heroTitle="Private Wellness Experience"
+            heroTitle="Wellness Booster"
             imageSrc={PrivateWellnessExperience}
             content={privateWellnessExperience}
             className="private-wellness"
@@ -282,7 +282,7 @@ export default function Offerings(props: Props) {
         </Row>
         <Row justify='space-around' align='middle'>
         <CardWithRightImage 
-            heroTitle="Wellness Booster"
+            // heroTitle="Wellness Booster"
             imageSrc={Bowls}
             title="EmpowerHer: Women's Trauma Healing Group"
             content={WellnessBooster}
