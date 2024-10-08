@@ -14,6 +14,7 @@ import Tiffany from '../../assets/images/Tiffany-sitting.png'
 import IndividualTherapy from "../../components/Offerings/individualTherapy";
 import PrivateWellnessExperience from "../../assets/images/private-wellness-experience.png";
 import privateWellnessExperience from "../../components/Offerings/privateWellnessExperience";
+import { Col, Row } from "antd";
 
 interface Props {
   isMobile: boolean;
@@ -260,24 +261,33 @@ export default function Offerings(props: Props) {
             </div>
           </div>
         </div>
+        <Row justify='space-around' align='middle'>
         <CardWithRightImage 
             heroTitle="Clinician Consult Corner"
             imageSrc={Consulting}
             title="Group Clinical Supervision"
             content={ClinicalConsultCorner}
         />
+        </Row>
+        <Row justify='space-around' align='middle'gutter={[16,{ xs: 8, sm: 16, md: 24, lg: 32 }]}>
+          <Col>
         <CardWithLeftImage 
             heroTitle="Private Wellness Experience"
             imageSrc={PrivateWellnessExperience}
             content={privateWellnessExperience}
             className="private-wellness"
         />
+        </Col>
+        <Col></Col>
+        </Row>
+        <Row justify='space-around' align='middle'>
         <CardWithRightImage 
             heroTitle="Wellness Booster"
             imageSrc={Bowls}
             title="EmpowerHer: Women's Trauma Healing Group"
             content={WellnessBooster}
         />
+        </Row>
     {/* </Col> */}
     {/* <Col span={24}> */}
         <CardWithLeftImage 
