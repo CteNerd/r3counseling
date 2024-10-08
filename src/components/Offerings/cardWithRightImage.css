@@ -1,6 +1,6 @@
-.card-container-right {
+/* .card-container-right {
     position: relative;
-}
+} */
 
 .image-card-right {
     width: 55%;
@@ -15,9 +15,12 @@
     /* overflow: 'auto'; */
 }
 
-.flex-container {
-    display: flex;
-    position: relative;
+
+
+@media (max-width: 425px) {
+    .flex-container {
+        flex-direction: column; /* Change to column for small screens */
+    }
 }
 
 @media (min-width: 1440px) {

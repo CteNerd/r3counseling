@@ -2,7 +2,7 @@
 
 const WellnessBooster = (
     <div>
-        <h2>Empower Her: Women's Trauma Healing Group</h2>
+        {/* <h2>Empower Her: Women's Trauma Healing Group</h2> */}
         <p>
         Join us for EmpowerHer: Women's Trauma Healing Group, an 8-week 
 journey designed to foster healing and understanding in a supportive 

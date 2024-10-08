@@ -1,6 +1,6 @@
 const privateWellnessExperience = (
     <div>
-        <h2>Empower Her: Women's Trauma Healing Group</h2>
+        <h2>Private Wellness Experience</h2>
         <p>
         Whether you're celebrating a birthday, grand opening, anniversary, 
 bachelorette party, or planning a self-care day, consider adding a unique 
