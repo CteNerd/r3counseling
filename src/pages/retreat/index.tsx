@@ -63,10 +63,10 @@ export default function Retreat() {
       </div>
       <div ref={containerRef}>
         <h1 className="transition-text">
-          PAUSE-Boutique Holistic Healing Retreat
+          PAUSE-Boutique Holistic Healing Retreats
         </h1>
         <p className="transition-text">
-          PAUSE: Holistic Healing retreat for high achieving women to rest,
+          PAUSE: Holistic Healing retreats for high achieving women to rest,
           restore, and reclaim their wholeness, time, and self care. We
           understand that you are a high achieving woman, constantly juggling
           the demands of family, career, and life. You may find yourself feeling
