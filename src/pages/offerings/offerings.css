@@ -103,7 +103,7 @@ iframe {
 }
 
 @media (max-width: 480px) {
-.heading {
-  text-align: center;
-}
+  .heading {
+    text-align: center;
+  }
 }

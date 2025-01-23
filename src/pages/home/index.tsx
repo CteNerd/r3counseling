@@ -55,10 +55,7 @@ export default function Home() {
       <div className="banner">
         <div className="banner-container">
           <h1 className="banner-header">Find me on :</h1>
-          <img
-            className="banner-img"
-            src={PshycologyTodayLogo}
-          />
+          <img className="banner-img" src={PshycologyTodayLogo} />
           <a
             href="https://www.cliniciansofcolor.org:443/clinicians/tiffany-luke-lpc/"
             target="_blank"
@@ -141,10 +138,7 @@ export default function Home() {
             className="banner-img"
             src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Cigna-Logo.png"
           />
-          <img
-            className="banner-img"
-            src={CareCreditLogo}
-          />
+          <img className="banner-img" src={CareCreditLogo} />
         </div>
       </div>
       <h1 style={{ textAlign: "center" }}>Take your voice back. BE YOU!</h1>

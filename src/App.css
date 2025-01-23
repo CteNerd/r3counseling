@@ -316,13 +316,13 @@ ol {
 
 @media (max-width: 1024px) {
   .image-card h2 {
-      font-size: 25px; /* Adjust as needed */
+    font-size: 25px; /* Adjust as needed */
   }
 }
 
 @media (max-width: 480px) {
   .App-body {
-      width: 100%;
+    width: 100%;
   }
 }
 

@@ -77,7 +77,7 @@ function App() {
             <a href="/offerings">Offerings</a>
           </Menu.Item>
           <Menu.Item key="events">
-            <a href="/events">Events</a>  
+            <a href="/events">Events</a>
           </Menu.Item>
           <Menu.Item key="img">
             <img

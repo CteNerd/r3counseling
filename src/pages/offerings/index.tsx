@@ -6,14 +6,14 @@ import FlowerWomen from "../../assets/images/flower-women.png";
 import R3QrCodeForCareCredit from "../../assets/images/Release Restore Redefine Counseling QR Code for CareCredit.png";
 import FAQs from "./intensive-faqs";
 import CardWithLeftImage from "../../components/Offerings/cardWithLeftImage";
-import LightBeamOnEye from'../../assets/images/lightbeam-on-eye.png'
+import LightBeamOnEye from "../../assets/images/lightbeam-on-eye.png";
 import AboutEDMR from "../../components/Offerings/EDMRIntesives/aboutEDMR";
 import CardWithRightImage from "../../components/Offerings/cardWithRightImage";
-import Consulting from '../../assets/images/girl-talk.png'
+import Consulting from "../../assets/images/girl-talk.png";
 import ClinicalConsultCorner from "../../components/Offerings/clinicalConsultCorner";
-import Bowls from '../../assets/images/Tiffany-playing-bowls.png'
+import Bowls from "../../assets/images/Tiffany-playing-bowls.png";
 import WellnessBooster from "../../components/Offerings/wellnessBooster";
-import Tiffany from '../../assets/images/Tiffany-sitting.png'
+import Tiffany from "../../assets/images/Tiffany-sitting.png";
 import IndividualTherapy from "../../components/Offerings/individualTherapy";
 import PrivateWellnessExperience from "../../assets/images/private-wellness-experience.png";
 import privateWellnessExperience from "../../components/Offerings/privateWellnessExperience";
@@ -81,7 +81,7 @@ export default function Offerings(props: Props) {
   }
 
   function CarouselImages() {
-    let Posters: string[] = [ GirlsOnCourt, LaughingWomen, FlowerWomen];
+    let Posters: string[] = [GirlsOnCourt, LaughingWomen, FlowerWomen];
     let content: JSX.Element[] = [];
 
     Posters.forEach((poster, index) => {
@@ -104,14 +104,12 @@ export default function Offerings(props: Props) {
         <CarouselImages />
       </div>
       <div>
-        <CardWithLeftImage 
+        <CardWithLeftImage
           imageSrc={LightBeamOnEye}
           title="EMDR Intensives"
           content={AboutEDMR}
         />
-        
-          
-        
+
         <div className="free-consult-container">
           <a onClick={() => setConsultModalVis(!consultModalVis)}>
             <button className="free-consult-button">Free Consultation</button>
@@ -133,17 +131,19 @@ export default function Offerings(props: Props) {
             </div>
           </div>
         </div>
-        <div  style={{ 
-          display: 'flex',
-           flexDirection: 'column',
-            alignItems: 'center', 
-            justifyContent: 'center', 
-            width: '100%',
-            }}>
-            <div className="heading">
-              <h3 className="transition-text">
-                Intensive Experience at a Glance
-              </h3>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "100%",
+          }}
+        >
+          <div className="heading">
+            <h3 className="transition-text">
+              Intensive Experience at a Glance
+            </h3>
           </div>
           <div>
             <ul className="intensive-offerings-list">
@@ -184,23 +184,48 @@ export default function Offerings(props: Props) {
                 the next steps for your journey.
                 <ul>
                   <li className="transition-text">
-                    <strong>Not an insurance covered service. Care Credit optional payment source</strong>
+                    <strong>
+                      Not an insurance covered service. Care Credit optional
+                      payment source
+                    </strong>
                   </li>
                 </ul>
               </li>
               <li className="transition-text">
                 <strong>Pricing begins at $1000</strong> and is adjusted based
-                on your Customized EMDR Intensive Schedule/Needs; Care Credit optional payment source.
+                on your Customized EMDR Intensive Schedule/Needs; Care Credit
+                optional payment source.
               </li>
             </ul>
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-            <a href="https://www.carecredit.com/go/542NPQ" target="_blank" rel="noopener noreferrer">
-              <img src={R3QrCodeForCareCredit} alt="Girls On Court" style={{ maxWidth: '100%', height: 'auto' }} />
-            </a>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginTop: "20px",
+              }}
+            >
+              <a
+                href="https://www.carecredit.com/go/542NPQ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={R3QrCodeForCareCredit}
+                  alt="Girls On Court"
+                  style={{ maxWidth: "100%", height: "auto" }}
+                />
+              </a>
             </div>
           </div>
         </div>
-        <div  style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <div>
             <div className="heading">
               <h3 className="transition-text">
@@ -211,19 +236,33 @@ export default function Offerings(props: Props) {
           </div>
           <FAQs />
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-        <div className="highlight-vid-container heading">
-          <h3 className="transition-text">EMDR at a Glance</h3>
-          <iframe
-            className="highlight-vid"
-            src="https://www.youtube.com/embed/Pkfln-ZtWeY"
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div className="highlight-vid-container heading">
+            <h3 className="transition-text">EMDR at a Glance</h3>
+            <iframe
+              className="highlight-vid"
+              src="https://www.youtube.com/embed/Pkfln-ZtWeY"
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <h2 className="transition-text heading">EMDR Group Intensives</h2>
           <p className="transition-text">
             <a
@@ -270,47 +309,50 @@ export default function Offerings(props: Props) {
             </div>
           </div>
         </div>
-        <Row justify='space-around' align='middle'>
-        <CardWithRightImage 
+        <Row justify="space-around" align="middle">
+          <CardWithRightImage
             heroTitle="Clinician Consult Corner"
             imageSrc={Consulting}
             title="Group Clinical Supervision"
             content={ClinicalConsultCorner}
-        />
+          />
         </Row>
-        <Row justify='space-around' align='middle'gutter={[16,{ xs: 8, sm: 16, md: 24, lg: 32 }]}>
+        <Row
+          justify="space-around"
+          align="middle"
+          gutter={[16, { xs: 8, sm: 16, md: 24, lg: 32 }]}
+        >
           <Col>
-        <CardWithLeftImage 
-            heroTitle="Wellness Booster"
-            imageSrc={PrivateWellnessExperience}
-            content={privateWellnessExperience}
-            className="private-wellness"
-        />
-        </Col>
-        <Col></Col>
+            <CardWithLeftImage
+              heroTitle="Wellness Booster"
+              imageSrc={PrivateWellnessExperience}
+              content={privateWellnessExperience}
+              className="private-wellness"
+            />
+          </Col>
+          <Col></Col>
         </Row>
-        <Row justify='space-around' align='middle'>
-        <CardWithRightImage 
+        <Row justify="space-around" align="middle">
+          <CardWithRightImage
             // heroTitle="Wellness Booster"
             imageSrc={Bowls}
             title="EmpowerHer: Women's Trauma Healing Group"
             content={WellnessBooster}
-        />
+          />
         </Row>
-    {/* </Col> */}
-    {/* <Col span={24}> */}
-        <CardWithLeftImage 
-            imageSrc={Tiffany}
-            title="Individual Therapy"
-            content={IndividualTherapy}
-            
+        {/* </Col> */}
+        {/* <Col span={24}> */}
+        <CardWithLeftImage
+          imageSrc={Tiffany}
+          title="Individual Therapy"
+          content={IndividualTherapy}
         />
-    {/* </Col> */}
-{/* </Row> */}
+        {/* </Col> */}
+        {/* </Row> */}
       </div>
       <div className="coming-soon-container">
         <h3 className="transition-text">
-        Stay Tuned....PAUSE Day Retreat Series Coming Soon
+          Stay Tuned....PAUSE Day Retreat Series Coming Soon
         </h3>
       </div>
       <div
