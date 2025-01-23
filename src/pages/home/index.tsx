@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./home.css";
 import ImageCarousel from "../../components/imageCarousel/imageCarousel";
+import PshycologyTodayLogo from "../../assets/logos/psychologytoday-13.png";
+import CareCreditLogo from "../../assets/logos/CareCredit.png";
 import { ImageMeta } from "../../types/models";
 
 export default function Home() {
@@ -53,10 +55,7 @@ export default function Home() {
       <div className="banner">
         <div className="banner-container">
           <h1 className="banner-header">Find me on :</h1>
-          <img
-            className="banner-img"
-            src="https://secureservercdn.net/198.71.233.229/41m.3eb.myftpupload.com/wp-content/uploads/2020/09/0009_psychology-today-logo.png?time=1634477867"
-          />
+          <img className="banner-img" src={PshycologyTodayLogo} />
           <a
             href="https://www.cliniciansofcolor.org:443/clinicians/tiffany-luke-lpc/"
             target="_blank"
@@ -75,9 +74,9 @@ export default function Home() {
         </div>
       </div>
 
-      <h1>PAUSE Boutique Holistic Healing Retreat</h1>
+      <h1>PAUSE Boutique Holistic Healing Retreats</h1>
       <p>
-        PAUSE: Holistic Healing retreat for high achieving women to rest,
+        PAUSE: Holistic Healing retreats for high achieving women to rest,
         restore, and reclaim their wholeness, time, and self care. You may find
         yourself feeling burnt-out, with little time to pour into yourself. The
         daily grind can be overwhelming, leaving little time for self care,
@@ -139,6 +138,7 @@ export default function Home() {
             className="banner-img"
             src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Cigna-Logo.png"
           />
+          <img className="banner-img" src={CareCreditLogo} />
         </div>
       </div>
       <h1 style={{ textAlign: "center" }}>Take your voice back. BE YOU!</h1>
