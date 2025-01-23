@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./offerings.css";
-import Posters from "./posters.json";
+import GirlsOnCourt from "../../assets/images/girls-on-court.png";
+import LaughingWomen from "../../assets/images/laughing-women.png";
+import FlowerWomen from "../../assets/images/flower-women.png";
+import R3QrCodeForCareCredit from "../../assets/images/Release Restore Redefine Counseling QR Code for CareCredit.png";
 import FAQs from "./intensive-faqs";
 import CardWithLeftImage from "../../components/Offerings/cardWithLeftImage";
 import LightBeamOnEye from'../../assets/images/lightbeam-on-eye.png'
@@ -78,13 +81,14 @@ export default function Offerings(props: Props) {
   }
 
   function CarouselImages() {
+    let Posters: string[] = [ GirlsOnCourt, LaughingWomen, FlowerWomen];
     let content: JSX.Element[] = [];
 
     Posters.forEach((poster, index) => {
       content.push(
         <div key={index} className="mySlides fade session-img">
           {/* <div className="numbertext">{index} / {Posters.length}</div> */}
-          <img src={poster.url} className="slide-img" />
+          <img src={poster} className="slide-img" />
           {/* <div className="text">{poster.caption}</div> */}
         </div>
       );
@@ -180,15 +184,20 @@ export default function Offerings(props: Props) {
                 the next steps for your journey.
                 <ul>
                   <li className="transition-text">
-                    <strong>Not an insurance covered service</strong>
+                    <strong>Not an insurance covered service. Care Credit optional payment source</strong>
                   </li>
                 </ul>
               </li>
               <li className="transition-text">
                 <strong>Pricing begins at $1000</strong> and is adjusted based
-                on your Customized EMDR Intensive Schedule/Needs
+                on your Customized EMDR Intensive Schedule/Needs; Care Credit optional payment source.
               </li>
             </ul>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+            <a href="https://www.carecredit.com/go/542NPQ" target="_blank" rel="noopener noreferrer">
+              <img src={R3QrCodeForCareCredit} alt="Girls On Court" style={{ maxWidth: '100%', height: 'auto' }} />
+            </a>
+            </div>
           </div>
         </div>
         <div  style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>

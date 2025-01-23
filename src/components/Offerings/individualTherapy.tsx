@@ -9,7 +9,7 @@ const IndividualTherapy = (
             align to RELEASE, RESTORE and REDEFINE the next phase of your
             journey!<br /><br />
             <strong style={{ color: '#839abf' }}>Duration: 1 Hour; Private Pay Fee: $175/$125 (Sliding Scale 
-Available with Intern)</strong>
+Available)</strong>
         </p>
     </div>
 )
