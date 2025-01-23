@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./terms.css";
 import GroupIntensiveImages from "./group-intensive-images.json";
+import R3QrCodeForCareCredit from "../../assets/images/Release Restore Redefine Counseling QR Code for CareCredit.png";
 
 export default function Terms() {
   const [emdrModalOpen, setEmdrModalOpen] = useState(false);
@@ -69,23 +70,6 @@ export default function Terms() {
             <ul>
               <li>$175/$125 for a 60 minute Individual Session</li>
               <li>
-                <a onClick={() => setEmdrModalOpen(true)}>
-                  Self Pay Package Rate: Individual/EMDR Intensive
-                </a>
-              </li>
-              <ul>
-                <li>
-                  <a
-                    href={
-                      "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/2024+EMDR+Intensive+Packages.png"
-                    }
-                    target={"_blank"}
-                  >
-                    Download PDF
-                  </a>
-                </li>
-              </ul>
-              <li>
                 <a
                   onClick={() => {
                     setGroupModalOpen(true);
@@ -125,7 +109,26 @@ export default function Terms() {
       </section>
       <section className="payments">
         <h4>Accepts Payments</h4>
-        <p>All major credit cards are accepted for payment.</p>
+        <p>All major credit cards are accepted for payment, including Care Credit for EMDR Intensives and Wellness Sessions.</p>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "20px",
+          }}
+        >
+          <a
+            href="https://www.carecredit.com/go/542NPQ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={R3QrCodeForCareCredit}
+              alt="Girls On Court"
+              style={{ maxWidth: "100%", height: "auto" }}
+            />
+          </a>
+        </div>
         <h4>Superbill</h4>
         <p>
           A Superbill can be requested and generated, if you would like to
