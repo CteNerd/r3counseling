@@ -15,7 +15,8 @@ const FAQs = () => {
     },
     {
       question: "Are Intensives covered by insurance?",
-      answer: "Unfortunately, Intensives are not covered by insurance.",
+      answer:
+        "Unfortunately, Intensives are not covered by insurance. Care Credit is an option for payment.",
     },
     {
       question: "How is the length of the Intensive determined?",
