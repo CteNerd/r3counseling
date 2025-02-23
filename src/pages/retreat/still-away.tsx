@@ -62,7 +62,7 @@ export default function StillAwayRetreat() {
             <p className="transition-text">
               Still Away Holistic Healing retreat is for women to rest, restore,
               and reclaim their wholeness, time, and self care. We understand
-              that you are a high achieving woman, constantly juggling the
+              that you are a woman, constantly juggling the
               demands of family, career, and life. You may find yourself feeling
               burnt-out, with little time to pour into yourself. The daily grind
               can be overwhelming, leaving little time for self care,
@@ -123,7 +123,7 @@ export default function StillAwayRetreat() {
                 Onsite breakfast, lunch, and snacks included
               </li>
               <li className="transition-text">
-                All Holistic Healing practices and activities-Trauma Conscious
+                All Holistic Healing practices and activities -
                 Yoga, Sound Meditation, Breath Work, Sister Circles, Still Away
                 Goodie Bag
               </li>
@@ -198,7 +198,7 @@ export default function StillAwayRetreat() {
         </div>
 
         <div className="banner">
-          <div className="banner-container">
+          <div className="still-away-banner-container">
             <img
               src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-porch.jpeg"
               className="banner-img"

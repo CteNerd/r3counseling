@@ -54,7 +54,9 @@ export default function Retreat() {
         <ul>
           <li>
             <a href="/retreat/still-away" className="new-retreat">
-              Still Away Retreat (New!)
+              <h4>
+              Still Away Retreat (New 2025!)
+              </h4>
             </a>
           </li>
           <li>
