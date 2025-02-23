@@ -74,6 +74,7 @@
 .image-side img {
   width: 100%; /* Make image fill its container */
   height: auto; /* Keep image aspect ratio */
+  max-height: 60vh; /* Limit image height */
 }
 
 .image-side a {
@@ -115,13 +116,17 @@
   text-align: center;
   background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
   padding: 20px;
-  font-family: BradleysPen;
+  font-family: LucidaHandwriting;
 }
 
 .banner-container {
   font-size: 16px;
   font-weight: 400;
   font-style: italic;
+}
+
+.still-away-banner-container img {
+  margin: 0px 10vw;
 }
 
 /* Responsive adjustments */

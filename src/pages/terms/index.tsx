@@ -109,7 +109,10 @@ export default function Terms() {
       </section>
       <section className="payments">
         <h4>Accepts Payments</h4>
-        <p>All major credit cards are accepted for payment, including Care Credit for EMDR Intensives and Wellness Sessions.</p>
+        <p>
+          All major credit cards are accepted for payment, including Care Credit
+          for EMDR Intensives and Wellness Sessions.
+        </p>
         <div
           style={{
             display: "flex",
