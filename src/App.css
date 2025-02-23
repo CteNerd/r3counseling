@@ -330,10 +330,11 @@ ol {
 
 @font-face {
   font-family: "LucidaHandwriting";
-  src: local("LucidaHandwriting"), url(./fonts/Lucida\ Handwriting\ Italic.ttf);
+  src: local("LucidaHandwriting"),
+    url("/public/fonts/Lucida\ Handwriting\ Italic.ttf");
 }
 
 @font-face {
   font-family: "BradleysPen";
-  src: local("BradleysPen"), url(./fonts/BRADHITC.TTF);
+  src: local("BradleysPen"), url("/public/fonts/BRADHITC.TTF");
 }

@@ -76,10 +76,10 @@ export default function Home() {
 
       <h1>Still Away Boutique Holistic Healing Retreats</h1>
       <p>
-        Still Away: Holistic Healing retreats for women to rest,
-        restore, and reclaim their wholeness, time, and self care. You may find
-        yourself feeling burnt-out, with little time to pour into yourself. The
-        daily grind can be overwhelming, leaving little time for self care,
+        Still Away: Holistic Healing retreats for women to rest, restore, and
+        reclaim their wholeness, time, and self care. You may find yourself
+        feeling burnt-out, with little time to pour into yourself. The daily
+        grind can be overwhelming, leaving little time for self care,
         authenticity, and rejuvenation. It is time to reset, recenter, and
         cultivate the balance you have envisioned.
       </p>
