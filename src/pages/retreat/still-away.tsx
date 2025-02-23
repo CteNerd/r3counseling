@@ -195,13 +195,21 @@ export default function StillAwayRetreat() {
         </div>
 
         <div className="banner">
-          <div className="still-away-banner-container">
+          <div className="banner-container">
             <img
               src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-porch.jpeg"
               className="banner-img"
             />
             <img
+              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-candles.png"
+              className="banner-img"
+            />
+            <img
               src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-flower.jpeg"
+              className="banner-img"
+            />
+            <img
+              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-notebook.png"
               className="banner-img"
             />
             <img
