@@ -54,7 +54,7 @@ export default function StillAwayRetreat() {
           Still Away Holistic Healing Day Retreat
         </h1>
         <p className="transition-text">
-          Still Away Holistic Healing retreat is for high achieving women to
+          Still Away Holistic Healing retreat is for women to
           rest, restore, and reclaim their wholeness, time, and self care. We
           understand that you are a high achieving woman, constantly juggling
           the demands of family, career, and life. You may find yourself feeling
@@ -76,7 +76,7 @@ export default function StillAwayRetreat() {
           <div className="text-side">
             <ul className="transition-text">
               <li className="transition-text">
-                Who are high achievers with limited time for self
+                Who are with limited time for self
               </li>
               <li className="transition-text">
                 Who are facing burnout and are ready to take off the mask
@@ -110,7 +110,7 @@ export default function StillAwayRetreat() {
                     Conscious Yoga, Sound Meditation, Breath Work, Sister
                     Circles, Still Away Goodie Bag
                   </li>
-                  <li className="transition-text">Bonuses: Mini Facials and</li>
+                  <li className="transition-text">Bonuses: Express Facials and</li>
                 </ul>
 
                 <h3 className="transition-text">Sample Retreat Schedule:</h3>
@@ -119,7 +119,7 @@ export default function StillAwayRetreat() {
                     8:00 AM - Arrival and Welcome
                   </li>
                   <li className="transition-text">
-                    9:00 AM - Trauma Conscious Yoga
+                    9:00 AM - Yoga
                   </li>
                   <li className="transition-text">
                     10:30 AM - Sound Meditation
