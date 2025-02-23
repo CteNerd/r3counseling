@@ -3,6 +3,10 @@ import "./retreat.css";
 
 export default function StillAwayRetreat() {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const url = "https://book.stripe.com/8wMdUfc977kq6t2bIT";
+  const qrCodeUrl = `https://quickchart.io/qr?text=${encodeURIComponent(
+    url
+  )}&size=50&dark=000000&light=ffffff&ecLevel=H&format=png&margin=10&style=square&corner_radius=10`;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -50,30 +54,44 @@ export default function StillAwayRetreat() {
         <div className="hero-text">Rest. Restore. Reclaim.</div>
       </div>
       <div ref={containerRef}>
-        <h1 className="transition-text">
-          Still Away Holistic Healing Day Retreat
-        </h1>
-        <p className="transition-text">
-          Still Away Holistic Healing retreat is for women to
-          rest, restore, and reclaim their wholeness, time, and self care. We
-          understand that you are a high achieving woman, constantly juggling
-          the demands of family, career, and life. You may find yourself feeling
-          burnt-out, with little time to pour into yourself. The daily grind can
-          be overwhelming, leaving little time for self care, authenticity, and
-          rejuvenation. It is time to reset, recenter, and cultivate the balance
-          you have envisioned. During this day retreat we will, awaken your
-          innate need to care for yourself, begin to restore yourself, while
-          surrounded by safe and supportive community. It is okay to give
-          yourself permission to Still Away.
-        </p>
-        {/* <div className="container"> */}
-        <div className="coming-soon-container">
-          <h2 className="transition-text">
-            Still Away Day Retreat is for the women
-          </h2>
-        </div>
         <div className="container">
           <div className="text-side">
+            <h1 className="transition-text">
+              Still Away Holistic Healing Day Retreat
+            </h1>
+            <p className="transition-text">
+              Still Away Holistic Healing retreat is for women to rest, restore,
+              and reclaim their wholeness, time, and self care. We understand
+              that you are a woman, constantly juggling the
+              demands of family, career, and life. You may find yourself feeling
+              burnt-out, with little time to pour into yourself. The daily grind
+              can be overwhelming, leaving little time for self care,
+              authenticity, and rejuvenation. It is time to reset, recenter, and
+              cultivate the balance you have envisioned. During this day retreat
+              we will, awaken your innate need to care for yourself, begin to
+              restore yourself, while surrounded by safe and supportive
+              community. It is okay to give yourself permission to Still Away.
+            </p>
+          </div>
+        </div>
+        <div className="container">
+          <div className="image-side">
+            <img
+              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-porch.jpeg"
+            />
+            <a
+              href="https://book.stripe.com/8wMdUfc977kq6t2bIT"
+              target="_blank"
+            >
+              <button title="Join Retreat">Join Retreat</button>
+            </a>
+          </div>
+          <div className="text-side">
+            <div className="coming-soon-container text-side">
+              <h2 className="transition-text">
+                Still Away Day Retreat is for the women
+              </h2>
+            </div>
             <ul className="transition-text">
               <li className="transition-text">
                 Who are with limited time for self
@@ -93,108 +111,156 @@ export default function StillAwayRetreat() {
                 Who are ready to take time to come back to themselves
               </li>
             </ul>
-            <div className="container">
-              <div className="text-side">
-                <h3 className="transition-text">Still Away Includes:</h3>
-                <ul className="transition-text">
-                  <li className="transition-text">
-                    Day accommodations on 18 acres of serene property, including
-                    indoor/outdoor living space, jacuzzi, fire pit, walking
-                    paths, pond, and lake access
-                  </li>
-                  <li className="transition-text">
-                    Onsite breakfast, lunch, and snacks included
-                  </li>
-                  <li className="transition-text">
-                    All Holistic Healing practices and activities-Trauma
-                    Conscious Yoga, Sound Meditation, Breath Work, Sister
-                    Circles, Still Away Goodie Bag
-                  </li>
-                  <li className="transition-text">Bonuses: Express Facials and</li>
-                </ul>
 
-                <h3 className="transition-text">Sample Retreat Schedule:</h3>
-                <ul className="transition-text">
-                  <li className="transition-text">
-                    8:00 AM - Arrival and Welcome
-                  </li>
-                  <li className="transition-text">
-                    9:00 AM - Yoga
-                  </li>
-                  <li className="transition-text">
-                    10:30 AM - Sound Meditation
-                  </li>
-                  <li className="transition-text">12:00 PM - Lunch</li>
-                  <li className="transition-text">1:00 PM - Breath Work</li>
-                  <li className="transition-text">2:30 PM - Sister Circles</li>
-                  <li className="transition-text">4:00 PM - Free Time</li>
-                  <li className="transition-text">5:00 PM - Closing Circle</li>
-                </ul>
-              </div>
-              <div className="image-side" style={{ height: "60vh" }}>
-                <img
-                  src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-porch.jpeg"
-                  style={{
-                    height: "100%",
-                    width: "100%",
-                    objectFit: "contain",
-                  }}
-                />
-              </div>
-            </div>
-            <div className="container">
-              <div className="image-side" style={{ height: "40vh" }}>
-                <img
-                  src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-flower.jpeg"
-                  style={{
-                    height: "100%",
-                    width: "100%",
-                    objectFit: "contain",
-                  }}
-                />
-              </div>
-              <div className="text-side">
-                <h3 className="transition-text">Cost:</h3>
-                <p className="transition-text">$347 per person</p>
-                <h3 className="transition-text">Payment:</h3>
-                <p className="transition-text">
-                  Payment can be made via credit card or Stripe.
-                </p>
-              </div>
-              <div className="image-side" style={{ height: "40vh" }}>
-                <img
-                  src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-stripe-qr.png"
-                  style={{
-                    height: "100%",
-                    width: "100%",
-                    objectFit: "contain",
-                  }}
-                />
-              </div>
-            </div>
-            <h3 className="transition-text">Frequently Asked Questions:</h3>
+            <h3 className="transition-text">Still Away Includes:</h3>
             <ul className="transition-text">
               <li className="transition-text">
-                <strong>What is the location of the retreat?</strong> Appling,
-                GA 30802. Address will be provided to the email address used at
-                booking.
+                Day accommodations on 18 acres of serene property, including
+                indoor/outdoor living space, jacuzzi, fire pit, walking paths,
+                pond, and lake access
               </li>
               <li className="transition-text">
-                <strong>Is parking available?</strong> Yes, parking is available
-                on-site. No cost.
+                Onsite breakfast, lunch, and snacks included
               </li>
               <li className="transition-text">
-                <strong>Can I bring swimwear for the jacuzzi?</strong> Of
-                course!! You will have access to private bedrooms and bathrooms,
-                if needed to change your clothing.
+                All Holistic Healing practices and activities -
+                Yoga, Sound Meditation, Breath Work, Sister Circles, Still Away
+                Goodie Bag
               </li>
               <li className="transition-text">
-                <strong>What should I bring?</strong> Yoga mat, swim wear (if
-                you desire), comfy shoes, a cozy blanket.
+                Bonuses: Express Facials and Speedy Hydration and Wellness
+                Ocygen Therapy
               </li>
             </ul>
           </div>
         </div>
+        <div>
+          <h1 className="transition-text">
+            Sample Retreat Schedule &quot;Schedule is Subject to Change&quot;
+          </h1>
+        </div>
+        <div className="container">
+          <div className="text-side">
+            <h5 className="transition-text">Arrive & Awaken</h5>
+            <div>
+              <ul className="transition-text">
+                <li className="transition-text">Welcome</li>
+                <li className="transition-text">Intention Setting</li>
+                <li className="transition-text">Breakfast</li>
+              </ul>
+            </div>
+
+            <h5 className="transition-text">Restore & Connect</h5>
+            <div>
+              <ul className="transition-text">
+                <li className="transition-text">Yoga</li>
+                <li className="transition-text">Sound Meditation</li>
+                <li className="transition-text">Sister Circle</li>
+              </ul>
+            </div>
+
+            <h5 className="transition-text">Nourish & Rejuvenate</h5>
+            <div>
+              <ul className="transition-text">
+                <li className="transition-text">Lunch</li>
+                <li className="transition-text">Relax</li>
+                <li className="transition-text">
+                  Individual Breakout Sessions: Facials and Oxygen Therapy
+                </li>
+              </ul>
+            </div>
+
+            <h5 className="transition-text">Reflect & Renew</h5>
+            <div>
+              <ul className="transition-text">
+                <li className="transition-text">Sister Circle Activity</li>
+                <li className="transition-text">Closing Reflection</li>
+                <li className="transition-text">Farewell</li>
+              </ul>
+            </div>
+          </div>
+          <div className="image-side">
+            <img
+              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-patio.jpeg"
+              style={{
+                height: "100%",
+                width: "100%",
+                objectFit: "contain",
+              }}
+            />
+            <a
+              href="https://book.stripe.com/8wMdUfc977kq6t2bIT"
+              target="_blank"
+            >
+              <button title="Join Retreat">Join Retreat</button>
+            </a>
+          </div>
+        </div>
+
+        <div className="banner">
+          <div className="still-away-banner-container">
+            <img
+              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-porch.jpeg"
+              className="banner-img"
+            />
+            <img
+              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-flower.jpeg"
+              className="banner-img"
+            />
+            <img
+              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-patio.jpeg"
+              className="banner-img"
+            />
+          </div>
+        </div>
+        
+        <div className="container">
+          <div className="image-side">
+            <img
+              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-backyard.png"
+              style={{
+                height: "100%",
+                width: "100%",
+                objectFit: "contain",
+              }}
+            />
+            <a
+              href="https://book.stripe.com/8wMdUfc977kq6t2bIT"
+              target="_blank"
+            >
+              <button title="Join Retreat">Join Retreat</button>
+            </a>
+          </div>
+          <div className="text-side">
+            <h3 className="transition-text">Cost:</h3>
+            <p className="transition-text">$357 per person</p>
+            <h3 className="transition-text">Payment:</h3>
+            <p className="transition-text">
+              Payment can be made via credit card or Apple Pay via Stripe.
+            </p>
+          </div>
+        </div>
+        <h3 className="transition-text">Frequently Asked Questions:</h3>
+        <ul className="transition-text">
+          <li className="transition-text">
+            <strong>What is the location of the retreat?</strong> Appling, GA
+            30802. Address will be provided to the email address used at
+            booking.
+          </li>
+          <li className="transition-text">
+            <strong>Is parking available?</strong> Yes, parking is available
+            on-site. No cost.
+          </li>
+          <li className="transition-text">
+            <strong>Can I bring swimwear for the jacuzzi?</strong> Of course!!
+            You will have access to private bedrooms and bathrooms, if needed to
+            change your clothing.
+          </li>
+          <li className="transition-text">
+            <strong>What should I bring?</strong> Yoga mat, swim wear (if you
+            desire), comfy shoes, a cozy blanket.
+          </li>
+        </ul>
       </div>
     </div>
   );
