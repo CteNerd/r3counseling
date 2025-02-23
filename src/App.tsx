@@ -20,6 +20,8 @@ import SideNav from "./components/sideNav/sideNav";
 import Resources from "./pages/resources";
 import Retreat from "./pages/retreat";
 import Events from "./pages/events";
+import StillAwayRetreat from "./pages/retreat/still-away";
+import PauseRetreat from "./pages/retreat/pause";
 
 function App() {
   const [selectedMenuKey, setSelectedMenuKey] = useState("");
@@ -134,11 +136,17 @@ function App() {
               <Route path="/ready-to-release">
                 <ReadyToRelease />
               </Route>
-              <Route path="/retreat">
-                <Retreat />
-              </Route>
               <Route path="/appointment-request">
                 <AppointmentRequest />
+              </Route>
+              <Route path="/retreat/pause">
+                <PauseRetreat />
+              </Route>
+              <Route path="/retreat/still-away">
+                <StillAwayRetreat />
+              </Route>
+              <Route path="/retreat">
+                <Retreat />
               </Route>
               <Route path="/">
                 <Home />
