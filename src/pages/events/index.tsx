@@ -22,10 +22,19 @@ export default function Events() {
     <div className="events-container">
       <h1>Events</h1>
       <div className="events-row">
-        <div className="events-col" onClick={() => openModal(ValentinesDaySelfLove2025)}>
-          <img src={ValentinesDaySelfLove2025} alt="Valentine's Day Self Love 2025" />
+        <div
+          className="events-col"
+          onClick={() => openModal(ValentinesDaySelfLove2025)}
+        >
+          <img
+            src={ValentinesDaySelfLove2025}
+            alt="Valentine's Day Self Love 2025"
+          />
         </div>
-        <div className="events-col" onClick={() => openModal(parkFreeWellnessBooster)}>
+        <div
+          className="events-col"
+          onClick={() => openModal(parkFreeWellnessBooster)}
+        >
           <img src={parkFreeWellnessBooster} alt="Park Free Wellness Booster" />
         </div>
         <div className="events-col" onClick={() => openModal(bookClub)}>
@@ -36,7 +45,9 @@ export default function Events() {
       {modalOpen && (
         <div className="modal" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <span className="close" onClick={closeModal}>&times;</span>
+            <span className="close" onClick={closeModal}>
+              &times;
+            </span>
             <img src={selectedImage!} alt="Selected Event" />
           </div>
         </div>
