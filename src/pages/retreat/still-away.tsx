@@ -126,7 +126,7 @@ export default function StillAwayRetreat() {
               </li>
               <li className="transition-text">
                 Bonuses: Express Facials and Speedy Hydration and Wellness
-                Ocygen Therapy
+                Oxygen Therapy
               </li>
             </ul>
           </div>
