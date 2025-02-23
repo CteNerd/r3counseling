@@ -62,23 +62,21 @@ export default function StillAwayRetreat() {
             <p className="transition-text">
               Still Away Holistic Healing retreat is for women to rest, restore,
               and reclaim their wholeness, time, and self care. We understand
-              that you are a woman, constantly juggling the
-              demands of family, career, and life. You may find yourself feeling
-              burnt-out, with little time to pour into yourself. The daily grind
-              can be overwhelming, leaving little time for self care,
-              authenticity, and rejuvenation. It is time to reset, recenter, and
-              cultivate the balance you have envisioned. During this day retreat
-              we will, awaken your innate need to care for yourself, begin to
-              restore yourself, while surrounded by safe and supportive
-              community. It is okay to give yourself permission to Still Away.
+              that you are a woman, constantly juggling the demands of family,
+              career, and life. You may find yourself feeling burnt-out, with
+              little time to pour into yourself. The daily grind can be
+              overwhelming, leaving little time for self care, authenticity, and
+              rejuvenation. It is time to reset, recenter, and cultivate the
+              balance you have envisioned. During this day retreat we will,
+              awaken your innate need to care for yourself, begin to restore
+              yourself, while surrounded by safe and supportive community. It is
+              okay to give yourself permission to Still Away.
             </p>
           </div>
         </div>
         <div className="container">
           <div className="image-side">
-            <img
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-porch.jpeg"
-            />
+            <img src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-porch.jpeg" />
             <a
               href="https://book.stripe.com/8wMdUfc977kq6t2bIT"
               target="_blank"
@@ -123,9 +121,8 @@ export default function StillAwayRetreat() {
                 Onsite breakfast, lunch, and snacks included
               </li>
               <li className="transition-text">
-                All Holistic Healing practices and activities -
-                Yoga, Sound Meditation, Breath Work, Sister Circles, Still Away
-                Goodie Bag
+                All Holistic Healing practices and activities - Yoga, Sound
+                Meditation, Breath Work, Sister Circles, Still Away Goodie Bag
               </li>
               <li className="transition-text">
                 Bonuses: Express Facials and Speedy Hydration and Wellness
@@ -213,7 +210,7 @@ export default function StillAwayRetreat() {
             />
           </div>
         </div>
-        
+
         <div className="container">
           <div className="image-side">
             <img

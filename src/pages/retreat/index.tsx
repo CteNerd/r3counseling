@@ -54,13 +54,13 @@ export default function Retreat() {
         <ul>
           <li>
             <a href="/retreat/still-away" className="new-retreat">
-              <h4>
-              Still Away Retreat (New 2025!)
-              </h4>
+              <h4>Still Away Retreat (New 2025!)</h4>
             </a>
           </li>
           <li>
-            <a href="/retreat/pause">Pause Retreat</a>
+            <a href="/retreat/pause">
+              <h4>Pause Retreat</h4>
+            </a>
           </li>
         </ul>
       </div>
