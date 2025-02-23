@@ -74,6 +74,7 @@
 .image-side img {
   width: 100%; /* Make image fill its container */
   height: auto; /* Keep image aspect ratio */
+  max-height: 60vh; /* Limit image height */
 }
 
 .image-side a {
@@ -122,6 +123,10 @@
   font-size: 16px;
   font-weight: 400;
   font-style: italic;
+}
+
+.banner-container img {
+  margin: 0px 10vw;
 }
 
 /* Responsive adjustments */
