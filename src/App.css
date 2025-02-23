@@ -178,15 +178,16 @@ button:disabled {
 h4,
 h2,
 h3,
-h5 {
+h5,
+h1 {
   color: #839abf;
   font-family: LucidaHandwriting;
 }
 
-h1 {
+/* h1 {
   color: #839abf;
   font-family: BradleysPen;
-}
+} */
 
 .App-footer {
   background: linear-gradient(-45deg, #d3fbf7, #fbdcd3, #fbf0d3);
