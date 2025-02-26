@@ -76,7 +76,7 @@ export default function StillAwayRetreat() {
         </div>
         <div className="container">
           <div className="image-side">
-            <img src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-porch.jpeg" />
+            <img src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-lake.jpg" />
             <a
               href="https://book.stripe.com/8wMdUfc977kq6t2bIT"
               target="_blank"
@@ -113,9 +113,8 @@ export default function StillAwayRetreat() {
             <h3 className="transition-text">Still Away Includes:</h3>
             <ul className="transition-text">
               <li className="transition-text">
-                Day accommodations on 18 acres of serene property, including
-                indoor/outdoor living space, jacuzzi, fire pit, walking paths,
-                pond, and lake access
+                Day accommodations on serene property, including indoor/outdoor
+                living space, jacuzzi, fire pit, walking paths, and lake access
               </li>
               <li className="transition-text">
                 Onsite breakfast, lunch, and snacks included
@@ -178,7 +177,7 @@ export default function StillAwayRetreat() {
           </div>
           <div className="image-side">
             <img
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-patio.jpeg"
+              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-dock.jpg"
               style={{
                 height: "100%",
                 width: "100%",
@@ -197,7 +196,7 @@ export default function StillAwayRetreat() {
         <div className="banner">
           <div className="banner-container">
             <img
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-porch.jpeg"
+              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-lake.jpg"
               className="banner-img"
             />
             <img
@@ -213,7 +212,7 @@ export default function StillAwayRetreat() {
               className="banner-img"
             />
             <img
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-patio.jpeg"
+              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-dock.jpg"
               className="banner-img"
             />
           </div>
@@ -222,7 +221,7 @@ export default function StillAwayRetreat() {
         <div className="container">
           <div className="image-side">
             <img
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-backyard.png"
+              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-hot-tub.jpg"
               style={{
                 height: "100%",
                 width: "100%",
@@ -248,8 +247,8 @@ export default function StillAwayRetreat() {
         <h3 className="transition-text">Frequently Asked Questions:</h3>
         <ul className="transition-text">
           <li className="transition-text">
-            <strong>What is the location of the retreat?</strong> Appling, GA
-            30802. Address will be provided to the email address used at
+            <strong>What is the location of the retreat?</strong> Lake Sinclair,
+            Eatonton, GA. Address will be provided to the email address used at
             booking.
           </li>
           <li className="transition-text">

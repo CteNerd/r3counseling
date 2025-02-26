@@ -16,7 +16,7 @@ export default function Home() {
     },
     {
       imageUrl:
-        "https://wellcall-app-cdk.s3.us-east-1.amazonaws.com/r3counseling/retreat/still-away-flyer.PNG",
+        "https://wellcall-app-cdk.s3.us-east-1.amazonaws.com/r3counseling/retreat/still-away-lake-sinclair-flyer.png",
       landingPageUrl: "/retreat/still-away",
     },
   ];
@@ -76,12 +76,12 @@ export default function Home() {
 
       <h1>Boutique Holistic Healing Retreats</h1>
       <p>
-        Holistic Healing retreats for women to rest, restore, and
-        reclaim their wholeness, time, and self care. You may find yourself
-        feeling burnt-out, with little time to pour into yourself. The daily
-        grind can be overwhelming, leaving little time for self care,
-        authenticity, and rejuvenation. It is time to reset, recenter, and
-        cultivate the balance you have envisioned.
+        Holistic Healing retreats for women to rest, restore, and reclaim their
+        wholeness, time, and self care. You may find yourself feeling burnt-out,
+        with little time to pour into yourself. The daily grind can be
+        overwhelming, leaving little time for self care, authenticity, and
+        rejuvenation. It is time to reset, recenter, and cultivate the balance
+        you have envisioned.
       </p>
       <div className="banner">
         <div className="banner-container">
