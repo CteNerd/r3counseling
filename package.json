@@ -2,6 +2,7 @@
   "name": "r3counseling",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://r3counseling.com",
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@testing-library/jest-dom": "^5.14.1",
@@ -26,7 +27,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "prettier": "2.4.1"
   }
 }

@@ -68,18 +68,18 @@ function App() {
           className="App-header-menu"
         >
           <Menu.Item key="home">
-            <a className="menu-item" href="/">
+            <Link className="menu-item" to="/">
               Home
-            </a>
+            </Link>
           </Menu.Item>
           <Menu.Item key="about">
-            <a href="/about">About</a>
+            <Link to="/about">About</Link>
           </Menu.Item>
           <Menu.Item key="offerings">
-            <a href="/offerings">Offerings</a>
+            <Link to="/offerings">Offerings</Link>
           </Menu.Item>
           <Menu.Item key="events">
-            <a href="/events">Events</a>
+            <Link to="/events">Events</Link>
           </Menu.Item>
           <Menu.Item key="img">
             <img
@@ -88,16 +88,16 @@ function App() {
             />
           </Menu.Item>
           <Menu.Item key="contact">
-            <a href="/ready-to-release">Ready to Release</a>
+            <Link to="/ready-to-release">Ready to Release</Link>
           </Menu.Item>
           <Menu.Item key="terms">
-            <a href="/terms">Terms</a>
+            <Link to="/terms">Terms</Link>
           </Menu.Item>
           <Menu.Item key="retreat">
-            <a href="/retreat">Retreat</a>
+            <Link to="/retreat">Retreat</Link>
           </Menu.Item>
           <Menu.Item key="resources">
-            <a href="/resources">Resources</a>
+            <Link to="/resources">Resources</Link>
           </Menu.Item>
         </Menu>
       );
@@ -105,7 +105,7 @@ function App() {
   }
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <SideNav />
         <header className="App-header">

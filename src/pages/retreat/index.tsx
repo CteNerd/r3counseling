@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import "./retreat.css";
 
 export default function Retreat() {
@@ -53,14 +54,14 @@ export default function Retreat() {
         <h1>Our Retreats</h1>
         <ul>
           <li>
-            <a href="/retreat/still-away" className="new-retreat">
+            <Link to="/retreat/still-away" className="new-retreat">
               <h4>Still Away Retreat (New 2025!)</h4>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/retreat/pause">
+            <Link to="/retreat/pause">
               <h4>Pause Retreat</h4>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

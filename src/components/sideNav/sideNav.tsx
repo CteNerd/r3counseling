@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   HomeOutlined,
   InfoCircleOutlined,
@@ -46,14 +47,14 @@ export default function SideNav() {
       <div className="closebtn" onClick={closeNav}>
         &times;
       </div>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/offerings">Offerings</a>
-      <a href="/events">Events</a>
-      <a href="/ready-to-release">Ready to Release</a>
-      <a href="/terms">Terms</a>
-      <a href="/retreat">Retreat</a>
-      <a href="/resources">Resources</a>
+      <Link to="/" onClick={closeNav}>Home</Link>
+      <Link to="/about" onClick={closeNav}>About</Link>
+      <Link to="/offerings" onClick={closeNav}>Offerings</Link>
+      <Link to="/events" onClick={closeNav}>Events</Link>
+      <Link to="/ready-to-release" onClick={closeNav}>Ready to Release</Link>
+      <Link to="/terms" onClick={closeNav}>Terms</Link>
+      <Link to="/retreat" onClick={closeNav}>Retreat</Link>
+      <Link to="/resources" onClick={closeNav}>Resources</Link>
     </div>
   );
 }
