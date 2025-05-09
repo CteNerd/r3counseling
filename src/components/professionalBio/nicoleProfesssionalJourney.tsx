@@ -3,9 +3,9 @@ import "./professionalBio.css";
 const NicoleProfessionalJourney = (
   <div className="professional-journey">
     <p>
-      Masters of Education in Clinical Mental Health Counseling:
+      Master of Education in Counselor Education, Clinical Mental Health:
       <br />
-      <strong>Augusta University-Graduation, May 2025</strong>
+      <strong>Augusta University</strong>
       <br />
       <br />
       Bachelors of Science in Psychology: <br />
