@@ -68,7 +68,9 @@ export default function Terms() {
         <div className="psychotherapy-container">
           <div className="psychotherapy-container-columns">
             <ul>
-              <li>$175/$125 for a 60 minute Individual Session</li>
+              <li>Individual Therapy $175.00 for a 60 minute Psychotherapy Session with Tiffany Luke</li>
+              <li>Individual Therapy $125.00 for a 50 minute Psychotherapy Session with Niya Burnette</li>
+              <li>Individual Therapy $85.00 for a 50 minute Psychotherapy Session with Nicole Thoms Fuentes under Clinical Supervision with Tiffany Luke</li>
               <li>
                 <a
                   onClick={() => {
@@ -94,18 +96,6 @@ export default function Terms() {
             </ul>
           </div>
         </div>
-      </section>
-      <section className="sliding-scale">
-        <h4>Sliding Scale</h4>
-        <ul>
-          <li>$40 for a 50 minute Individual Session</li>
-          <ul>
-            <li>
-              Intern-Graduate Student in an internship program, under the direct
-              clinical supervision of a fully licensed therapist
-            </li>
-          </ul>
-        </ul>
       </section>
       <section className="payments">
         <h4>Accepts Payments</h4>
@@ -172,7 +162,7 @@ export default function Terms() {
         <p>
           In the event that you do not attend your scheduled therapy appointment
           or you failed to reschedule/cancel 24 hours prior to scheduled
-          appointment, you will be automatically charged a $50.00 fee.
+          appointment, you will be automatically charged a $50.00 fee-with Tiffany or Niya as a clinician; $85.00 with Nicole as a clinician.
         </p>
       </section>
       <div
