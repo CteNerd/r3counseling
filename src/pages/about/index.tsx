@@ -42,8 +42,7 @@ export default function AboutMe() {
             title="Nicole Thoms Fuentes"
             description={
               <>
-                Graduate Therapist Intern under the Clinical Supervision of
-                Tiffany Luke, LPC, CPCS <br />
+                Pre-Licensed Therapist under the clinical supervision of Tiffany Luke, LPC, CPCS <br />
                 <br />
                 <strong>(ACCEPTING NEW CLIENTS)</strong>
               </>
