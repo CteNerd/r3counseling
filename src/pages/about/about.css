@@ -1,3 +1,10 @@
+/* Add responsive padding for top section */
+@media screen and (max-width: 768px) {
+  div[style*="width: 100%"] {
+    padding-top: 40px !important;
+  }
+}
+
 .professional-accolades-list {
   text-align: left;
 }

@@ -13,7 +13,7 @@ import Niya from "../../assets/images/Niya-headShot.png";
 
 export default function AboutMe() {
   return (
-    <div style={{ width: "100%" }}>
+    <div style={{ width: "100%", paddingTop: "20px" }}>
       <h1>About</h1>
       <Row gutter={[24, 16]} justify="center">
         <Col className="gutter-row" xs={24} md={8}>
