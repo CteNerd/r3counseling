@@ -34,12 +34,13 @@ const ProfessionalBio: React.FC<ProfessionalBioProps> = ({
           cover={
             <div className="bio-image-container">
               <img 
-                alt={title} 
+                alt={`Professional photo of ${title}, therapist at R3 Counseling`} 
                 src={imageSrc} 
-                className="bio-image" 
+                className="bio-image"
+                loading="lazy" 
               />
               {showBio && (
-                <div className="bio-content-overlay">
+                <div className="bio-content-overlay" role="region" aria-label={`${title}'s biography`}>
                   {content}
                 </div>
               )}

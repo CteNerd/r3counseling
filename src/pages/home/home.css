@@ -1,3 +1,4 @@
+/* filepath: /Users/rctii/Projects/r3counseling/src/pages/home/home.css */
 .masthead-img {
   max-width: 100%;
 }
@@ -19,6 +20,48 @@
   height: 50vh;
   background-color: transparent !important;
   background: transparent !important;
+}
+
+/* For screen readers - visually hidden content */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Semantic sections styling */
+section {
+  margin-bottom: 2rem;
+}
+
+.hero-section {
+  padding: 1rem 0;
+}
+
+.credentials-section,
+.retreats-section,
+.services-section,
+.insurance-section,
+.cta-section {
+  padding: 1rem 0;
+}
+
+/* Improve heading hierarchy */
+h2 {
+  font-size: 2rem;
+  margin: 1.5rem 0 1rem;
+  color: #839abf;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin: 1rem 0 0.75rem;
+  color: #839abf;
 }
 
 @media only screen and (max-width: 600px) {

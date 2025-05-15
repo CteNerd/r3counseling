@@ -5,6 +5,50 @@ import "./retreat.css";
 export default function Retreat() {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
+  // Add Schema.org Event markup for retreat events
+  useEffect(() => {
+    const retreatSchema = {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "R3 Counseling Retreats",
+      "description": "Holistic Healing retreats for women to rest, restore, and reclaim their wholeness, time, and self care.",
+      "image": "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0299.JPG",
+      "url": "https://r3counseling.com/retreat",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "organizer": {
+        "@type": "Person",
+        "name": "Tiffany Luke",
+        "url": "https://r3counseling.com/about"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://r3counseling.com/retreat",
+        "availability": "https://schema.org/InStock"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Retreat Location",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Martinez",
+          "addressRegion": "GA"
+        }
+      }
+    };
+    
+    // Create and append the script element to the document head
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(retreatSchema);
+    document.head.appendChild(script);
+    
+    // Clean up
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {

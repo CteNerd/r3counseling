@@ -1,5 +1,16 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
+Disallow: /appointment-request/ # Protect appointment request forms
+
+# Allow all crawlers access to all content
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
 
 Sitemap: https://r3counseling.com/sitemap.xml

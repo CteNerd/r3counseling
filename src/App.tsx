@@ -28,6 +28,70 @@ function App() {
   const breakpoint = window.matchMedia("(max-width: 1279px)");
   const [isMobile, setIsMobile] = useState(false);
 
+  // Add site-wide schema markup
+  useEffect(() => {
+    // Create breadcrumb schema
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://r3counseling.com/",
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://r3counseling.com/about",
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Offerings",
+          "item": "https://r3counseling.com/offerings",
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Events",
+          "item": "https://r3counseling.com/events",
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Ready to Release",
+          "item": "https://r3counseling.com/ready-to-release",
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Retreats",
+          "item": "https://r3counseling.com/retreat",
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Resources",
+          "item": "https://r3counseling.com/resources",
+        },
+      ],
+    };
+
+    // Create the script element for breadcrumbs
+    const breadcrumbScript = document.createElement("script");
+    breadcrumbScript.type = "application/ld+json";
+    breadcrumbScript.text = JSON.stringify(breadcrumbSchema);
+    document.head.appendChild(breadcrumbScript);
+
+    // Clean up
+    return () => {
+      document.head.removeChild(breadcrumbScript);
+    };
+  }, []);
+
   useEffect(() => {
     setIsMobile(breakpoint.matches);
   }, []);
@@ -85,6 +149,7 @@ function App() {
             <img
               className="menu-img"
               src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/R3+Counseling+Logo+-+Final-01-Transparentv2.png"
+              alt="R3 Counseling Logo - Release Restore Redefine"
             />
           </Menu.Item>
           <Menu.Item key="contact">
@@ -154,18 +219,20 @@ function App() {
             </Switch>
           </div>
         </div>
-        <footer className="App-footer">
+        <footer className="App-footer" role="contentinfo" aria-label="Contact information">
           <div>
-            <div className="footer-link-container">
+            <div className="footer-link-container" itemScope itemType="http://schema.org/LocalBusiness">
+              <span className="visually-hidden" itemProp="name">Release Restore Redefine Counseling</span>
               <a
                 className="footer-link"
                 href="https://www.google.com/maps/place/4210+Columbia+Rd,+Augusta,+GA+30907/@33.5060819,-82.1193749,17z/data=!3m1!4b1!4m5!3m4!1s0x88f9d370a85e0bed:0xedc6d4adfbf9f6be!8m2!3d33.5060819!4d-82.1171862"
+                itemProp="address" itemScope itemType="http://schema.org/PostalAddress"
               >
-                4210 Columbia Rd | Martinez, GA 30907
+                <span itemProp="streetAddress">4210 Columbia Rd</span> | <span itemProp="addressLocality">Martinez</span>, <span itemProp="addressRegion">GA</span> <span itemProp="postalCode">30907</span>
               </a>
             </div>
             <div className="footer-link-container">
-              <a className="footer-link" href="tel:1-706-750-8906">
+              <a className="footer-link" href="tel:1-706-750-8906" itemProp="telephone">
                 PHONE: (706) 750-8906
               </a>
             </div>
@@ -173,26 +240,33 @@ function App() {
               <a
                 className="footer-link"
                 href="mailto:R3counseling@counselingsecure.com"
+                itemProp="email"
               >
                 EMAIL US
               </a>
             </div>
-            <div className="footer-link-container">
+            <div className="footer-link-container" itemScope itemType="http://schema.org/Organization">
               <a
                 className="footer-link"
                 href="https://www.linkedin.com/in/tiffany-luke-lpc-cpcs-certified-emdr-holistic-therapist-29683119?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                itemProp="sameAs"
+                aria-label="LinkedIn profile"
               >
                 <LinkedinOutlined />
               </a>
               <a
                 className="footer-link"
                 href="https://www.instagram.com/r3counseling"
+                itemProp="sameAs"
+                aria-label="Instagram profile"
               >
                 <InstagramOutlined />
               </a>
               <a
                 className="footer-link"
                 href="https://goo.gl/maps/vE8KskCmY6pJJwZp8"
+                itemProp="sameAs"
+                aria-label="Google Maps location"
               >
                 <GoogleOutlined />
               </a>
