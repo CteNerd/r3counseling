@@ -1,4 +1,18 @@
-.info-box-style {
+.bio-image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bio-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.bio-content-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -6,30 +20,22 @@
   height: 100%;
   background-color: rgb(228, 176, 153);
   color: white;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  padding: 15px;
+  overflow-y: auto;
   text-align: left;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  padding: 5px;
-  overflow: auto;
 }
-.info-box-style p {
-  font-size: 14px; /* Change this value to the size you want */
+
+.bio-content-overlay p {
+  font-size: 15px;
+  margin-bottom: 10px;
 }
-.info-box-style:hover {
-  opacity: 1;
-}
+
 .custom-meta {
-  padding: 10px !important; /* Change 10px to your desired padding */
+  padding: 10px !important;
 }
 
 @media (max-width: 480px) {
-  .info-box-style {
-    position: inherit;
-    width: 270px;
-    right: 30%;
-    text-align: center;
+  .bio-image {
+    max-height: 350px;
   }
 }
