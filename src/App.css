@@ -3,6 +3,18 @@
   font-family: "League Spartan", arial, helvetica, sans-serif;
 }
 
+/* For screen readers - visually hidden content */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 .ant-menu-horizontal {
   justify-content: center;
   align-items: center;

@@ -1,5 +1,6 @@
 import "./about.css";
 import "../../components/professionalBio/col-adjust.css";
+import React, { useEffect } from "react";
 import ProfessionalBio from "../../components/professionalBio/professionalBio";
 import TiffanyBioContent from "../../components/professionalBio/tiffanyBioContent";
 import TiffanyProfessionalJourney from "../../components/professionalBio/tiffanyProfessionalJourney";
@@ -12,6 +13,54 @@ import NiyaProfessionalJourney from "../../components/professionalBio/niyaProfes
 import Niya from "../../assets/images/Niya-headShot.png";
 
 export default function AboutMe() {
+  // Schema markup for therapists
+  useEffect(() => {
+    // Add structured data for therapists
+    const therapistSchema = {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Release Restore Redefine Counseling",
+      "url": "https://r3counseling.com/about",
+      "logo": "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/R3+Counseling+Logo+-+Final-05.jpeg",
+      "sameAs": [
+        "https://www.linkedin.com/in/tiffany-luke-lpc-cpcs-certified-emdr-holistic-therapist-29683119",
+        "https://www.instagram.com/r3counseling"
+      ],
+      "employees": [
+        {
+          "@type": "Person",
+          "name": "Tiffany Luke",
+          "jobTitle": "Licensed Professional Counselor, EMDR Certified Therapist",
+          "description": "Founder & Therapist specializing in EMDR and holistic therapy approaches",
+          "image": "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/tiff-profile.jpeg"
+        },
+        {
+          "@type": "Person",
+          "name": "Nicole Thoms Fuentes",
+          "jobTitle": "Pre-Licensed Therapist",
+          "description": "Accepting new clients under clinical supervision of Tiffany Luke"
+        },
+        {
+          "@type": "Person",
+          "name": "Niya Burnette",
+          "jobTitle": "Licensed Clinical Social Worker",
+          "description": "Virtual therapy sessions available"
+        }
+      ]
+    };
+    
+    // Create and append the script element to the document head
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(therapistSchema);
+    document.head.appendChild(script);
+    
+    // Clean up
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+  
   return (
     <div style={{ width: "100%", paddingTop: "20px" }}>
       <h1>About</h1>
