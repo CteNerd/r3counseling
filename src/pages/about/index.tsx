@@ -26,12 +26,24 @@ export default function AboutMe() {
         "https://www.linkedin.com/in/tiffany-luke-lpc-cpcs-certified-emdr-holistic-therapist-29683119",
         "https://www.instagram.com/r3counseling"
       ],
+      "availableService": [{
+        "@type": "MedicalTherapy",
+        "name": "Virtual Therapy Sessions",
+        "description": "Online mental health counseling and EMDR therapy available for Marietta residents in zip codes 30144 and 30066",
+        "serviceType": "Telehealth",
+        "areaServed": {
+          "@type": "City",
+          "name": "Marietta",
+          "postalCode": ["30144", "30066"],
+          "addressRegion": "GA"
+        }
+      }],
       "employees": [
         {
           "@type": "Person",
           "name": "Tiffany Luke",
           "jobTitle": "Licensed Professional Counselor, EMDR Certified Therapist",
-          "description": "Founder & Therapist specializing in EMDR and holistic therapy approaches",
+          "description": "Founder & Therapist specializing in EMDR and holistic therapy approaches with virtual sessions available",
           "image": "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/tiff-profile.jpeg"
         },
         {
