@@ -2,7 +2,7 @@ import { useState } from "react";
 import ValentinesDaySelfLove2025 from "../../assets/images/2025/Valentines_SelfLove.png";
 import parkFreeWellnessBooster from "../../assets/images/Park Free Wellness Booster.png";
 import bookClub from "../../assets/images/Book Club Thema Bryant.png";
-import NatureAndNurture from "../../assets/images/2025/Nature and Nurture.png";
+import NatureAndNurture from "../../assets/images/2025/NatureAndNurture.png";
 import "./events.css";
 
 export default function Events() {
