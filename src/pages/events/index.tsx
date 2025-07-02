@@ -25,7 +25,7 @@ export default function Events() {
       <div className="events-row">
         <div
           className="events-col"
-          onClick={() => openModal(ValentinesDaySelfLove2025)}
+          onClick={() => openModal(NatureAndNurture)}
         >
           <img
             src={NatureAndNurture}
