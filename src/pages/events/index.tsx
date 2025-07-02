@@ -2,6 +2,7 @@ import { useState } from "react";
 import ValentinesDaySelfLove2025 from "../../assets/images/2025/Valentines_SelfLove.png";
 import parkFreeWellnessBooster from "../../assets/images/Park Free Wellness Booster.png";
 import bookClub from "../../assets/images/Book Club Thema Bryant.png";
+import natureAndNurture from "../../assets/images/Nature-and-Nurture.png";
 import "./events.css";
 
 export default function Events() {
@@ -39,6 +40,9 @@ export default function Events() {
         </div>
         <div className="events-col" onClick={() => openModal(bookClub)}>
           <img src={bookClub} alt="Book Club Thema Bryant" />
+        </div>
+        <div className="events-col" onClick={() => openModal(natureAndNurture)}>
+          <img src={natureAndNurture} alt="Nature and Nurture Event" />
         </div>
       </div>
 
