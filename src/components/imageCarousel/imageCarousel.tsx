@@ -41,30 +41,31 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, className }) => {
       );
     } catch (err) {
       // Suppress errors for invalid URLs, but log for debugging
-      // console.error("Invalid landingPageUrl:", url, err);
       return false;
     }
   }, [currentImage?.landingPageUrl]);
 
-  const safeLandingPageUrl =
-    typeof currentImage?.landingPageUrl === "string" && currentImage.landingPageUrl.trim()
-      ? currentImage.landingPageUrl
-      : "#";
+  const hasValidUrl =
+    typeof currentImage?.landingPageUrl === "string" && currentImage.landingPageUrl.trim();
 
   return (
     <div>
-      {isExternal ? (
-        <a
-          href={safeLandingPageUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img className={className} src={currentImage.imageUrl} alt="carousel" />
-        </a>
+      {hasValidUrl ? (
+        isExternal ? (
+          <a
+            href={currentImage.landingPageUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={className} src={currentImage.imageUrl} alt="carousel" />
+          </a>
+        ) : (
+          <Link to={currentImage.landingPageUrl}>
+            <img className={className} src={currentImage.imageUrl} alt="carousel" />
+          </Link>
+        )
       ) : (
-        <Link to={safeLandingPageUrl}>
-          <img className={className} src={currentImage.imageUrl} alt="carousel" />
-        </Link>
+        <img className={className} src={currentImage.imageUrl} alt="carousel" />
       )}
     </div>
   );
