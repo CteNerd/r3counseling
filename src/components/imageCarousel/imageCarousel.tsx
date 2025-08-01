@@ -20,7 +20,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, className }) => {
 
   return (
     <div>
-      <a href={images[currentIndex].landingPageUrl} target="_blank">
+      <a href={images[currentIndex].landingPageUrl}>
         <img
           className={className}
           src={images[currentIndex].imageUrl}
