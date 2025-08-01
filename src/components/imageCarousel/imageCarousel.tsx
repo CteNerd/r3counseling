@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { ImageMeta } from "../../types/models";
 import { Link } from "react-router-dom";
 
@@ -21,24 +21,30 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, className }) => {
 
   const currentImage = images[currentIndex];
 
-  const isExternal = (() => {
+  const isExternal = useMemo(() => {
+    const url = currentImage?.landingPageUrl;
+    if (typeof url !== "string" || !url.trim()) {
+      // landingPageUrl is missing or invalid
+      return false;
+    }
     try {
       // Handle protocol-relative URLs by prepending window.location.protocol
-      let url = currentImage.landingPageUrl;
+      let normalizedUrl = url;
       if (url.startsWith("//")) {
-        url = window.location.protocol + url;
+        normalizedUrl = window.location.protocol + url;
       }
-      const parsed = new URL(url, window.location.origin);
+      const parsed = new URL(normalizedUrl, window.location.origin);
       // Only allow http/https, and treat as external if hostname differs
       return (
         (parsed.protocol === "http:" || parsed.protocol === "https:") &&
         parsed.hostname !== window.location.hostname
       );
-    } catch {
-      // Invalid URL, treat as internal for safety
+    } catch (err) {
+      // Suppress errors for invalid URLs, but log for debugging
+      // console.error("Invalid landingPageUrl:", url, err);
       return false;
     }
-  })();
+  }, [currentImage?.landingPageUrl, window.location.hostname]);
 
   return (
     <div>
