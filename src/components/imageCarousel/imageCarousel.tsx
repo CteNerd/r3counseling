@@ -44,7 +44,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, className }) => {
       // console.error("Invalid landingPageUrl:", url, err);
       return false;
     }
-  }, [currentImage?.landingPageUrl, window.location.hostname]);
+  }, [currentImage?.landingPageUrl]);
 
   return (
     <div>
