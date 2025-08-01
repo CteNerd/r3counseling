@@ -46,18 +46,23 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, className }) => {
     }
   }, [currentImage?.landingPageUrl]);
 
+  const safeLandingPageUrl =
+    typeof currentImage?.landingPageUrl === "string" && currentImage.landingPageUrl.trim()
+      ? currentImage.landingPageUrl
+      : "#";
+
   return (
     <div>
       {isExternal ? (
         <a
-          href={currentImage.landingPageUrl}
+          href={safeLandingPageUrl}
           target="_blank"
           rel="noopener noreferrer"
         >
           <img className={className} src={currentImage.imageUrl} alt="carousel" />
         </a>
       ) : (
-        <Link to={currentImage.landingPageUrl}>
+        <Link to={safeLandingPageUrl}>
           <img className={className} src={currentImage.imageUrl} alt="carousel" />
         </Link>
       )}
