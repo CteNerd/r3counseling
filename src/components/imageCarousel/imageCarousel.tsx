@@ -21,7 +21,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, className }) => {
 
   const currentImage = images[currentIndex];
 
-  const isExternal = currentImage.landingPageUrl.startsWith("http");
+  const isExternal = /^(https?:)?\/\//i.test(currentImage.landingPageUrl);
 
   return (
     <div>
