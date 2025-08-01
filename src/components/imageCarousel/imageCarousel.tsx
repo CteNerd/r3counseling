@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ImageMeta } from "../../types/models";
+import { Link } from "react-router-dom";
 
 // Define a type for the props
 type ImageCarouselProps = {
@@ -18,15 +19,25 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, className }) => {
     return () => clearInterval(intervalId); // Cleanup interval on component unmount
   }, [images.length]);
 
+  const currentImage = images[currentIndex];
+
+  const isExternal = currentImage.landingPageUrl.startsWith("http");
+
   return (
     <div>
-      <a href={images[currentIndex].landingPageUrl} rel="noopener">
-        <img
-          className={className}
-          src={images[currentIndex].imageUrl}
-          alt="carousel"
-        />
-      </a>
+      {isExternal ? (
+        <a
+          href={currentImage.landingPageUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img className={className} src={currentImage.imageUrl} alt="carousel" />
+        </a>
+      ) : (
+        <Link to={currentImage.landingPageUrl}>
+          <img className={className} src={currentImage.imageUrl} alt="carousel" />
+        </Link>
+      )}
     </div>
   );
 };
