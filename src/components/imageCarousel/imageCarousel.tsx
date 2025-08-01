@@ -21,7 +21,24 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, className }) => {
 
   const currentImage = images[currentIndex];
 
-  const isExternal = /^(https?:)?\/\//i.test(currentImage.landingPageUrl);
+  const isExternal = (() => {
+    try {
+      // Handle protocol-relative URLs by prepending window.location.protocol
+      let url = currentImage.landingPageUrl;
+      if (url.startsWith("//")) {
+        url = window.location.protocol + url;
+      }
+      const parsed = new URL(url, window.location.origin);
+      // Only allow http/https, and treat as external if hostname differs
+      return (
+        (parsed.protocol === "http:" || parsed.protocol === "https:") &&
+        parsed.hostname !== window.location.hostname
+      );
+    } catch {
+      // Invalid URL, treat as internal for safety
+      return false;
+    }
+  })();
 
   return (
     <div>
