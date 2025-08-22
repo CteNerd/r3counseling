@@ -31,15 +31,22 @@ provider:
 
 functions:
   lead:
-    handler: src/handlers/lead.handler
+    handler: ${self:custom.leadHandler}
     events:
       - httpApi:
           path: /lead
           method: POST
 
+plugins:
+  - serverless-offline
+
 custom:
   tableName: Contacts
   turnstileSecretArn: arn:aws:secretsmanager:${self:provider.region}:${aws:accountId}:secret:/r3counseling/turnstile_secret-*
+  leadHandler: dist/handlers/lead.handler
+  serverless-offline:
+    httpPort: 3001
+    host: 0.0.0.0
 
 resources:
   Resources:
