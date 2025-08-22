@@ -1,7 +1,6 @@
 import { DynamoDBClient, PutItemCommand } from "@aws-sdk/client-dynamodb";
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 import { SecretsManagerClient, GetSecretValueCommand } from "@aws-sdk/client-secrets-manager";
-import { nanoid } from "nanoid";
 import fetch from "node-fetch";
 
 const ddb = new DynamoDBClient({});
@@ -16,15 +15,22 @@ const TURNSTILE_SECRET_ARN = process.env.TURNSTILE_SECRET_ARN;
 let cachedCaptchaSecret: string | null = null;
 async function getCaptchaSecret(): Promise<string | null> {
   if (!TURNSTILE_SECRET_ARN) return null;
-  if (cachedCaptchaSecret) return cachedCaptchaSecret;
-  const res = await sm.send(new GetSecretValueCommand({ SecretId: TURNSTILE_SECRET_ARN }));
-  cachedCaptchaSecret = res.SecretString || null;
-  return cachedCaptchaSecret;
+  if (cachedCaptchaSecret !== null) return cachedCaptchaSecret;
+  
+  try {
+    const result = await sm.send(new GetSecretValueCommand({ SecretId: TURNSTILE_SECRET_ARN }));
+    cachedCaptchaSecret = result.SecretString || "";
+    return cachedCaptchaSecret;
+  } catch {
+    cachedCaptchaSecret = "";
+    return "";
+  }
 }
 
 export const handler = async (event: any) => {
   try {
     const { name, email, message, captchaToken } = JSON.parse(event.body || "{}");
+    
     if (!name || !email) return json(400, { error: "invalid_input" });
 
     // Validate email format
@@ -44,6 +50,8 @@ export const handler = async (event: any) => {
       if (!verify.success) return json(400, { error: "captcha_failed" });
     }
 
+    // Use dynamic import for nanoid
+    const { nanoid } = await import("nanoid");
     const leadId = nanoid();
     const createdAt = new Date().toISOString();
     const ip = event.requestContext?.http?.sourceIp || "unknown";
@@ -89,11 +97,11 @@ export const handler = async (event: any) => {
 function json(statusCode: number, body: any) {
   return {
     statusCode,
-    headers: { 
-      "content-type": "application/json", 
-      "access-control-allow-origin": "*",
-      "access-control-allow-headers": "Content-Type",
-      "access-control-allow-methods": "POST, OPTIONS"
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization"
     },
     body: JSON.stringify(body)
   };
