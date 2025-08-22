@@ -1,7 +1,6 @@
 import { DynamoDBClient, PutItemCommand } from "@aws-sdk/client-dynamodb";
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 import { SecretsManagerClient, GetSecretValueCommand } from "@aws-sdk/client-secrets-manager";
-import fetch from "node-fetch";
 
 const ddb = new DynamoDBClient({});
 const ses = new SESClient({});
@@ -42,6 +41,7 @@ export const handler = async (event: any) => {
     // Verify captcha if secret is available
     const secret = await getCaptchaSecret();
     if (secret) {
+      // Use native fetch (available in Node.js 18+)
       const verify = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
         method: "POST",
         headers: { "content-type": "application/x-www-form-urlencoded" },
