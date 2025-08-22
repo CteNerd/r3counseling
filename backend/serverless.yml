@@ -1,0 +1,56 @@
+service: r3counseling-backend
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-east-1
+  httpApi:
+    cors: true
+  environment:
+    TABLE_NAME: ${self:custom.tableName}
+    NOTIFY_TO: ${ssm:/r3counseling/notify_to}
+    FROM_EMAIL: ${ssm:/r3counseling/from_email}
+    TURNSTILE_SECRET_ARN: ${self:custom.turnstileSecretArn}
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action: 
+            - dynamodb:PutItem
+          Resource:
+            - arn:aws:dynamodb:${self:provider.region}:*:table/${self:custom.tableName}
+        - Effect: Allow
+          Action:
+            - ses:SendEmail
+            - ses:SendRawEmail
+          Resource: "*"
+        - Effect: Allow
+          Action:
+            - secretsmanager:GetSecretValue
+          Resource: ${self:custom.turnstileSecretArn}
+
+functions:
+  lead:
+    handler: src/handlers/lead.handler
+    events:
+      - httpApi:
+          path: /lead
+          method: POST
+
+custom:
+  tableName: Contacts
+  turnstileSecretArn: arn:aws:secretsmanager:${self:provider.region}:${aws:accountId}:secret:/r3counseling/turnstile_secret-*
+
+resources:
+  Resources:
+    ContactsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.tableName}
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: leadId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: leadId
+            KeyType: HASH
