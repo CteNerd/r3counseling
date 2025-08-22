@@ -41,7 +41,18 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           role-session-name: r3counseling-backend-deploy
           aws-region: us-east-1
-          
+
+      - name: Clean up existing stack (if needed)
+        working-directory: ./backend
+        run: |
+          if npx serverless info --stage dev 2>/dev/null; then
+            echo "Stack exists, removing it..."
+            npx serverless remove --stage dev
+          else
+            echo "No existing stack found"
+          fi
+        continue-on-error: true
+
       - name: Deploy to AWS
         working-directory: ./backend
         run: npm run deploy
