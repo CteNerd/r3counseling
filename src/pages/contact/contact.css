@@ -1,0 +1,135 @@
+.contact-page {
+  min-height: calc(100vh - 160px);
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.contact-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.contact-hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-title {
+  color: white !important;
+  margin-bottom: 16px !important;
+  font-size: 3rem !important;
+  font-weight: 600 !important;
+}
+
+.contact-subtitle {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 1.2rem !important;
+  margin-bottom: 0 !important;
+  line-height: 1.6;
+}
+
+.contact-content {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+}
+
+.contact-info h2 {
+  color: #1890ff;
+  margin-bottom: 32px;
+}
+
+.contact-info h4 {
+  color: #262626;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.contact-info p {
+  color: #595959;
+  margin-bottom: 0;
+  line-height: 1.8;
+}
+
+.contact-link {
+  color: #1890ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.contact-link:hover {
+  color: #40a9ff;
+}
+
+.lead-form-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.lead-form-card .ant-card-head {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px 12px 0 0;
+}
+
+.lead-form-card .ant-card-head-title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.lead-form-card .ant-card-body {
+  padding: 32px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2.5rem !important;
+  }
+  
+  .contact-subtitle {
+    font-size: 1.1rem !important;
+  }
+  
+  .contact-hero {
+    padding: 60px 20px;
+  }
+  
+  .contact-content {
+    padding: 60px 20px;
+  }
+  
+  .contact-info {
+    padding: 24px;
+  }
+  
+  .lead-form-card .ant-card-body {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-title {
+    font-size: 2rem !important;
+  }
+  
+  .contact-hero {
+    padding: 40px 16px;
+  }
+  
+  .contact-content {
+    padding: 40px 16px;
+  }
+}

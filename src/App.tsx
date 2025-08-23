@@ -20,6 +20,7 @@ import SideNav from "./components/sideNav/sideNav";
 import Resources from "./pages/resources";
 import Retreat from "./pages/retreat";
 import Events from "./pages/events";
+import Contact from "./pages/contact";
 import StillAwayRetreat from "./pages/retreat/still-away";
 import PauseRetreat from "./pages/retreat/pause";
 
@@ -62,18 +63,24 @@ function App() {
         {
           "@type": "ListItem",
           "position": 5,
+          "name": "Contact",
+          "item": "https://r3counseling.com/contact",
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
           "name": "Ready to Release",
           "item": "https://r3counseling.com/ready-to-release",
         },
         {
           "@type": "ListItem",
-          "position": 6,
+          "position": 7,
           "name": "Retreats",
           "item": "https://r3counseling.com/retreat",
         },
         {
           "@type": "ListItem",
-          "position": 7,
+          "position": 8,
           "name": "Resources",
           "item": "https://r3counseling.com/resources",
         },
@@ -153,6 +160,9 @@ function App() {
             />
           </Menu.Item>
           <Menu.Item key="contact">
+            <Link to="/contact">Contact</Link>
+          </Menu.Item>
+          <Menu.Item key="ready-to-release">
             <Link to="/ready-to-release">Ready to Release</Link>
           </Menu.Item>
           <Menu.Item key="terms">
@@ -197,6 +207,9 @@ function App() {
               </Route>
               <Route path="/events">
                 <Events />
+              </Route>
+              <Route path="/contact">
+                <Contact />
               </Route>
               <Route path="/ready-to-release">
                 <ReadyToRelease />
