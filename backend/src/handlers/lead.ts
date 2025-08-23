@@ -77,18 +77,28 @@ export const handler = async (event: any) => {
 
     // Send notification email
     if (NOTIFY_TO.length > 0 && FROM_EMAIL) {
-      await ses.send(new SendEmailCommand({
-        Source: FROM_EMAIL,
-        Destination: { ToAddresses: NOTIFY_TO },
-        Message: {
-          Subject: { Data: "New Lead Submitted - R3 Counseling" },
-          Body: { 
-            Text: { 
-              Data: `A new lead has been submitted on the R3 Counseling website.\n\nName: ${name}\nEmail: ${email}\nMessage: ${message || "No message provided"}\n\nSubmitted: ${createdAt}\nIP: ${ip}\nUser Agent: ${userAgent}\n\nLead ID: ${leadId}` 
-            } 
+      console.log(`Sending email to: ${NOTIFY_TO.join(', ')} from: ${FROM_EMAIL}`);
+      
+      try {
+        await ses.send(new SendEmailCommand({
+          Source: FROM_EMAIL,
+          Destination: { ToAddresses: NOTIFY_TO },
+          Message: {
+            Subject: { Data: "New Lead Submitted - R3 Counseling" },
+            Body: { 
+              Text: { 
+                Data: `A new lead has been submitted on the R3 Counseling website.\n\nName: ${name}\nEmail: ${email}\nMessage: ${message || "No message provided"}\n\nSubmitted: ${createdAt}\nIP: ${ip}\nUser Agent: ${userAgent}\n\nLead ID: ${leadId}` 
+              } 
+            }
           }
-        }
-      }));
+        }));
+        console.log('Email sent successfully');
+      } catch (emailError) {
+        console.error('Failed to send email:', emailError);
+        // Don't fail the whole request if email fails
+      }
+    } else {
+      console.log(`Email not sent. NOTIFY_TO: ${NOTIFY_TO}, FROM_EMAIL: ${FROM_EMAIL}`);
     }
 
     return json(200, { ok: true, leadId });
