@@ -3,6 +3,7 @@ import ValentinesDaySelfLove2025 from "../../assets/images/2025/Valentines_SelfL
 import parkFreeWellnessBooster from "../../assets/images/Park Free Wellness Booster.png";
 import bookClub from "../../assets/images/Book Club Thema Bryant.png";
 import NatureAndNurture from "../../assets/images/2025/NatureAndNurture.png";
+import ColumbiaCountyAmphitheatre from "../../assets/images/2025/ColumbiaCountyAmphitheatre.png";
 import "./events.css";
 
 export default function Events() {
@@ -29,7 +30,16 @@ export default function Events() {
         >
           <img
             src={NatureAndNurture}
-            alt="Nature and Nurture 2025"
+            alt="Nature and Nurture 2025 wellness retreat and counseling event"
+          />
+        </div>
+        <div
+          className="events-col"
+          onClick={() => openModal(ColumbiaCountyAmphitheatre)}
+        >
+          <img
+            src={ColumbiaCountyAmphitheatre}
+            alt="Columbia County Amphitheatre mental health awareness event and counseling services"
           />
         </div>
         <div
@@ -38,17 +48,17 @@ export default function Events() {
         >
           <img
             src={ValentinesDaySelfLove2025}
-            alt="Valentine's Day Self Love 2025"
+            alt="Valentine's Day Self Love 2025 therapy and wellness workshop"
           />
         </div>
         <div
           className="events-col"
           onClick={() => openModal(parkFreeWellnessBooster)}
         >
-          <img src={parkFreeWellnessBooster} alt="Park Free Wellness Booster" />
+          <img src={parkFreeWellnessBooster} alt="Park Free Wellness Booster community mental health event" />
         </div>
         <div className="events-col" onClick={() => openModal(bookClub)}>
-          <img src={bookClub} alt="Book Club Thema Bryant" />
+          <img src={bookClub} alt="Book Club Thema Bryant therapy and healing book discussion group" />
         </div>
       </div>
 
