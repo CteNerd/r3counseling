@@ -2,6 +2,7 @@ import { DynamoDBClient, PutItemCommand } from "@aws-sdk/client-dynamodb";
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 import { SecretsManagerClient, GetSecretValueCommand } from "@aws-sdk/client-secrets-manager";
 import { randomBytes } from "crypto";
+import { EmailTemplates } from "../services/emailTemplates";
 
 const ddb = new DynamoDBClient({});
 const ses = new SESClient({});
@@ -101,6 +102,16 @@ export const handler = async (event: any) => {
       const fromEmail = await getFromEmail();
       console.log(`Sending notification email to: ${NOTIFY_TO.join(', ')} from: ${fromEmail}`);
       
+      const htmlTemplate = EmailTemplates.getLeadNotificationTemplate({
+        name,
+        email,
+        message: message || "",
+        createdAt,
+        ip,
+        userAgent,
+        leadId
+      });
+      
       try {
         await ses.send(new SendEmailCommand({
           Source: fromEmail,
@@ -108,6 +119,7 @@ export const handler = async (event: any) => {
           Message: {
             Subject: { Data: "New Lead Submitted - R3 Counseling" },
             Body: { 
+              Html: { Data: htmlTemplate },
               Text: { 
                 Data: `A new lead has been submitted on the R3 Counseling website.\n\nName: ${name}\nEmail: ${email}\n\nSubmitted: ${createdAt}\nIP: ${ip}\nUser Agent: ${userAgent}\n\nLead ID: ${leadId}` 
               } 
@@ -128,6 +140,14 @@ export const handler = async (event: any) => {
       const fromEmail = await getFromEmail();
       console.log(`Sending message email to admin: ${ADMIN_EMAIL} from: ${fromEmail}`);
       
+      const htmlTemplate = EmailTemplates.getAdminMessageTemplate({
+        name,
+        email,
+        message,
+        createdAt,
+        leadId
+      });
+      
       try {
         await ses.send(new SendEmailCommand({
           Source: fromEmail,
@@ -135,6 +155,7 @@ export const handler = async (event: any) => {
           Message: {
             Subject: { Data: `New Message from ${name} - R3 Counseling` },
             Body: { 
+              Html: { Data: htmlTemplate },
               Text: { 
                 Data: `You have received a new message from a lead on the R3 Counseling website.\n\nFrom: ${name} (${email})\n\nMessage:\n${message}\n\n---\nSubmitted: ${createdAt}\nLead ID: ${leadId}` 
               } 

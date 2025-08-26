@@ -1,5 +1,6 @@
 import { nanoid } from "nanoid";
 import fetch from "node-fetch";
+import { EmailTemplates } from "../services/emailTemplates";
 
 // Mock implementations for local testing
 class MockDynamoDBClient {
@@ -14,8 +15,16 @@ class MockSESClient {
     console.log("📧 [MOCK SES] Sending email notification:", {
       to: command.input?.Destination?.ToAddresses,
       subject: command.input?.Message?.Subject?.Data,
-      body: command.input?.Message?.Body?.Text?.Data
+      hasHtml: !!command.input?.Message?.Body?.Html?.Data,
+      textPreview: command.input?.Message?.Body?.Text?.Data?.substring(0, 100) + "..."
     });
+    
+    // Optionally log HTML template for debugging
+    if (command.input?.Message?.Body?.Html?.Data) {
+      console.log("📧 [MOCK SES] HTML template generated (first 200 chars):", 
+        command.input.Message.Body.Html.Data.substring(0, 200) + "...");
+    }
+    
     return { MessageId: "mock-message-id" };
   }
 }
@@ -93,6 +102,16 @@ export const handler = async (event: any) => {
 
     // Send mock notification email
     if (NOTIFY_TO.length > 0 && FROM_EMAIL) {
+      const htmlTemplate = EmailTemplates.getLeadNotificationTemplate({
+        name,
+        email,
+        message: message || "",
+        createdAt,
+        ip,
+        userAgent,
+        leadId
+      });
+      
       await ses.send({
         input: {
           Source: FROM_EMAIL,
@@ -100,6 +119,7 @@ export const handler = async (event: any) => {
           Message: {
             Subject: { Data: "New Lead Submitted - R3 Counseling (LOCAL TEST)" },
             Body: { 
+              Html: { Data: htmlTemplate },
               Text: { 
                 Data: `A new lead has been submitted on the R3 Counseling website.\n\nName: ${name}\nEmail: ${email}\n\nSubmitted: ${createdAt}\nIP: ${ip}\nUser Agent: ${userAgent}\n\nLead ID: ${leadId}` 
               } 
@@ -111,6 +131,14 @@ export const handler = async (event: any) => {
 
     // Send separate mock message email to admin (Tiff) if message exists and admin email is configured
     if (message && ADMIN_EMAIL && FROM_EMAIL) {
+      const htmlTemplate = EmailTemplates.getAdminMessageTemplate({
+        name,
+        email,
+        message,
+        createdAt,
+        leadId
+      });
+      
       await ses.send({
         input: {
           Source: FROM_EMAIL,
@@ -118,6 +146,7 @@ export const handler = async (event: any) => {
           Message: {
             Subject: { Data: `New Message from ${name} - R3 Counseling (LOCAL TEST)` },
             Body: { 
+              Html: { Data: htmlTemplate },
               Text: { 
                 Data: `You have received a new message from a lead on the R3 Counseling website.\n\nFrom: ${name} (${email})\n\nMessage:\n${message}\n\n---\nSubmitted: ${createdAt}\nLead ID: ${leadId}` 
               } 
