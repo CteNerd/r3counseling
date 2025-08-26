@@ -55,7 +55,7 @@ custom:
   leadHandler: dist/handlers/lead.handler
   customDomain:
     domainName: api.r3counseling.com
-    certificateName: '*.r3counseling.com'
+    certificateArn: arn:aws:acm:us-east-1:425061472162:certificate/4f86c517-4143-4464-a226-d94f2efed792
     createRoute53Record: false
     endpointType: 'regional'
     securityPolicy: tls_1_2
