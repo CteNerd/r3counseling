@@ -211,10 +211,6 @@ export class EmailTemplates {
                       timeZoneName: 'short'
                     })}</span>
                 </div>
-                <div class="detail-row">
-                    <span class="detail-label">Lead ID:</span>
-                    <span class="detail-value">${data.leadId}</span>
-                </div>
             </div>
 
             ${data.message ? `
