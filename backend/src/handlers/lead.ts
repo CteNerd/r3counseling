@@ -10,6 +10,7 @@ const sm = new SecretsManagerClient({});
 const TABLE_NAME = process.env.TABLE_NAME!;
 const NOTIFY_TO = (process.env.NOTIFY_TO || "").split(",").map(s => s.trim()).filter(Boolean);
 const FROM_EMAIL = process.env.FROM_EMAIL!;
+const FROM_EMAIL_SECRET_ARN = process.env.FROM_EMAIL_SECRET_ARN;
 const TURNSTILE_SECRET_ARN = process.env.TURNSTILE_SECRET_ARN;
 
 // Simple ID generator using crypto
@@ -29,6 +30,25 @@ async function getCaptchaSecret(): Promise<string | null> {
   } catch {
     cachedCaptchaSecret = "";
     return "";
+  }
+}
+
+let cachedFromEmail: string | null = null;
+async function getFromEmail(): Promise<string> {
+  // If FROM_EMAIL_SECRET_ARN is not set, fall back to environment variable
+  if (!FROM_EMAIL_SECRET_ARN) return FROM_EMAIL;
+  
+  // Return cached value if available
+  if (cachedFromEmail !== null) return cachedFromEmail;
+  
+  try {
+    const result = await sm.send(new GetSecretValueCommand({ SecretId: FROM_EMAIL_SECRET_ARN }));
+    cachedFromEmail = result.SecretString || FROM_EMAIL;
+    return cachedFromEmail;
+  } catch (error) {
+    console.warn('Failed to retrieve FROM_EMAIL from Secrets Manager, falling back to environment variable:', error);
+    cachedFromEmail = FROM_EMAIL;
+    return FROM_EMAIL;
   }
 }
 
@@ -76,12 +96,13 @@ export const handler = async (event: any) => {
     }));
 
     // Send notification email
-    if (NOTIFY_TO.length > 0 && FROM_EMAIL) {
-      console.log(`Sending email to: ${NOTIFY_TO.join(', ')} from: ${FROM_EMAIL}`);
+    if (NOTIFY_TO.length > 0) {
+      const fromEmail = await getFromEmail();
+      console.log(`Sending email to: ${NOTIFY_TO.join(', ')} from: ${fromEmail}`);
       
       try {
         await ses.send(new SendEmailCommand({
-          Source: FROM_EMAIL,
+          Source: fromEmail,
           Destination: { ToAddresses: NOTIFY_TO },
           Message: {
             Subject: { Data: "New Lead Submitted - R3 Counseling" },
@@ -98,7 +119,7 @@ export const handler = async (event: any) => {
         // Don't fail the whole request if email fails
       }
     } else {
-      console.log(`Email not sent. NOTIFY_TO: ${NOTIFY_TO}, FROM_EMAIL: ${FROM_EMAIL}`);
+      console.log(`Email not sent. NOTIFY_TO: ${NOTIFY_TO}`);
     }
 
     return json(200, { ok: true, leadId });
