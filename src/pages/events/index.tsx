@@ -26,20 +26,20 @@ export default function Events() {
       <div className="events-row">
         <div
           className="events-col"
-          onClick={() => openModal(NatureAndNurture)}
-        >
-          <img
-            src={NatureAndNurture}
-            alt="Nature and Nurture 2025 wellness retreat and counseling event"
-          />
-        </div>
-        <div
-          className="events-col"
           onClick={() => openModal(ColumbiaCountyAmphitheatre)}
         >
           <img
             src={ColumbiaCountyAmphitheatre}
             alt="Columbia County Amphitheatre mental health awareness event and counseling services"
+          />
+        </div>
+        <div
+          className="events-col"
+          onClick={() => openModal(NatureAndNurture)}
+        >
+          <img
+            src={NatureAndNurture}
+            alt="Nature and Nurture 2025 wellness retreat and counseling event"
           />
         </div>
         <div
