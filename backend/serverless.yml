@@ -47,11 +47,20 @@ functions:
 
 plugins:
   - serverless-offline
+  - serverless-domain-manager
 
 custom:
   tableName: Contacts
   turnstileSecretArn: arn:aws:secretsmanager:${self:provider.region}:${aws:accountId}:secret:/r3counseling/turnstile_secret-*
   leadHandler: dist/handlers/lead.handler
+  customDomain:
+    domainName: api.r3counseling.com
+    certificateName: '*.r3counseling.com'
+    createRoute53Record: false
+    endpointType: 'regional'
+    securityPolicy: tls_1_2
+    apiType: http
+    autoDomain: true
   serverless-offline:
     httpPort: 3001
     host: 0.0.0.0
