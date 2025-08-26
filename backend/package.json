@@ -1,0 +1,40 @@
+{
+  "name": "r3counseling-backend",
+  "version": "1.0.0",
+  "description": "AWS Lambda backend for R3 Counseling contact form",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "serverless offline",
+    "dev:local": "serverless offline --config serverless.local.yml",
+    "test:local": "npm run build && npm run dev:local",
+    "test:direct": "npm run build && node test-local.js",
+    "deploy": "serverless deploy",
+    "package": "serverless package"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.450.0",
+    "@aws-sdk/client-secrets-manager": "^3.450.0",
+    "@aws-sdk/client-ses": "^3.450.0",
+    "nanoid": "^5.0.4",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "serverless": "^3.36.0",
+    "serverless-domain-manager": "^8.0.0",
+    "serverless-offline": "^13.9.0",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "serverless",
+    "contact-form"
+  ],
+  "author": "R3 Counseling",
+  "license": "MIT"
+}

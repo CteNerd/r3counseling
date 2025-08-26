@@ -1,0 +1,31 @@
+service: r3counseling-backend-local
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-east-1
+  httpApi:
+    cors: true
+  environment:
+    TABLE_NAME: local-contacts
+    NOTIFY_TO: test@example.com
+    ADMIN_EMAIL: admin@example.com
+    FROM_EMAIL: noreply@r3counseling.com
+    TURNSTILE_SECRET_ARN: ""
+
+functions:
+  lead:
+    handler: dist/handlers/lead.handler
+    events:
+      - httpApi:
+          path: /lead
+          method: POST
+
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    httpPort: 3001
+    host: 0.0.0.0
+    noEnvironment: true
