@@ -43,6 +43,12 @@ aws ssm put-parameter \
   --value "admin@r3counseling.com,notifications@r3counseling.com" \
   --type "String"
 
+# Admin email for lead messages (Tiff's email)
+aws ssm put-parameter \
+  --name "/r3counseling/admin_email" \
+  --value "tiff@r3counseling.com" \
+  --type "String"
+
 # From email address (must be verified in SES)
 aws ssm put-parameter \
   --name "/r3counseling/from_email" \
@@ -149,7 +155,8 @@ Error (500):
 The Lambda function uses the following environment variables (automatically set by serverless.yml):
 
 - `TABLE_NAME`: DynamoDB table name for storing leads
-- `NOTIFY_TO`: Comma-separated list of notification recipients
+- `NOTIFY_TO`: Comma-separated list of notification recipients (for general lead notifications)
+- `ADMIN_EMAIL`: Admin email address for receiving lead messages (Tiff's email)
 - `FROM_EMAIL`: SES from-address for notifications
 - `TURNSTILE_SECRET_ARN`: ARN of Turnstile secret in Secrets Manager
 

@@ -33,6 +33,7 @@ const sm = new MockSecretsManagerClient();
 
 const TABLE_NAME = process.env.TABLE_NAME || "local-contacts";
 const NOTIFY_TO = (process.env.NOTIFY_TO || "test@example.com").split(",").map(s => s.trim()).filter(Boolean);
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL; // Tiff's email for lead messages
 const FROM_EMAIL = process.env.FROM_EMAIL || "noreply@r3counseling.com";
 const TURNSTILE_SECRET_ARN = process.env.TURNSTILE_SECRET_ARN;
 
@@ -100,7 +101,25 @@ export const handler = async (event: any) => {
             Subject: { Data: "New Lead Submitted - R3 Counseling (LOCAL TEST)" },
             Body: { 
               Text: { 
-                Data: `A new lead has been submitted on the R3 Counseling website.\n\nName: ${name}\nEmail: ${email}\nMessage: ${message || "No message provided"}\n\nSubmitted: ${createdAt}\nIP: ${ip}\nUser Agent: ${userAgent}\n\nLead ID: ${leadId}` 
+                Data: `A new lead has been submitted on the R3 Counseling website.\n\nName: ${name}\nEmail: ${email}\n\nSubmitted: ${createdAt}\nIP: ${ip}\nUser Agent: ${userAgent}\n\nLead ID: ${leadId}` 
+              } 
+            }
+          }
+        }
+      });
+    }
+
+    // Send separate mock message email to admin (Tiff) if message exists and admin email is configured
+    if (message && ADMIN_EMAIL && FROM_EMAIL) {
+      await ses.send({
+        input: {
+          Source: FROM_EMAIL,
+          Destination: { ToAddresses: [ADMIN_EMAIL] },
+          Message: {
+            Subject: { Data: `New Message from ${name} - R3 Counseling (LOCAL TEST)` },
+            Body: { 
+              Text: { 
+                Data: `You have received a new message from a lead on the R3 Counseling website.\n\nFrom: ${name} (${email})\n\nMessage:\n${message}\n\n---\nSubmitted: ${createdAt}\nLead ID: ${leadId}` 
               } 
             }
           }

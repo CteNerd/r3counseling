@@ -4,6 +4,7 @@ const { handler } = require('./src/handlers/lead');
 // Mock AWS services for local testing
 process.env.TABLE_NAME = 'test-contacts';
 process.env.NOTIFY_TO = 'test@example.com';
+process.env.ADMIN_EMAIL = 'admin@example.com';
 process.env.FROM_EMAIL = 'noreply@r3counseling.com';
 
 // Mock event

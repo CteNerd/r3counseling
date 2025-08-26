@@ -9,6 +9,7 @@ const sm = new SecretsManagerClient({});
 
 const TABLE_NAME = process.env.TABLE_NAME!;
 const NOTIFY_TO = (process.env.NOTIFY_TO || "").split(",").map(s => s.trim()).filter(Boolean);
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL; // Tiff's email for lead messages
 const FROM_EMAIL = process.env.FROM_EMAIL!;
 const FROM_EMAIL_SECRET_ARN = process.env.FROM_EMAIL_SECRET_ARN;
 const TURNSTILE_SECRET_ARN = process.env.TURNSTILE_SECRET_ARN;
@@ -98,7 +99,7 @@ export const handler = async (event: any) => {
     // Send notification email
     if (NOTIFY_TO.length > 0) {
       const fromEmail = await getFromEmail();
-      console.log(`Sending email to: ${NOTIFY_TO.join(', ')} from: ${fromEmail}`);
+      console.log(`Sending notification email to: ${NOTIFY_TO.join(', ')} from: ${fromEmail}`);
       
       try {
         await ses.send(new SendEmailCommand({
@@ -108,18 +109,45 @@ export const handler = async (event: any) => {
             Subject: { Data: "New Lead Submitted - R3 Counseling" },
             Body: { 
               Text: { 
-                Data: `A new lead has been submitted on the R3 Counseling website.\n\nName: ${name}\nEmail: ${email}\nMessage: ${message || "No message provided"}\n\nSubmitted: ${createdAt}\nIP: ${ip}\nUser Agent: ${userAgent}\n\nLead ID: ${leadId}` 
+                Data: `A new lead has been submitted on the R3 Counseling website.\n\nName: ${name}\nEmail: ${email}\n\nSubmitted: ${createdAt}\nIP: ${ip}\nUser Agent: ${userAgent}\n\nLead ID: ${leadId}` 
               } 
             }
           }
         }));
-        console.log('Email sent successfully');
+        console.log('Notification email sent successfully');
       } catch (emailError) {
-        console.error('Failed to send email:', emailError);
+        console.error('Failed to send notification email:', emailError);
         // Don't fail the whole request if email fails
       }
     } else {
-      console.log(`Email not sent. NOTIFY_TO: ${NOTIFY_TO}`);
+      console.log(`Notification email not sent. NOTIFY_TO: ${NOTIFY_TO}`);
+    }
+
+    // Send separate message email to admin (Tiff) if message exists and admin email is configured
+    if (message && ADMIN_EMAIL) {
+      const fromEmail = await getFromEmail();
+      console.log(`Sending message email to admin: ${ADMIN_EMAIL} from: ${fromEmail}`);
+      
+      try {
+        await ses.send(new SendEmailCommand({
+          Source: fromEmail,
+          Destination: { ToAddresses: [ADMIN_EMAIL] },
+          Message: {
+            Subject: { Data: `New Message from ${name} - R3 Counseling` },
+            Body: { 
+              Text: { 
+                Data: `You have received a new message from a lead on the R3 Counseling website.\n\nFrom: ${name} (${email})\n\nMessage:\n${message}\n\n---\nSubmitted: ${createdAt}\nLead ID: ${leadId}` 
+              } 
+            }
+          }
+        }));
+        console.log('Admin message email sent successfully');
+      } catch (emailError) {
+        console.error('Failed to send admin message email:', emailError);
+        // Don't fail the whole request if email fails
+      }
+    } else if (message && !ADMIN_EMAIL) {
+      console.log('Message provided but ADMIN_EMAIL not configured');
     }
 
     return json(200, { ok: true, leadId });

@@ -9,6 +9,7 @@ provider:
   environment:
     TABLE_NAME: ${self:custom.tableName}
     NOTIFY_TO: ${ssm:/r3counseling/notify_to}
+    ADMIN_EMAIL: ${ssm:/r3counseling/admin_email}
     FROM_EMAIL: ${ssm:/r3counseling/from_email}
     TURNSTILE_SECRET_ARN: ${self:custom.turnstileSecretArn}
   iam:
@@ -28,6 +29,13 @@ provider:
           Action:
             - secretsmanager:GetSecretValue
           Resource: ${self:custom.turnstileSecretArn}
+        - Effect: Allow
+          Action:
+            - ssm:GetParameter
+            - ssm:GetParameters
+            - ssm:GetParametersByPath
+          Resource:
+            - arn:aws:ssm:${self:provider.region}:*:parameter/r3counseling/*
 
 functions:
   lead:

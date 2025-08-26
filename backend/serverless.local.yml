@@ -9,6 +9,7 @@ provider:
   environment:
     TABLE_NAME: local-contacts
     NOTIFY_TO: test@example.com
+    ADMIN_EMAIL: admin@example.com
     FROM_EMAIL: noreply@r3counseling.com
     TURNSTILE_SECRET_ARN: ""
 
