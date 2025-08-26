@@ -56,7 +56,7 @@ export class EmailTemplates {
             display: flex;
             align-items: center;
             justify-content: center;
-            background-image: url('https://r3counseling.com/logo192.png');
+            background-image: url('https://r3counseling.com/R3-Email-Logo.png');
             background-size: 60px 60px;
             background-repeat: no-repeat;
             background-position: center;
