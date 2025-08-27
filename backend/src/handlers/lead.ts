@@ -55,7 +55,7 @@ async function getFromEmail(): Promise<string> {
 
 export const handler = async (event: any) => {
   try {
-    const { name, email, message, captchaToken, notifyTo } = JSON.parse(event.body || "{}");
+    const { name, email, message, captchaToken } = JSON.parse(event.body || "{}");
     
     if (!name || !email) return json(400, { error: "invalid_input" });
 
@@ -65,13 +65,10 @@ export const handler = async (event: any) => {
       return json(400, { error: "invalid_email" });
     }
 
-    // Process notifyTo emails (similar to how the old NOTIFY_TO was processed)
-    const notifyToEmails = notifyTo ? 
-      (typeof notifyTo === 'string' ? notifyTo : String(notifyTo))
-        .split(",")
-        .map(s => s.trim())
-        .filter(Boolean) 
-      : [];
+    // Use the user's email for notifications
+    const notifyToEmails = [email];
+
+    console.log(`Debug - email from payload: ${JSON.stringify(email)}, notifyToEmails: ${JSON.stringify(notifyToEmails)}`);
 
     // Verify captcha if secret is available
     const secret = await getCaptchaSecret();
@@ -139,7 +136,7 @@ export const handler = async (event: any) => {
         // Don't fail the whole request if email fails
       }
     } else {
-      console.log(`Notification email not sent. notifyTo: ${notifyToEmails}`);
+      console.log(`Notification email not sent. email from payload: ${JSON.stringify(email)}, processed emails: ${JSON.stringify(notifyToEmails)}`);
     }
 
     // Send separate message email to admin (Tiff) if message exists and admin email is configured
