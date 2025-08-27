@@ -18,12 +18,20 @@
 .ant-menu-horizontal {
   justify-content: center;
   align-items: center;
+  display: flex;
+}
+
+.ant-menu-horizontal .ant-menu-item {
+  flex: none;
 }
 
 .App-header-menu {
   background: linear-gradient(-45deg, #d3fbf7, #fbdcd3, #fbf0d3);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-header-menu a:hover {
@@ -54,6 +62,8 @@
 
 .menu-img {
   max-height: 110px;
+  margin: 0 auto;
+  display: block;
 }
 
 .banner {
