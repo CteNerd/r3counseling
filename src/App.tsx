@@ -152,15 +152,15 @@ function App() {
           <Menu.Item key="events">
             <Link to="/events">Events</Link>
           </Menu.Item>
+          <Menu.Item key="contact">
+            <Link to="/contact">Contact</Link>
+          </Menu.Item>
           <Menu.Item key="img">
             <img
               className="menu-img"
               src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/R3+Counseling+Logo+-+Final-01-Transparentv2.png"
               alt="R3 Counseling Logo - Release Restore Redefine"
             />
-          </Menu.Item>
-          <Menu.Item key="contact">
-            <Link to="/contact">Contact</Link>
           </Menu.Item>
           <Menu.Item key="ready-to-release">
             <Link to="/ready-to-release">Ready to Release</Link>
