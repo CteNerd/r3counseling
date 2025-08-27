@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Button, Input, Form, message, Row, Col, Card } from "antd";
 import { MailOutlined, UserOutlined } from "@ant-design/icons";
+import Turnstile from "react-turnstile";
 
 const { TextArea } = Input;
 
 const API_URL = process.env.REACT_APP_API_URL;
+const TURNSTILE_SITE_KEY = process.env.REACT_APP_TURNSTILE_SITE_KEY;
 
 interface FormData {
   name: string;
@@ -15,10 +17,18 @@ interface FormData {
 export default function LeadForm() {
   const [form] = Form.useForm();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [turnstileKey, setTurnstileKey] = useState(0); // For resetting Turnstile
 
   const onFinish = async (values: FormData) => {
     if (!API_URL) {
       message.error("Contact form is not configured. Please try again later.");
+      return;
+    }
+
+    // Check if CAPTCHA is required and token is available
+    if (TURNSTILE_SITE_KEY && !captchaToken) {
+      message.error("Please complete the security verification.");
       return;
     }
 
@@ -34,6 +44,7 @@ export default function LeadForm() {
           name: values.name,
           email: values.email,
           message: values.message || "",
+          captchaToken: captchaToken,
         }),
       });
 
@@ -42,12 +53,18 @@ export default function LeadForm() {
       if (response.ok) {
         message.success("Thank you! Your message has been sent. We'll be in touch soon.");
         form.resetFields();
+        setCaptchaToken(null);
+        // Reset the Turnstile widget
+        setTurnstileKey(prev => prev + 1);
       } else {
         console.error("Contact form error:", result);
         if (result.error === "invalid_email") {
           message.error("Please enter a valid email address.");
         } else if (result.error === "captcha_failed") {
-          message.error("Security verification failed. Please try again.");
+          message.error("Security verification failed. Please complete the CAPTCHA again.");
+          // Reset the Turnstile widget on captcha failure
+          setTurnstileKey(prev => prev + 1);
+          setCaptchaToken(null);
         } else {
           message.error("Something went wrong. Please try again or contact us directly.");
         }
@@ -123,6 +140,25 @@ export default function LeadForm() {
             maxLength={1000}
           />
         </Form.Item>
+
+        {/* Turnstile CAPTCHA */}
+        {TURNSTILE_SITE_KEY && (
+          <Form.Item style={{ textAlign: "center", marginBottom: 24 }}>
+            <Turnstile
+              key={turnstileKey}
+              sitekey={TURNSTILE_SITE_KEY}
+              onVerify={(token) => setCaptchaToken(token)}
+              onError={() => {
+                setCaptchaToken(null);
+                message.error("Security verification failed. Please try again.");
+              }}
+              onExpire={() => {
+                setCaptchaToken(null);
+                message.warning("Security verification expired. Please complete it again.");
+              }}
+            />
+          </Form.Item>
+        )}
 
         <Form.Item style={{ marginBottom: 0, textAlign: "center" }}>
           <Button 
