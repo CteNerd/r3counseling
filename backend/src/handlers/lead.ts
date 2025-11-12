@@ -1,4 +1,4 @@
-import { DynamoDBClient, PutItemCommand } from "@aws-sdk/client-dynamodb";
+import { DynamoDBClient, PutItemCommand, QueryCommand } from "@aws-sdk/client-dynamodb";
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 import { SecretsManagerClient, GetSecretValueCommand } from "@aws-sdk/client-secrets-manager";
 import { randomBytes } from "crypto";
@@ -72,6 +72,29 @@ export const handler = async (event: any) => {
     const notifyToEmails = [email];
 
     console.log(`Debug - email from payload: ${JSON.stringify(email)}, notifyToEmails: ${JSON.stringify(notifyToEmails)}`);
+
+    // Check for duplicate email submissions (within last 24 hours)
+    try {
+      const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+      const existingLeads = await ddb.send(new QueryCommand({
+        TableName: TABLE_NAME,
+        IndexName: "email-index",
+        KeyConditionExpression: "email = :email",
+        FilterExpression: "createdAt > :oneDayAgo",
+        ExpressionAttributeValues: {
+          ":email": { S: email },
+          ":oneDayAgo": { S: oneDayAgo }
+        }
+      }));
+
+      if (existingLeads.Items && existingLeads.Items.length > 0) {
+        console.log(`Duplicate submission detected for email: ${email}`);
+        return json(400, { error: "duplicate_submission", message: "You have already submitted a lead recently. Please wait 24 hours before submitting again." });
+      }
+    } catch (error) {
+      console.warn("Failed to check for duplicates (proceeding anyway):", error);
+      // Don't fail the request if duplicate check fails
+    }
 
     // Verify captcha if secret is available
     const secret = await getCaptchaSecret();
