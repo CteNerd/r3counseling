@@ -18,8 +18,10 @@ provider:
         - Effect: Allow
           Action: 
             - dynamodb:PutItem
+            - dynamodb:Query
           Resource:
             - arn:aws:dynamodb:${self:provider.region}:*:table/${self:custom.tableName}
+            - arn:aws:dynamodb:${self:provider.region}:*:table/${self:custom.tableName}/index/*
         - Effect: Allow
           Action:
             - ses:SendEmail
@@ -75,6 +77,15 @@ resources:
         AttributeDefinitions:
           - AttributeName: leadId
             AttributeType: S
+          - AttributeName: email
+            AttributeType: S
         KeySchema:
           - AttributeName: leadId
             KeyType: HASH
+        GlobalSecondaryIndexes:
+          - IndexName: email-index
+            KeySchema:
+              - AttributeName: email
+                KeyType: HASH
+            Projection:
+              ProjectionType: ALL
