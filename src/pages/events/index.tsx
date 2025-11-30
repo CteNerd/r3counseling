@@ -1,4 +1,6 @@
 import { useState } from "react";
+import HolidaySeasonSupportSpace from "../../assets/images/2025/HolidaySeasonSupportSpace.png";
+import PoliticalClimateSupportSpace from "../../assets/images/2025/PoliticalClimateSupportSpace.png";
 import ValentinesDaySelfLove2025 from "../../assets/images/2025/Valentines_SelfLove.png";
 import parkFreeWellnessBooster from "../../assets/images/Park Free Wellness Booster.png";
 import bookClub from "../../assets/images/Book Club Thema Bryant.png";
@@ -24,6 +26,24 @@ export default function Events() {
     <div className="events-container">
       <h1>Events</h1>
       <div className="events-row">
+        <div
+          className="events-col"
+          onClick={() => openModal(HolidaySeasonSupportSpace)}
+        >
+          <img
+            src={HolidaySeasonSupportSpace}
+            alt="Holiday Season Support Space - mental health counseling and wellness support during the holidays"
+          />
+        </div>
+        <div
+          className="events-col"
+          onClick={() => openModal(PoliticalClimateSupportSpace)}
+        >
+          <img
+            src={PoliticalClimateSupportSpace}
+            alt="Political Climate Support Space - counseling and support for navigating political stress"
+          />
+        </div>
         <div
           className="events-col"
           onClick={() => openModal(ColumbiaCountyAmphitheatre)}
