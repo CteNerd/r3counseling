@@ -18,6 +18,7 @@ import IndividualTherapy from "../../components/Offerings/individualTherapy";
 import PrivateWellnessExperience from "../../assets/images/private-wellness-experience.png";
 import privateWellnessExperience from "../../components/Offerings/privateWellnessExperience";
 import { Col, Row } from "antd";
+import LeadForm from "../../components/LeadForm";
 
 interface Props {
   isMobile: boolean;
@@ -126,7 +127,7 @@ export default function Offerings(props: Props) {
                 >
                   &times;
                 </span>
-                <iframe src="https://cdn.forms-content.sg-form.com/58a2c899-c0c0-11ed-b4f5-060e8f5a62bc" />
+                <LeadForm />
               </div>
             </div>
           </div>
@@ -303,7 +304,7 @@ export default function Offerings(props: Props) {
                   >
                     &times;
                   </span>
-                  <iframe src="https://cdn.forms-content.sg-form.com/58a2c899-c0c0-11ed-b4f5-060e8f5a62bc" />
+                  <LeadForm />
                 </div>
               </div>
             </div>

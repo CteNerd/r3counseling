@@ -1,4 +1,4 @@
-import { DynamoDBClient, PutItemCommand } from "@aws-sdk/client-dynamodb";
+import { DynamoDBClient, PutItemCommand, QueryCommand } from "@aws-sdk/client-dynamodb";
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 import { SecretsManagerClient, GetSecretValueCommand } from "@aws-sdk/client-secrets-manager";
 import { randomBytes } from "crypto";
@@ -55,9 +55,12 @@ async function getFromEmail(): Promise<string> {
 
 export const handler = async (event: any) => {
   try {
-    const { name, email, message, captchaToken } = JSON.parse(event.body || "{}");
+    const { firstName, lastName, name, email, message, captchaToken } = JSON.parse(event.body || "{}");
     
-    if (!name || !email) return json(400, { error: "invalid_input" });
+    // Support both old format (name) and new format (firstName + lastName)
+    const fullName = firstName && lastName ? `${firstName} ${lastName}`.trim() : name;
+    
+    if (!fullName || !email) return json(400, { error: "invalid_input" });
 
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -69,6 +72,29 @@ export const handler = async (event: any) => {
     const notifyToEmails = [email];
 
     console.log(`Debug - email from payload: ${JSON.stringify(email)}, notifyToEmails: ${JSON.stringify(notifyToEmails)}`);
+
+    // Check for duplicate email submissions (within last 24 hours)
+    try {
+      const oneDayAgo = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+      const existingLeads = await ddb.send(new QueryCommand({
+        TableName: TABLE_NAME,
+        IndexName: "email-index",
+        KeyConditionExpression: "email = :email",
+        FilterExpression: "createdAt > :oneDayAgo",
+        ExpressionAttributeValues: {
+          ":email": { S: email },
+          ":oneDayAgo": { S: oneDayAgo }
+        }
+      }));
+
+      if (existingLeads.Items && existingLeads.Items.length > 0) {
+        console.log(`Duplicate submission detected for email: ${email}`);
+        return json(400, { error: "duplicate_submission", message: "You have already submitted a lead recently. Please wait 24 hours before submitting again." });
+      }
+    } catch (error) {
+      console.warn("Failed to check for duplicates (proceeding anyway):", error);
+      // Don't fail the request if duplicate check fails
+    }
 
     // Verify captcha if secret is available
     const secret = await getCaptchaSecret();
@@ -88,17 +114,27 @@ export const handler = async (event: any) => {
     const userAgent = event.headers?.["user-agent"] || "unknown";
 
     // Store lead in DynamoDB
+    const item: any = {
+      leadId: { S: leadId },
+      name: { S: fullName },
+      email: { S: email },
+      message: { S: message || "" },
+      createdAt: { S: createdAt },
+      ip: { S: ip },
+      userAgent: { S: userAgent }
+    };
+    
+    // Store firstName and lastName separately if provided
+    if (firstName) {
+      item.firstName = { S: firstName };
+    }
+    if (lastName) {
+      item.lastName = { S: lastName };
+    }
+    
     await ddb.send(new PutItemCommand({
       TableName: TABLE_NAME,
-      Item: {
-        leadId: { S: leadId },
-        name: { S: name },
-        email: { S: email },
-        message: { S: message || "" },
-        createdAt: { S: createdAt },
-        ip: { S: ip },
-        userAgent: { S: userAgent }
-      }
+      Item: item
     }));
 
     // Send notification email
@@ -107,7 +143,7 @@ export const handler = async (event: any) => {
       console.log(`Sending notification email to: ${notifyToEmails.join(', ')} from: ${fromEmail}`);
       
       const htmlTemplate = EmailTemplates.getLeadNotificationTemplate({
-        name,
+        name: fullName,
         email,
         message: message || "",
         createdAt,
@@ -125,7 +161,7 @@ export const handler = async (event: any) => {
             Body: { 
               Html: { Data: htmlTemplate },
               Text: { 
-                Data: `A new lead has been submitted on the R3 Counseling website.\n\nName: ${name}\nEmail: ${email}\n\nSubmitted: ${createdAt}\nIP: ${ip}\nUser Agent: ${userAgent}\n\nLead ID: ${leadId}` 
+                Data: `A new lead has been submitted on the R3 Counseling website.\n\nName: ${fullName}\nEmail: ${email}\n\nSubmitted: ${createdAt}\nIP: ${ip}\nUser Agent: ${userAgent}\n\nLead ID: ${leadId}` 
               } 
             }
           }
@@ -145,7 +181,7 @@ export const handler = async (event: any) => {
       console.log(`Sending message email to admin: ${ADMIN_EMAIL} from: ${fromEmail}`);
       
       const htmlTemplate = EmailTemplates.getAdminMessageTemplate({
-        name,
+        name: fullName,
         email,
         message,
         createdAt,
@@ -157,11 +193,11 @@ export const handler = async (event: any) => {
           Source: fromEmail,
           Destination: { ToAddresses: [ADMIN_EMAIL] },
           Message: {
-            Subject: { Data: `New Message from ${name} - R3 Counseling` },
+            Subject: { Data: `New Message from ${fullName} - R3 Counseling` },
             Body: { 
               Html: { Data: htmlTemplate },
               Text: { 
-                Data: `You have received a new message from a lead on the R3 Counseling website.\n\nFrom: ${name} (${email})\n\nMessage:\n${message}\n\n---\nSubmitted: ${createdAt}\nLead ID: ${leadId}` 
+                Data: `You have received a new message from a lead on the R3 Counseling website.\n\nFrom: ${fullName} (${email})\n\nMessage:\n${message}\n\n---\nSubmitted: ${createdAt}\nLead ID: ${leadId}` 
               } 
             }
           }

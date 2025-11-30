@@ -9,7 +9,8 @@ const API_URL = process.env.REACT_APP_API_URL;
 const TURNSTILE_SITE_KEY = process.env.REACT_APP_TURNSTILE_SITE_KEY;
 
 interface FormData {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   message?: string;
 }
@@ -41,7 +42,8 @@ export default function LeadForm() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: values.name,
+          firstName: values.firstName,
+          lastName: values.lastName,
           email: values.email,
           message: values.message || "",
           captchaToken: captchaToken,
@@ -93,37 +95,52 @@ export default function LeadForm() {
         <Row gutter={16}>
           <Col xs={24} sm={12}>
             <Form.Item
-              name="name"
-              label="Full Name"
+              name="firstName"
+              label="First Name"
               rules={[
-                { required: true, message: "Please enter your name" },
-                { min: 2, message: "Name must be at least 2 characters" }
+                { required: true, message: "Please enter your first name" },
+                { min: 2, message: "First name must be at least 2 characters" }
               ]}
             >
               <Input 
                 prefix={<UserOutlined />} 
-                placeholder="Your name" 
+                placeholder="Please enter your first name" 
                 disabled={isSubmitting}
               />
             </Form.Item>
           </Col>
           <Col xs={24} sm={12}>
             <Form.Item
-              name="email"
-              label="Email Address"
+              name="lastName"
+              label="Last Name"
               rules={[
-                { required: true, message: "Please enter your email" },
-                { type: "email", message: "Please enter a valid email" }
+                { required: true, message: "Please enter your last name" },
+                { min: 2, message: "Last name must be at least 2 characters" }
               ]}
             >
               <Input 
-                prefix={<MailOutlined />} 
-                placeholder="your.email@example.com" 
+                prefix={<UserOutlined />} 
+                placeholder="Please enter your last name" 
                 disabled={isSubmitting}
               />
             </Form.Item>
           </Col>
         </Row>
+        
+        <Form.Item
+          name="email"
+          label="Email"
+          rules={[
+            { required: true, message: "Please enter your email" },
+            { type: "email", message: "Please enter a valid email" }
+          ]}
+        >
+          <Input 
+            prefix={<MailOutlined />} 
+            placeholder="Please enter your email" 
+            disabled={isSubmitting}
+          />
+        </Form.Item>
         
         <Form.Item
           name="message"

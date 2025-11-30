@@ -14,9 +14,20 @@ describe('Lead Handler', () => {
     expect(typeof handler).toBe('function');
   });
 
-  test('should handle invalid input', async () => {
+  test('should handle invalid input - old format', async () => {
     const event = {
       body: JSON.stringify({ name: '', email: '' })
+    };
+
+    const result = await handler(event);
+    
+    expect(result.statusCode).toBe(400);
+    expect(JSON.parse(result.body).error).toBe('invalid_input');
+  });
+
+  test('should handle invalid input - new format', async () => {
+    const event = {
+      body: JSON.stringify({ firstName: '', lastName: '', email: '' })
     };
 
     const result = await handler(event);

@@ -14,11 +14,6 @@ export default function Home() {
       landingPageUrl:
         "https://cdn.forms-content.sg-form.com/58a2c899-c0c0-11ed-b4f5-060e8f5a62bc",
     },
-    {
-      imageUrl:
-        "https://wellcall-app-cdk.s3.us-east-1.amazonaws.com/r3counseling/retreat/still-away-lake-sinclair-flyer.png",
-      landingPageUrl: "/retreat/still-away",
-    },
   ];
 
   function closeModal() {
