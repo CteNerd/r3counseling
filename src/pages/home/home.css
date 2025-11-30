@@ -11,18 +11,26 @@
 
 .home-modal-content {
   max-height: 90vh;
-  margin: 5vh 25vw;
+  margin: 5vh auto;
+  max-width: 90vw;
+  width: fit-content;
   height: fit-content;
   overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
 }
 
 .home-img {
-  width: 50vw;
+  width: 100%;
+  max-width: 800px;
   max-height: 60vh;
   height: auto;
   background-color: transparent !important;
   background: transparent !important;
   object-fit: contain;
+  display: block;
 }
 
 /* For screen readers - visually hidden content */
@@ -82,14 +90,19 @@ h3 {
 
   .home-modal-content {
     max-height: 90vh;
-    margin: 5vh 5vw;
+    margin: 5vh auto;
+    max-width: 95vw;
+    width: fit-content;
     height: fit-content;
     text-align: center;
     overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
   }
 
   .home-img {
-    width: 90vw;
+    width: 100%;
+    max-width: 95vw;
     max-height: 70vh;
     height: auto;
     margin: 0;
