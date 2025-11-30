@@ -103,7 +103,7 @@ export default function AboutMe() {
             title="Nicole Thoms Fuentes"
             description={
               <>
-                Pre-Licensed Therapist under the clinical supervision of Tiffany Luke, LPC, CPCS <br />
+                Licensed Associate Professional Counselor under the clinical supervision of Tiffany Luke, LPC, CPCS <br />
                 <br />
                 <strong>(ACCEPTING NEW CLIENTS)</strong>
               </>

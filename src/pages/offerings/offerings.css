@@ -33,6 +33,17 @@
 
 .free-consult-button {
   padding: 5px;
+  transition: all 0.3s ease;
+}
+
+.free-consult-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.free-consult-button:focus {
+  outline: 2px solid #839abf;
+  outline-offset: 2px;
 }
 
 .faq-question {
@@ -78,7 +89,7 @@
 
 .consult-container {
   padding: 16px;
-  max-height: 80vh;
+  max-height: 85vh;
   overflow-y: auto;
 }
 
@@ -91,21 +102,21 @@ iframe {
   text-align: center;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   .highlight-vid {
     height: 315px;
     width: 560px;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 576px) {
   .session-img {
     max-width: 100%;
     max-height: none;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .heading {
     text-align: center;
   }

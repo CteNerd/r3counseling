@@ -1,21 +1,28 @@
-/* .card-container-right {
+.card-container-right {
     position: relative;
-} */
+    margin-bottom: 80px;
+    min-height: 500px;
+}
 
 .image-card-right {
   width: 55%;
-  height: 75%;
+  /* height: auto; */
   /* position: absolute; */
   left: 10%;
   border-color: #839abf;
   border-width: 3px;
   margin-top: 5%;
   z-index: 1;
-  margin-bottom: 30px;
-  /* overflow: 'auto'; */
+  margin-bottom: 60px;
+  /* overflow: visible; */
+  transition: box-shadow 0.3s ease;
 }
 
-@media (max-width: 425px) {
+.image-card-right:hover {
+  box-shadow: 0 6px 12px rgba(131, 154, 191, 0.3);
+}
+
+@media (max-width: 576px) {
   .flex-container {
     flex-direction: column; /* Change to column for small screens */
   }
@@ -24,7 +31,7 @@
 @media (min-width: 1440px) {
   .image-card-right {
     width: 55%;
-    height: 75%;
+    /* height: 75%; */
   }
   .image-right {
     height: 80%;
@@ -35,7 +42,7 @@
 @media (max-width: 1024px) {
   .image-card-right {
     width: 95px;
-    height: 60%;
+    /* height: 60%; */
   }
   .image-right {
     height: auto;
@@ -46,7 +53,7 @@
 @media (min-width: 768px) {
   .image-card-right {
     width: 75%;
-    height: 45%;
+    /* height: 45%; */
   }
   .image-right {
     height: 80%;
@@ -54,14 +61,19 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .image-card-right {
     width: 100%;
-    height: 75%;
+    /* height: auto; */
     left: 5%;
+    margin-bottom: 40px;
   }
   .image-right {
     height: 80%;
     width: 50%;
+  }
+  .card-container-right {
+    margin-bottom: 80px;
+    min-height: auto;
   }
 }

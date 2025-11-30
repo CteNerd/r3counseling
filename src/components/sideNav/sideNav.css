@@ -48,6 +48,13 @@
 
 .sidenav .closebtn:hover {
   cursor: pointer;
+  opacity: 0.8;
+}
+
+.sidenav .closebtn:focus {
+  outline: 2px solid #839abf;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 /* Style the sidenav links and the dropdown button */
@@ -77,8 +84,20 @@
   color: #fff;
 }
 
+.dropdown-btn:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 .sidenav a:hover {
   color: #fff;
+}
+
+.sidenav a:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Optional: Style the caret down icon */
