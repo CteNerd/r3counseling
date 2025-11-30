@@ -15,9 +15,14 @@
   z-index: 1;
   margin-bottom: 60px;
   /* overflow: visible; */
+  transition: box-shadow 0.3s ease;
 }
 
-@media (max-width: 425px) {
+.image-card-right:hover {
+  box-shadow: 0 6px 12px rgba(131, 154, 191, 0.3);
+}
+
+@media (max-width: 576px) {
   .flex-container {
     flex-direction: column; /* Change to column for small screens */
   }
@@ -56,7 +61,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .image-card-right {
     width: 100%;
     /* height: auto; */

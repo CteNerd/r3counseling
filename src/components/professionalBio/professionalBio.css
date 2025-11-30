@@ -34,7 +34,7 @@
   padding: 10px !important;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .bio-image {
     max-height: 350px;
   }

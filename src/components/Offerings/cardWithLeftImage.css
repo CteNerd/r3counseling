@@ -12,6 +12,11 @@
   border-width: 3px;
   /* overflow: auto; */
   margin-bottom: 60px;
+  transition: box-shadow 0.3s ease;
+}
+
+.image-card:hover {
+  box-shadow: 0 6px 12px rgba(131, 154, 191, 0.3);
 }
 
 .flex-container {
@@ -56,7 +61,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .flex-container {
     display: inline-flex;
     flex-direction: column;
