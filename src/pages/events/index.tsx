@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SelfLoveExperience2026 from "../../assets/images/2026/SelfLoveExperience2026.png";
 import HolidaySeasonSupportSpace from "../../assets/images/2025/HolidaySeasonSupportSpace.png";
 import PoliticalClimateSupportSpace from "../../assets/images/2025/PoliticalClimateSupportSpace.png";
 import ValentinesDaySelfLove2025 from "../../assets/images/2025/Valentines_SelfLove.png";
@@ -26,6 +27,15 @@ export default function Events() {
     <div className="events-container">
       <h1>Events</h1>
       <div className="events-row">
+        <div
+          className="events-col"
+          onClick={() => openModal(SelfLoveExperience2026)}
+        >
+          <img
+            src={SelfLoveExperience2026}
+            alt="The Self Love Experience 2026 - women's wellness event with gentle movement, sound, and reflection at A Better Today Wellness Studio"
+          />
+        </div>
         <div
           className="events-col"
           onClick={() => openModal(HolidaySeasonSupportSpace)}
