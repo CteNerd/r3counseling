@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SelfLoveExperience2026 from "../../assets/images/2026/SelfLoveExperience2026.png";
+import SelfLoveExperience2026 from "../../assets/images/2026/IMG_0201.jpeg";
 import HolidaySeasonSupportSpace from "../../assets/images/2025/HolidaySeasonSupportSpace.png";
 import PoliticalClimateSupportSpace from "../../assets/images/2025/PoliticalClimateSupportSpace.png";
 import ValentinesDaySelfLove2025 from "../../assets/images/2025/Valentines_SelfLove.png";
