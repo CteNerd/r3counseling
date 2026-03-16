@@ -30,15 +30,17 @@ export default function Events() {
   };
 
   useEffect(() => {
-    const eventSchema = {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      name: "QTBIPOC ADHD Support Group",
-      description:
-        "A virtual support group for QTBIPOC adults with ADHD. Join a supportive community led by Nicole Thoms Fuentes, Associate Licensed Therapist. Bi-weekly group meets Wednesdays 6:30–7:45pm ET, April 1st to June 10th. Pay-what-you-can ($25–$75/meeting). Open to all states.",
-      image: QTBIPOC_ADHD_IMAGE_URL,
-      startDate: "2026-04-01T18:30:00-05:00",
-      endDate: "2026-06-10T19:45:00-05:00",
+    // Bi-weekly Wednesday sessions 6:30–7:45 pm EDT (UTC-4) from April 1 to June 10
+    const sessionDates = [
+      ["2026-04-01T18:30:00-04:00", "2026-04-01T19:45:00-04:00"],
+      ["2026-04-15T18:30:00-04:00", "2026-04-15T19:45:00-04:00"],
+      ["2026-04-29T18:30:00-04:00", "2026-04-29T19:45:00-04:00"],
+      ["2026-05-13T18:30:00-04:00", "2026-05-13T19:45:00-04:00"],
+      ["2026-05-27T18:30:00-04:00", "2026-05-27T19:45:00-04:00"],
+      ["2026-06-10T18:30:00-04:00", "2026-06-10T19:45:00-04:00"],
+    ];
+
+    const sharedProps = {
       eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
       eventStatus: "https://schema.org/EventScheduled",
       location: {
@@ -56,13 +58,25 @@ export default function Events() {
         jobTitle: "Associate Licensed Therapist",
       },
       offers: {
-        "@type": "Offer",
-        price: "25",
+        "@type": "AggregateOffer",
+        lowPrice: "25",
+        highPrice: "75",
         priceCurrency: "USD",
         availability: "https://schema.org/InStock",
         url: "https://r3counseling.com/events",
         validFrom: "2026-03-01",
       },
+    };
+
+    const eventSchema = {
+      "@context": "https://schema.org",
+      "@type": "EventSeries",
+      name: "QTBIPOC ADHD Support Group",
+      description:
+        "A virtual support group for QTBIPOC adults with ADHD. Join a supportive community led by Nicole Thoms Fuentes, Associate Licensed Therapist. Bi-weekly group meets Wednesdays 6:30–7:45pm EDT, April 1st to June 10th. Pay-what-you-can ($25–$75/meeting). Open to all states.",
+      image: QTBIPOC_ADHD_IMAGE_URL,
+      startDate: sessionDates[0][0],
+      endDate: sessionDates[sessionDates.length - 1][1],
       audience: {
         "@type": "Audience",
         audienceType:
@@ -70,6 +84,14 @@ export default function Events() {
       },
       keywords:
         "QTBIPOC ADHD support group, virtual ADHD support, Nicole Thoms Fuentes therapist, queer bipoc support group, trans BIPOC mental health, ADHD therapy virtual, QTBIPOC wellness",
+      subEvent: sessionDates.map(([start, end]) => ({
+        "@type": "Event",
+        name: "QTBIPOC ADHD Support Group",
+        startDate: start,
+        endDate: end,
+        ...sharedProps,
+      })),
+      ...sharedProps,
     };
 
     const script = document.createElement("script");
@@ -96,18 +118,29 @@ export default function Events() {
               "QTBIPOC ADHD Support Group virtual event flyer – facilitated by Nicole Thoms Fuentes, Associate Licensed Therapist. Wednesdays 6:30–7:45pm ET, bi-weekly, April 1 to June 10. $25–$75 pay-what-you-can. Open to queer/trans + BIPOC adults 18+, all states welcome."
             )
           }
-          aria-label="QTBIPOC ADHD Support Group – virtual event, Wednesdays 6:30–7:45pm ET, April 1 to June 10, facilitated by Nicole Thoms Fuentes"
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              openModal(
+                QTBIPOC_ADHD_IMAGE_URL,
+                "QTBIPOC ADHD Support Group virtual event flyer – facilitated by Nicole Thoms Fuentes, Associate Licensed Therapist. Wednesdays 6:30–7:45pm ET, bi-weekly, April 1 to June 10. $25–$75 pay-what-you-can. Open to queer/trans + BIPOC adults 18+, all states welcome."
+              );
+            }
+          }}
+          tabIndex={0}
+          role="button"
+          aria-label="QTBIPOC ADHD Support Group – virtual event, Wednesdays 6:30–7:45pm ET, April 1 to June 10, facilitated by Nicole Thoms Fuentes. Press Enter or Space to view full flyer."
           itemScope
           itemType="https://schema.org/Event"
         >
           <meta itemProp="name" content="QTBIPOC ADHD Support Group" />
           <meta
             itemProp="startDate"
-            content="2026-04-01T18:30:00-05:00"
+            content="2026-04-01T18:30:00-04:00"
           />
           <meta
             itemProp="endDate"
-            content="2026-06-10T19:45:00-05:00"
+            content="2026-06-10T19:45:00-04:00"
           />
           <img
             src={QTBIPOC_ADHD_IMAGE_URL}
@@ -232,9 +265,9 @@ export default function Events() {
       {modalOpen && (
         <div className="modal" onClick={closeModal} role="dialog" aria-modal="true" aria-label={selectedAlt}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <span className="close" onClick={closeModal} role="button" aria-label="Close">
+            <button type="button" className="close" onClick={closeModal} aria-label="Close">
               &times;
-            </span>
+            </button>
             <img src={selectedImage!} alt={selectedAlt} />
           </div>
         </div>
