@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Image, Card, Row } from "antd";
 import "../../pages/offerings/offerings.css";
 import "./cardWithLeftImage.css";
@@ -6,6 +6,8 @@ import "./cardWithLeftImage.css";
 interface CardWithLeftImageProps {
   heroTitle?: string;
   imageSrc: string;
+  rotatingImageSources?: string[];
+  rotateIntervalMs?: number;
   title?: string;
   content: JSX.Element;
   className?: string;
@@ -13,10 +15,38 @@ interface CardWithLeftImageProps {
 
 const CardWithLeftImage: React.FC<CardWithLeftImageProps> = ({
   imageSrc,
+  rotatingImageSources,
+  rotateIntervalMs = 5000,
   title,
   content,
   heroTitle,
 }) => {
+  const images = useMemo(() => {
+    if (!rotatingImageSources || rotatingImageSources.length === 0) {
+      return [imageSrc];
+    }
+
+    return rotatingImageSources;
+  }, [imageSrc, rotatingImageSources]);
+
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  useEffect(() => {
+    setActiveImageIndex(0);
+  }, [images]);
+
+  useEffect(() => {
+    if (images.length <= 1) {
+      return;
+    }
+
+    const intervalId = window.setInterval(() => {
+      setActiveImageIndex((currentIndex) => (currentIndex + 1) % images.length);
+    }, rotateIntervalMs);
+
+    return () => window.clearInterval(intervalId);
+  }, [images, rotateIntervalMs]);
+
   return (
     <div
       className="card-container"
@@ -33,7 +63,8 @@ const CardWithLeftImage: React.FC<CardWithLeftImageProps> = ({
           style={{ objectFit: "cover" }}
           height="auto"
           width="50%"
-          src={imageSrc}
+          src={images[activeImageIndex]}
+          fallback={imageSrc}
           preview={false}
         />
         <Card className="image-card">
