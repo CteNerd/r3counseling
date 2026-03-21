@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Image, Card, Row } from "antd";
+import { Image, Card } from "antd";
 import "../../pages/offerings/offerings.css";
 import "./cardWithLeftImage.css";
 

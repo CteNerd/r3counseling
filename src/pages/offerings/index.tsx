@@ -21,6 +21,11 @@ import privateWellnessExperience from "../../components/Offerings/privateWellnes
 import { Col, Row } from "antd";
 import LeadForm from "../../components/LeadForm";
 
+const privateWellnessRotatingImages = [
+  PrivateWellnessExperience,
+  PrivateWellnessExperienceAlt,
+];
+
 interface Props {
   isMobile: boolean;
 }
@@ -328,10 +333,7 @@ export default function Offerings(props: Props) {
             <CardWithLeftImage
               heroTitle="Wellness Booster"
               imageSrc={PrivateWellnessExperience}
-              rotatingImageSources={[
-                PrivateWellnessExperience,
-                PrivateWellnessExperienceAlt,
-              ]}
+              rotatingImageSources={privateWellnessRotatingImages}
               rotateIntervalMs={5000}
               content={privateWellnessExperience}
               className="private-wellness"
