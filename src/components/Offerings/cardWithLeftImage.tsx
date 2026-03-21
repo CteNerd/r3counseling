@@ -47,6 +47,8 @@ const CardWithLeftImage: React.FC<CardWithLeftImageProps> = ({
     return () => window.clearInterval(intervalId);
   }, [images, rotateIntervalMs]);
 
+  const safeImageIndex = Math.max(0, Math.min(activeImageIndex, images.length - 1));
+
   return (
     <div
       className="card-container"
@@ -63,7 +65,7 @@ const CardWithLeftImage: React.FC<CardWithLeftImageProps> = ({
           style={{ objectFit: "cover" }}
           height="auto"
           width="50%"
-          src={images[activeImageIndex]}
+          src={images[safeImageIndex]}
           fallback={imageSrc}
           preview={false}
         />
