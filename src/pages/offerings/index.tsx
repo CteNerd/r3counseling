@@ -16,9 +16,15 @@ import WellnessBooster from "../../components/Offerings/wellnessBooster";
 import Tiffany from "../../assets/images/Tiffany-sitting.png";
 import IndividualTherapy from "../../components/Offerings/individualTherapy";
 import PrivateWellnessExperience from "../../assets/images/private-wellness-experience.png";
+import PrivateWellnessExperienceAlt from "../../assets/images/2026/dji_mimo_20260221_113146_20260221113147_1771693822704_photo.JPG";
 import privateWellnessExperience from "../../components/Offerings/privateWellnessExperience";
 import { Col, Row } from "antd";
 import LeadForm from "../../components/LeadForm";
+
+const privateWellnessRotatingImages = [
+  PrivateWellnessExperience,
+  PrivateWellnessExperienceAlt,
+];
 
 interface Props {
   isMobile: boolean;
@@ -327,6 +333,8 @@ export default function Offerings(props: Props) {
             <CardWithLeftImage
               heroTitle="Wellness Booster"
               imageSrc={PrivateWellnessExperience}
+              rotatingImageSources={privateWellnessRotatingImages}
+              rotateIntervalMs={5000}
               content={privateWellnessExperience}
               className="private-wellness"
             />
