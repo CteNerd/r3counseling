@@ -127,6 +127,7 @@ export default function PauseRetreat() {
             <a
               href="https://docs.google.com/forms/d/131VPZ5XOYhlt7gOK9dtYN-UYWBNRSUNqrdUcD3lt4tY/edit?ts=6599ccdc"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <button title="Join Retreat">Join Retreat</button>
             </a>
@@ -182,6 +183,7 @@ export default function PauseRetreat() {
             <a
               href="https://docs.google.com/forms/d/131VPZ5XOYhlt7gOK9dtYN-UYWBNRSUNqrdUcD3lt4tY/edit?ts=6599ccdc"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <button title="Join Retreat">Join Retreat</button>
             </a>
@@ -288,6 +290,7 @@ export default function PauseRetreat() {
             <a
               href="https://docs.google.com/forms/d/131VPZ5XOYhlt7gOK9dtYN-UYWBNRSUNqrdUcD3lt4tY/edit?ts=6599ccdc"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <button title="Join Retreat">Join Retreat</button>
             </a>

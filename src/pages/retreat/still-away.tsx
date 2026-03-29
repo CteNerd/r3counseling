@@ -81,6 +81,7 @@ export default function StillAwayRetreat() {
             <a
               href="https://book.stripe.com/8wMdUfc977kq6t2bIT"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <button title="Join Retreat">Join Retreat</button>
             </a>
@@ -188,6 +189,7 @@ export default function StillAwayRetreat() {
             <a
               href="https://book.stripe.com/8wMdUfc977kq6t2bIT"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <button title="Join Retreat">Join Retreat</button>
             </a>
@@ -232,6 +234,7 @@ export default function StillAwayRetreat() {
             <a
               href="https://book.stripe.com/8wMdUfc977kq6t2bIT"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <button title="Join Retreat">Join Retreat</button>
             </a>
