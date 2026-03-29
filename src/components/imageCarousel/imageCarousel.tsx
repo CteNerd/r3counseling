@@ -58,15 +58,15 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, className }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className={className} src={currentImage.imageUrl} alt="carousel" />
+            <img className={className} src={currentImage.imageUrl} alt={currentImage.alt ?? ""} />
           </a>
         ) : (
           <Link to={currentImage.landingPageUrl}>
-            <img className={className} src={currentImage.imageUrl} alt="carousel" />
+            <img className={className} src={currentImage.imageUrl} alt={currentImage.alt ?? ""} />
           </Link>
         )
       ) : (
-        <img className={className} src={currentImage.imageUrl} alt="carousel" />
+        <img className={className} src={currentImage.imageUrl} alt={currentImage.alt ?? ""} />
       )}
     </div>
   );

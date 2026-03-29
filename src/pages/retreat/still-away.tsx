@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./retreat.css";
+import { MEDIA } from "../../constants/media";
 
 export default function StillAwayRetreat() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -48,7 +49,7 @@ export default function StillAwayRetreat() {
       <div
         className="hero-container"
         style={{
-          backgroundImage: `url(https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-banner.jpeg)`,
+          backgroundImage: `url(${MEDIA.stillAwayBanner})`,
         }}
       >
         <div className="hero-text">Rest. Restore. Reclaim.</div>
@@ -76,10 +77,11 @@ export default function StillAwayRetreat() {
         </div>
         <div className="container">
           <div className="image-side">
-            <img src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-lake.jpg" />
+            <img src={MEDIA.stillAwayLake} alt="Peaceful lake setting for the Still Away Day Retreat" />
             <a
               href="https://book.stripe.com/8wMdUfc977kq6t2bIT"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <button title="Join Retreat">Join Retreat</button>
             </a>
@@ -177,7 +179,7 @@ export default function StillAwayRetreat() {
           </div>
           <div className="image-side">
             <img
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-dock.jpg"
+              src={MEDIA.stillAwayDock}
               style={{
                 height: "100%",
                 width: "100%",
@@ -187,6 +189,7 @@ export default function StillAwayRetreat() {
             <a
               href="https://book.stripe.com/8wMdUfc977kq6t2bIT"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <button title="Join Retreat">Join Retreat</button>
             </a>
@@ -196,24 +199,29 @@ export default function StillAwayRetreat() {
         <div className="banner">
           <div className="banner-container">
             <img
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-lake.jpg"
+              src={MEDIA.stillAwayLake}
               className="banner-img"
+              alt=""
             />
             <img
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-candles.png"
+              src={MEDIA.stillAwayCandles}
               className="banner-img"
+              alt=""
             />
             <img
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-flower.jpeg"
+              src={MEDIA.stillAwayFlower}
               className="banner-img"
+              alt=""
             />
             <img
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-notebook.png"
+              src={MEDIA.stillAwayNotebook}
               className="banner-img"
+              alt=""
             />
             <img
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-dock.jpg"
+              src={MEDIA.stillAwayDock}
               className="banner-img"
+              alt=""
             />
           </div>
         </div>
@@ -221,7 +229,7 @@ export default function StillAwayRetreat() {
         <div className="container">
           <div className="image-side">
             <img
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/still-away-hot-tub.jpg"
+              src={MEDIA.stillAwayHotTub}
               style={{
                 height: "100%",
                 width: "100%",
@@ -231,6 +239,7 @@ export default function StillAwayRetreat() {
             <a
               href="https://book.stripe.com/8wMdUfc977kq6t2bIT"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <button title="Join Retreat">Join Retreat</button>
             </a>

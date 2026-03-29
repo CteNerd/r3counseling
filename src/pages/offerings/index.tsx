@@ -20,6 +20,7 @@ import PrivateWellnessExperienceAlt from "../../assets/images/2026/dji_mimo_2026
 import privateWellnessExperience from "../../components/Offerings/privateWellnessExperience";
 import { Col, Row } from "antd";
 import LeadForm from "../../components/LeadForm";
+import { MEDIA } from "../../constants/media";
 
 const privateWellnessRotatingImages = [
   PrivateWellnessExperience,
@@ -467,7 +468,7 @@ export default function Offerings(props: Props) {
           <video className="modal-video" autoPlay={true} loop muted>
             <source
               src={
-                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Group+Intensive+Offering+.mp4"
+                MEDIA.groupIntensiveVideo
               }
               type="video/mp4"
             />

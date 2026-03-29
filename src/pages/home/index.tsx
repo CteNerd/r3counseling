@@ -4,15 +4,16 @@ import ImageCarousel from "../../components/imageCarousel/imageCarousel";
 import PshycologyTodayLogo from "../../assets/logos/psychologytoday-13.png";
 import CareCreditLogo from "../../assets/logos/CareCredit.png";
 import { ImageMeta } from "../../types/models";
+import { MEDIA } from "../../constants/media";
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(true);
   const images: ImageMeta[] = [
     {
-      imageUrl:
-        "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Home-Rocks.png",
+      imageUrl: MEDIA.homeRocks,
       landingPageUrl:
         "https://cdn.forms-content.sg-form.com/58a2c899-c0c0-11ed-b4f5-060e8f5a62bc",
+      alt: "Stacked stones beside calm water — Release Restore Redefine Counseling",
     },
   ];
 
@@ -31,7 +32,7 @@ export default function Home() {
       "mainEntity": {
         "@type": "ProfessionalService",
         "name": "Release Restore Redefine Counseling",
-        "image": "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/R3+Counseling+Logo+-+Final-05.jpeg",
+        "image": MEDIA.logoSocial,
         "telephone": "(706) 750-8906",
         "address": {
           "@type": "PostalAddress",
@@ -72,7 +73,7 @@ export default function Home() {
         <div className="masthead-img-container">
           <img
             className="masthead-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/tiff-swinging.jpeg"
+            src={MEDIA.tiffanySwinging}
             alt="Tiffany Luke, founder of R3 Counseling, embodying freedom and joy"
             loading="eager"
           />
@@ -110,12 +111,12 @@ export default function Home() {
             </a>
             <img
               className="banner-img"
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/EMDR+Certified+Therapist+%E2%80%A2+Tiffany+Luke+%E2%80%A2+EMDR+International+Association+Badge.png"
+              src={MEDIA.emdrBadge}
               alt="EMDR Certified Therapist Badge - Tiffany Luke - EMDR International Association"
             />
             <img
               className="banner-img"
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/TFBG-logo.jpg"
+              src={MEDIA.tfbgLogo}
               alt="Trauma-Focused Behavioral Health Provider - Tiffany Luke"
             />
           </div>
@@ -136,27 +137,27 @@ export default function Home() {
           <div className="banner-container">
             <img
               className="banner-img"
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat-1.png"
+              src={MEDIA.retreat1}
               alt="R3 Counseling Retreat Experience 1"
             />
             <img
               className="banner-img"
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat-12.png"
+              src={MEDIA.retreat12}
               alt="R3 Counseling Retreat Experience 2"
             />
             <img
               className="banner-img"
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat-7.png"
+              src={MEDIA.retreat7}
               alt="R3 Counseling Retreat Experience 3"
             />
             <img
               className="banner-img"
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat-9.png"
+              src={MEDIA.retreat9}
               alt="R3 Counseling Retreat Experience 4"
             />
             <img
               className="banner-img"
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat-19.png"
+              src={MEDIA.retreat19}
               alt="R3 Counseling Retreat Experience 5"
             />
           </div>
@@ -180,27 +181,27 @@ export default function Home() {
           <div className="banner-container">
             <img
               className="banner-img"
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/united-healthcare-logo.png"
+              src={MEDIA.unitedHealthcareLogo}
               alt="United Healthcare accepted insurance logo"
             />
             <img
               className="banner-img"
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/anthem-bcbs-logo-removebg.png"
+              src={MEDIA.anthemLogo}
               alt="Anthem Blue Cross Blue Shield accepted insurance logo"
             />
             <img
               className="banner-img"
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/oscar-removebg.png"
+              src={MEDIA.oscarLogo}
               alt="Oscar Health accepted insurance logo"
             />
             <img
               className="banner-img"
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/aetna_purple.jpg"
+              src={MEDIA.aetnaLogo}
               alt="Aetna accepted insurance logo"
             />
             <img
               className="banner-img"
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Cigna-Logo.png"
+              src={MEDIA.cignaLogo}
               alt="Cigna accepted insurance logo"
             />
             <img 
