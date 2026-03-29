@@ -8,7 +8,7 @@ type FAQItemProps = {
 
 export const emdrIntensiveFaqs: FAQItemProps[] = [
   {
-    question: "How long does it take to schedule an Intensives?",
+    question: "How long does it take to schedule an Intensive?",
     answer:
       "Typically, Intensives are booked 1-2 months in advance. Potential dates are discussed during the 30-minute phone consultation.",
   },
@@ -48,10 +48,9 @@ const FAQs = () => {
   return (
     <div>
       <ul>
-        {emdrIntensiveFaqs.map((faq, index) => (
+        {emdrIntensiveFaqs.map((faq) => (
           <li key={faq.question}>
-            {" "}
-            <FAQItem key={index} {...faq} />
+            <FAQItem {...faq} />
           </li>
         ))}
       </ul>

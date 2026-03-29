@@ -48,7 +48,7 @@ const ROUTE_SEO: Record<string, RouteSeoConfig> = {
       "Meet the Release Restore Redefine Counseling team and learn about our trauma-informed, culturally responsive care approach.",
   },
   "/offerings": {
-    title: "Offerings | Release Restore Redefine Counseling",
+    title: "Offerings | Release Restore Redefine Counseling | Martinez, GA",
     description:
       "Explore EMDR intensives, private wellness experiences, clinical consultation, groups, and individual therapy services.",
   },

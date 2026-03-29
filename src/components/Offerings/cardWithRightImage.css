@@ -3,6 +3,14 @@
   margin-bottom: 80px;
 }
 
+.offerings-card-layout {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: min(1180px, 100%);
+  margin: 0 auto 40px;
+}
+
 .offerings-card-layout-right {
   justify-content: flex-end;
 }

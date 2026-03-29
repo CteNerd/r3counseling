@@ -7,62 +7,9 @@ interface Props {
 
 export default function Resources(props: Props) {
   useEffect(() => {
-    const resourcesTitle = "Resources | Release Restore Redefine Counseling";
     const resourcesDescription =
       "Crisis and support resources, warm lines, and mental health tools for individuals and families in Georgia and nationwide.";
     const resourcesUrl = "https://r3counseling.com/resources";
-
-    document.title = resourcesTitle;
-
-    const upsertMetaTag = (
-      selector: string,
-      attributeName: "name" | "property",
-      attributeValue: string,
-      content: string
-    ) => {
-      let element = document.head.querySelector(selector) as HTMLMetaElement | null;
-
-      if (!element) {
-        element = document.createElement("meta");
-        element.setAttribute(attributeName, attributeValue);
-        document.head.appendChild(element);
-      }
-
-      element.setAttribute("content", content);
-    };
-
-    const canonicalLink =
-      (document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null) ||
-      document.createElement("link");
-
-    canonicalLink.setAttribute("rel", "canonical");
-    canonicalLink.setAttribute("href", resourcesUrl);
-
-    if (!canonicalLink.parentNode) {
-      document.head.appendChild(canonicalLink);
-    }
-
-    upsertMetaTag(
-      'meta[name="description"]',
-      "name",
-      "description",
-      resourcesDescription
-    );
-    upsertMetaTag('meta[property="og:title"]', "property", "og:title", resourcesTitle);
-    upsertMetaTag(
-      'meta[property="og:description"]',
-      "property",
-      "og:description",
-      resourcesDescription
-    );
-    upsertMetaTag('meta[property="og:url"]', "property", "og:url", resourcesUrl);
-    upsertMetaTag('meta[name="twitter:title"]', "name", "twitter:title", resourcesTitle);
-    upsertMetaTag(
-      'meta[name="twitter:description"]',
-      "name",
-      "twitter:description",
-      resourcesDescription
-    );
 
     const resourcesSchema = {
       "@context": "https://schema.org",
@@ -83,25 +30,25 @@ export default function Resources(props: Props) {
             "@type": "ListItem",
             position: 2,
             name: "Georgia Crisis Access Line",
-            url: "tel:18007154225",
+            url: "tel:+18007154225",
           },
           {
             "@type": "ListItem",
             position: 3,
             name: "CARES Warm Line",
-            url: "tel:18443265400",
+            url: "tel:+18443265400",
           },
           {
             "@type": "ListItem",
             position: 4,
             name: "National Sexual Assault Hotline",
-            url: "tel:18006564673",
+            url: "tel:+18006564673",
           },
           {
             "@type": "ListItem",
             position: 5,
             name: "Domestic Violence National Hotline",
-            url: "tel:18007997233",
+            url: "tel:+18007997233",
           },
         ],
       },
@@ -135,7 +82,7 @@ export default function Resources(props: Props) {
               </ul>
             </li>
             <li>
-              <a href="tel:18007154225">Georgia Crisis Access Line</a>
+              <a href="tel:+18007154225">Georgia Crisis Access Line</a>
               <ul>
                 <li>
                   Available 24 hours a day/7 days per week. Available to help
@@ -145,7 +92,7 @@ export default function Resources(props: Props) {
               </ul>
             </li>
             <li>
-              <a href="tel:18443265400">
+              <a href="tel:+18443265400">
                 CARES Warm Line (Georgia Certified Addiction Recovery
                 Specialist)
               </a>
@@ -158,7 +105,7 @@ export default function Resources(props: Props) {
               </ul>
             </li>
             <li>
-              <a href="tel:18663998938">
+              <a href="tel:+18663998938">
                 Georgia COVID-19 Emotional Support Line
               </a>
               <ul>
@@ -170,7 +117,7 @@ export default function Resources(props: Props) {
               </ul>
             </li>
             <li>
-              <a href="tel:7067363094">
+              <a href="tel:+17067363094">
                 National Alliance on Mental Illness (NAMI)
               </a>
               <ul>
@@ -181,7 +128,7 @@ export default function Resources(props: Props) {
               </ul>
             </li>
             <li>
-              <a href="tel:18007296686">
+              <a href="tel:+18007296686">
                 Substance Abuse and Mental Health Services Administration
               </a>
               <ul>
@@ -189,7 +136,7 @@ export default function Resources(props: Props) {
               </ul>
             </li>
             <li>
-              <a href="tel:7069450920">Focus on Reocvery</a>
+              <a href="tel:+17069450920">Focus on Reocvery</a>
               <ul>
                 <li>
                   Recovery Community Organization which focuses on ensuring
@@ -199,7 +146,7 @@ export default function Resources(props: Props) {
               </ul>
             </li>
             <li>
-              <a href="tel:18775658860">Trans Peer Support Lifeline</a>
+              <a href="tel:+18775658860">Trans Peer Support Lifeline</a>
               <ul>
                 <li>
                   Providing direct emotional and financial support to those in
@@ -208,7 +155,7 @@ export default function Resources(props: Props) {
               </ul>
             </li>
             <li>
-              <a href="tel:18002738255,1">Veterans Crisis Line</a>
+              <a href="tel:+18002738255,1">Veterans Crisis Line</a>
               <ul>
                 <li>
                   Confidential line for Veterans needing emotional support.
@@ -217,16 +164,16 @@ export default function Resources(props: Props) {
               </ul>
             </li>
             <li>
-              <a href="tel:18002738255">National Suicide Prevention Lifeline</a>
+              <a href="tel:+18002738255">National Suicide Prevention Lifeline</a>
               <ul>
                 <li>Free emotional support and resource line</li>
               </ul>
             </li>
             <li>
-              <a href="tel:18006564673">National Sexual Assault Hotline</a>
+              <a href="tel:+18006564673">National Sexual Assault Hotline</a>
             </li>
             <li>
-              <a href="tel:18007997233">Domestic Violence National Hotline</a>
+              <a href="tel:+18007997233">Domestic Violence National Hotline</a>
             </li>
           </ul>
         </div>

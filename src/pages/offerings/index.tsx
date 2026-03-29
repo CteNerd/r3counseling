@@ -32,8 +32,6 @@ const offeringsTitle =
 const offeringsDescription =
   "Explore EMDR intensives, private wellness experiences, trauma-informed groups, clinical consultation, and individual therapy with Release Restore Redefine Counseling in Martinez, Georgia.";
 const offeringsUrl = "https://r3counseling.com/offerings";
-const offeringsSocialImage =
-  "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/R3+Counseling+Logo+-+Final-05.jpeg";
 
 interface Props {
   isMobile: boolean;
@@ -82,70 +80,6 @@ export default function Offerings(props: Props) {
   }, []);
 
   useEffect(() => {
-    document.title = offeringsTitle;
-
-    const upsertMetaTag = (
-      selector: string,
-      attributeName: "name" | "property",
-      attributeValue: string,
-      content: string
-    ) => {
-      let element = document.head.querySelector(selector) as HTMLMetaElement | null;
-
-      if (!element) {
-        element = document.createElement("meta");
-        element.setAttribute(attributeName, attributeValue);
-        document.head.appendChild(element);
-      }
-
-      element.setAttribute("content", content);
-    };
-
-    const canonicalLink =
-      (document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null) ||
-      document.createElement("link");
-
-    canonicalLink.setAttribute("rel", "canonical");
-    canonicalLink.setAttribute("href", offeringsUrl);
-
-    if (!canonicalLink.parentNode) {
-      document.head.appendChild(canonicalLink);
-    }
-
-    upsertMetaTag(
-      'meta[name="description"]',
-      "name",
-      "description",
-      offeringsDescription
-    );
-    upsertMetaTag('meta[property="og:title"]', "property", "og:title", offeringsTitle);
-    upsertMetaTag(
-      'meta[property="og:description"]',
-      "property",
-      "og:description",
-      offeringsDescription
-    );
-    upsertMetaTag('meta[property="og:url"]', "property", "og:url", offeringsUrl);
-    upsertMetaTag(
-      'meta[property="og:image"]',
-      "property",
-      "og:image",
-      offeringsSocialImage
-    );
-    upsertMetaTag('meta[name="twitter:title"]', "name", "twitter:title", offeringsTitle);
-    upsertMetaTag(
-      'meta[name="twitter:description"]',
-      "name",
-      "twitter:description",
-      offeringsDescription
-    );
-    upsertMetaTag(
-      'meta[name="twitter:image"]',
-      "name",
-      "twitter:image",
-      offeringsSocialImage
-    );
-
     const offeringsSchema = {
       "@context": "https://schema.org",
       "@graph": [
