@@ -4,7 +4,7 @@ import GirlsOnCourt from "../../assets/images/girls-on-court.png";
 import LaughingWomen from "../../assets/images/laughing-women.png";
 import FlowerWomen from "../../assets/images/flower-women.png";
 import R3QrCodeForCareCredit from "../../assets/images/Release Restore Redefine Counseling QR Code for CareCredit.png";
-import FAQs from "./intensive-faqs";
+import FAQs, { emdrIntensiveFaqs } from "./intensive-faqs";
 import CardWithLeftImage from "../../components/Offerings/cardWithLeftImage";
 import LightBeamOnEye from "../../assets/images/lightbeam-on-eye.png";
 import AboutEDMR from "../../components/Offerings/EDMRIntesives/aboutEDMR";
@@ -26,6 +26,13 @@ const privateWellnessRotatingImages = [
   PrivateWellnessExperienceAlt,
 ];
 
+const posterImages = [GirlsOnCourt, LaughingWomen, FlowerWomen];
+const offeringsTitle =
+  "Offerings | Release Restore Redefine Counseling | Martinez, GA";
+const offeringsDescription =
+  "Explore EMDR intensives, private wellness experiences, trauma-informed groups, clinical consultation, and individual therapy with Release Restore Redefine Counseling in Martinez, Georgia.";
+const offeringsUrl = "https://r3counseling.com/offerings";
+
 interface Props {
   isMobile: boolean;
 }
@@ -33,6 +40,7 @@ interface Props {
 export default function Offerings(props: Props) {
   const [consultModalVis, setConsultModalVis] = useState(false);
   const [groupModalOpen, setGroupModalOpen] = useState(false);
+  const [activePosterIndex, setActivePosterIndex] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,47 +69,116 @@ export default function Offerings(props: Props) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Your existing component code
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setActivePosterIndex((currentIndex) =>
+        (currentIndex + 1) % posterImages.length
+      );
+    }, 3500);
 
-  var slideIndex = 1;
-  showSlides(slideIndex);
+    return () => window.clearInterval(intervalId);
+  }, []);
 
-  function showSlides(n: number) {
-    var i;
-    var slides = document.getElementsByClassName(
-      "mySlides"
-    ) as HTMLCollectionOf<HTMLElement>;
+  useEffect(() => {
+    const offeringsSchema = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          name: offeringsTitle,
+          description: offeringsDescription,
+          url: offeringsUrl,
+          mainEntity: {
+            "@type": "OfferCatalog",
+            name: "R3 Counseling Offerings",
+            itemListElement: [
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "EMDR Intensives",
+                  description:
+                    "Extended trauma-focused EMDR intensives with consultation, preparation, customized scheduling, and follow-up care.",
+                },
+              },
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "Private Wellness Experience",
+                  description:
+                    "Trauma-conscious yoga, breathwork, meditation, sound bath, and customized wellness experiences for private or corporate events.",
+                },
+              },
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "Group Clinical Supervision",
+                  description:
+                    "Clinical consultation and supervision support for clinicians building skills, confidence, and practice direction.",
+                },
+              },
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "EmpowerHer: Women's Trauma Healing Group",
+                  description:
+                    "An 8-week trauma healing group blending support circles, movement, breathwork, and sound meditation.",
+                },
+              },
+              {
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: "Individual Therapy",
+                  description:
+                    "One-on-one therapy in a supportive environment focused on healing, insight, and next-step growth.",
+                },
+              },
+            ],
+          },
+        },
+        {
+          "@type": "FAQPage",
+          mainEntity: emdrIntensiveFaqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer,
+            },
+          })),
+        },
+      ],
+    };
 
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
-    }
+    const schemaScript = document.createElement("script");
+    schemaScript.type = "application/ld+json";
+    schemaScript.id = "offerings-page-schema";
+    schemaScript.text = JSON.stringify(offeringsSchema);
+    document.head.appendChild(schemaScript);
 
-    if (slides[slideIndex - 1]) {
-      slides[slideIndex - 1].style.display = "block";
-    }
+    return () => {
+      const existingSchema = document.getElementById("offerings-page-schema");
 
-    setTimeout(showSlides, 3500); // Change image every 3.5 seconds
-  }
+      if (existingSchema) {
+        existingSchema.remove();
+      }
+    };
+  }, []);
 
   function CarouselImages() {
-    let Posters: string[] = [GirlsOnCourt, LaughingWomen, FlowerWomen];
-    let content: JSX.Element[] = [];
-
-    Posters.forEach((poster, index) => {
-      content.push(
-        <div key={index} className="mySlides fade session-img">
-          {/* <div className="numbertext">{index} / {Posters.length}</div> */}
-          <img src={poster} className="slide-img" />
-          {/* <div className="text">{poster.caption}</div> */}
-        </div>
-      );
-    });
-
-    return <div>{content}</div>;
+    return (
+      <div className="mySlides fade session-img">
+        <img
+          src={posterImages[activePosterIndex]}
+          className="slide-img"
+          alt="Featured counseling and wellness offering"
+        />
+      </div>
+    );
   }
 
   return (
@@ -118,9 +195,13 @@ export default function Offerings(props: Props) {
         />
 
         <div className="free-consult-container">
-          <a onClick={() => setConsultModalVis(!consultModalVis)}>
-            <button className="free-consult-button">Free Consultation</button>
-          </a>
+          <button
+            type="button"
+            className="free-consult-button"
+            onClick={() => setConsultModalVis(!consultModalVis)}
+          >
+            Free Consultation
+          </button>
           <div
             id="id01"
             className={consultModalVis ? "consult-modal" : "consult-modal-none"}
@@ -254,6 +335,7 @@ export default function Offerings(props: Props) {
           <div className="highlight-vid-container heading">
             <h3 className="transition-text">EMDR at a Glance</h3>
             <iframe
+              title="EMDR at a Glance video"
               className="highlight-vid"
               src="https://www.youtube.com/embed/Pkfln-ZtWeY"
               frameBorder="0"
@@ -276,6 +358,7 @@ export default function Offerings(props: Props) {
               className="emdr-link"
               href="https://youtu.be/n2fQ8xC4U10"
               target="_blank"
+              rel="noopener noreferrer"
             >
               EMDR Intensive Groups
             </a>{" "}
@@ -288,14 +371,20 @@ export default function Offerings(props: Props) {
             to schedule a consult today!!
           </p>
           <div className="free-consult-container">
-            <a onClick={() => setGroupModalOpen(true)}>
-              <button className="free-consult-button">
-                Group Intensive Info
-              </button>
-            </a>
-            <a onClick={() => setConsultModalVis(!consultModalVis)}>
-              <button className="free-consult-button">Free Consultation</button>
-            </a>
+            <button
+              type="button"
+              className="free-consult-button"
+              onClick={() => setGroupModalOpen(true)}
+            >
+              Group Intensive Info
+            </button>
+            <button
+              type="button"
+              className="free-consult-button"
+              onClick={() => setConsultModalVis(!consultModalVis)}
+            >
+              Free Consultation
+            </button>
             <div
               id="id01"
               className={
@@ -335,6 +424,7 @@ export default function Offerings(props: Props) {
               imageSrc={PrivateWellnessExperience}
               rotatingImageSources={privateWellnessRotatingImages}
               rotateIntervalMs={5000}
+              imageObjectPosition="50% 22%"
               content={privateWellnessExperience}
               className="private-wellness"
             />

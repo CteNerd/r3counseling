@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import logo from "./logo.svg";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useLocation,
+} from "react-router-dom";
 import "./App.css";
-import { Menu, Modal } from "antd";
+import { Menu } from "antd";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Terms from "./pages/terms";
@@ -10,8 +15,6 @@ import Offerings from "./pages/offerings";
 import ReadyToRelease from "./pages/ready-to-release";
 import AppointmentRequest from "./pages/appointment-request";
 import {
-  FacebookOutlined,
-  GiftOutlined,
   GoogleOutlined,
   InstagramOutlined,
   LinkedinOutlined,
@@ -24,10 +27,174 @@ import Contact from "./pages/contact";
 import StillAwayRetreat from "./pages/retreat/still-away";
 import PauseRetreat from "./pages/retreat/pause";
 
+const BASE_URL = "https://r3counseling.com";
+const DEFAULT_SOCIAL_IMAGE =
+  "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/R3+Counseling+Logo+-+Final-05.jpeg";
+
+type RouteSeoConfig = {
+  title: string;
+  description: string;
+};
+
+const ROUTE_SEO: Record<string, RouteSeoConfig> = {
+  "/": {
+    title: "Release Restore Redefine Counseling | Martinez, GA",
+    description:
+      "Holistic counseling services in Martinez, Georgia, including EMDR intensives, trauma-focused therapy, wellness offerings, and restorative retreats.",
+  },
+  "/about": {
+    title: "About | Release Restore Redefine Counseling",
+    description:
+      "Meet the Release Restore Redefine Counseling team and learn about our trauma-informed, culturally responsive care approach.",
+  },
+  "/offerings": {
+    title: "Offerings | Release Restore Redefine Counseling | Martinez, GA",
+    description:
+      "Explore EMDR intensives, private wellness experiences, clinical consultation, groups, and individual therapy services.",
+  },
+  "/events": {
+    title: "Events | Release Restore Redefine Counseling",
+    description:
+      "Discover upcoming support groups, wellness gatherings, and community events hosted by Release Restore Redefine Counseling.",
+  },
+  "/contact": {
+    title: "Contact | Release Restore Redefine Counseling",
+    description:
+      "Contact Release Restore Redefine Counseling to request services, ask questions, and begin your healing journey.",
+  },
+  "/resources": {
+    title: "Resources | Release Restore Redefine Counseling",
+    description:
+      "Access crisis lines, support resources, and mental health tools available in Georgia and nationwide.",
+  },
+  "/retreat": {
+    title: "Retreats | Release Restore Redefine Counseling",
+    description:
+      "Learn about restorative retreat experiences designed to support rest, healing, and personal reconnection.",
+  },
+  "/ready-to-release": {
+    title: "Ready To Release | Release Restore Redefine Counseling",
+    description:
+      "Join the Ready To Release community and stay connected with wellness updates, offerings, and support opportunities.",
+  },
+  "/appointment-request": {
+    title: "Appointment Request | Release Restore Redefine Counseling",
+    description:
+      "Request an appointment with Release Restore Redefine Counseling for therapy, intensives, and wellness support.",
+  },
+};
+
+function upsertMetaTag(
+  selector: string,
+  attributeName: "name" | "property",
+  attributeValue: string,
+  content: string
+) {
+  let element = document.head.querySelector(selector) as HTMLMetaElement | null;
+
+  if (!element) {
+    element = document.createElement("meta");
+    element.setAttribute(attributeName, attributeValue);
+    document.head.appendChild(element);
+  }
+
+  element.setAttribute("content", content);
+}
+
+function resolveSeoForPath(pathname: string): RouteSeoConfig {
+  if (pathname.startsWith("/retreat")) {
+    return ROUTE_SEO["/retreat"];
+  }
+
+  return ROUTE_SEO[pathname] || ROUTE_SEO["/"];
+}
+
+function RouteMetadata() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const currentPath = location.pathname || "/";
+    const seo = resolveSeoForPath(currentPath);
+    const canonicalUrl = `${BASE_URL}${currentPath === "/" ? "/" : currentPath}`;
+
+    document.title = seo.title;
+
+    const canonicalLink =
+      (document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null) ||
+      document.createElement("link");
+
+    canonicalLink.setAttribute("rel", "canonical");
+    canonicalLink.setAttribute("href", canonicalUrl);
+
+    if (!canonicalLink.parentNode) {
+      document.head.appendChild(canonicalLink);
+    }
+
+    upsertMetaTag("meta[name=\"description\"]", "name", "description", seo.description);
+    upsertMetaTag("meta[property=\"og:type\"]", "property", "og:type", "website");
+    upsertMetaTag("meta[property=\"og:title\"]", "property", "og:title", seo.title);
+    upsertMetaTag(
+      "meta[property=\"og:description\"]",
+      "property",
+      "og:description",
+      seo.description
+    );
+    upsertMetaTag("meta[property=\"og:url\"]", "property", "og:url", canonicalUrl);
+    upsertMetaTag(
+      "meta[property=\"og:image\"]",
+      "property",
+      "og:image",
+      DEFAULT_SOCIAL_IMAGE
+    );
+    upsertMetaTag("meta[name=\"twitter:card\"]", "name", "twitter:card", "summary_large_image");
+    upsertMetaTag("meta[name=\"twitter:title\"]", "name", "twitter:title", seo.title);
+    upsertMetaTag(
+      "meta[name=\"twitter:description\"]",
+      "name",
+      "twitter:description",
+      seo.description
+    );
+    upsertMetaTag(
+      "meta[name=\"twitter:image\"]",
+      "name",
+      "twitter:image",
+      DEFAULT_SOCIAL_IMAGE
+    );
+
+    const routeSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: seo.title,
+      description: seo.description,
+      url: canonicalUrl,
+      isPartOf: {
+        "@type": "WebSite",
+        name: "Release Restore Redefine Counseling",
+        url: BASE_URL,
+      },
+    };
+
+    const schemaId = "route-page-schema";
+    let schemaScript = document.getElementById(schemaId) as HTMLScriptElement | null;
+
+    if (!schemaScript) {
+      schemaScript = document.createElement("script");
+      schemaScript.type = "application/ld+json";
+      schemaScript.id = schemaId;
+      document.head.appendChild(schemaScript);
+    }
+
+    schemaScript.text = JSON.stringify(routeSchema);
+  }, [location.pathname]);
+
+  return null;
+}
+
 function App() {
   const [selectedMenuKey, setSelectedMenuKey] = useState("");
-  const breakpoint = window.matchMedia("(max-width: 1279px)");
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(
+    () => window.matchMedia("(max-width: 1279px)").matches
+  );
 
   // Add site-wide schema markup
   useEffect(() => {
@@ -100,7 +267,27 @@ function App() {
   }, []);
 
   useEffect(() => {
-    setIsMobile(breakpoint.matches);
+    const mediaQuery = window.matchMedia("(max-width: 1279px)");
+
+    const handleMatchChange = (event: MediaQueryListEvent) => {
+      setIsMobile(event.matches);
+    };
+
+    setIsMobile(mediaQuery.matches);
+
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", handleMatchChange);
+
+      return () => {
+        mediaQuery.removeEventListener("change", handleMatchChange);
+      };
+    }
+
+    mediaQuery.addListener(handleMatchChange);
+
+    return () => {
+      mediaQuery.removeListener(handleMatchChange);
+    };
   }, []);
 
   function handleMenuClick(key: string) {
@@ -122,6 +309,7 @@ function App() {
           <img
             className="menu-img"
             src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/R3+Counseling+Logo+-+Final-01-Transparentv2.png"
+            alt="R3 Counseling logo"
           />
           <div className="menu-btn" onClick={() => openNav()}>
             <div className="menu-line"></div>
@@ -181,6 +369,7 @@ function App() {
 
   return (
     <Router basename={process.env.PUBLIC_URL}>
+      <RouteMetadata />
       <div className="App">
         <SideNav />
         <header className="App-header">
