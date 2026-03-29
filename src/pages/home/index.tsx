@@ -13,6 +13,7 @@ export default function Home() {
       imageUrl: MEDIA.homeRocks,
       landingPageUrl:
         "https://cdn.forms-content.sg-form.com/58a2c899-c0c0-11ed-b4f5-060e8f5a62bc",
+      alt: "Stacked stones beside calm water — Release Restore Redefine Counseling",
     },
   ];
 
