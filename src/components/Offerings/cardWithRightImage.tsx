@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Card, Row } from "antd";
+import { Image, Card } from "antd";
 import "../../pages/offerings/offerings.css";
 import "./cardWithRightImage.css";
 
@@ -18,6 +18,8 @@ const CardWithRightImage: React.FC<CardWithRightImageProps> = ({
   heroTitle,
   pngSrc,
 }) => {
+  const imageAltText = title || heroTitle || "Release Restore Redefine Counseling offering";
+
   return (
     <div
       className="card-container-right"
@@ -29,18 +31,21 @@ const CardWithRightImage: React.FC<CardWithRightImageProps> = ({
       }}
     >
       <h2 className="transition-text heading">{heroTitle}</h2>
-      <div className="flex-container">
+      <div className="offerings-card-layout offerings-card-layout-right">
         <Card className="image-card-right">
           <h2 className="transition-text">{title}</h2>
           {content}
         </Card>
-        <Image
-          style={{ objectFit: "cover" }}
-          height="80%"
-          width="50%"
-          src={imageSrc}
-          preview={false}
-        />
+        <div className="offerings-card-media offerings-card-media-right">
+          <Image
+            className="offerings-card-image"
+            style={{ objectFit: "cover" }}
+            width="100%"
+            src={imageSrc}
+            alt={imageAltText}
+            preview={false}
+          />
+        </div>
       </div>
     </div>
   );

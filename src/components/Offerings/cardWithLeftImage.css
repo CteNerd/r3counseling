@@ -2,82 +2,93 @@
   position: relative;
 }
 
+.offerings-card-layout {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: min(1180px, 100%);
+  margin: 0 auto 40px;
+}
+
+.offerings-card-layout-left {
+  justify-content: flex-start;
+}
+
 .image-card {
-  width: 70%;
-  /* position: absolute; */
-  /* height: 75%; */
-  /* top: 10%; */
-  /* left: 30%; */
+  flex: 0 1 48%;
   border-color: #839abf;
   border-width: 3px;
-  /* overflow: auto; */
   margin-bottom: 60px;
   transition: box-shadow 0.3s ease;
+}
+
+.image-card-left {
+  margin-left: -8%;
+  z-index: 1;
 }
 
 .image-card:hover {
   box-shadow: 0 6px 12px rgba(131, 154, 191, 0.3);
 }
 
-.flex-container {
-  display: flex;
-  position: relative;
-  margin-bottom: 40px;
-}
-
 @media (min-width: 1440px) {
-  .flex-container {
-    min-height: 600px;
-  }
   .image-card {
-    position: absolute;
-    top: 20%;
-    left: 38%;
-    /* height: 60%; */
+    flex-basis: 46%;
   }
 }
 
 @media (max-width: 1024px) {
-  .flex-container {
-    min-height: 500px;
-  }
-  .image-card {
-    position: absolute;
-    top: 10%;
-    left: 33%;
-    /* height: 52%; */
-  }
   .private-wellnes {
     height: 5%;
   }
 }
 
+@media (max-width: 900px) {
+  .offerings-card-layout {
+    gap: 16px;
+  }
+
+  .image-card-left {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .offerings-card-layout {
+    align-items: flex-start;
+  }
+
+  .image-card-left {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 768px) {
+  .offerings-card-layout {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .offerings-card-media,
   .image-card {
-    /* position: absolute; */
-    /* top: 10%; */
-    /* left: 30%; */
-    /* height: auto; */
+    width: 100%;
+  }
+
+  .offerings-card-media {
+    aspect-ratio: 4 / 3;
+  }
+
+  .image-card-left {
+    margin-left: 0;
   }
 }
 
 @media (max-width: 576px) {
-  .flex-container {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 60px;
+  .offerings-card-layout {
+    margin-bottom: 24px;
   }
+
   .image-card {
-    left: 5%;
-    width: 100%;
-    /* height: auto; */
-    /* border-color: rgb(224, 188, 191, 0.5); */
-    border-width: 3px;
-    /* overflow: visible; */
-    position: relative;
-    margin: auto;
     margin-bottom: 40px;
   }
 }

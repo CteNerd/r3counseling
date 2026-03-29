@@ -1,10 +1,127 @@
 import "./resources.css";
+import { useEffect } from "react";
 
 interface Props {
   isMobile: boolean;
 }
 
 export default function Resources(props: Props) {
+  useEffect(() => {
+    const resourcesTitle = "Resources | Release Restore Redefine Counseling";
+    const resourcesDescription =
+      "Crisis and support resources, warm lines, and mental health tools for individuals and families in Georgia and nationwide.";
+    const resourcesUrl = "https://r3counseling.com/resources";
+
+    document.title = resourcesTitle;
+
+    const upsertMetaTag = (
+      selector: string,
+      attributeName: "name" | "property",
+      attributeValue: string,
+      content: string
+    ) => {
+      let element = document.head.querySelector(selector) as HTMLMetaElement | null;
+
+      if (!element) {
+        element = document.createElement("meta");
+        element.setAttribute(attributeName, attributeValue);
+        document.head.appendChild(element);
+      }
+
+      element.setAttribute("content", content);
+    };
+
+    const canonicalLink =
+      (document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null) ||
+      document.createElement("link");
+
+    canonicalLink.setAttribute("rel", "canonical");
+    canonicalLink.setAttribute("href", resourcesUrl);
+
+    if (!canonicalLink.parentNode) {
+      document.head.appendChild(canonicalLink);
+    }
+
+    upsertMetaTag(
+      'meta[name="description"]',
+      "name",
+      "description",
+      resourcesDescription
+    );
+    upsertMetaTag('meta[property="og:title"]', "property", "og:title", resourcesTitle);
+    upsertMetaTag(
+      'meta[property="og:description"]',
+      "property",
+      "og:description",
+      resourcesDescription
+    );
+    upsertMetaTag('meta[property="og:url"]', "property", "og:url", resourcesUrl);
+    upsertMetaTag('meta[name="twitter:title"]', "name", "twitter:title", resourcesTitle);
+    upsertMetaTag(
+      'meta[name="twitter:description"]',
+      "name",
+      "twitter:description",
+      resourcesDescription
+    );
+
+    const resourcesSchema = {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      name: "Resources to Release",
+      description: resourcesDescription,
+      url: resourcesUrl,
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "National Suicide and Crisis Lifeline",
+            url: "tel:988",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Georgia Crisis Access Line",
+            url: "tel:18007154225",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "CARES Warm Line",
+            url: "tel:18443265400",
+          },
+          {
+            "@type": "ListItem",
+            position: 4,
+            name: "National Sexual Assault Hotline",
+            url: "tel:18006564673",
+          },
+          {
+            "@type": "ListItem",
+            position: 5,
+            name: "Domestic Violence National Hotline",
+            url: "tel:18007997233",
+          },
+        ],
+      },
+    };
+
+    const schemaScript = document.createElement("script");
+    schemaScript.type = "application/ld+json";
+    schemaScript.id = "resources-page-schema";
+    schemaScript.text = JSON.stringify(resourcesSchema);
+    document.head.appendChild(schemaScript);
+
+    return () => {
+      const existingSchema = document.getElementById("resources-page-schema");
+
+      if (existingSchema) {
+        existingSchema.remove();
+      }
+    };
+  }, []);
+
   return (
     <div>
       <h1>Resources to Release</h1>

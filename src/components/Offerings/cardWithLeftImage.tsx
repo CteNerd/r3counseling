@@ -8,6 +8,7 @@ interface CardWithLeftImageProps {
   imageSrc: string;
   rotatingImageSources?: string[];
   rotateIntervalMs?: number;
+  imageObjectPosition?: string;
   title?: string;
   content: JSX.Element;
   className?: string;
@@ -17,6 +18,7 @@ const CardWithLeftImage: React.FC<CardWithLeftImageProps> = ({
   imageSrc,
   rotatingImageSources,
   rotateIntervalMs = 5000,
+  imageObjectPosition,
   title,
   content,
   heroTitle,
@@ -48,6 +50,10 @@ const CardWithLeftImage: React.FC<CardWithLeftImageProps> = ({
   }, [images, rotateIntervalMs]);
 
   const safeImageIndex = Math.max(0, Math.min(activeImageIndex, images.length - 1));
+  const imageAltText = title || heroTitle || "Release Restore Redefine Counseling offering";
+  const mediaStyle = imageObjectPosition
+    ? ({ "--offerings-image-position": imageObjectPosition } as React.CSSProperties)
+    : undefined;
 
   return (
     <div
@@ -60,16 +66,22 @@ const CardWithLeftImage: React.FC<CardWithLeftImageProps> = ({
       }}
     >
       <h2 className="transition-text heading">{heroTitle}</h2>
-      <div className="flex-container">
-        <Image
-          style={{ objectFit: "cover" }}
-          height="auto"
-          width="50%"
-          src={images[safeImageIndex]}
-          fallback={imageSrc}
-          preview={false}
-        />
-        <Card className="image-card">
+      <div className="offerings-card-layout offerings-card-layout-left">
+        <div
+          className="offerings-card-media offerings-card-media-left"
+          style={mediaStyle}
+        >
+          <Image
+            className="offerings-card-image"
+            style={{ objectFit: "cover" }}
+            width="100%"
+            src={images[safeImageIndex]}
+            fallback={imageSrc}
+            alt={imageAltText}
+            preview={false}
+          />
+        </div>
+        <Card className="image-card image-card-left">
           <h2 className="transition-text">{title}</h2>
           {content}
         </Card>
