@@ -26,10 +26,10 @@ import Events from "./pages/events";
 import Contact from "./pages/contact";
 import StillAwayRetreat from "./pages/retreat/still-away";
 import PauseRetreat from "./pages/retreat/pause";
+import { MEDIA } from "./constants/media";
 
 const BASE_URL = "https://r3counseling.com";
-const DEFAULT_SOCIAL_IMAGE =
-  "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/R3+Counseling+Logo+-+Final-05.jpeg";
+const DEFAULT_SOCIAL_IMAGE = MEDIA.logoSocial;
 
 type RouteSeoConfig = {
   title: string;
@@ -308,7 +308,7 @@ function App() {
         <div>
           <img
             className="menu-img"
-            src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/R3+Counseling+Logo+-+Final-01-Transparentv2.png"
+            src={MEDIA.logoTransparent}
             alt="R3 Counseling logo"
           />
           <div className="menu-btn" onClick={() => openNav()}>
@@ -346,7 +346,7 @@ function App() {
           <Menu.Item key="img">
             <img
               className="menu-img"
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/R3+Counseling+Logo+-+Final-01-Transparentv2.png"
+              src={MEDIA.logoTransparent}
               alt="R3 Counseling Logo - Release Restore Redefine"
             />
           </Menu.Item>
@@ -377,7 +377,7 @@ function App() {
             <Navigation />
           </div>
         </header>
-        <div className="App-body">
+        <div className="App-body" style={{ backgroundImage: `url(${MEDIA.contactBanner})` }}>
           <div className="App-body-container">
             {/* A <Switch> looks through its children <Route>s and
       renders the first one that matches the current URL. */}

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./retreat.css";
+import { MEDIA } from "../../constants/media";
 
 export default function Retreat() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -12,7 +13,7 @@ export default function Retreat() {
       "@type": "Event",
       "name": "R3 Counseling Retreats",
       "description": "Holistic Healing retreats for women to rest, restore, and reclaim their wholeness, time, and self care.",
-      "image": "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0299.JPG",
+      "image": MEDIA.pauseHero,
       "url": "https://r3counseling.com/retreat",
       "eventStatus": "https://schema.org/EventScheduled",
       "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
@@ -89,7 +90,7 @@ export default function Retreat() {
       <div
         className="hero-container"
         style={{
-          backgroundImage: `url(https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0299.JPG)`,
+          backgroundImage: `url(${MEDIA.pauseHero})`,
         }}
       >
         <div className="hero-text">Rest. Restore. Reclaim.</div>
@@ -112,7 +113,7 @@ export default function Retreat() {
       <div className="container" ref={containerRef}>
         <div className="image-side">
           <div>
-            <img src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat_Host_v2.jpg" />
+            <img src={MEDIA.retreatHost} />
           </div>
         </div>
         <div className="text-side">

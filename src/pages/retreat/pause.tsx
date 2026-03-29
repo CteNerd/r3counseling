@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./retreat.css";
+import { MEDIA } from "../../constants/media";
 
 export default function PauseRetreat() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -56,7 +57,7 @@ export default function PauseRetreat() {
       <div
         className="hero-container"
         style={{
-          backgroundImage: `url(https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0299.JPG)`,
+          backgroundImage: `url(${MEDIA.pauseHero})`,
         }}
       >
         <div className="hero-text">Rest. Restore. Reclaim.</div>
@@ -122,7 +123,7 @@ export default function PauseRetreat() {
             </ul>
           </div>
           <div className="image-side">
-            <img src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0300.jpg" />
+            <img src={MEDIA.pausePhoto0300} />
             <a
               href="https://docs.google.com/forms/d/131VPZ5XOYhlt7gOK9dtYN-UYWBNRSUNqrdUcD3lt4tY/edit?ts=6599ccdc"
               target="_blank"
@@ -177,7 +178,7 @@ export default function PauseRetreat() {
             </div>
           </div>
           <div className="image-side">
-            <img src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat-7.png" />
+            <img src={MEDIA.retreat7} />
             <a
               href="https://docs.google.com/forms/d/131VPZ5XOYhlt7gOK9dtYN-UYWBNRSUNqrdUcD3lt4tY/edit?ts=6599ccdc"
               target="_blank"
@@ -206,27 +207,27 @@ export default function PauseRetreat() {
         <div className="banner">
           <div className="banner-container">
             <img
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0301.JPG"
+              src={MEDIA.pausePhoto0301}
               className="banner-img"
             />
             <img
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0496.JPG"
+              src={MEDIA.pausePhoto0496}
               className="banner-img"
             />
             <img
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0497.JPG"
+              src={MEDIA.pausePhoto0497}
               className="banner-img"
             />
             <img
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0498.JPG"
+              src={MEDIA.pausePhoto0498}
               className="banner-img"
             />
             <img
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0502.JPG"
+              src={MEDIA.pausePhoto0502}
               className="banner-img"
             />
             <img
-              src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/retreat/IMG_0299.JPG"
+              src={MEDIA.pauseHero}
               className="banner-img"
             />
           </div>
@@ -283,7 +284,7 @@ export default function PauseRetreat() {
             </ul>
           </div>
           <div className="image-side">
-            <img src="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Retreat-18.png" />
+            <img src={MEDIA.retreat18} />
             <a
               href="https://docs.google.com/forms/d/131VPZ5XOYhlt7gOK9dtYN-UYWBNRSUNqrdUcD3lt4tY/edit?ts=6599ccdc"
               target="_blank"

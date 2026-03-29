@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./terms.css";
-import GroupIntensiveImages from "./group-intensive-images.json";
+import GroupIntensiveImages from "./group-intensive-images";
 import R3QrCodeForCareCredit from "../../assets/images/Release Restore Redefine Counseling QR Code for CareCredit.png";
+import { MEDIA } from "../../constants/media";
 
 export default function Terms() {
   const [emdrModalOpen, setEmdrModalOpen] = useState(false);
@@ -85,7 +86,7 @@ export default function Terms() {
                 <li>
                   <a
                     href={
-                      "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Group+Intensive+Offering+.pdf"
+                      MEDIA.groupIntensivePdf
                     }
                     target={"_blank"}
                   >
@@ -177,7 +178,7 @@ export default function Terms() {
           <video className="modal-video" autoPlay={true} loop muted>
             <source
               src={
-                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/2024+EMDR+Intensive+Packages.mp4"
+                MEDIA.emdrIntensivePackagesVideo
               }
               type="video/mp4"
             />
@@ -196,7 +197,7 @@ export default function Terms() {
           <video className="modal-video" autoPlay={true} loop muted>
             <source
               src={
-                "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/Group+Intensive+Offering+.mp4"
+                MEDIA.groupIntensiveVideo
               }
               type="video/mp4"
             />

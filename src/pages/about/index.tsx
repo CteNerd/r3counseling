@@ -11,6 +11,7 @@ import NicoleProfessionalJourney from "../../components/professionalBio/nicolePr
 import NiyaBioContent from "../../components/professionalBio/niyaBioContent";
 import NiyaProfessionalJourney from "../../components/professionalBio/niyaProfessionalJourney";
 import Niya from "../../assets/images/Niya-headShot.png";
+import { MEDIA } from "../../constants/media";
 
 export default function AboutMe() {
   // Schema markup for therapists
@@ -21,7 +22,7 @@ export default function AboutMe() {
       "@type": "MedicalBusiness",
       "name": "Release Restore Redefine Counseling",
       "url": "https://r3counseling.com/about",
-      "logo": "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/R3+Counseling+Logo+-+Final-05.jpeg",
+      "logo": MEDIA.logoSocial,
       "sameAs": [
         "https://www.linkedin.com/in/tiffany-luke-lpc-cpcs-certified-emdr-holistic-therapist-29683119",
         "https://www.instagram.com/r3counseling"
@@ -44,7 +45,7 @@ export default function AboutMe() {
           "name": "Tiffany Luke",
           "jobTitle": "Licensed Professional Counselor, EMDR Certified Therapist",
           "description": "Founder & Therapist specializing in EMDR and holistic therapy approaches with virtual sessions available",
-          "image": "https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/tiff-profile.jpeg"
+          "image": MEDIA.tiffanyProfile
         },
         {
           "@type": "Person",
@@ -93,7 +94,7 @@ export default function AboutMe() {
                 </strong>
               </>
             }
-            imageSrc="https://wellcall-app-cdk.s3.amazonaws.com/r3counseling/tiff-profile.jpeg"
+            imageSrc={MEDIA.tiffanyProfile}
             content={TiffanyBioContent}
             content2={TiffanyProfessionalJourney}
           />
