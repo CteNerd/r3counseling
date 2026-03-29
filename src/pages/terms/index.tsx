@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./terms.css";
-import GroupIntensiveImages from "./group-intensive-images";
+import groupIntensiveImages from "./group-intensive-images";
 import R3QrCodeForCareCredit from "../../assets/images/Release Restore Redefine Counseling QR Code for CareCredit.png";
 import { MEDIA } from "../../constants/media";
 
@@ -34,7 +34,7 @@ export default function Terms() {
   function CarouselImages() {
     let content: JSX.Element[] = [];
 
-    GroupIntensiveImages.forEach((image, index) => {
+    groupIntensiveImages.forEach((image, index) => {
       content.push(
         <div key={index} className="mySlides fade">
           {/* <div className="numbertext">{index} / {Cookies.length}</div> */}
@@ -89,6 +89,7 @@ export default function Terms() {
                       MEDIA.groupIntensivePdf
                     }
                     target={"_blank"}
+                    rel="noopener noreferrer"
                   >
                     Download PDF
                   </a>

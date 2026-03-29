@@ -77,7 +77,7 @@ export default function StillAwayRetreat() {
         </div>
         <div className="container">
           <div className="image-side">
-            <img src={MEDIA.stillAwayLake} />
+            <img src={MEDIA.stillAwayLake} alt="Peaceful lake setting for the Still Away Day Retreat" />
             <a
               href="https://book.stripe.com/8wMdUfc977kq6t2bIT"
               target="_blank"
@@ -201,22 +201,27 @@ export default function StillAwayRetreat() {
             <img
               src={MEDIA.stillAwayLake}
               className="banner-img"
+              alt=""
             />
             <img
               src={MEDIA.stillAwayCandles}
               className="banner-img"
+              alt=""
             />
             <img
               src={MEDIA.stillAwayFlower}
               className="banner-img"
+              alt=""
             />
             <img
               src={MEDIA.stillAwayNotebook}
               className="banner-img"
+              alt=""
             />
             <img
               src={MEDIA.stillAwayDock}
               className="banner-img"
+              alt=""
             />
           </div>
         </div>

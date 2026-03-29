@@ -113,7 +113,7 @@ export default function Retreat() {
       <div className="container" ref={containerRef}>
         <div className="image-side">
           <div>
-            <img src={MEDIA.retreatHost} />
+            <img src={MEDIA.retreatHost} alt="Retreat host Tiffany" />
           </div>
         </div>
         <div className="text-side">

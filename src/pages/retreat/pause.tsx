@@ -123,7 +123,7 @@ export default function PauseRetreat() {
             </ul>
           </div>
           <div className="image-side">
-            <img src={MEDIA.pausePhoto0300} />
+            <img src={MEDIA.pausePhoto0300} alt="Retreat property outdoor view" />
             <a
               href="https://docs.google.com/forms/d/131VPZ5XOYhlt7gOK9dtYN-UYWBNRSUNqrdUcD3lt4tY/edit?ts=6599ccdc"
               target="_blank"
@@ -211,26 +211,32 @@ export default function PauseRetreat() {
             <img
               src={MEDIA.pausePhoto0301}
               className="banner-img"
+              alt=""
             />
             <img
               src={MEDIA.pausePhoto0496}
               className="banner-img"
+              alt=""
             />
             <img
               src={MEDIA.pausePhoto0497}
               className="banner-img"
+              alt=""
             />
             <img
               src={MEDIA.pausePhoto0498}
               className="banner-img"
+              alt=""
             />
             <img
               src={MEDIA.pausePhoto0502}
               className="banner-img"
+              alt=""
             />
             <img
               src={MEDIA.pauseHero}
               className="banner-img"
+              alt=""
             />
           </div>
         </div>
