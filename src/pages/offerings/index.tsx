@@ -443,6 +443,7 @@ export default function Offerings(props: Props) {
         {/* <Col span={24}> */}
         <CardWithLeftImage
           imageSrc={Tiffany}
+          imageObjectPosition="50% 14%"
           title="Individual Therapy"
           content={IndividualTherapy}
         />
