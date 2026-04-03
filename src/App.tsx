@@ -434,6 +434,15 @@ function App() {
               </a>
             </div>
             <div className="footer-link-container">
+              <a
+                className="footer-link"
+                href="http://maps.apple.com/maps?q=1301+Shiloh+Road+Kennesaw+GA+30144"
+                itemProp="address" itemScope itemType="http://schema.org/PostalAddress"
+              >
+                <span itemProp="streetAddress">1301 Shiloh Road</span> | <span itemProp="addressLocality">Kennesaw</span>, <span itemProp="addressRegion">GA</span> <span itemProp="postalCode">30144</span>
+              </a>
+            </div>
+            <div className="footer-link-container">
               <a className="footer-link" href="tel:1-706-750-8906" itemProp="telephone">
                 PHONE: (706) 750-8906
               </a>
