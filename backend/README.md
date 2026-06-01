@@ -94,9 +94,12 @@ npm run deploy
 
 ### CI/CD Deployment
 
-The project includes a GitHub Actions workflow (`.github/workflows/backend-deploy.yml`) that automatically deploys when changes are made to the `/backend` folder.
+The backend uses a single promotion workflow (`.github/workflows/backend-deploy.yml`) on merges to `main`:
 
-For staging, use `.github/workflows/backend-deploy-staging.yml` and deploy with the `staging` Serverless stage.
+1. Build and validate backend
+2. Deploy to `staging`
+3. Pause for manual approval in GitHub Environment protection
+4. Deploy to `prod`
 
 #### Required GitHub Secrets
 
@@ -104,6 +107,13 @@ Add the following secret to your GitHub repository:
 
 - `AWS_ROLE_ARN`: The ARN of an AWS IAM role that GitHub Actions can assume
 - `AWS_STAGING_ROLE_ARN`: The ARN of an AWS IAM role for staging deployments
+
+#### Required GitHub Environments
+
+Create the following repository environments under **Settings → Environments**:
+
+- `staging`
+- `production` (configure required reviewers for manual approval before prod deploy)
 
 ### Staging Setup (AWS CLI)
 
