@@ -8,12 +8,12 @@ const { Title, Paragraph } = Typography;
 export default function Contact() {
   useEffect(() => {
     // SEO optimization
-    document.title = "Contact Us | Release Restore Redefine Counseling | Martinez, GA";
+    document.title = "Contact Us | Release Restore Redefine Counseling | Martinez & Kennesaw, GA";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", 
-        "Contact Release Restore Redefine Counseling in Martinez, GA. Get in touch for therapy services, EMDR sessions, and wellness retreats. Call (706) 750-8906 or use our online form."
+        "Contact Release Restore Redefine Counseling in Martinez and Kennesaw, GA. Get in touch for therapy services, EMDR intensives, and wellness offerings. Call (706) 750-8906 or use our online form."
       );
     }
 
@@ -28,14 +28,32 @@ export default function Contact() {
         "@type": "ProfessionalService",
         "name": "Release Restore Redefine Counseling",
         "telephone": "(706) 750-8906",
-        "email": "info@r3counseling.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "4210 Columbia Rd",
-          "addressLocality": "Martinez",
-          "addressRegion": "GA",
-          "postalCode": "30907"
-        }
+        "email": "R3counseling@counselingsecure.com",
+        "areaServed": ["Martinez, GA", "Kennesaw, GA"],
+        "location": [
+          {
+            "@type": "Place",
+            "name": "R3 Counseling Martinez Office",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "4210 Columbia Rd",
+              "addressLocality": "Martinez",
+              "addressRegion": "GA",
+              "postalCode": "30907"
+            }
+          },
+          {
+            "@type": "Place",
+            "name": "R3 Counseling Kennesaw Office",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "1301 Shiloh Rd. Suite 1240",
+              "addressLocality": "Kennesaw",
+              "addressRegion": "GA",
+              "postalCode": "30144"
+            }
+          }
+        ]
       }
     };
 
@@ -62,11 +80,16 @@ export default function Contact() {
           <Col xs={24} sm={20} md={16} lg={12}>
             <div className="contact-hero-content">
               <Title level={1} className="contact-title">
-                Contact Us
+                Book a Consultation
               </Title>
               <Paragraph className="contact-subtitle">
-                Ready to begin your journey? We're here to help you take the first step 
-                toward healing and growth.
+                Ready to move forward? Reach out to explore EMDR Intensives,
+                trauma-focused therapy, referral pathways, or clinical
+                supervision support.
+              </Paragraph>
+              <Paragraph className="contact-milestone">
+                Led by Tiffany Luke, Goldman Sachs One Million Black Women in
+                Business graduate.
               </Paragraph>
             </div>
           </Col>
@@ -94,6 +117,10 @@ export default function Contact() {
                     4210 Columbia Rd<br />
                     Martinez, GA 30907
                   </Paragraph>
+                  <Paragraph>
+                    1301 Shiloh Rd. Suite 1240<br />
+                    Kennesaw, GA 30144
+                  </Paragraph>
                 </div>
 
                 <div>
@@ -108,9 +135,10 @@ export default function Contact() {
                   <Title level={4}>Services</Title>
                   <Paragraph>
                     • Individual Therapy<br />
-                    • EMDR Therapy<br />
-                    • Trauma Healing<br />
-                    • Wellness Retreats<br />
+                    • EMDR Intensives<br />
+                    • Clinical Supervision<br />
+                    • Community Wellness Programs<br />
+                    • Referral Partner Coordination<br />
                     • Virtual Sessions Available
                   </Paragraph>
                 </div>

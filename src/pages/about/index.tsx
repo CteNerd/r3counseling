@@ -77,6 +77,11 @@ export default function AboutMe() {
   return (
     <div style={{ width: "100%", paddingTop: "20px" }}>
       <h1>About</h1>
+      <p className="about-milestone-note">
+        Tiffany Luke is a Goldman Sachs One Million Black Women in Business
+        graduate, strengthening R3 Counseling's commitment to accessible,
+        high-quality, community-centered trauma care.
+      </p>
       <Row gutter={[24, 16]} justify="center">
         <Col className="gutter-row" xs={24} md={8}>
           <ProfessionalBio

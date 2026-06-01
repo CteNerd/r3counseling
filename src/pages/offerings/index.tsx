@@ -19,6 +19,7 @@ import PrivateWellnessExperience from "../../assets/images/private-wellness-expe
 import PrivateWellnessExperienceAlt from "../../assets/images/2026/dji_mimo_20260221_113146_20260221113147_1771693822704_photo.JPG";
 import privateWellnessExperience from "../../components/Offerings/privateWellnessExperience";
 import { Col, Row } from "antd";
+import { Link } from "react-router-dom";
 import LeadForm from "../../components/LeadForm";
 import { MEDIA } from "../../constants/media";
 
@@ -31,7 +32,7 @@ const posterImages = [GirlsOnCourt, LaughingWomen, FlowerWomen];
 const offeringsTitle =
   "Offerings | Release Restore Redefine Counseling | Martinez, GA";
 const offeringsDescription =
-  "Explore EMDR intensives, private wellness experiences, trauma-informed groups, clinical consultation, and individual therapy with Release Restore Redefine Counseling in Martinez, Georgia.";
+  "Explore EMDR intensives, trauma-focused supervision, community wellness, and integrative therapy services with Release Restore Redefine Counseling in Martinez, Georgia.";
 const offeringsUrl = "https://r3counseling.com/offerings";
 
 interface Props {
@@ -201,7 +202,7 @@ export default function Offerings(props: Props) {
             className="free-consult-button"
             onClick={() => setConsultModalVis(!consultModalVis)}
           >
-            Free Consultation
+            Book a Consultation
           </button>
           <div
             id="id01"
@@ -234,6 +235,74 @@ export default function Offerings(props: Props) {
               Intensive Experience at a Glance
             </h3>
           </div>
+          <div className="offerings-info-panel">
+            <h3 className="transition-text">Good Fit for EMDR Intensives</h3>
+            <ul className="intensive-offerings-list">
+              <li className="transition-text">
+                You have been in therapy but still feel stuck.
+              </li>
+              <li className="transition-text">
+                You have limited time for weekly therapy.
+              </li>
+              <li className="transition-text">
+                You want a focused healing experience.
+              </li>
+              <li className="transition-text">
+                You are seeking relief from unresolved trauma.
+              </li>
+              <li className="transition-text">
+                You want deeper healing than talk therapy alone.
+              </li>
+            </ul>
+          </div>
+
+          <div className="offerings-info-panel">
+            <h3 className="transition-text">Why Intensives Work</h3>
+            <ul className="intensive-offerings-list">
+              <li className="transition-text">Sustained focus for deeper processing</li>
+              <li className="transition-text">Fewer interruptions than weekly 50-minute sessions</li>
+              <li className="transition-text">Ability to stay with the work longer</li>
+              <li className="transition-text">Greater continuity from start to integration</li>
+            </ul>
+          </div>
+
+          <div className="offerings-info-panel">
+            <h3 className="transition-text">Real-Life Outcomes</h3>
+            <ul className="intensive-offerings-list">
+              <li className="transition-text">Feeling present in your relationships</li>
+              <li className="transition-text">Increased emotional awareness</li>
+              <li className="transition-text">Reduced emotional reactivity</li>
+              <li className="transition-text">Better decision making under stress</li>
+              <li className="transition-text">Greater connection to self and daily life</li>
+            </ul>
+          </div>
+
+          <div className="offerings-info-panel">
+            <h3 className="transition-text">The R3 Intensive Framework</h3>
+            <ol className="intensive-framework-list">
+              <li className="transition-text">
+                <strong>Consultation and Assessment</strong> - Clarify goals,
+                symptoms, timeline, and treatment fit.
+              </li>
+              <li className="transition-text">
+                <strong>Preparation and Workbook</strong> - Complete guided
+                preparation activities and regulation tools.
+              </li>
+              <li className="transition-text">
+                <strong>EMDR Intensive Experience</strong> - Focused trauma
+                processing with integrative support practices.
+              </li>
+              <li className="transition-text">
+                <strong>Integration Session</strong> - Consolidate insights and
+                stabilize post-intensive gains.
+              </li>
+              <li className="transition-text">
+                <strong>Continued Support Plan</strong> - Define practical next
+                steps for sustained progress.
+              </li>
+            </ol>
+          </div>
+
           <div>
             <ul className="intensive-offerings-list">
               <li className="transition-text">
@@ -384,7 +453,7 @@ export default function Offerings(props: Props) {
               className="free-consult-button"
               onClick={() => setConsultModalVis(!consultModalVis)}
             >
-              Free Consultation
+              Learn if an Intensive is Right for You
             </button>
             <div
               id="id01"
@@ -448,6 +517,39 @@ export default function Offerings(props: Props) {
           title="Individual Therapy"
           content={IndividualTherapy}
         />
+
+        <div className="offerings-action-grid">
+          <div className="offerings-action-card">
+            <h3>Referral Partners</h3>
+            <p>
+              Refer adults who feel stuck despite therapy and need focused,
+              trauma-integrative care.
+            </p>
+            <Link className="offerings-link-button" to="/referral-partners">
+              Refer a Client
+            </Link>
+          </div>
+          <div className="offerings-action-card">
+            <h3>Clinical Supervision</h3>
+            <p>
+              Explore trauma-focused supervision and consultation for associate
+              licensed clinicians and therapists.
+            </p>
+            <Link className="offerings-link-button" to="/clinical-supervision">
+              Learn About Clinical Supervision
+            </Link>
+          </div>
+          <div className="offerings-action-card">
+            <h3>Community Wellness</h3>
+            <p>
+              Bring trauma-conscious yoga and mind-body wellness experiences to
+              your school, team, or organization.
+            </p>
+            <Link className="offerings-link-button" to="/community-wellness">
+              Explore Community Wellness Offerings
+            </Link>
+          </div>
+        </div>
         {/* </Col> */}
         {/* </Row> */}
       </div>

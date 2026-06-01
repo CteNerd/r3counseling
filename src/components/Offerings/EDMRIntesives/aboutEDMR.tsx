@@ -2,23 +2,21 @@ import "../../../pages/offerings/offerings.css";
 const AboutEDMR = (
   <div>
     <p className="transition-text">
-      EMDR Intensives offer an alternative path to healing by rewiring memory
-      networks rather than simply altering thought patterns to change emotions.
-      Through EMDR processing, memories that contribute to feeling stuck in the
-      past are desensitized, allowing for transformation of negative feelings,
-      beliefs, and body sensations. These Intensives provide a condensed
-      opportunity to address past, present, and future concerns, expediting the
-      healing process.
+      EMDR Intensives are designed for adults who have been doing the work but
+      still feel stuck. If weekly 50-minute sessions feel too interrupted to
+      create momentum, an Intensive provides the sustained time needed to move
+      deeper into unresolved trauma patterns. This format supports high-
+      functioning individuals who may appear fine externally, yet feel
+      overwhelmed, emotionally numb, disconnected in relationships, or out of
+      sync with their body.
       <br />
       <br />
-      Typically spanning 4 to 8 hours per day over 1 to 5 days, Intensives offer
-      concentrated time to address specific issues. While the work is intense,
-      it can serve as a profound emotional reset. To ensure suitability for
-      Intensive work, a complimentary consultation is provided. Clients are
-      welcome to travel to Augusta for the Intensive, creating space for focused
-      healing before returning to their regular routines. Don't hesitate to
-      reach out and schedule your free consultation today—why wait to begin your
-      healing journey?
+      Through EMDR processing, memories that keep you anchored in survival
+      responses are desensitized and reprocessed so you can experience better
+      emotional regulation, stronger self-connection, and more presence in daily
+      life. Intensives typically span 4 to 8 hours per day over 1 to 5 days,
+      creating continuity that traditional scheduling often cannot provide.
+      Clients are welcome to travel to Augusta for this focused healing model.
     </p>
   </div>
 );

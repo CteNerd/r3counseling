@@ -5,6 +5,13 @@
   }
 }
 
+.about-milestone-note {
+  border-left: 4px solid #839abf;
+  background-color: #f9fbff;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+
 .professional-accolades-list {
   text-align: left;
 }

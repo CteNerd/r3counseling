@@ -2,12 +2,12 @@ const privateWellnessExperience = (
   <div>
     <h2>Private Wellness Experience</h2>
     <p>
-      Whether you're celebrating a birthday, grand opening, anniversary,
-      bachelorette party, or planning a self-care day, consider adding a unique
-      touch of wellness to your event. Choose from Trauma-Conscious Yoga,
-      Breathwork, Meditation, or a Sound Bath session—or enjoy a customized mix
-      of these offerings. Each practice is designed to create a space for
-      relaxation, connection, and holistic rejuvenation.
+      Whether you're planning a birthday, grand opening, self-care gathering,
+      wellness workshop, community healing event, college-based program, or
+      business wellness activation, R3 can curate a trauma-conscious experience
+      for your audience. Choose from Trauma-Conscious Yoga, Breathwork,
+      Meditation, or Sound Bath sessions, or combine modalities into a custom
+      wellness flow that supports connection, regulation, and restoration.
       <br />
       <br />
       <strong style={{ color: "#839abf" }}>

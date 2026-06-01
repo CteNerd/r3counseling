@@ -1,0 +1,41 @@
+.clinical-supervision-page {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.clinical-supervision-section {
+  margin-top: 20px;
+  padding: 16px;
+  border: 1px solid #dbe4ef;
+  border-radius: 8px;
+  background-color: #f9fbff;
+}
+
+.clinical-supervision-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.clinical-supervision-button {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #4f6f8f;
+  color: #fff;
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-weight: 600;
+}
+
+.clinical-supervision-button:hover,
+.clinical-supervision-button:focus {
+  background-color: #3f5f7e;
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  .clinical-supervision-cta-row {
+    flex-direction: column;
+  }
+}

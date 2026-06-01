@@ -22,6 +22,9 @@ export default function SideNav() {
       <Link to="/terms" onClick={closeNav}>Terms</Link>
       <Link to="/retreat" onClick={closeNav}>Retreat</Link>
       <Link to="/resources" onClick={closeNav}>Resources</Link>
+      <Link to="/referral-partners" onClick={closeNav}>Referral Partners</Link>
+      <Link to="/clinical-supervision" onClick={closeNav}>Clinical Supervision</Link>
+      <Link to="/community-wellness" onClick={closeNav}>Community Wellness</Link>
     </div>
   );
 }
