@@ -62,8 +62,10 @@ jobs:
         run: aws s3 sync build/ "s3://${{ secrets.FRONTEND_STAGING_S3_BUCKET }}" --delete
 
       - name: Invalidate CloudFront cache (staging)
-        if: ${{ secrets.FRONTEND_STAGING_CLOUDFRONT_DISTRIBUTION_ID != '' }}
-        run: aws cloudfront create-invalidation --distribution-id "${{ secrets.FRONTEND_STAGING_CLOUDFRONT_DISTRIBUTION_ID }}" --paths "/*"
+        env:
+          CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.FRONTEND_STAGING_CLOUDFRONT_DISTRIBUTION_ID }}
+        if: ${{ env.CLOUDFRONT_DISTRIBUTION_ID != '' }}
+        run: aws cloudfront create-invalidation --distribution-id "$CLOUDFRONT_DISTRIBUTION_ID" --paths "/*"
 
   deploy_production:
     runs-on: ubuntu-latest
@@ -99,5 +101,7 @@ jobs:
         run: aws s3 sync build/ "s3://${{ secrets.FRONTEND_PROD_S3_BUCKET }}" --delete
 
       - name: Invalidate CloudFront cache (production)
-        if: ${{ secrets.FRONTEND_PROD_CLOUDFRONT_DISTRIBUTION_ID != '' }}
-        run: aws cloudfront create-invalidation --distribution-id "${{ secrets.FRONTEND_PROD_CLOUDFRONT_DISTRIBUTION_ID }}" --paths "/*"
+        env:
+          CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.FRONTEND_PROD_CLOUDFRONT_DISTRIBUTION_ID }}
+        if: ${{ env.CLOUDFRONT_DISTRIBUTION_ID != '' }}
+        run: aws cloudfront create-invalidation --distribution-id "$CLOUDFRONT_DISTRIBUTION_ID" --paths "/*"

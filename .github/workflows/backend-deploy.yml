@@ -98,8 +98,8 @@ jobs:
           role-session-name: r3counseling-backend-deploy-prod
           aws-region: us-east-1
 
-      - name: Deploy to AWS (production workflow, legacy dev stage)
+      - name: Deploy to AWS (production)
         working-directory: ./backend
-        run: npx serverless deploy --stage dev
+        run: npx serverless deploy --stage prod
         env:
           AWS_REGION: us-east-1
