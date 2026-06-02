@@ -163,7 +163,7 @@ npx serverless deploy --stage staging
 Deploy production from backend folder:
 
 ```bash
-npx serverless deploy --stage prod
+npx serverless deploy --stage dev
 ```
 
 #### Setting up AWS OIDC for GitHub Actions

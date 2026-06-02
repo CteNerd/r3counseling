@@ -3,13 +3,10 @@ name: Frontend Promotion Pipeline
 on:
   push:
     branches: [main]
-    paths:
-      - 'src/**'
-      - 'public/**'
-      - 'package.json'
-      - 'package-lock.json'
-      - '.github/workflows/deploy.yml'
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build_and_test:
@@ -53,14 +50,24 @@ jobs:
           REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL_STAGING }}
           REACT_APP_PUBLIC_URL: ${{ secrets.REACT_APP_PUBLIC_URL_STAGING }}
 
-      - name: Deploy staging build to gh-pages-staging
+      - name: Deploy staging preview to gh-pages (/staging)
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git checkout --orphan gh-pages-staging
-          git --work-tree build add --all
-          git --work-tree build commit -m 'Deploy staging'
-          git push origin HEAD:gh-pages-staging --force
+          if git ls-remote --exit-code --heads origin gh-pages; then
+            git fetch origin gh-pages
+            git checkout -B gh-pages origin/gh-pages
+          else
+            git checkout --orphan gh-pages
+            git rm -rf . || true
+          fi
+          rm -rf staging
+          mkdir -p staging
+          cp -R build/. staging/
+          touch staging/.nojekyll
+          git add staging
+          git commit -m 'Deploy staging preview' || echo 'No staging preview changes'
+          git push origin HEAD:gh-pages --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

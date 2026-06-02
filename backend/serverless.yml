@@ -53,10 +53,12 @@ plugins:
   - serverless-domain-manager
 
 custom:
-  stage: ${opt:stage, 'prod'}
+  stage: ${opt:stage, 'dev'}
   tableName: ${self:custom.tableNames.${self:custom.stage}, self:custom.tableNames.default}
   tableNames:
     default: Contacts
+    dev: Contacts
+    prod: Contacts
     staging: Contacts-staging
   parameterBasePath: ${self:custom.parameterBasePaths.${self:custom.stage}, self:custom.parameterBasePaths.default}
   parameterBasePaths:
@@ -68,7 +70,7 @@ custom:
     staging: arn:aws:secretsmanager:${self:provider.region}:${aws:accountId}:secret:/r3counseling/staging/turnstile_secret-*
   leadHandler: dist/handlers/lead.handler
   customDomain:
-    enabled: ${self:custom.customDomainEnabled.${self:custom.stage}, self:custom.customDomainEnabled.default}
+    enabled: ${self:custom.customDomainEnabled.${self:custom.stage}, false}
     domainName: api.r3counseling.com
     certificateArn: arn:aws:acm:us-east-1:425061472162:certificate/4f86c517-4143-4464-a226-d94f2efed792
     createRoute53Record: false
@@ -77,7 +79,9 @@ custom:
     apiType: http
     autoDomain: true
   customDomainEnabled:
-    default: true
+    default: false
+    dev: true
+    prod: true
     staging: false
   serverless-offline:
     httpPort: 3001
