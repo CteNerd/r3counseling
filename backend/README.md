@@ -94,13 +94,77 @@ npm run deploy
 
 ### CI/CD Deployment
 
-The project includes a GitHub Actions workflow (`.github/workflows/backend-deploy.yml`) that automatically deploys when changes are made to the `/backend` folder.
+The backend uses a single promotion workflow (`.github/workflows/backend-deploy.yml`) on merges to `main`:
+
+1. Build and validate backend
+2. Deploy to `staging`
+3. Pause for manual approval in GitHub Environment protection
+4. Deploy to `prod`
 
 #### Required GitHub Secrets
 
 Add the following secret to your GitHub repository:
 
 - `AWS_ROLE_ARN`: The ARN of an AWS IAM role that GitHub Actions can assume
+- `AWS_STAGING_ROLE_ARN`: The ARN of an AWS IAM role for staging deployments
+
+#### Required GitHub Environments
+
+Create the following repository environments under **Settings → Environments**:
+
+- `staging`
+- `production` (configure required reviewers for manual approval before prod deploy)
+
+### Staging Setup (AWS CLI)
+
+Staging uses stage-scoped config values under `/r3counseling/staging` and deploys with `--stage staging`.
+
+Create staging SSM parameters:
+
+```bash
+aws ssm put-parameter \
+  --name "/r3counseling/staging/notify_to" \
+  --value "admin@r3counseling.com,notifications@r3counseling.com" \
+  --type "String" \
+  --overwrite
+
+aws ssm put-parameter \
+  --name "/r3counseling/staging/admin_email" \
+  --value "tiff@r3counseling.com" \
+  --type "String" \
+  --overwrite
+
+aws ssm put-parameter \
+  --name "/r3counseling/staging/from_email" \
+  --value "noreply@r3counseling.com" \
+  --type "String" \
+  --overwrite
+```
+
+Create or update staging Turnstile secret:
+
+```bash
+aws secretsmanager create-secret \
+  --name "/r3counseling/staging/turnstile_secret" \
+  --secret-string "your-turnstile-secret-key"
+
+# If it already exists:
+aws secretsmanager put-secret-value \
+  --secret-id "/r3counseling/staging/turnstile_secret" \
+  --secret-string "your-turnstile-secret-key"
+```
+
+Deploy staging from backend folder:
+
+```bash
+npx serverless deploy --stage staging
+```
+
+Deploy production from backend folder:
+
+```bash
+npx serverless deploy --stage dev
+```
 
 #### Setting up AWS OIDC for GitHub Actions
 

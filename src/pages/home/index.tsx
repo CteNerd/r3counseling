@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./home.css";
 import ImageCarousel from "../../components/imageCarousel/imageCarousel";
 import PshycologyTodayLogo from "../../assets/logos/psychologytoday-13.png";
@@ -26,21 +27,39 @@ export default function Home() {
     const homeSchema = {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Release Restore Redefine Counseling - Mental Health Services in Martinez, GA",
-      "description": "Professional counseling services offering EMDR therapy, holistic healing, and wellness retreats in Martinez, GA.",
+      "name": "Release Restore Redefine Counseling - Mental Health Services in Martinez and Kennesaw, GA",
+      "description": "Professional counseling services offering EMDR therapy, holistic healing, and wellness retreats in Martinez and Kennesaw, Georgia.",
       "url": "https://r3counseling.com/",
       "mainEntity": {
         "@type": "ProfessionalService",
         "name": "Release Restore Redefine Counseling",
         "image": MEDIA.logoSocial,
         "telephone": "(706) 750-8906",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "4210 Columbia Rd",
-          "addressLocality": "Martinez",
-          "addressRegion": "GA",
-          "postalCode": "30907"
-        }
+        "areaServed": ["Martinez, GA", "Kennesaw, GA"],
+        "location": [
+          {
+            "@type": "Place",
+            "name": "R3 Counseling Martinez Office",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "4210 Columbia Rd",
+              "addressLocality": "Martinez",
+              "addressRegion": "GA",
+              "postalCode": "30907"
+            }
+          },
+          {
+            "@type": "Place",
+            "name": "R3 Counseling Kennesaw Office",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "1301 Shiloh Rd. Suite 1240",
+              "addressLocality": "Kennesaw",
+              "addressRegion": "GA",
+              "postalCode": "30144"
+            }
+          }
+        ]
       }
     };
     
@@ -80,12 +99,49 @@ export default function Home() {
         </div>
         <h1>Let's Come Alive</h1>
         <p>
-          Are you emotionally constipated? Are you trapped in your mask? Is your
-          plate overflowing with life's demands? Are you noticing increased
-          anxiety or stress? Are your past wounds impacting your present
-          relationships? Do you find yourself numbing the pain to cope with your
-          reality? Are you surrounded by 'your team' but still suffering in
-          silence, feeling unheard, failing to be seen or fully supported?
+          If you have been doing the work but still do not feel like yourself,
+          you are not alone. Maybe you understand your patterns but still feel
+          emotionally disconnected. Maybe you have tried therapy, wellness, and
+          self-development tools, but progress keeps stalling and restarting.
+          R3 supports adults who feel stuck and are ready for focused,
+          integrative trauma treatment that creates meaningful forward movement.
+        </p>
+        <div className="hero-cta-row">
+          <Link className="home-cta-button" to="/offerings">
+            Explore EMDR Intensives
+          </Link>
+          <Link className="home-cta-button" to="/appointment-request">
+            Book a Consultation
+          </Link>
+        </div>
+      </section>
+
+      <section className="stuck-section" aria-label="Who We Support">
+        <h2>If You Feel Stuck, This Space Is for You</h2>
+        <ul className="stuck-list">
+          <li>You have been in therapy but still feel stuck in the same cycle.</li>
+          <li>You understand your trauma history but still feel disconnected in daily life.</li>
+          <li>You have tried wellness practices but have not felt lasting relief.</li>
+          <li>You are a busy professional who needs focused care, not slow fragmented progress.</li>
+        </ul>
+      </section>
+
+      <section className="outcomes-section" aria-label="Outcome Focused Healing">
+        <h2>What Change Can Look Like</h2>
+        <ul className="outcomes-list">
+          <li>Feeling more present in your relationships</li>
+          <li>Greater emotional awareness and less emotional numbness</li>
+          <li>Reduced emotional reactivity during stress</li>
+          <li>Clearer decisions with more confidence and self-trust</li>
+          <li>Deeper connection to your body, values, and daily life</li>
+        </ul>
+      </section>
+
+      <section className="milestone-section" aria-label="Practice Milestone">
+        <p>
+          Practice leadership milestone: Tiffany is a Goldman Sachs One Million
+          Black Women in Business graduate, reflecting R3's continued investment
+          in excellence, impact, and community-centered care.
         </p>
       </section>
       
@@ -101,7 +157,7 @@ export default function Home() {
             <a
               href="https://www.cliniciansofcolor.org:443/clinicians/tiffany-luke-lpc/"
               target="_blank"
-              rel="external nofollow"
+              rel="external nofollow noopener noreferrer"
               aria-label="Clinicians of Color Profile"
             >
               <img
@@ -214,7 +270,12 @@ export default function Home() {
       </section>
       
       <section className="cta-section" aria-label="Call to Action">
-        <h2 style={{ textAlign: "center" }}>Take your voice back. BE YOU!</h2>
+        <h2 style={{ textAlign: "center" }}>Take your voice back. Be you.</h2>
+        <div className="hero-cta-row">
+          <Link className="home-cta-button" to="/offerings">
+            Learn if an Intensive is Right for You
+          </Link>
+        </div>
       </section>
       
       <div

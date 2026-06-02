@@ -26,6 +26,9 @@ import Events from "./pages/events";
 import Contact from "./pages/contact";
 import StillAwayRetreat from "./pages/retreat/still-away";
 import PauseRetreat from "./pages/retreat/pause";
+import ReferralPartners from "./pages/referral-partners";
+import ClinicalSupervision from "./pages/clinical-supervision";
+import CommunityWellness from "./pages/community-wellness";
 import { MEDIA } from "./constants/media";
 
 const BASE_URL = "https://r3counseling.com";
@@ -38,9 +41,9 @@ type RouteSeoConfig = {
 
 const ROUTE_SEO: Record<string, RouteSeoConfig> = {
   "/": {
-    title: "Release Restore Redefine Counseling | Martinez, GA",
+    title: "Release Restore Redefine Counseling | Martinez & Kennesaw, GA",
     description:
-      "Holistic counseling services in Martinez, Georgia, including EMDR intensives, trauma-focused therapy, wellness offerings, and restorative retreats.",
+      "R3 Counseling helps adults who feel stuck despite therapy move forward through EMDR intensives, trauma-focused care, and mind-body integration in Martinez and Kennesaw, Georgia.",
   },
   "/about": {
     title: "About | Release Restore Redefine Counseling",
@@ -48,9 +51,9 @@ const ROUTE_SEO: Record<string, RouteSeoConfig> = {
       "Meet the Release Restore Redefine Counseling team and learn about our trauma-informed, culturally responsive care approach.",
   },
   "/offerings": {
-    title: "Offerings | Release Restore Redefine Counseling | Martinez, GA",
+    title: "Offerings | Release Restore Redefine Counseling | Martinez & Kennesaw, GA",
     description:
-      "Explore EMDR intensives, private wellness experiences, clinical consultation, groups, and individual therapy services.",
+      "Explore EMDR intensives, trauma-focused supervision, community wellness, and integrative therapy services at R3 Counseling.",
   },
   "/events": {
     title: "Events | Release Restore Redefine Counseling",
@@ -58,14 +61,29 @@ const ROUTE_SEO: Record<string, RouteSeoConfig> = {
       "Discover upcoming support groups, wellness gatherings, and community events hosted by Release Restore Redefine Counseling.",
   },
   "/contact": {
-    title: "Contact | Release Restore Redefine Counseling",
+    title: "Contact | Release Restore Redefine Counseling | Martinez & Kennesaw, GA",
     description:
-      "Contact Release Restore Redefine Counseling to request services, ask questions, and begin your healing journey.",
+      "Contact Release Restore Redefine Counseling in Martinez and Kennesaw, Georgia to request services, ask questions, and begin your healing journey.",
   },
   "/resources": {
     title: "Resources | Release Restore Redefine Counseling",
     description:
       "Access crisis lines, support resources, and mental health tools available in Georgia and nationwide.",
+  },
+  "/referral-partners": {
+    title: "Referral Partners | Release Restore Redefine Counseling",
+    description:
+      "Refer clients to Release Restore Redefine Counseling for EMDR intensives, trauma-focused therapy, and integrative care pathways.",
+  },
+  "/clinical-supervision": {
+    title: "Clinical Supervision | Release Restore Redefine Counseling",
+    description:
+      "Trauma-focused clinical supervision and consultation for associate licensed clinicians and therapists.",
+  },
+  "/community-wellness": {
+    title: "Community Wellness | Release Restore Redefine Counseling",
+    description:
+      "Explore trauma-conscious yoga, wellness workshops, and community healing experiences for schools and organizations.",
   },
   "/retreat": {
     title: "Retreats | Release Restore Redefine Counseling",
@@ -251,6 +269,24 @@ function App() {
           "name": "Resources",
           "item": "https://r3counseling.com/resources",
         },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Referral Partners",
+          "item": "https://r3counseling.com/referral-partners",
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Clinical Supervision",
+          "item": "https://r3counseling.com/clinical-supervision",
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Community Wellness",
+          "item": "https://r3counseling.com/community-wellness",
+        },
       ],
     };
 
@@ -362,6 +398,15 @@ function App() {
           <Menu.Item key="resources">
             <Link to="/resources">Resources</Link>
           </Menu.Item>
+          <Menu.Item key="referral-partners">
+            <Link to="/referral-partners">Referrals</Link>
+          </Menu.Item>
+          <Menu.Item key="clinical-supervision">
+            <Link to="/clinical-supervision">Supervision</Link>
+          </Menu.Item>
+          <Menu.Item key="community-wellness">
+            <Link to="/community-wellness">Community Wellness</Link>
+          </Menu.Item>
         </Menu>
       );
     }
@@ -409,6 +454,15 @@ function App() {
               <Route path="/retreat/pause">
                 <PauseRetreat />
               </Route>
+              <Route path="/community-wellness">
+                <CommunityWellness />
+              </Route>
+              <Route path="/clinical-supervision">
+                <ClinicalSupervision />
+              </Route>
+              <Route path="/referral-partners">
+                <ReferralPartners />
+              </Route>
               <Route path="/retreat/still-away">
                 <StillAwayRetreat />
               </Route>
@@ -431,6 +485,15 @@ function App() {
                 itemProp="address" itemScope itemType="http://schema.org/PostalAddress"
               >
                 <span itemProp="streetAddress">4210 Columbia Rd</span> | <span itemProp="addressLocality">Martinez</span>, <span itemProp="addressRegion">GA</span> <span itemProp="postalCode">30907</span>
+              </a>
+            </div>
+            <div className="footer-link-container" itemScope itemType="http://schema.org/LocalBusiness">
+              <a
+                className="footer-link"
+                href="https://maps.app.goo.gl/96Rjpxfnrt2vY1mFA"
+                itemProp="address" itemScope itemType="http://schema.org/PostalAddress"
+              >
+                <span itemProp="streetAddress">1301 Shiloh Rd. Suite 1240</span> | <span itemProp="addressLocality">Kennesaw</span>, <span itemProp="addressRegion">GA</span> <span itemProp="postalCode">30144</span>
               </a>
             </div>
             <div className="footer-link-container">

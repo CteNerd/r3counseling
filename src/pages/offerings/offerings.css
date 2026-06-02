@@ -125,6 +125,50 @@ iframe {
   text-align: center;
 }
 
+.offerings-info-panel {
+  width: min(960px, 100%);
+  margin: 12px auto;
+  padding: 16px;
+  border: 1px solid #dbe4ef;
+  border-radius: 8px;
+  background-color: #f9fbff;
+}
+
+.intensive-framework-list {
+  padding-left: 20px;
+}
+
+.offerings-action-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 24px 0;
+}
+
+.offerings-action-card {
+  border: 1px solid #dbe4ef;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #ffffff;
+}
+
+.offerings-link-button {
+  display: inline-block;
+  margin-top: 8px;
+  background-color: #4f6f8f;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.offerings-link-button:hover,
+.offerings-link-button:focus {
+  background-color: #3f5f7e;
+  color: #fff;
+}
+
 @media only screen and (min-width: 768px) {
   .highlight-vid {
     height: 315px;

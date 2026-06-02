@@ -223,6 +223,17 @@ export default function Resources(props: Props) {
           </div>
         </div>
       </div>
+
+      <div>
+        <h4>Educational Topics We Cover</h4>
+        <ul>
+          <li>Why therapy can feel stalled and signs you are ready for an intensive</li>
+          <li>High-functioning trauma and hidden burnout patterns</li>
+          <li>How unresolved trauma impacts emotional and relational connection</li>
+          <li>Why insight alone is not enough without mind-body healing practices</li>
+          <li>How intensive models differ from weekly therapy and why continuity matters</li>
+        </ul>
+      </div>
     </div>
   );
 }

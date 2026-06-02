@@ -4,13 +4,14 @@ provider:
   name: aws
   runtime: nodejs20.x
   region: us-east-1
+  stage: ${self:custom.stage}
   httpApi:
     cors: true
   environment:
     TABLE_NAME: ${self:custom.tableName}
-    NOTIFY_TO: ${ssm:/r3counseling/notify_to}
-    ADMIN_EMAIL: ${ssm:/r3counseling/admin_email}
-    FROM_EMAIL: ${ssm:/r3counseling/from_email}
+    NOTIFY_TO: ${ssm:${self:custom.parameterBasePath}/notify_to}
+    ADMIN_EMAIL: ${ssm:${self:custom.parameterBasePath}/admin_email}
+    FROM_EMAIL: ${ssm:${self:custom.parameterBasePath}/from_email}
     TURNSTILE_SECRET_ARN: ${self:custom.turnstileSecretArn}
   iam:
     role:
@@ -37,7 +38,7 @@ provider:
             - ssm:GetParameters
             - ssm:GetParametersByPath
           Resource:
-            - arn:aws:ssm:${self:provider.region}:*:parameter/r3counseling/*
+            - arn:aws:ssm:${self:provider.region}:*:parameter${self:custom.parameterBasePath}/*
 
 functions:
   lead:
@@ -52,10 +53,24 @@ plugins:
   - serverless-domain-manager
 
 custom:
-  tableName: Contacts
-  turnstileSecretArn: arn:aws:secretsmanager:${self:provider.region}:${aws:accountId}:secret:/r3counseling/turnstile_secret-*
+  stage: ${opt:stage, 'dev'}
+  tableName: ${self:custom.tableNames.${self:custom.stage}, self:custom.tableNames.default}
+  tableNames:
+    default: Contacts
+    dev: Contacts
+    prod: Contacts
+    staging: Contacts-staging
+  parameterBasePath: ${self:custom.parameterBasePaths.${self:custom.stage}, self:custom.parameterBasePaths.default}
+  parameterBasePaths:
+    default: /r3counseling
+    staging: /r3counseling/staging
+  turnstileSecretArn: ${self:custom.turnstileSecretArns.${self:custom.stage}, self:custom.turnstileSecretArns.default}
+  turnstileSecretArns:
+    default: arn:aws:secretsmanager:${self:provider.region}:${aws:accountId}:secret:/r3counseling/turnstile_secret-*
+    staging: arn:aws:secretsmanager:${self:provider.region}:${aws:accountId}:secret:/r3counseling/staging/turnstile_secret-*
   leadHandler: dist/handlers/lead.handler
   customDomain:
+    enabled: ${self:custom.customDomainEnabled.${self:custom.stage}, false}
     domainName: api.r3counseling.com
     certificateArn: arn:aws:acm:us-east-1:425061472162:certificate/4f86c517-4143-4464-a226-d94f2efed792
     createRoute53Record: false
@@ -63,6 +78,11 @@ custom:
     securityPolicy: tls_1_2
     apiType: http
     autoDomain: true
+  customDomainEnabled:
+    default: false
+    dev: true
+    prod: true
+    staging: false
   serverless-offline:
     httpPort: 3001
     host: 0.0.0.0
