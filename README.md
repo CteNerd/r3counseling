@@ -2,52 +2,34 @@
 
 This is the official website for R3 Counseling, providing mental health services, counseling, and wellness retreats.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and is deployed using GitHub Pages.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and is deployed to AWS for staging and production.
 
-## GitHub Pages Deployment
+## Frontend Deployment
 
-This website is deployed to GitHub Pages with a custom domain (r3counseling.com). The deployment is automated using GitHub Actions.
+The frontend deploys through a promotion workflow in `.github/workflows/deploy.yml`:
 
-### Custom Domain Setup
+1. Build and test on merge to `main`
+2. Deploy to AWS staging
+3. Wait for manual approval in GitHub `production` environment
+4. Deploy to AWS production
 
-The website is configured to use the custom domain r3counseling.com. This is set up with:
-- A CNAME file in the repository root
-- DNS settings with the domain provider pointing to GitHub Pages
+### Required GitHub Secrets
 
-### Automated Deployment
+- `AWS_STAGING_ROLE_ARN`
+- `AWS_ROLE_ARN`
+- `FRONTEND_STAGING_S3_BUCKET`
+- `FRONTEND_PROD_S3_BUCKET`
+- `FRONTEND_STAGING_CLOUDFRONT_DISTRIBUTION_ID` (optional)
+- `FRONTEND_PROD_CLOUDFRONT_DISTRIBUTION_ID` (optional)
+- `REACT_APP_API_URL_STAGING`
+- `REACT_APP_PUBLIC_URL_STAGING`
+- `REACT_APP_API_URL`
+- `REACT_APP_PUBLIC_URL`
 
-The website is automatically deployed to GitHub Pages whenever changes are pushed to the main branch using GitHub Actions workflow.
+### Required GitHub Environments
 
-## SPA Routing with GitHub Pages
-
-This application uses React Router for client-side routing. To support SPA (Single Page Application) routing with GitHub Pages, the following has been implemented:
-
-1. A 404.html page that redirects all requests to index.html
-2. A script in index.html that handles the redirect from 404.html
-3. Updated React Router configuration with a basename corresponding to the public URL
-
-## DNS Configuration
-
-When setting up the custom domain with your DNS provider, you'll need to:
-
-1. Add an A record pointing your apex domain (r3counseling.com) to GitHub Pages IP addresses:
-   - 185.199.108.153
-   - 185.199.109.153
-   - 185.199.110.153
-   - 185.199.111.153
-
-2. Add a CNAME record for www subdomain (www.r3counseling.com) pointing to your GitHub Pages domain (username.github.io).
-
-## GitHub Repository Settings
-
-In your GitHub repository settings:
-
-1. Go to Settings > Pages
-2. Under "Build and deployment", select:
-   - Source: Deploy from a branch
-   - Branch: gh-pages
-3. Under "Custom domain", enter: r3counseling.com
-4. Check "Enforce HTTPS" for secure connections
+- `staging`
+- `production` (configure required reviewers to enforce prod approval)
 
 ## Available Scripts
 
@@ -88,11 +70,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ### `npm run deploy`
 
-Builds the app and deploys it to GitHub Pages. This command:
-1. Builds the production version of the app
-2. Publishes the build to the gh-pages branch
-
-Note: When using GitHub Actions for deployment, you don't need to run this command manually as deployments are automated.
+This repository deploys via GitHub Actions promotion workflows. Use local `npm run build` for verification and trigger deployment via merges/workflow dispatch.
 
 ## Learn More
 
