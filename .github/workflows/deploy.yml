@@ -1,4 +1,4 @@
-name: Deploy to Production (GitHub Pages)
+name: Deploy to Production (AWS)
 
 on:
   push:
@@ -6,11 +6,13 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  id-token: write
+  contents: read
 
 jobs:
-  build:
+  deploy_production:
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -24,19 +26,24 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build project
+      - name: Build project (production)
         run: CI=false npm run build
         env:
           REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
           REACT_APP_PUBLIC_URL: ${{ secrets.REACT_APP_PUBLIC_URL }}
 
-      - name: Deploy to GitHub Pages
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git checkout --orphan gh-pages
-          git --work-tree build add --all
-          git --work-tree build commit -m 'Deploy'
-          git push origin HEAD:gh-pages --force
+      - name: Configure AWS credentials (production)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          role-session-name: r3counseling-frontend-deploy-prod
+          aws-region: us-east-1
+
+      - name: Deploy frontend to S3 (production)
+        run: aws s3 sync build/ "s3://${{ secrets.FRONTEND_PROD_S3_BUCKET }}" --delete
+
+      - name: Invalidate CloudFront cache (production)
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.FRONTEND_PROD_CLOUDFRONT_DISTRIBUTION_ID }}
+        if: ${{ env.CLOUDFRONT_DISTRIBUTION_ID != '' }}
+        run: aws cloudfront create-invalidation --distribution-id "$CLOUDFRONT_DISTRIBUTION_ID" --paths "/*"
