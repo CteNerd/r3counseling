@@ -87,10 +87,7 @@ export default function Contact() {
                 trauma-focused therapy, referral pathways, or clinical
                 supervision support.
               </Paragraph>
-              <Paragraph className="contact-milestone">
-                Led by Tiffany Luke, Goldman Sachs One Million Black Women in
-                Business graduate.
-              </Paragraph>
+
             </div>
           </Col>
         </Row>

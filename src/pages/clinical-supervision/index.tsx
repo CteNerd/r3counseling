@@ -16,7 +16,7 @@ export default function ClinicalSupervision() {
         <ul>
           <li>Associate licensed clinicians</li>
           <li>Therapists seeking trauma-focused development</li>
-          <li>Clinicians interested in EMDR-informed work</li>
+          <li>Clinicians interested in integrating EMDR, Holistic Modalities, IFS, and Somatics</li>
           <li>Providers seeking consultation and clinical support</li>
         </ul>
       </section>

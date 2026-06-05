@@ -164,6 +164,38 @@ export default function Resources(props: Props) {
               </ul>
             </li>
             <li>
+              <a
+                href="https://thrivelifeline.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Thrive Lifeline
+              </a>
+              <ul>
+                <li>
+                  Peer support text line offering compassionate support for
+                  people navigating emotional distress, trauma, and life
+                  challenges.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="https://www.aninfinitemind.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                An Infinite Mind
+              </a>
+              <ul>
+                <li>
+                  Educational and support resources for individuals living with
+                  dissociative disorders and those seeking greater understanding
+                  of trauma-related experiences.
+                </li>
+              </ul>
+            </li>
+            <li>
               <a href="tel:+18002738255">National Suicide Prevention Lifeline</a>
               <ul>
                 <li>Free emotional support and resource line</li>

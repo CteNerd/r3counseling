@@ -123,6 +123,9 @@ export default function Home() {
           <li>You understand your trauma history but still feel disconnected in daily life.</li>
           <li>You have tried wellness practices but have not felt lasting relief.</li>
           <li>You are a busy professional who needs focused care, not slow fragmented progress.</li>
+          <li>You feel emotionally constipated — like you know things but can't move through them.</li>
+          <li>You feel trapped behind a mask, showing up for everyone but yourself.</li>
+          <li>You feel disconnected despite doing all the right things.</li>
         </ul>
       </section>
 
@@ -137,12 +140,15 @@ export default function Home() {
         </ul>
       </section>
 
-      <section className="milestone-section" aria-label="Practice Milestone">
-        <p>
-          Practice leadership milestone: Tiffany is a Goldman Sachs One Million
-          Black Women in Business graduate, reflecting R3's continued investment
-          in excellence, impact, and community-centered care.
-        </p>
+      <section className="milestone-section banner" aria-label="Practice Milestone">
+        <div className="banner-container">
+          <img
+            className="banner-img milestone-logo"
+            src={MEDIA.logoSocial}
+            alt="R3 Counseling logo"
+          />
+          <p className="milestone-title">Practice Leadership Milestone</p>
+        </div>
       </section>
       
       <section className="credentials-section" aria-label="Professional Credentials">

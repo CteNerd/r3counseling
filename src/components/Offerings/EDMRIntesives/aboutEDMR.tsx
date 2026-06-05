@@ -4,19 +4,32 @@ const AboutEDMR = (
     <p className="transition-text">
       EMDR Intensives are designed for adults who have been doing the work but
       still feel stuck. If weekly 50-minute sessions feel too interrupted to
-      create momentum, an Intensive provides the sustained time needed to move
-      deeper into unresolved trauma patterns. This format supports high-
-      functioning individuals who may appear fine externally, yet feel
-      overwhelmed, emotionally numb, disconnected in relationships, or out of
-      sync with their body.
+      create momentum, an Intensive may be an option to consider.
       <br />
       <br />
-      Through EMDR processing, memories that keep you anchored in survival
-      responses are desensitized and reprocessed so you can experience better
-      emotional regulation, stronger self-connection, and more presence in daily
-      life. Intensives typically span 4 to 8 hours per day over 1 to 5 days,
-      creating continuity that traditional scheduling often cannot provide.
-      Clients are welcome to travel to Augusta for this focused healing model.
+      They offer a personalized, focused approach to healing that is tailored to
+      your unique needs and goals.
+      <br />
+      <br />
+      Designed to help you make meaningful progress in a shorter period of time,
+      intensives provide dedicated space to address the experiences that may be
+      keeping you stuck in patterns of distress, overwhelm, or survival mode.
+      <br />
+      <br />
+      Through EMDR therapy, distressing memories and experiences can be processed
+      and reworked, allowing for greater emotional regulation, increased
+      self-awareness, and a stronger sense of connection to yourself and others.
+      <br />
+      <br />
+      EMDR Intensives typically include:
+    </p>
+    <ul className="transition-text">
+      <li>Pre-Intensive Planning Session</li>
+      <li>4–6 Hour Intensive Therapy Session</li>
+      <li>Follow-Up Integration Session</li>
+    </ul>
+    <p className="transition-text">
+      Clients are welcome to travel to either our Augusta or Kennesaw location.
     </p>
   </div>
 );

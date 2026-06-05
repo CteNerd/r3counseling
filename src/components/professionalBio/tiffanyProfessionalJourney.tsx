@@ -15,10 +15,10 @@ const TiffanyProfessionalJourney = (
       <strong>LPCGA</strong>
       <br />
       <br />
-      EMDRIA Certified EMDR Therapist
+      EMDR Certified Therapist
       <br />
       <br />
-      Certified Holistic Healer
+      Certified Holistic Therapist
       <br />
       <br />
       CYT 300, Certified Yoga Therapist
@@ -27,7 +27,7 @@ const TiffanyProfessionalJourney = (
       Certified, Trauma Conscious Yoga Method
       <br />
       <br />
-      IFS Level One Trained Therapist
+      IFS Level Two Trained Therapist
       <br />
       <br />
       Master of Science concentration Community Counseling: <br />

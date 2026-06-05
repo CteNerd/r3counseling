@@ -17,7 +17,6 @@ export default function ReferralPartners() {
         <ul>
           <li>Clients who feel stuck despite ongoing therapy</li>
           <li>Clients with unresolved trauma and emotional reactivity</li>
-          <li>High-functioning adults struggling internally</li>
           <li>Clients with limited time for weekly therapy</li>
           <li>Clients who need a focused treatment model</li>
         </ul>

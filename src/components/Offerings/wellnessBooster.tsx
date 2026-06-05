@@ -13,8 +13,11 @@ const WellnessBooster = (
       <br />
       <br />
       <strong style={{ color: "#839abf" }}>
-        Duration: 90 minutes; 8-weeks; Closed Group; Fees: Private Pay $50 per
+        Duration: 90 minutes; 8-weeks; Closed Group; Fees: Private Pay $60 per
         session
+        <br />
+        <br />
+        Stay tuned for new dates.
       </strong>
     </p>
   </div>
