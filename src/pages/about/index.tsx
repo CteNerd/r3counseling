@@ -85,7 +85,7 @@ export default function AboutMe() {
             description={
               <>
                 LPC, CPCS, EMDR Certified Therapist, Certified Holistic
-                Therapist, Level 2 IFS Trained, TCYM, <br />
+                Therapist, IFS Level Two Trained, TCYM, <br />
                 CYT-300 <br />
                 <br />
                 Founder & Therapist <br />

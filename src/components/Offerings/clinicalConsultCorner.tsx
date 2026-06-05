@@ -23,14 +23,15 @@ const ClinicalConsultCorner = (
       <br />
       <br />
       <h2>Insight Moment</h2>
-      Are you a clinician seeking consultation on trauma presentations, case
-      stuck points, EMDR-informed interventions, or practice development? This
-      individual consultation space offers focused feedback to support your
-      confidence, clinical growth, and long-term professional sustainability.
+      Are you an individual clinician seeking consultation on trauma
+      presentations, case stuck points, EMDR-informed interventions, or
+      practice development? This one-on-one consultation space offers focused
+      feedback to support your confidence, clinical growth, and long-term
+      professional sustainability.
       <br />
       <br />
       <strong style={{ color: "#839abf" }}>
-        Duration: 1 Hour; Fee: $85 Individual Setting
+        Duration: 1 Hour; Fee: $85
       </strong>
     </p>
   </div>

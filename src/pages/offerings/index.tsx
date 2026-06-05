@@ -276,32 +276,6 @@ export default function Offerings(props: Props) {
             </ul>
           </div>
 
-          <div className="offerings-info-panel">
-            <h3 className="transition-text">The R3 Intensive Framework</h3>
-            <ol className="intensive-framework-list">
-              <li className="transition-text">
-                <strong>Consultation and Assessment</strong> - Clarify goals,
-                symptoms, timeline, and treatment fit.
-              </li>
-              <li className="transition-text">
-                <strong>Preparation and Workbook</strong> - Complete guided
-                preparation activities and regulation tools.
-              </li>
-              <li className="transition-text">
-                <strong>EMDR Intensive Experience</strong> - Focused trauma
-                processing with integrative support practices.
-              </li>
-              <li className="transition-text">
-                <strong>Integration Session</strong> - Consolidate insights and
-                stabilize post-intensive gains.
-              </li>
-              <li className="transition-text">
-                <strong>Continued Support Plan</strong> - Define practical next
-                steps for sustained progress.
-              </li>
-            </ol>
-          </div>
-
           <div>
             <ul className="intensive-offerings-list">
               <li className="transition-text">
