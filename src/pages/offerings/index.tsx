@@ -41,7 +41,6 @@ interface Props {
 
 export default function Offerings(props: Props) {
   const [consultModalVis, setConsultModalVis] = useState(false);
-  const [groupModalOpen, setGroupModalOpen] = useState(false);
   const [activePosterIndex, setActivePosterIndex] = useState(0);
 
   useEffect(() => {
@@ -306,53 +305,50 @@ export default function Offerings(props: Props) {
           <div>
             <ul className="intensive-offerings-list">
               <li className="transition-text">
-                <strong>Consultation 30 minutes</strong> - Our Goodness of Fit
-                consultation aims to assess whether the Intensive is the optimal
-                approach for your current journey.
+                <strong>1. Complimentary Consultation (30 Minutes)</strong>
+                <br />
+                Your healing journey begins with a complimentary consultation
+                designed to help us connect and determine whether an EMDR
+                Intensive is the right fit. Discussion includes current
+                challenges, healing goals, how EMDR and integrative approaches
+                can help, and questions about the intensive process. If not a
+                good fit, referrals and alternative recommendations will be
+                provided.
               </li>
               <li className="transition-text">
-                <strong>EMDR Client Workbook</strong> - This workbook features
-                assessments and activities designed to ready you for the
-                Intensive, enabling you to track progress on your treatment
-                goals throughout our sessions. This tool empowers you to
-                maintain a comprehensive record of your journey before, during,
-                and after our sessions.
+                <strong>2. Pre-Intensive Session (60 Minutes)</strong>
+                <br />
+                Clarify goals, review the Intensive Workbook, identify treatment
+                targets, increase awareness of nervous system responses, gather
+                background information, and develop your Intensive plan. The
+                workbook supports emotional preparation, reflection, and
+                progress tracking.
               </li>
               <li className="transition-text">
-                <strong>Intensive Intake 60 minutes</strong> - In this 60-minute
-                session, we establish the objectives of the Intensive and lay
-                the groundwork for the journey ahead. Together, we'll pinpoint
-                the sources of discomfort—be it painful experiences, beliefs,
-                emotions, bodily sensations, or images—that you aim to address.
+                <strong>3. Day of Intensive (4–6 Hours)</strong>
+                <br />
+                4–6 hours of customized therapeutic work that may include EMDR
+                therapy and trauma processing, nervous system regulation,
+                holistic and integrative healing modalities, and reflection,
+                grounding, and integration.
               </li>
               <li className="transition-text">
-                <strong>Customized EMDR Intensive Schedule</strong> - Intensives
-                typically span from 1 to 5 days, with sessions lasting 4 to 8
-                hours each. Our focus during these sessions will be on
-                addressing the stressful experiences identified during the
-                initial 60-minute Intensive Intake session. Techniques such as
-                EMDR, Resourcing Activities, and Holistic Practices will be
-                integrated.
+                <strong>4. Integration Session (60 Minutes)</strong>
+                <br />
+                Reflect on shifts and insights, identify ongoing needs,
+                strengthen integration, and discuss recommendations and next
+                steps.
               </li>
+            </ul>
+            <ul className="intensive-offerings-list">
+              <li className="transition-text">Customized based on individual goals</li>
+              <li className="transition-text">Available in Augusta and Kennesaw</li>
+              <li className="transition-text">Private Pay Service</li>
+              <li className="transition-text">Typically not covered by insurance</li>
+              <li className="transition-text">CareCredit available</li>
               <li className="transition-text">
-                <strong>Post Intensive Follow Up/Next Steps 45 minutes</strong>{" "}
-                - This 45-minute session is dedicated to exploring your
-                experience, reflecting on any changes you've observed within
-                yourself or new insights you may have gained. We'll also discuss
-                the next steps for your journey.
-                <ul>
-                  <li className="transition-text">
-                    <strong>
-                      Not an insurance covered service. Care Credit optional
-                      payment source
-                    </strong>
-                  </li>
-                </ul>
-              </li>
-              <li className="transition-text">
-                <strong>Pricing begins at $1000</strong> and is adjusted based
-                on your Customized EMDR Intensive Schedule/Needs; Care Credit
-                optional payment source.
+                <strong>Pricing begins at $1,170</strong> and varies based on
+                customized intensive plan
               </li>
             </ul>
             <div
@@ -414,72 +410,11 @@ export default function Offerings(props: Props) {
             ></iframe>
           </div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h2 className="transition-text heading">EMDR Group Intensives</h2>
-          <p className="transition-text">
-            <a
-              className="emdr-link"
-              href="https://youtu.be/n2fQ8xC4U10"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              EMDR Intensive Groups
-            </a>{" "}
-            are NOT your typical groups. There is no sharing required, internal
-            processing occurs, and rapid intervention to support those who have
-            experienced acute trauma. EMDR does not make you forget what has
-            happened, it will help you decrease the intensity surrounding your
-            flashbacks, limiting beliefs, and overwhelming feelings. EMDR group
-            therapy can be provided within your organization as well. Feel free
-            to schedule a consult today!!
-          </p>
-          <div className="free-consult-container">
-            <button
-              type="button"
-              className="free-consult-button"
-              onClick={() => setGroupModalOpen(true)}
-            >
-              Group Intensive Info
-            </button>
-            <button
-              type="button"
-              className="free-consult-button"
-              onClick={() => setConsultModalVis(!consultModalVis)}
-            >
-              Learn if an Intensive is Right for You
-            </button>
-            <div
-              id="id01"
-              className={
-                consultModalVis ? "consult-modal" : "consult-modal-none"
-              }
-            >
-              <div className="consult-modal-content">
-                <div className="consult-container">
-                  <span
-                    onClick={() => setConsultModalVis(false)}
-                    className="w3-button w3-display-topright"
-                  >
-                    &times;
-                  </span>
-                  <LeadForm />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <Row justify="space-around" align="middle">
           <CardWithRightImage
             heroTitle="Clinician Consult Corner"
             imageSrc={Consulting}
-            title="Group Clinical Supervision"
+            title="Group or Individual Clinical Supervision"
             content={ClinicalConsultCorner}
           />
         </Row>
@@ -552,30 +487,6 @@ export default function Offerings(props: Props) {
         </div>
         {/* </Col> */}
         {/* </Row> */}
-      </div>
-      <div className="coming-soon-container">
-        <h3 className="transition-text">
-          Stay Tuned....PAUSE Day Retreat Series Coming Soon
-        </h3>
-      </div>
-      <div
-        id="groupIntensiveModal"
-        className="modal"
-        style={{ display: groupModalOpen ? "block" : "none" }}
-      >
-        <div className="modal-content">
-          <span className="close" onClick={() => setGroupModalOpen(false)}>
-            &times;
-          </span>
-          <video className="modal-video" autoPlay={true} loop muted>
-            <source
-              src={
-                MEDIA.groupIntensiveVideo
-              }
-              type="video/mp4"
-            />
-          </video>
-        </div>
       </div>
     </div>
   );

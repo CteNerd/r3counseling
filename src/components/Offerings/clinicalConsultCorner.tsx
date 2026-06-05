@@ -1,16 +1,24 @@
 const ClinicalConsultCorner = (
   <div>
     <p>
-      Group clinical supervision is for associate licensed clinicians,
-      therapists seeking trauma-focused development, and providers who want to
-      strengthen EMDR-informed and integrative treatment planning. R3 offers a
-      structured space to build your clinical identity, deepen case
-      conceptualization skills, and gain practical support for private practice
-      or agency work.
+      Clinical supervision is for therapists on the road to licensure to have a
+      safe, collaborative, structured space to build your clinical identity,
+      deepen case conceptualization skills, build confidence integrating
+      modalities, and gain practical support across a variety of clinical
+      settings.
       <br />
+      <br />
+      <strong style={{ color: "#839abf" }}>Individual Setting</strong>
       <br />
       <strong style={{ color: "#839abf" }}>
-        Duration: 3 Hour; Fee: $145 Group Setting {<br />}Meets Once Monthly
+        Duration: 1 Hour; Fee: $85
+      </strong>
+      <br />
+      <br />
+      <strong style={{ color: "#839abf" }}>Group Setting</strong>
+      <br />
+      <strong style={{ color: "#839abf" }}>
+        Duration: 3 Hours; Fee: $145 {<br />}Meets Once Monthly
       </strong>
       <br />
       <br />
@@ -22,7 +30,7 @@ const ClinicalConsultCorner = (
       <br />
       <br />
       <strong style={{ color: "#839abf" }}>
-        Duration: 1 Hour; Fee: $75 Individual Setting
+        Duration: 1 Hour; Fee: $85 Individual Setting
       </strong>
     </p>
   </div>

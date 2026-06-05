@@ -9,7 +9,7 @@ const IndividualTherapy = (
       <br />
       <br />
       <strong style={{ color: "#839abf" }}>
-        Duration: 1 Hour; Private Pay Fee: $175/$125 (Sliding Scale Available)
+        Duration: 1 Hour; Private Pay Fee: $195/$150 (Sliding Scale Available)
       </strong>
     </p>
   </div>
