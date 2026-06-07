@@ -4,6 +4,7 @@ import "./home.css";
 import ImageCarousel from "../../components/imageCarousel/imageCarousel";
 import PshycologyTodayLogo from "../../assets/logos/psychologytoday-13.png";
 import CareCreditLogo from "../../assets/logos/CareCredit.png";
+import BiBLogo from "../../assets/images/2026/BiB_2025_website-banner-e1745076206216.png";
 import { ImageMeta } from "../../types/models";
 import { MEDIA } from "../../constants/media";
 
@@ -141,13 +142,13 @@ export default function Home() {
       </section>
 
       <section className="milestone-section banner" aria-label="Practice Milestone">
-        <div className="banner-container">
-          <img
-            className="banner-img milestone-logo"
-            src={MEDIA.logoSocial}
-            alt="R3 Counseling logo"
-          />
+        <div className="milestone-banner-container">
           <p className="milestone-title">Practice Leadership Milestone</p>
+          <img
+            className="bib-banner-img"
+            src={BiBLogo}
+            alt="Goldman Sachs One Million Black Women — Black in Business: Your time is now. Seize it."
+          />
         </div>
       </section>
       

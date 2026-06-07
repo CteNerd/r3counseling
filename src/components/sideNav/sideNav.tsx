@@ -19,7 +19,6 @@ export default function SideNav() {
       <Link to="/events" onClick={closeNav}>Events</Link>
       <Link to="/contact" onClick={closeNav}>Contact</Link>
       <Link to="/ready-to-release" onClick={closeNav}>Ready to Release</Link>
-      <Link to="/terms" onClick={closeNav}>Terms</Link>
       <Link to="/retreat" onClick={closeNav}>Retreat</Link>
       <Link to="/resources" onClick={closeNav}>Resources</Link>
       <Link to="/referral-partners" onClick={closeNav}>Referral Partners</Link>

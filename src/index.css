@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #2d4545;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

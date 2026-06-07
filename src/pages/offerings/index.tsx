@@ -294,9 +294,7 @@ export default function Offerings(props: Props) {
                 <br />
                 Clarify goals, review the Intensive Workbook, identify treatment
                 targets, increase awareness of nervous system responses, gather
-                background information, and develop your Intensive plan. The
-                workbook supports emotional preparation, reflection, and
-                progress tracking.
+                background information, and develop your Intensive plan.
               </li>
               <li className="transition-text">
                 <strong>3. Day of Intensive (4–6 Hours)</strong>
