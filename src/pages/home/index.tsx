@@ -142,20 +142,13 @@ export default function Home() {
       </section>
 
       <section className="milestone-section banner" aria-label="Practice Milestone">
-        <div className="banner-container milestone-banner-container">
+        <div className="milestone-banner-container">
           <p className="milestone-title">Practice Leadership Milestone</p>
-          <div className="milestone-logos">
-            <img
-              className="banner-img milestone-logo"
-              src={MEDIA.logoSocial}
-              alt="R3 Counseling logo"
-            />
-            <img
-              className="banner-img bib-logo"
-              src={BiBLogo}
-              alt="Goldman Sachs One Million Black Women in Business"
-            />
-          </div>
+          <img
+            className="bib-banner-img"
+            src={BiBLogo}
+            alt="Goldman Sachs One Million Black Women — Black in Business: Your time is now. Seize it."
+          />
         </div>
       </section>
       

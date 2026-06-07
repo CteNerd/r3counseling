@@ -379,15 +379,15 @@ function App() {
           <Menu.Item key="contact">
             <Link to="/contact">Contact</Link>
           </Menu.Item>
+          <Menu.Item key="ready-to-release">
+            <Link to="/ready-to-release">Ready to Release</Link>
+          </Menu.Item>
           <Menu.Item key="img">
             <img
               className="menu-img"
               src={MEDIA.logoTransparent}
               alt="R3 Counseling Logo - Release Restore Redefine"
             />
-          </Menu.Item>
-          <Menu.Item key="ready-to-release">
-            <Link to="/ready-to-release">Ready to Release</Link>
           </Menu.Item>
           <Menu.Item key="retreat">
             <Link to="/retreat">Retreat</Link>
