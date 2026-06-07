@@ -45,6 +45,14 @@
   border: 0;
 }
 
+.cta-section {
+  text-align: center;
+}
+
+.cta-section .hero-cta-row {
+  justify-content: center;
+}
+
 /* Semantic sections styling */
 section {
   margin-bottom: 2rem;

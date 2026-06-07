@@ -389,9 +389,6 @@ function App() {
           <Menu.Item key="ready-to-release">
             <Link to="/ready-to-release">Ready to Release</Link>
           </Menu.Item>
-          <Menu.Item key="terms">
-            <Link to="/terms">Terms</Link>
-          </Menu.Item>
           <Menu.Item key="retreat">
             <Link to="/retreat">Retreat</Link>
           </Menu.Item>
@@ -446,6 +443,9 @@ function App() {
                 <Contact />
               </Route>
               <Route path="/ready-to-release">
+                <ReadyToRelease />
+              </Route>
+              <Route path="/terms">
                 <ReadyToRelease />
               </Route>
               <Route path="/appointment-request">

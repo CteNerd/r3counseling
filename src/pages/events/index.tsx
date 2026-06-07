@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import BipocNeurodivergent from "../../assets/images/2026/bipoc-neurodivergent-support-group.png";
+import QtbipocAdhd2026 from "../../assets/images/2026/qtbipoc-adhd-support-group-2026.png";
 import SelfLoveExperience2026 from "../../assets/images/2026/IMG_0201.jpeg";
 import HolidaySeasonSupportSpace from "../../assets/images/2025/HolidaySeasonSupportSpace.png";
 import PoliticalClimateSupportSpace from "../../assets/images/2025/PoliticalClimateSupportSpace.png";
@@ -110,6 +112,83 @@ export default function Events() {
     <div className="events-container">
       <h1>Events</h1>
       <div className="events-row">
+        <article
+          className="events-col"
+          onClick={() =>
+            openModal(
+              BipocNeurodivergent,
+              "BIPOC Neurodivergent Support Group virtual event flyer – virtual, 18+, open to anywhere. Sundays 2:00–3:15 PM EDT, July 12 – September 20. $25–$75 sliding scale, pay what you can."
+            )
+          }
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              openModal(
+                BipocNeurodivergent,
+                "BIPOC Neurodivergent Support Group virtual event flyer – virtual, 18+, open to anywhere. Sundays 2:00–3:15 PM EDT, July 12 – September 20. $25–$75 sliding scale, pay what you can."
+              );
+            }
+          }}
+          tabIndex={0}
+          role="button"
+          aria-label="BIPOC Neurodivergent Support Group – virtual, Sundays 2–3:15pm EDT, July 12 – September 20. Press Enter or Space to view full flyer."
+          itemScope
+          itemType="https://schema.org/Event"
+        >
+          <meta itemProp="name" content="BIPOC Neurodivergent Support Group" />
+          <meta itemProp="startDate" content="2026-07-12T14:00:00-04:00" />
+          <meta itemProp="endDate" content="2026-09-20T15:15:00-04:00" />
+          <img
+            src={BipocNeurodivergent}
+            alt="BIPOC Neurodivergent Support Group virtual event flyer – virtual, 18+, open to anywhere. Sundays 2:00–3:15 PM EDT, July 12 – September 20. $25–$75 sliding scale, pay what you can."
+            itemProp="image"
+          />
+          <div className="event-details">
+            <p><strong>BIPOC Neurodivergent Support Group</strong></p>
+            <p>Virtual · 18+ · Open to Anywhere</p>
+            <p>Sundays 2:00–3:15 PM EDT · July 12 – September 20</p>
+            <p>$25–$75 Sliding Scale · Pay What You Can</p>
+          </div>
+        </article>
+        <article
+          className="events-col"
+          onClick={() =>
+            openModal(
+              QtbipocAdhd2026,
+              "QTBIPOC ADHD Support Group – new session, virtual. Facilitated by Nicole Thoms Fuentes, Associate Licensed Therapist. Wednesdays 6:30–7:45 PM EDT, bi-weekly, August 5 – October 14. $25–$75 per meeting, pay what you can. Open to QTBIPOC adults 18+, all states."
+            )
+          }
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              openModal(
+                QtbipocAdhd2026,
+                "QTBIPOC ADHD Support Group – new session, virtual. Facilitated by Nicole Thoms Fuentes, Associate Licensed Therapist. Wednesdays 6:30–7:45 PM EDT, bi-weekly, August 5 – October 14. $25–$75 per meeting, pay what you can. Open to QTBIPOC adults 18+, all states."
+              );
+            }
+          }}
+          tabIndex={0}
+          role="button"
+          aria-label="QTBIPOC ADHD Support Group – new session, virtual, Wednesdays 6:30–7:45pm EDT, bi-weekly, August 5 – October 14, facilitated by Nicole Thoms Fuentes. Press Enter or Space to view full flyer."
+          itemScope
+          itemType="https://schema.org/Event"
+        >
+          <meta itemProp="name" content="QTBIPOC ADHD Support Group" />
+          <meta itemProp="startDate" content="2026-08-05T18:30:00-04:00" />
+          <meta itemProp="endDate" content="2026-10-14T19:45:00-04:00" />
+          <img
+            src={QtbipocAdhd2026}
+            alt="QTBIPOC ADHD Support Group – new session, virtual. Facilitated by Nicole Thoms Fuentes, Associate Licensed Therapist. Wednesdays 6:30–7:45 PM EDT, bi-weekly, August 5 – October 14. $25–$75 per meeting, pay what you can."
+            itemProp="image"
+          />
+          <div className="event-details">
+            <p><strong>QTBIPOC ADHD Support Group</strong></p>
+            <p>Virtual · 18+ · Open to Anywhere</p>
+            <p>Wednesdays 6:30–7:45 PM EDT · Bi-weekly · Aug 5 – Oct 14</p>
+            <p>Facilitated by Nicole Thoms Fuentes</p>
+            <p>$25–$75 Per Meeting · Pay What You Can</p>
+          </div>
+        </article>
         <article
           className="events-col"
           onClick={() =>
