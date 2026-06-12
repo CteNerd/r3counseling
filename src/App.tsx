@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
   Link,
   useLocation,
 } from "react-router-dom";
@@ -10,7 +11,6 @@ import "./App.css";
 import { Menu } from "antd";
 import Home from "./pages/home";
 import About from "./pages/about";
-import Terms from "./pages/terms";
 import Offerings from "./pages/offerings";
 import ReadyToRelease from "./pages/ready-to-release";
 import AppointmentRequest from "./pages/appointment-request";
@@ -428,7 +428,7 @@ function App() {
                 <About />
               </Route>
               <Route path="/terms">
-                <Terms />
+                <Redirect to="/ready-to-release" />
               </Route>
               <Route path="/resources">
                 <Resources isMobile={isMobile} />
@@ -443,9 +443,6 @@ function App() {
                 <Contact />
               </Route>
               <Route path="/ready-to-release">
-                <ReadyToRelease />
-              </Route>
-              <Route path="/terms">
                 <ReadyToRelease />
               </Route>
               <Route path="/appointment-request">
