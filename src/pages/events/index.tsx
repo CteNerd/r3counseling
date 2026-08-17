@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import NatureAndNurture2026 from "../../assets/images/2026/NatureAndNurture2026.png";
 import BipocNeurodivergent from "../../assets/images/2026/bipoc-neurodivergent-support-group.png";
 import QtbipocAdhd2026 from "../../assets/images/2026/qtbipoc-adhd-support-group-2026.png";
 import SelfLoveExperience2026 from "../../assets/images/2026/IMG_0201.jpeg";
@@ -13,6 +14,9 @@ import "./events.css";
 
 const QTBIPOC_ADHD_IMAGE_URL =
   "https://github.com/user-attachments/assets/c6cf9222-94b7-4157-aa3b-8b0860d5549a";
+
+const NatureAndNurture2026Description =
+  "Nature & Nurture wellness event flyer – breathe, move, belong. In-person at Columbia County Amphitheater, Saturday, September 12, 2026, 9:30 AM. Free morning of breathwork, gentle movement, and sound healing in nature. Open to all, RSVP required.";
 
 export default function Events() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -112,6 +116,32 @@ export default function Events() {
     <div className="events-container">
       <h1>Events</h1>
       <div className="events-row">
+        <article
+          className="events-col"
+          onClick={() =>
+            openModal(NatureAndNurture2026, NatureAndNurture2026Description)
+          }
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              openModal(NatureAndNurture2026, NatureAndNurture2026Description);
+            }
+          }}
+          tabIndex={0}
+          role="button"
+          aria-label="Nature & Nurture – in-person wellness event at Columbia County Amphitheater, September 12, 2026 at 9:30 AM. Free, open to all. Press Enter or Space to view full flyer."
+          itemScope
+          itemType="https://schema.org/Event"
+        >
+          <meta itemProp="name" content="Nature & Nurture" />
+          <meta itemProp="startDate" content="2026-09-12T09:30:00-04:00" />
+          <meta itemProp="endDate" content="2026-09-12T11:00:00-04:00" />
+          <img
+            src={NatureAndNurture2026}
+            alt={NatureAndNurture2026Description}
+            itemProp="image"
+          />
+        </article>
         <article
           className="events-col"
           onClick={() =>
