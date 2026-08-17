@@ -9,8 +9,8 @@ Use this skill whenever a new event flyer needs to be added to the public Events
 
 ## Workflow
 
-1. **Get the flyer image on disk.** Chat-attached images cannot be saved directly by the agent — ask the user to save/drag the file into the repo (e.g. `src/assets/images/2026/`) if it isn't already there. Use `file_search` to confirm the exact path before continuing.
-2. **Rename the file** to a filesystem-safe, descriptive name with no spaces or special characters (e.g. `NatureAndNurture2026.png`), matching the style of existing files in that folder.
+1. **Get the flyer image on disk.** Chat-attached images cannot be saved directly by the agent — ask the user to save/drag the file into the repo (e.g. `src/assets/images/2026/`) if it isn't already there. Search the workspace by filename/glob to confirm the exact path before continuing.
+2. **Rename the file** to a filesystem-safe, kebab-case name with no spaces or special characters (e.g. `nature-nurture-2026.png`), matching the naming style of the most recently added files in that folder (`bipoc-neurodivergent-support-group.png`, `qtbipoc-adhd-support-group-2026.png`).
 3. **Read [src/pages/events/index.tsx](../../../src/pages/events/index.tsx) first** to see the current top-of-file imports and the most recently added event `<article>` block — always copy the newest pattern, not an older one.
 4. **Add the import** for the new image near the other `src/assets/images/2026/...` imports.
 5. **Add a description constant** (e.g. `EventNameDescription`) above `export default function Events()` holding the shared alt/aria/modal text. Do not inline the same string in both `onClick` and `onKeyDown` — that duplication was called out in a prior PR review; always reuse the constant.
@@ -25,7 +25,7 @@ Use this skill whenever a new event flyer needs to be added to the public Events
    - Place newest/upcoming events near the top of `events-row`, matching current ordering (most current events first).
 7. **Older, already-past one-off events** use a simpler plain `<div className="events-col">` without schema markup — only use the full `<article>`/schema pattern for current or upcoming events.
 8. **Validate**: run `npm run build` from the repo root and confirm no new TypeScript/ESLint errors in `src/pages/events/index.tsx`.
-9. **Clean up stray duplicate images** left at the repo root from the attachment/rename step — confirm with `grep_search` that the old filename isn't referenced anywhere before deleting.
+9. **Clean up stray duplicate images** left at the repo root from the attachment/rename step — confirm with a text/regex search that the old filename isn't referenced anywhere before deleting.
 
 ## Branch / PR Convention
 
