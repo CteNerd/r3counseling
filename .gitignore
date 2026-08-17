@@ -11,6 +11,9 @@
 # production
 /build
 
+# local working notes, not part of the shipped site
+/notes
+
 # misc
 .DS_Store
 .env
