@@ -6,9 +6,9 @@
 
 .bio-image {
   width: 100%;
-  height: auto;
-  max-height: 500px;
+  height: 400px;
   object-fit: cover;
+  object-position: top;
   display: block;
 }
 
@@ -23,6 +23,22 @@
   padding: 15px;
   overflow-y: auto;
   text-align: left;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.bio-content-overlay.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .bio-image-container:hover .bio-content-overlay,
+  .bio-image-container:focus-within .bio-content-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
 .bio-content-overlay p {
@@ -36,6 +52,6 @@
 
 @media (max-width: 576px) {
   .bio-image {
-    max-height: 350px;
+    height: 350px;
   }
 }
