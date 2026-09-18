@@ -44,8 +44,11 @@ const ProfessionalBio: React.FC<ProfessionalBioProps> = ({
             aria-label={`Show biography for ${title}`}
             aria-expanded={showBio}
             onClick={() => setShowBio((prev) => !prev)}
-            onFocus={() => setShowBio(true)}
-            onBlur={() => setShowBio(false)}
+            onBlur={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget as Node)) {
+                setShowBio(false);
+              }
+            }}
             onKeyDown={(event) => {
               if (event.key === "Enter" || event.key === " ") {
                 event.preventDefault();
@@ -62,6 +65,7 @@ const ProfessionalBio: React.FC<ProfessionalBioProps> = ({
             />
             <div
               className={`bio-content-overlay${showBio ? " is-visible" : ""}`}
+              aria-hidden={!showBio}
               role="region"
               aria-label={`${title}'s biography`}
             >
