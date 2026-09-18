@@ -71,7 +71,8 @@ export default function Terms() {
             <ul>
               <li>Individual Therapy $195.00 for a 55 minute Psychotherapy Session with Tiffany Luke</li>
               <li>Individual Therapy $175.00 for a 55 minute Psychotherapy Session with Niya Burnette</li>
-              <li>Individual Therapy $150.00 for a 50 minute Psychotherapy Session with Nicole Thoms Fuentes under Clinical Supervision with Tiffany Luke</li>
+              <li>Individual Therapy $150.00 for a 50 minute Psychotherapy Session with Nicole Thoms Fuentes under Clinical Supervision with Tiffany Luke — Equity Scale Available</li>
+              <li>Individual Therapy $150.00 for a 50 minute Psychotherapy Session with Tiffany Cook-King under Clinical Supervision with Dr. Kendra Roberson — Equity Scale Available</li>
               <li>
                 <a
                   onClick={() => {
@@ -164,7 +165,7 @@ export default function Terms() {
         <p>
           In the event that you do not attend your scheduled therapy appointment
           or you failed to reschedule/cancel 24 hours prior to scheduled
-          appointment, you will be automatically charged a $75.00 fee with Tiffany or Niya as a clinician; $150.00 with Nicole as a clinician.
+          appointment, you will be automatically charged a $75.00 fee with Tiffany Luke or Niya as a clinician; $150.00 with Nicole or Tiffany Cook-King as a clinician.
         </p>
       </section>
       <div
