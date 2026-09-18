@@ -87,8 +87,8 @@ export default function AboutMe() {
     <div style={{ width: "100%", paddingTop: "20px" }}>
       <h1>About</h1>
 
-      <Row gutter={[24, 16]} justify="center">
-        <Col className="gutter-row" xs={24} md={12} lg={8}>
+      <Row gutter={[24, 16]} justify="center" align="stretch">
+        <Col className="gutter-row" xs={24} sm={12} lg={6} style={{ display: "flex" }}>
           <ProfessionalBio
             title="Tiffany Luke"
             description={
@@ -109,7 +109,7 @@ export default function AboutMe() {
             content2={TiffanyProfessionalJourney}
           />
         </Col>
-        <Col className="gutter-row" xs={24} md={12} lg={8}>
+        <Col className="gutter-row" xs={24} sm={12} lg={6} style={{ display: "flex" }}>
           <ProfessionalBio
             title="Nicole Thoms Fuentes"
             description={
@@ -120,11 +120,12 @@ export default function AboutMe() {
               </>
             }
             imageSrc={Nicole}
+            imagePosition="center 60%"
             content={NicoleBioContent}
             content2={NicoleProfessionalJourney}
           />
         </Col>
-        <Col className="gutter-row col-adjust" xs={24} md={12} lg={8}>
+        <Col className="gutter-row col-adjust" xs={24} sm={12} lg={6} style={{ display: "flex" }}>
           <ProfessionalBio
             title="Niya Burnette"
             description={
@@ -141,7 +142,7 @@ export default function AboutMe() {
             content2={NiyaProfessionalJourney}
           />
         </Col>
-        <Col className="gutter-row" xs={24} md={8}>
+        <Col className="gutter-row" xs={24} sm={12} lg={6} style={{ display: "flex" }}>
           <ProfessionalBio
             title="Tiffany Cook-King"
             description={
