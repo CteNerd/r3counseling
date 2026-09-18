@@ -63,6 +63,7 @@ export default function ReadyToRelease() {
           <li>Individual Therapy $195.00 — 55 min session with Tiffany Luke</li>
           <li>Individual Therapy $175.00 — 55 min session with Niya Burnette</li>
           <li>Individual Therapy $150.00 — 50 min session with Nicole Thoms Fuentes (under clinical supervision of Tiffany Luke)</li>
+          <li>Individual Therapy $150.00 — 50 min session with Tiffany Cook-King (under clinical supervision of Dr. Kendra Roberson) — Equity Scale Available</li>
         </ul>
       </section>
 
