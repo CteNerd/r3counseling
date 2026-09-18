@@ -71,7 +71,7 @@ export default function Terms() {
             <ul>
               <li>Individual Therapy $195.00 for a 55 minute Psychotherapy Session with Tiffany Luke</li>
               <li>Individual Therapy $175.00 for a 55 minute Psychotherapy Session with Niya Burnette</li>
-              <li>Individual Therapy $150.00 for a 50 minute Psychotherapy Session with Nicole Thoms Fuentes under Clinical Supervision with Tiffany Luke</li>
+              <li>Individual Therapy $150.00 for a 50 minute Psychotherapy Session with Nicole Thoms Fuentes under Clinical Supervision with Tiffany Luke — Equity Scale Available</li>
               <li>Individual Therapy $150.00 for a 50 minute Psychotherapy Session with Tiffany Cook-King under Clinical Supervision with Dr. Kendra Roberson — Equity Scale Available</li>
               <li>
                 <a
