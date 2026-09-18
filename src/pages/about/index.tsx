@@ -11,7 +11,7 @@ import NicoleProfessionalJourney from "../../components/professionalBio/nicolePr
 import NiyaBioContent from "../../components/professionalBio/niyaBioContent";
 import NiyaProfessionalJourney from "../../components/professionalBio/niyaProfessionalJourney";
 import Niya from "../../assets/images/Niya-headShot.png";
-import TiffanyCookKing from "../../assets/images/Tiffany Cook-King - Profile Photo.png";
+import TiffanyCookKing from "../../assets/images/tiffany-cook-king-profile-photo.png";
 import TiffanyCookKingBioContent from "../../components/professionalBio/tiffanyCookKingBioContent";
 import TiffanyCookKingProfessionalJourney from "../../components/professionalBio/tiffanyCookKingProfessionalJourney";
 import { MEDIA } from "../../constants/media";
