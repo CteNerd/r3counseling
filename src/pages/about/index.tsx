@@ -42,7 +42,7 @@ export default function AboutMe() {
           "addressRegion": "GA"
         }
       }],
-      "employees": [
+      "employee": [
         {
           "@type": "Person",
           "name": "Tiffany Luke",

@@ -112,7 +112,7 @@ export default function ReadyToRelease() {
           In the event that you do not attend your scheduled therapy appointment
           or fail to reschedule/cancel at least 24 hours prior to your
           appointment, you will be charged a $75.00 fee (with Tiffany or Niya) or
-          $150.00 (with Nicole).
+          $150.00 (with Nicole or Tiffany Cook-King).
         </p>
       </section>
     </div>
