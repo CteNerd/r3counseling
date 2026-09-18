@@ -11,6 +11,9 @@ import NicoleProfessionalJourney from "../../components/professionalBio/nicolePr
 import NiyaBioContent from "../../components/professionalBio/niyaBioContent";
 import NiyaProfessionalJourney from "../../components/professionalBio/niyaProfessionalJourney";
 import Niya from "../../assets/images/Niya-headShot.png";
+import TiffanyCookKing from "../../assets/images/tiffany-cook-king-profile-photo.png";
+import TiffanyCookKingBioContent from "../../components/professionalBio/tiffanyCookKingBioContent";
+import TiffanyCookKingProfessionalJourney from "../../components/professionalBio/tiffanyCookKingProfessionalJourney";
 import { MEDIA } from "../../constants/media";
 
 export default function AboutMe() {
@@ -39,7 +42,7 @@ export default function AboutMe() {
           "addressRegion": "GA"
         }
       }],
-      "employees": [
+      "employee": [
         {
           "@type": "Person",
           "name": "Tiffany Luke",
@@ -58,6 +61,12 @@ export default function AboutMe() {
           "name": "Niya Burnette",
           "jobTitle": "Licensed Clinical Social Worker",
           "description": "Virtual therapy sessions available"
+        },
+        {
+          "@type": "Person",
+          "name": "Tiffany Cook-King",
+          "jobTitle": "Licensed Master Social Worker",
+          "description": "Accepting new clients under the clinical supervision of Dr. Kendra Roberson"
         }
       ]
     };
@@ -130,6 +139,22 @@ export default function AboutMe() {
             imageSrc={Niya}
             content={NiyaBioContent}
             content2={NiyaProfessionalJourney}
+          />
+        </Col>
+        <Col className="gutter-row" xs={24} md={8}>
+          <ProfessionalBio
+            title="Tiffany Cook-King"
+            description={
+              <>
+                Licensed Master Social Worker under the clinical supervision of
+                Dr. Kendra Roberson <br />
+                <br />
+                <strong>(ACCEPTING NEW CLIENTS)</strong>
+              </>
+            }
+            imageSrc={TiffanyCookKing}
+            content={TiffanyCookKingBioContent}
+            content2={TiffanyCookKingProfessionalJourney}
           />
         </Col>
       </Row>

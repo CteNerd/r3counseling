@@ -63,6 +63,7 @@ export default function ReadyToRelease() {
           <li>Individual Therapy $195.00 — 55 min session with Tiffany Luke</li>
           <li>Individual Therapy $175.00 — 55 min session with Niya Burnette</li>
           <li>Individual Therapy $150.00 — 50 min session with Nicole Thoms Fuentes (under clinical supervision of Tiffany Luke)</li>
+          <li>Individual Therapy $150.00 — 50 min session with Tiffany Cook-King (under clinical supervision of Dr. Kendra Roberson) — Equity Scale Available</li>
         </ul>
       </section>
 
@@ -111,7 +112,7 @@ export default function ReadyToRelease() {
           In the event that you do not attend your scheduled therapy appointment
           or fail to reschedule/cancel at least 24 hours prior to your
           appointment, you will be charged a $75.00 fee (with Tiffany or Niya) or
-          $150.00 (with Nicole).
+          $150.00 (with Nicole or Tiffany Cook-King).
         </p>
       </section>
     </div>

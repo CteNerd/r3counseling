@@ -32,15 +32,34 @@ const ProfessionalBio: React.FC<ProfessionalBioProps> = ({
           hoverable
           style={{ maxWidth: 350, backgroundColor: "#e4b099" }}
           cover={
-            <div className="bio-image-container">
-              <img 
-                alt={`Professional photo of ${title}, therapist at R3 Counseling`} 
-                src={imageSrc} 
+            <div
+              className="bio-image-container"
+              role="button"
+              tabIndex={0}
+              aria-label={`Show biography for ${title}`}
+              aria-expanded={showBio}
+              onClick={() => setShowBio(true)}
+              onFocus={() => setShowBio(true)}
+              onBlur={() => setShowBio(false)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  setShowBio(true);
+                }
+              }}
+            >
+              <img
+                alt={`${title}, therapist at R3 Counseling`}
+                src={imageSrc}
                 className="bio-image"
-                loading="lazy" 
+                loading="lazy"
               />
               {showBio && (
-                <div className="bio-content-overlay" role="region" aria-label={`${title}'s biography`}>
+                <div
+                  className="bio-content-overlay"
+                  role="region"
+                  aria-label={`${title}'s biography`}
+                >
                   {content}
                 </div>
               )}
