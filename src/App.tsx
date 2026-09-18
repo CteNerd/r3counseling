@@ -43,7 +43,7 @@ const ROUTE_SEO: Record<string, RouteSeoConfig> = {
   "/": {
     title: "Release Restore Redefine Counseling | Martinez & Kennesaw, GA",
     description:
-      "R3 Counseling helps adults who feel stuck despite therapy move forward through EMDR intensives, trauma-focused care, and mind-body integration in Martinez and Kennesaw, Georgia.",
+      "Release Restore Redefine Counseling provides in-person or virtual trauma-informed therapy, EMDR intensives, wellness offerings, and retreat support, serving Martinez, Kennesaw, and metro Atlanta, Georgia.",
   },
   "/about": {
     title: "About | Release Restore Redefine Counseling",
