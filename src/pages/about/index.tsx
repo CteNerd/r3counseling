@@ -79,7 +79,7 @@ export default function AboutMe() {
       <h1>About</h1>
 
       <Row gutter={[24, 16]} justify="center">
-        <Col className="gutter-row" xs={24} md={8}>
+        <Col className="gutter-row" xs={24} md={12} lg={8}>
           <ProfessionalBio
             title="Tiffany Luke"
             description={
@@ -100,7 +100,7 @@ export default function AboutMe() {
             content2={TiffanyProfessionalJourney}
           />
         </Col>
-        <Col className="gutter-row" xs={24} md={8}>
+        <Col className="gutter-row" xs={24} md={12} lg={8}>
           <ProfessionalBio
             title="Nicole Thoms Fuentes"
             description={
@@ -115,7 +115,7 @@ export default function AboutMe() {
             content2={NicoleProfessionalJourney}
           />
         </Col>
-        <Col className="gutter-row col-adjust" xs={24} md={8}>
+        <Col className="gutter-row col-adjust" xs={24} md={12} lg={8}>
           <ProfessionalBio
             title="Niya Burnette"
             description={
