@@ -18,7 +18,8 @@ const TiffanyCookKingBioContent = (
       relationships, and emotional well-being. I also have a growing focus on
       the intersection of autism and hormonal transitions, including PMDD and
       menopause, and how these changes can intensify sensory, emotional, and
-      cognitive experiences.
+      cognitive experiences. In addition, I support neurodivergent couples
+      navigating the ebbs and flows of their relationship.
       <br />
       <br />
       As a Black, queer therapist who is autistic and has ADHD, I understand
