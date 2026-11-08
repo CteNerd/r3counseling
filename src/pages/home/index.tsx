@@ -28,27 +28,16 @@ export default function Home() {
     const homeSchema = {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Release Restore Redefine Counseling - Mental Health Services in Martinez and Kennesaw, GA",
-      "description": "Professional counseling services offering EMDR therapy, holistic healing, and wellness retreats in Martinez and Kennesaw, Georgia.",
+      "name": "Release Restore Redefine Counseling - Mental Health Services in Kennesaw, GA",
+      "description": "Professional counseling services offering in-person care in Kennesaw and virtual therapy across Georgia.",
       "url": "https://r3counseling.com/",
       "mainEntity": {
         "@type": "ProfessionalService",
         "name": "Release Restore Redefine Counseling",
         "image": MEDIA.logoSocial,
         "telephone": "(706) 750-8906",
-        "areaServed": ["Martinez, GA", "Kennesaw, GA"],
+        "areaServed": ["Kennesaw, GA", "Georgia"],
         "location": [
-          {
-            "@type": "Place",
-            "name": "R3 Counseling Martinez Office",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "4210 Columbia Rd",
-              "addressLocality": "Martinez",
-              "addressRegion": "GA",
-              "postalCode": "30907"
-            }
-          },
           {
             "@type": "Place",
             "name": "R3 Counseling Kennesaw Office",

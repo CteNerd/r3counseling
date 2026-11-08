@@ -41,9 +41,9 @@ type RouteSeoConfig = {
 
 const ROUTE_SEO: Record<string, RouteSeoConfig> = {
   "/": {
-    title: "Release Restore Redefine Counseling | Martinez & Kennesaw, GA",
+    title: "Release Restore Redefine Counseling | Kennesaw, GA",
     description:
-      "Release Restore Redefine Counseling provides in-person or virtual trauma-informed therapy, EMDR intensives, wellness offerings, and retreat support, serving Martinez, Kennesaw, and metro Atlanta, Georgia.",
+      "Release Restore Redefine Counseling provides in-person trauma-informed therapy in Kennesaw and virtual services across Georgia, including EMDR intensives, wellness offerings, and retreat support.",
   },
   "/about": {
     title: "About | Release Restore Redefine Counseling",
@@ -51,7 +51,7 @@ const ROUTE_SEO: Record<string, RouteSeoConfig> = {
       "Meet the Release Restore Redefine Counseling team and learn about our trauma-informed, culturally responsive care approach.",
   },
   "/offerings": {
-    title: "Offerings | Release Restore Redefine Counseling | Martinez & Kennesaw, GA",
+    title: "Offerings | Release Restore Redefine Counseling | Kennesaw, GA",
     description:
       "Explore EMDR intensives, trauma-focused supervision, community wellness, and integrative therapy services at R3 Counseling.",
   },
@@ -61,9 +61,9 @@ const ROUTE_SEO: Record<string, RouteSeoConfig> = {
       "Discover upcoming support groups, wellness gatherings, and community events hosted by Release Restore Redefine Counseling.",
   },
   "/contact": {
-    title: "Contact | Release Restore Redefine Counseling | Martinez & Kennesaw, GA",
+    title: "Contact | Release Restore Redefine Counseling | Kennesaw, GA",
     description:
-      "Contact Release Restore Redefine Counseling in Martinez and Kennesaw, Georgia to request services, ask questions, and begin your healing journey.",
+      "Contact Release Restore Redefine Counseling in Kennesaw, Georgia to request in-person or virtual services, ask questions, and begin your healing journey.",
   },
   "/resources": {
     title: "Resources | Release Restore Redefine Counseling",
@@ -478,15 +478,6 @@ function App() {
               <span className="visually-hidden" itemProp="name">Release Restore Redefine Counseling</span>
               <a
                 className="footer-link"
-                href="https://www.google.com/maps/place/4210+Columbia+Rd,+Augusta,+GA+30907/@33.5060819,-82.1193749,17z/data=!3m1!4b1!4m5!3m4!1s0x88f9d370a85e0bed:0xedc6d4adfbf9f6be!8m2!3d33.5060819!4d-82.1171862"
-                itemProp="address" itemScope itemType="http://schema.org/PostalAddress"
-              >
-                <span itemProp="streetAddress">4210 Columbia Rd</span> | <span itemProp="addressLocality">Martinez</span>, <span itemProp="addressRegion">GA</span> <span itemProp="postalCode">30907</span>
-              </a>
-            </div>
-            <div className="footer-link-container" itemScope itemType="http://schema.org/LocalBusiness">
-              <a
-                className="footer-link"
                 href="https://maps.app.goo.gl/96Rjpxfnrt2vY1mFA"
                 itemProp="address" itemScope itemType="http://schema.org/PostalAddress"
               >
@@ -526,7 +517,7 @@ function App() {
               </a>
               <a
                 className="footer-link"
-                href="https://goo.gl/maps/vE8KskCmY6pJJwZp8"
+                href="https://maps.app.goo.gl/96Rjpxfnrt2vY1mFA"
                 itemProp="sameAs"
                 aria-label="Google Maps location"
               >

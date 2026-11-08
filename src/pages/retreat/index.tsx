@@ -29,12 +29,7 @@ export default function Retreat() {
       },
       "location": {
         "@type": "Place",
-        "name": "Retreat Location",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Martinez",
-          "addressRegion": "GA"
-        }
+        "name": "Retreat Location"
       }
     };
     

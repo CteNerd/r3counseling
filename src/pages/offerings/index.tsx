@@ -30,9 +30,9 @@ const privateWellnessRotatingImages = [
 
 const posterImages = [GirlsOnCourt, LaughingWomen, FlowerWomen];
 const offeringsTitle =
-  "Offerings | Release Restore Redefine Counseling | Martinez, GA";
+  "Offerings | Release Restore Redefine Counseling | Kennesaw, GA";
 const offeringsDescription =
-  "Explore EMDR intensives, trauma-focused supervision, community wellness, and integrative therapy services with Release Restore Redefine Counseling in Martinez, Georgia.";
+  "Explore EMDR intensives, trauma-focused supervision, community wellness, and integrative therapy services at R3 Counseling in Kennesaw, Georgia, or virtually across Georgia.";
 const offeringsUrl = "https://r3counseling.com/offerings";
 
 interface Props {
@@ -314,7 +314,7 @@ export default function Offerings(props: Props) {
             </ul>
             <ul className="intensive-offerings-list">
               <li className="transition-text">Customized based on individual goals</li>
-              <li className="transition-text">Available in Augusta and Kennesaw</li>
+              <li className="transition-text">In-person intensives available in Kennesaw; virtual services available across Georgia</li>
               <li className="transition-text">Private Pay Service</li>
               <li className="transition-text">Typically not covered by insurance</li>
               <li className="transition-text">CareCredit available</li>
