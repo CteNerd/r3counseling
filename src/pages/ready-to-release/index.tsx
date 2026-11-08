@@ -74,6 +74,64 @@ export default function ReadyToRelease() {
         </ul>
       </section>
 
+      <section
+        className="equity-scale-pricing"
+        aria-labelledby="equity-scale-pricing-heading"
+      >
+        <h4 id="equity-scale-pricing-heading">Equity Scale Pricing</h4>
+        <p>
+          We believe access to mental health care should honor both individual
+          circumstances and the sustainability of our services. Our equity
+          scale offers different pricing options based on financial capacity,
+          helping us create more opportunities for accessible care.
+        </p>
+        <table className="equity-scale-pricing-table">
+          <caption className="equity-scale-pricing-caption">
+            Equity scale pricing options
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Tier</th>
+              <th scope="col">Rate</th>
+              <th scope="col">Who It's For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Redistribution</th>
+              <td>
+                <strong>$175</strong>
+              </td>
+              <td>
+                For those who are able to give a little more, helping sustain
+                access for others.
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Full Cost</th>
+              <td>
+                <strong>$150</strong>
+              </td>
+              <td>Reflects the full cost of providing this service.</td>
+            </tr>
+            <tr>
+              <th scope="row">Sustain</th>
+              <td>
+                <strong>$125</strong>
+              </td>
+              <td>Covers the essentials — a solid, sustainable choice.</td>
+            </tr>
+            <tr>
+              <th scope="row">Solidarity</th>
+              <td>
+                <strong>$100</strong>
+              </td>
+              <td>Available to those for whom cost is a real barrier.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
       <section className="payments">
         <h4>Accepts Payments</h4>
         <p>
