@@ -29,7 +29,8 @@ const AboutEDMR = (
       <li>Follow-Up Integration Session</li>
     </ul>
     <p className="transition-text">
-      Clients are welcome to travel to either our Augusta or Kennesaw location.
+      In-person EMDR Intensives are available in Kennesaw, with virtual services
+      available across Georgia.
     </p>
   </div>
 );

@@ -8,12 +8,12 @@ const { Title, Paragraph } = Typography;
 export default function Contact() {
   useEffect(() => {
     // SEO optimization
-    document.title = "Contact Us | Release Restore Redefine Counseling | Martinez & Kennesaw, GA";
+    document.title = "Contact Us | Release Restore Redefine Counseling | Kennesaw, GA";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", 
-        "Contact Release Restore Redefine Counseling in Martinez and Kennesaw, GA. Get in touch for therapy services, EMDR intensives, and wellness offerings. Call (706) 750-8906 or use our online form."
+        "Contact Release Restore Redefine Counseling in Kennesaw, GA for in-person or virtual therapy services, EMDR intensives, and wellness offerings. Call (706) 750-8906 or use our online form."
       );
     }
 
@@ -29,19 +29,8 @@ export default function Contact() {
         "name": "Release Restore Redefine Counseling",
         "telephone": "(706) 750-8906",
         "email": "R3counseling@counselingsecure.com",
-        "areaServed": ["Martinez, GA", "Kennesaw, GA"],
+        "areaServed": ["Kennesaw, GA", "Georgia"],
         "location": [
-          {
-            "@type": "Place",
-            "name": "R3 Counseling Martinez Office",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "4210 Columbia Rd",
-              "addressLocality": "Martinez",
-              "addressRegion": "GA",
-              "postalCode": "30907"
-            }
-          },
           {
             "@type": "Place",
             "name": "R3 Counseling Kennesaw Office",
@@ -109,11 +98,7 @@ export default function Contact() {
                 </div>
                 
                 <div>
-                  <Title level={4}>Address</Title>
-                  <Paragraph>
-                    4210 Columbia Rd<br />
-                    Martinez, GA 30907
-                  </Paragraph>
+                  <Title level={4}>Kennesaw Office</Title>
                   <Paragraph>
                     1301 Shiloh Rd. Suite 1240<br />
                     Kennesaw, GA 30144

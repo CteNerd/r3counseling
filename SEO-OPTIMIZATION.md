@@ -9,7 +9,7 @@ This document outlines the SEO optimizations implemented for the R3 Counseling w
 - Added meta keywords tag with relevant therapy and counseling terms
 - Improved Open Graph descriptions for better social sharing
 - Added Twitter Card meta tags for improved social media visibility
-- Added geo tags for local SEO (region, placename, position)
+- Added geo tags for local SEO (region and placename)
 - Added canonical URL tags
 
 ## Structured Data / Schema.org
@@ -64,7 +64,7 @@ This document outlines the SEO optimizations implemented for the R3 Counseling w
 
 2. **Ongoing Content Strategy**
    - Regularly update the blog with relevant therapy and counseling content
-   - Focus on local SEO terms and phrases for Martinez, GA area
+   - Focus on local SEO terms and phrases for Kennesaw, GA and virtual services across Georgia
 
 3. **Monitor Performance**
    - Set up Google Search Console and Google Analytics
