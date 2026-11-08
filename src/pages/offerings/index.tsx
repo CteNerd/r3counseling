@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./offerings.css";
-import GirlsOnCourt from "../../assets/images/girls-on-court.png";
-import LaughingWomen from "../../assets/images/laughing-women.png";
-import FlowerWomen from "../../assets/images/flower-women.png";
+import R3TeamPhoto from "../../assets/images/DSC07754.JPG";
 import R3QrCodeForCareCredit from "../../assets/images/Release Restore Redefine Counseling QR Code for CareCredit.png";
 import FAQs, { emdrIntensiveFaqs } from "./intensive-faqs";
 import CardWithLeftImage from "../../components/Offerings/cardWithLeftImage";
@@ -28,7 +26,6 @@ const privateWellnessRotatingImages = [
   PrivateWellnessExperienceAlt,
 ];
 
-const posterImages = [GirlsOnCourt, LaughingWomen, FlowerWomen];
 const offeringsTitle =
   "Offerings | Release Restore Redefine Counseling | Kennesaw, GA";
 const offeringsDescription =
@@ -41,7 +38,6 @@ interface Props {
 
 export default function Offerings(props: Props) {
   const [consultModalVis, setConsultModalVis] = useState(false);
-  const [activePosterIndex, setActivePosterIndex] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,16 +64,6 @@ export default function Offerings(props: Props) {
 
     // Clean up the event listener when the component unmounts
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const intervalId = window.setInterval(() => {
-      setActivePosterIndex((currentIndex) =>
-        (currentIndex + 1) % posterImages.length
-      );
-    }, 3500);
-
-    return () => window.clearInterval(intervalId);
   }, []);
 
   useEffect(() => {
@@ -170,23 +156,17 @@ export default function Offerings(props: Props) {
     };
   }, []);
 
-  function CarouselImages() {
-    return (
-      <div className="mySlides fade session-img">
-        <img
-          src={posterImages[activePosterIndex]}
-          className="slide-img"
-          alt="Featured counseling and wellness offering"
-        />
-      </div>
-    );
-  }
-
   return (
     <div>
       <h1>Offerings</h1>
       <div className={"session-img-container"}>
-        <CarouselImages />
+        <img
+          src={R3TeamPhoto}
+          className="offerings-team-photo"
+          alt="The four members of the R3 Counseling team standing together"
+          width={2400}
+          height={1600}
+        />
       </div>
       <div>
         <CardWithLeftImage
